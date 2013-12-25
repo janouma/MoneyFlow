@@ -1,0 +1,62 @@
+@import 'bourbon/bourbon'
+
+$header-color: #000055
+$emerald: #228055
+$jade: #88bb00
+
+.logo
+    background: url('/img/logo-small-bg.png')
+    
+    &:hover
+        background: url('/img/logo-small-bg-selected.png')
+        
+.powered-by
+    background: url('/img/powered-by.png')
+    width: 150px
+    height: 56px
+    display: block
+    
+.background-transparent
+    background-color: transparent
+
+.gradient-nightfall
+    +background-image(linear-gradient(rgba(darken($header-color, 10%), 0.95) 10%, rgba($header-color, 0.85) 65%, rgba($header-color, 0.75)))
+    
+.no-box-shadow
+    box-shadow: none
+    
+.no-text-decoration
+    &, &:hover
+        text-decoration: none
+        
+.pull-right
+    float: right
+    
+.text-center
+    text-align: center
+    
+.color-blue
+    &,a
+        color: darken(steelblue, 10%) !important
+    a:hover
+        color: steelblue !important
+    .active
+        &,a
+            color: lighten(dodgerblue, 5%) !important
+            
+.color-jade
+    color: $jade
+    
+.color-emerald
+    &,a
+        color: $emerald !important
+    a:hover
+        color: lighten($emerald, 7%) !important
+    .active
+        &,a
+            color: $jade !important
+            
+#sociallogos
+    width: 155px
+    
+    

@@ -1,0 +1,23 @@
+<template name="nav">
+    <div class="col width-fit mobile-width-fit">
+        <div class="cell">
+            <h2><a href="{{pathFor 'home'}}" class="no-text-decoration"><i class="fa fa-leaf color-emerald"></i> <span class="color-jade">Money</span><span class="color-emerald">Flow</span></a></h2>
+        </div>
+    </div>
+    <div class="col width-fill mobile-width-fill">
+        <div class="cell">
+            <ul class="col width-fit mobile-width-fit nav color-blue">
+                <li class="{{activeRouteClass 'invoices'}}"><a href="{{pathFor 'invoices'}}"><i class="fa fa-file-text"></i> Factures</a></li>
+                <li class="{{activeRouteClass 'orders'}}"><a href="{{pathFor 'orders'}}"><i class="fa fa-barcode"></i> Commandes</a></li>
+                <li class="{{activeRouteClass 'clients'}}"><a href="{{pathFor 'clients'}}"><i class="fa fa-group"></i> Clients</a></li>
+                <li class="{{activeRouteClass 'settings'}}"><a href="{{pathFor 'settings'}}"><i class="fa fa-gear"></i> Paramétrages</a></li>
+            </ul>
+            <div class="col width-fill mobile-width-fill">
+                <ul class="nav color-emerald pull-right">
+                    <li><a href="#"><i class="fa fa-download"></i> Télécharger</a></li>
+                    <li><a href="#"><i class="fa fa-lock"></i> Connexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>

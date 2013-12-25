@@ -1,0 +1,1 @@
+Simple tool to manage invoices
