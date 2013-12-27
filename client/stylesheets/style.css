@@ -25,6 +25,9 @@
 .pull-right {
   float: right; }
 
+.capitalize {
+  text-transform: capitalize; }
+
 .text-center {
   text-align: center; }
 
@@ -45,5 +48,9 @@
 .color-emerald .active, .color-emerald .active a {
   color: #88bb00 !important; }
 
-#sociallogos {
-  width: 155px; }
+#signature {
+  width: 156px; }
+
+.socialicons a {
+  display: inline-block;
+  width: 52px; }
