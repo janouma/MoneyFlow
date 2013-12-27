@@ -25,6 +25,9 @@ messages =
     signin:
         fr: 'connexion'
         en: 'sign in'
+        
+    french: 'français'
+    english: 'english'
 
 
 translationFor = (messageId)->

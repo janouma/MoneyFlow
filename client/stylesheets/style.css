@@ -1,3 +1,38 @@
+.background-transparent {
+  background-color: transparent; }
+
+.gradient-nightfall {
+  background-image: -webkit-linear-gradient( rgba(0, 0, 34, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75));
+  background-image: linear-gradient( rgba(0, 0, 34, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75)); }
+
+.color-blue, .color-blue a {
+  color: #38678f !important; }
+.color-blue a:hover {
+  color: steelblue !important; }
+.color-blue .active, .color-blue .active a, .color-blue.active, .color-blue.active a {
+  color: #389dff !important; }
+
+.color-jade, .color-jade a {
+  color: #88bb00 !important; }
+.color-jade a:hover {
+  color: #88bb00 !important; }
+.color-jade .active, .color-jade .active a, .color-jade.active, .color-jade.active a {
+  color: #88bb00 !important; }
+
+.color-emerald, .color-emerald a {
+  color: #228055 !important; }
+.color-emerald a:hover {
+  color: #299c68 !important; }
+.color-emerald .active, .color-emerald .active a, .color-emerald.active, .color-emerald.active a {
+  color: #88bb00 !important; }
+
+.color-black, .color-black a {
+  color: #555555 !important; }
+.color-black a:hover {
+  color: #cccccc !important; }
+.color-black .active, .color-black .active a, .color-black.active, .color-black.active a {
+  color: black !important; }
+
 .logo {
   background: url("/img/logo-small-bg.png"); }
   .logo:hover {
@@ -8,13 +43,6 @@
   width: 150px;
   height: 56px;
   display: block; }
-
-.background-transparent {
-  background-color: transparent; }
-
-.gradient-nightfall {
-  background-image: -webkit-linear-gradient( rgba(0, 0, 34, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75));
-  background-image: linear-gradient( rgba(0, 0, 34, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75)); }
 
 .no-box-shadow {
   box-shadow: none; }
@@ -31,26 +59,11 @@
 .text-center {
   text-align: center; }
 
-.color-blue, .color-blue a {
-  color: #38678f !important; }
-.color-blue a:hover {
-  color: steelblue !important; }
-.color-blue .active, .color-blue .active a {
-  color: #389dff !important; }
-
-.color-jade {
-  color: #88bb00; }
-
-.color-emerald, .color-emerald a {
-  color: #228055 !important; }
-.color-emerald a:hover {
-  color: #299c68 !important; }
-.color-emerald .active, .color-emerald .active a {
-  color: #88bb00 !important; }
-
 #signature {
   width: 156px; }
 
-.socialicons a {
-  display: inline-block;
-  width: 52px; }
+.socialicons {
+  white-space: nowrap; }
+  .socialicons a {
+    display: inline-block;
+    width: 52px; }
