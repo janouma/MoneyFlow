@@ -28,6 +28,10 @@ messages =
         
     french: 'français'
     english: 'english'
+    
+    resourceNotFound:
+        fr: 'ressource introuvable'
+        en: 'resource not found'
 
 
 translationFor = (messageId)->

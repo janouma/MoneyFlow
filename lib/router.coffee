@@ -1,5 +1,8 @@
 Router.configure(
     layoutTemplate: 'layout'
+    
+    #CAUTION, this option is not for unmatched route but for null "data" on a matched route
+    notFoundTemplate: 'notFound'
 )
 
 setLang = ->
@@ -42,4 +45,9 @@ Router.map ->
     @route(
         'settings'
         path: '/:lang?/settings'
+    )
+    
+    @route(
+        'notFound'
+        path: '*'
     )
