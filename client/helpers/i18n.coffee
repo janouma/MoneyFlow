@@ -36,12 +36,12 @@ messages =
 
 translationFor = (messageId)->
     currentLang = Session.get('lang') or DEFAULT_LANG
-    messages[messageId]?[currentLang] or messages[messageId]?[DEFAULT_LANG] or messages[messageId] or "{{#{messageId}}}"
+    messages[messageId]?[currentLang] or messages[messageId]?[DEFAULT_LANG] or messages[messageId]
 
 
 singularFor = (messageId)->
     message = translationFor messageId
-    if message.constructor.name is 'Array'
+    if message?.constructor.name is 'Array'
         message[0]
     else
         message
@@ -49,14 +49,18 @@ singularFor = (messageId)->
         
 pluralFor = (messageId)->
     message = translationFor messageId
-    if message.constructor.name is 'Array'
+    if message?.constructor.name is 'Array'
         message[1]
     else
         "#{message}s"
+        
 
-
-for messageId in Object.keys(messages)
-    do (messageId) ->
-        capitalizedMsgId = messageId[0].toUpperCase() + messageId[1..]
-        Handlebars.registerHelper "i18n#{capitalizedMsgId}", -> singularFor messageId
-        Handlebars.registerHelper "i18n#{capitalizedMsgId}s", -> pluralFor messageId
+Handlebars.registerHelper(
+    'i18n'
+    (messageId)->
+        message = singularFor messageId
+        unless message
+            if /s$/i.test messageId then pluralFor messageId[0...messageId.length-1] else "{{#{messageId}}}"
+        else
+            message
+)

@@ -12,8 +12,10 @@ Template.footer.helpers(
             Router.current().route.path(lang: lang)
         catch error
             Meteor._debug """
-            Error: #{error.message}
+            Warning: #{error.message}
              |_route: #{Router.current().route.name}
+             |_path: #{Router.current().path}
+             |_template: #{Router.current().template}
              |_lang: #{lang}
             """
             "/#{lang}"
