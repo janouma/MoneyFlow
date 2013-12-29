@@ -1,25 +1,16 @@
 Template.footer.helpers(
-    activeLangClass: (lang)->
-        #DEBUG
-        console.log "amplify.store('lang'): #{amplify.store('lang')}, Session.get('lang'): #{Session.get('lang')}"
-        
-        #TODO Use I18n.languages instead of ['en', 'fr'] constant
-        unless Session.get('lang') not in ['en', 'fr']
-            'active color-black' if lang is Session.get('lang')
-        else
-            #TODO Use I18n.defaultLang instead of 'fr' constant
-            'active color-black' if lang is 'fr'
+    activeLangClass: (language)-> 'active color-black' if language is I18nEasy.getLanguage()
 
-    pathToLang: (lang)->
+    pathToLanguage: (language)->
         try
-            Router.current().route.path(lang: lang)
+            Router.current().route.path(language: language)
         catch error
             Meteor._debug """
             Warning: #{error.message}
              |_route: #{Router.current().route.name}
              |_path: #{Router.current().path}
              |_template: #{Router.current().template}
-             |_lang: #{lang}
+             |_language: #{language}
             """
-            "/#{lang}"
+            "/#{language}"
 )

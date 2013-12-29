@@ -5,22 +5,23 @@ Router.configure(
     notFoundTemplate: 'notFound'
 )
 
-navigatorLang = ->
+navigatorLanguage = ->
     results = /(\w{2}).*/gi.exec window.navigator.language
     results.length > 1 and results[1]
     
-appLang = -> amplify.store('lang') or navigatorLang() or 'fr' #TODO Use I18n.defaultLang instead of 'fr' constant
+appLanguage = -> amplify.store('language') or navigatorLanguage() or I18nEasy.getDefault()
 
-setLang = ->
-    lang = @params[0] or @params.lang or appLang()
+setLanguage = ->
+    language = @params[0] or @params.language or appLanguage()
 
-    if lang and Session.get('lang') isnt lang
-        Session.set('lang', lang)
-        amplify.store('lang', lang)
+    if language and I18nEasy.getLanguage() isnt language
+        I18nEasy.setLanguage language
+        Session.set 'language', language
+        amplify.store 'language', language
 
 
 Router.before(
-    setLang
+    setLanguage
     except: 'notFound'
 )
 
@@ -33,31 +34,26 @@ Router.map ->
     
     @route(
         'invoices'
-        path: '/:lang?/invoices'
+        path: '/:language?/invoices'
     )
     
     @route(
         'orders'
-        path: '/:lang?/orders'
+        path: '/:language?/orders'
     )
     
     @route(
         'clients'
-        path: '/:lang?/clients'
+        path: '/:language?/clients'
     )
     
     @route(
         'settings'
-        path: '/:lang?/settings'
+        path: '/:language?/settings'
     )
     
     @route(
         'notFound'
         path: '*'
-        before: ->
-            unless Session.get 'lang'
-                Session.set(
-                    'lang'
-                    appLang()
-                )
+        before: -> I18nEasy.setLanguage(appLanguage()) unless Session.get 'language'
     )
