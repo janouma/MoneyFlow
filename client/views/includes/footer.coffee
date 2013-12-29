@@ -1,5 +1,8 @@
 Template.footer.helpers(
     activeLangClass: (lang)->
+        #DEBUG
+        console.log "amplify.store('lang'): #{amplify.store('lang')}, Session.get('lang'): #{Session.get('lang')}"
+        
         #TODO Use I18n.languages instead of ['en', 'fr'] constant
         unless Session.get('lang') not in ['en', 'fr']
             'active color-black' if lang is Session.get('lang')

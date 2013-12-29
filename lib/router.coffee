@@ -5,20 +5,24 @@ Router.configure(
     notFoundTemplate: 'notFound'
 )
 
-setLang = ->
-    lang = @params[0] or @params.lang or amplify.store('lang')
+navigatorLang = ->
+    results = /(\w{2}).*/gi.exec window.navigator.language
+    results.length > 1 and results[1]
+    
+appLang = -> amplify.store('lang') or navigatorLang() or 'fr' #TODO Use I18n.defaultLang instead of 'fr' constant
 
-    unless lang
-        results = /(\w{2}).*/gi.exec window.navigator.language
-        lang = results.length > 1 and results[1]
-        
+setLang = ->
+    lang = @params[0] or @params.lang or appLang()
+
     if lang and Session.get('lang') isnt lang
         Session.set('lang', lang)
         amplify.store('lang', lang)
 
 
-Router.before setLang
-
+Router.before(
+    setLang
+    except: 'notFound'
+)
 
 Router.map ->
 
@@ -50,4 +54,10 @@ Router.map ->
     @route(
         'notFound'
         path: '*'
+        before: ->
+            unless Session.get 'lang'
+                Session.set(
+                    'lang'
+                    appLang()
+                )
     )

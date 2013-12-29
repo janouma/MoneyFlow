@@ -33,6 +33,16 @@
 .color-black .active, .color-black .active a, .color-black.active, .color-black.active a {
   color: black !important; }
 
+.color-red, .color-red a {
+  color: #ff6000 !important; }
+.color-red a:hover {
+  color: #ff6000 !important; }
+.color-red .active, .color-red .active a, .color-red.active, .color-red.active a {
+  color: #ff6000 !important; }
+
+.fa.fa-10x {
+  font-size: 10em; }
+
 .logo {
   background: url("/img/logo-small-bg.png"); }
   .logo:hover {

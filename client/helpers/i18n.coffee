@@ -32,6 +32,10 @@ messages =
     resourceNotFound:
         fr: 'ressource introuvable'
         en: 'resource not found'
+        
+    resourceNotFoundBody:
+        fr: 'La ressource demandée est introuvable sur ce serveur'
+        en: 'The requested resource cannot be found on this server'
 
 
 translationFor = (messageId)->
