@@ -3,6 +3,8 @@ Router.configure(
     
     #CAUTION, this option is not for unmatched route but for null "data" on a matched route
     notFoundTemplate: 'notFound'
+    
+    waitOn: -> I18nEasy.subscribe default: 'fr'
 )
 
 navigatorLanguage = ->
@@ -16,7 +18,6 @@ setLanguage = ->
 
     if language and I18nEasy.getLanguage() isnt language
         I18nEasy.setLanguage language
-        Session.set 'language', language
         amplify.store 'language', language
 
 
@@ -55,5 +56,8 @@ Router.map ->
     @route(
         'notFound'
         path: '*'
-        before: -> I18nEasy.setLanguage(appLanguage()) unless Session.get 'language'
+        before: ->
+            fallback = appLanguage()
+            unless I18nEasy.getLanguage() is fallback
+                I18nEasy.setLanguage fallback
     )
