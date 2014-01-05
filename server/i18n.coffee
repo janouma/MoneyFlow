@@ -1,9 +1,5 @@
-do I18nEasy.publish
-
-unless I18nEasyMessages.find().count()
-
-    I18nEasy.map(
-        'fr'
+initialTranslations =
+    fr:
         home: 'accueil'
         invoice: 'facture'
         order: 'commande'
@@ -15,10 +11,8 @@ unless I18nEasyMessages.find().count()
         english: 'english'
         resourceNotFound: 'ressource introuvable'
         resourceNotFoundBody: 'La ressource demandée est introuvable sur ce serveur'
-    )
-    
-    I18nEasy.map(
-        'en'
+        
+    en:
         home: 'home'
         order: 'order'
         setting: 'setting'
@@ -26,4 +20,6 @@ unless I18nEasyMessages.find().count()
         signin: 'sign in'
         resourceNotFound: 'resource not found'
         resourceNotFoundBody: 'The requested resource cannot be found on this server'
-    )
+
+
+I18nEasy.publish initialTranslations
