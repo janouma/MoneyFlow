@@ -11,7 +11,7 @@ navigatorLanguage = ->
     results = /(\w{2}).*/gi.exec window.navigator.language
     results.length > 1 and results[1]
     
-appLanguage = -> amplify.store('language') or navigatorLanguage() or I18nEasy.getDefault()
+appLanguage = -> amplify.store('language') or navigatorLanguage()
 
 setLanguage = ->
     language = @params[0] or @params.language or appLanguage()
