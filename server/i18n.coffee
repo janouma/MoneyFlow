@@ -1,27 +1,38 @@
 initialTranslations =
     fr:
+        french: 'français'
+        english: 'english'
+
         home: 'accueil'
         invoice: 'facture'
         order: 'commande'
         client: 'client'
-        setting: ['paramètre', 'paramétrages']
+        setting: 'paramètre'
         download: 'télécharger'  
         signin:'connexion'
-        french: 'français'
-        english: 'english'
         resourceNotFound: 'ressource introuvable'
-        resourceNotFoundBody: 'La ressource demandée est introuvable sur ce serveur'
+        resourceNotFoundBody: 'la ressource demandée est introuvable sur ce serveur'
         translationAdmin: 'gestionnaire des traductions'
+        save: 'enregistrer'
+        add: 'ajouter'
+        singular: 'singulier'
+        plural: 'pluriel'
+        
         
     en:
         home: 'home'
+        invoice: 'invoice'
         order: 'order'
         setting: 'setting'
         download: 'download'
         signin: 'sign in'
         resourceNotFound: 'resource not found'
-        resourceNotFoundBody: 'The requested resource cannot be found on this server'
+        resourceNotFoundBody: 'the requested resource cannot be found on this server'
         translationAdmin: 'translation manager'
+        save: 'save'
+        add: 'add'
+        singular: 'singular'
+        plural: 'plural'
 
     
 initialTranslations.fr.fr = initialTranslations.fr.french
