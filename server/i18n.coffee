@@ -17,7 +17,7 @@ initialTranslations =
         add: 'ajouter'
         singular: 'singulier'
         plural: 'pluriel'
-        
+        newKey: 'nouvelle clé'
         
     en:
         home: 'home'
@@ -33,6 +33,7 @@ initialTranslations =
         add: 'add'
         singular: 'singular'
         plural: 'plural'
+        newKey: 'new key'
 
     
 initialTranslations.fr.fr = initialTranslations.fr.french
