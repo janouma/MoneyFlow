@@ -39,4 +39,7 @@ initialTranslations =
 initialTranslations.fr.fr = initialTranslations.fr.french
 initialTranslations.fr.en = initialTranslations.fr.english
 
-I18nEasy.publish initialTranslations
+I18nEasy.publish {
+	default: 'fr'
+	translations: initialTranslations
+}
