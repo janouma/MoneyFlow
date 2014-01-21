@@ -5,7 +5,6 @@ Router.configure(
     notFoundTemplate: 'notFound'
     
     waitOn: -> I18nEasy.subscribe default: 'fr'
-    fastRender: true
 )
 
 navigatorLanguage = ->
