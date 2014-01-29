@@ -3,13 +3,22 @@
         <div class="site-footer">
             <div class="cell">
                 <div class="col width-fit mobile-width-fit">
+					<ul class="nav capitalize">
+						{{#each languages}}
+						<li class="{{activeLanguageClass this}}">
+							<a href="{{pathToLanguage this}}"><i class="fa {{activeFlagClass this}} fa-lg"></i> {{i18n this}}</a>
+						</li>
+						{{/each}}
+					</ul>
+					<!--
                     <div class="pipes">
                         <ul class="nav capitalize">
                             <li><i class="fa fa-flag fa-lg"></i></li>
-                            <li class="{{activeLangClass 'fr'}}"><a href="{{pathToLanguage 'fr'}}">{{i18n 'french'}}</a></li>
-                            <li class="{{activeLangClass 'en'}}"><a href="{{pathToLanguage 'en'}}">{{i18n 'english'}}</a></li>
+                            <li class="{{activeLanguageClass 'fr'}}"><a href="{{pathToLanguage 'fr'}}">{{i18n 'french'}}</a></li>
+                            <li class="{{activeLanguageClass 'en'}}"><a href="{{pathToLanguage 'en'}}">{{i18n 'english'}}</a></li>
                         </ul>
                     </div>
+                    -->
                 </div>
                 <div class="col width-fill mobile-width-fill">
                     <div id="signature" class="pull-right">
