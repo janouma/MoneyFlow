@@ -21,10 +21,11 @@ setLanguage = ->
         amplify.store 'language', language
 
 
-Router.before(
-    setLanguage
-    except: 'notFound'
-)
+unless Meteor.isServer
+	Router.before(
+		setLanguage
+		except: 'notFound'
+	)
 
 Router.map ->
 
