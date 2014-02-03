@@ -11,11 +11,7 @@ initialTranslations =
 		order: "order"
 		processing: "processing ..."
 
-		resourceNotFound:[
-			"resource not found"
-			"resources not found"
-		]
-
+		resourceNotFound: "resource not found"
 		resourceNotFoundBody: "the requested resource cannot be found on this server"
 		save: "save"
 		setting: "setting"
@@ -25,6 +21,8 @@ initialTranslations =
 			"an unknown error occurred"
 			"several unknown errors occured"
 		]
+		resourceForbidden: "access forbidden"
+		resourceForbiddenBody: "you are not allowed to access this resource"
 
 	fr:
 		add: "ajouter"
@@ -56,6 +54,8 @@ initialTranslations =
 			"une erreur inconnue est survenue"
 			"plusieurs erreurs inconnues sont survenues"
 		]
+		resourceForbidden: "accès non-autorisé"
+		resourceForbiddenBody: "vous n'êtes pas autorisé à accéder à cette ressource"
 
 
 #==================================
