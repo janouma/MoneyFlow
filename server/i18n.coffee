@@ -1,5 +1,4 @@
-initialTranslations =
-
+I18nEasy.mapAll {
 	en:
 		add: "add"
 		cancel: "cancel"
@@ -56,10 +55,8 @@ initialTranslations =
 		]
 		resourceForbidden: "accès non-autorisé"
 		resourceForbiddenBody: "vous n'êtes pas autorisé à accéder à cette ressource"
+}
 
 
 #==================================
-I18nEasy.publish {
-	default: 'fr'
-	translations: initialTranslations
-}
+I18nEasy.publish default: 'fr'
