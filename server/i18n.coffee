@@ -59,4 +59,4 @@ I18nEasy.mapAll {
 
 
 #==================================
-I18nEasy.publish default: 'fr'
+do I18nEasy.publish

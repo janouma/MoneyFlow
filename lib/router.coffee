@@ -4,7 +4,7 @@ Router.configure(
     #CAUTION, this option is not for unmatched route but for null "data" on a matched route
     notFoundTemplate: 'notFound'
     
-    waitOn: -> I18nEasy.subscribe default: 'fr'
+    waitOn: -> do I18nEasy.subscribe
 )
 
 navigatorLanguage = ->
@@ -14,11 +14,11 @@ navigatorLanguage = ->
 appLanguage = -> amplify.store('language') or navigatorLanguage()
 
 setLanguage = ->
-    language = @params[0] or @params.language or appLanguage()
+	language = @params[0] or @params.language or appLanguage()
 
-    if language and I18nEasy.getLanguage() isnt language
-        I18nEasy.setLanguage language
-        amplify.store 'language', language
+	if language and I18nEasy.getLanguage() isnt language
+		I18nEasy.setLanguage language
+		amplify.store 'language', language
 
 
 unless Meteor.isServer
