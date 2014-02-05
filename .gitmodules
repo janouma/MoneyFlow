@@ -1,3 +1,6 @@
 [submodule "packages/i18n-easy-admin"]
 	path = packages/i18n-easy-admin
 	url = https://github.com/janouma/i18n-easy-admin.git
+[submodule "packages/i18n-easy"]
+	path = packages/i18n-easy
+	url = https://github.com/janouma/i18n-easy.git
