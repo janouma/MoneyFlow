@@ -77,3 +77,16 @@
   .socialicons a {
     display: inline-block;
     width: 52px; }
+
+@media (min-device-width: 1600px) {
+  .site-body {
+    min-height: 840px; } }
+@media (max-device-width: 1599px) {
+  .site-body {
+    min-height: 640px; } }
+@media (max-device-width: 767px) {
+  .site-body {
+    min-height: 440px; } }
+@media (max-device-width: 479px) {
+  .site-body {
+    min-height: 240px; } }
