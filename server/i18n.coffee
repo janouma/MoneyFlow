@@ -19,7 +19,7 @@ I18nEasy.mapAll {
 		order: "commande"
 		resourceNotFound: "ressource introuvable"
 		resourceNotFoundBody: "la ressource demandée est introuvable sur ce serveur"
-		setting: "paramètre"
+		setting: "préférence"
 		signin: "connexion"
 }
 
