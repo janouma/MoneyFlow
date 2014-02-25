@@ -1,3 +1,5 @@
+templateName = 'settings'
+
 focus = (e, template) ->
 	$field = $(e.target)
 	$tip = $(template.find(".form-tip[for=#{$field.attr('id')}]"))
@@ -18,7 +20,11 @@ mouseleave = (e, template) ->
 	$tip = $(template.find(".form-tip[for=#{$field.attr('id')}]"))
 	$tip.addClass 'hidden'
 
-Template.settings.events {
+Template[templateName].helpers {
+	taxerate: -> App.taxerate
+}
+
+Template[templateName].events {
 	"focus input[type]": focus
 	"mouseenter input[type]": mouseenter
 	"focus textarea": focus

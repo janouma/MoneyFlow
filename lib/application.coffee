@@ -1,0 +1,2 @@
+@App =
+	taxerate: 20
