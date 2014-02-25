@@ -6,25 +6,12 @@
 					<div class="col">
 						<div class="col width-2of7">
 							<div class="cell">
-								<input type="text" id="name" placeholder="{{i18n 'firstnames'}} & {{i18n 'lastname'}}" class="text capitalize stretch spaced-letters brln brtn brrn no-radius">
-							</div>
-						</div>
-						<div class="col width-1of5">
-							<div class="cell">
-								<label class="theme-sky color-white capitalize" for="name">lorem ipsum...</label>
-							</div>
-						</div>
-					</div>
-
-					<div class="col">
-						<div class="col width-2of7">
-							<div class="cell">
 								<input type="text" id="company" placeholder="{{i18n 'company'}}" class="text capitalize stretch spaced-letters brln brtn brrn no-radius">
 							</div>
 						</div>
 						<div class="col width-1of5">
 							<div class="cell">
-								<label class="theme-sky color-white capitalize" for="company">lorem ipsum...</label>
+								<label class="form-tip theme-sky color-white animated hidden" for="company">{{i18n 'company'}}</label>
 							</div>
 						</div>
 					</div>
@@ -37,7 +24,20 @@
 						</div>
 						<div class="col width-1of5">
 							<div class="cell">
-								<label class="theme-sky color-white capitalize" for="companyid">lorem ipsum...</label>
+								<label class="form-tip theme-sky color-white animated hidden" for="companyid">{{i18n 'companyid'}}</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="col width-2of7">
+							<div class="cell">
+								<input type="email" id="email" placeholder="{{i18n 'email'}}" class="text stretch spaced-letters brln brtn brrn no-radius">
+							</div>
+						</div>
+						<div class="col width-1of5">
+							<div class="cell">
+								<label class="form-tip theme-sky color-white animated hidden" for="email">{{i18n 'email'}}</label>
 							</div>
 						</div>
 					</div>
@@ -50,7 +50,7 @@
 						</div>
 						<div class="col width-1of5">
 							<div class="cell textarea-tip">
-								<label class="theme-sky color-white capitalize" for="address">lorem ipsum...</label>
+								<label class="form-tip theme-sky color-white animated hidden" for="address">{{i18n 'address'}}</label>
 							</div>
 						</div>
 					</div>
@@ -58,12 +58,12 @@
 					<div class="col">
 						<div class="col width-2of7">
 							<div class="cell">
-								<input type="text" id="taxerate" placeholder="{{i18n 'taxerate'}}" class="text stretch spaced-letters brln brtn brrn no-radius">
+								<input type="text" id="taxerate" placeholder="{{i18n 'taxerate'}} ({{taxerate}})" class="text stretch spaced-letters brln brtn brrn no-radius">
 							</div>
 						</div>
 						<div class="col width-1of5">
 							<div class="cell">
-								<label class="theme-sky color-white capitalize" for="taxerate">lorem ipsum...</label>
+								<label class="form-tip theme-sky color-white animated hidden" for="taxerate">{{i18n 'taxerate'}}</label>
 							</div>
 						</div>
 					</div>

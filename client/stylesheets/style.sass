@@ -5,16 +5,24 @@
 @import _spaces
 @import _common
 
+.focus
+	@extend .brbm
+	box-shadow: none
+	font-weight: bold
+	border-color: dodgerblue
+	outline: 0
+
 input[type=text],
 input[type=file],
 input[type=number],
+input[type=email],
 textarea
 	&:focus
-		@extend .brbm
-		box-shadow: none
-		font-weight: bold
-		border-color: dodgerblue
-		outline: 0
+		@extend .focus
+
+input[type=email]:invalid
+	background-color: #ffffff
+	border-color: red
 
 textarea
 	height: 45px
@@ -22,9 +30,14 @@ textarea
 
 .textarea-tip
 	height: 54px
-	label
+	.form-tip
 		position: absolute
 		bottom: -1px
+
+.form-tip
+	@extend .capitalize-first
+	@extend .medium-radius
+	border-bottom-left-radius: 0
 
 .logo
 	background: url('/img/logo-small-bg.png')

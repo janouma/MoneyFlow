@@ -75,9 +75,10 @@ a.theme-sky:hover,
  * br = border
  * a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
  * s,m,l,n = small(1px),medium(2px),large(5px),none(0px) */
-.brts, .brvs, .bras, .brtm, .brvm, .bram, .brtl, .brvl, .bral, .brrs, .brhs, .brrm, .brhm, .brrl, .brhl, .brbs, .brbm, input[type=text]:focus,
+.brts, .brvs, .bras, .brtm, .brvm, .bram, .brtl, .brvl, .bral, .brrs, .brhs, .brrm, .brhm, .brrl, .brhl, .brbs, .brbm, .focus, input[type=text]:focus,
 input[type=file]:focus,
 input[type=number]:focus,
+input[type=email]:focus,
 textarea:focus, .brbl, .brls, .brlm, .brll {
   border-style: solid;
   border-color: inherit;
@@ -113,9 +114,10 @@ textarea:focus, .brbl, .brls, .brlm, .brll {
 .brbs, .brvs, .bras {
   border-bottom-width: 1px; }
 
-.brbm, input[type=text]:focus,
+.brbm, .focus, input[type=text]:focus,
 input[type=file]:focus,
 input[type=number]:focus,
+input[type=email]:focus,
 textarea:focus, .brvm, .bram {
   border-bottom-width: 2px; }
 
@@ -299,7 +301,7 @@ input[type=file] {
 .pull-left {
   float: left; }
 
-.capitalize, .capitalize-first::first-letter {
+.capitalize, .capitalize-first::first-letter, .form-tip::first-letter {
   text-transform: capitalize; }
 
 .lowercase {
@@ -336,12 +338,12 @@ input[type=file] {
   -moz-transition-property: color, background-color, opacity, visibility, margin, padding;
   transition-property: color, background-color, opacity, visibility, margin, padding; }
 
-.collapse-left, .collapse-left.small-radius, .collapse-left.medium-radius, .collapse-left.big-radius, .collapse-left.huge-radius {
+.collapse-left, .collapse-left.small-radius, .collapse-left.medium-radius, .collapse-left.form-tip, .collapse-left.big-radius, .collapse-left.huge-radius {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding-left: 7px; }
 
-.collapse-right, .collapse-right.small-radius, .collapse-right.medium-radius, .collapse-right.big-radius, .collapse-right.huge-radius {
+.collapse-right, .collapse-right.small-radius, .collapse-right.medium-radius, .collapse-right.form-tip, .collapse-right.big-radius, .collapse-right.huge-radius {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   padding-right: 7px; }
@@ -364,7 +366,7 @@ input[type=file] {
 .small-radius {
   border-radius: 3px; }
 
-.medium-radius {
+.medium-radius, .form-tip {
   border-radius: 5px; }
 
 .big-radius {
@@ -410,14 +412,19 @@ input[type=file] {
   border-bottom-color: white;
   border-top-width: 0; }
 
-input[type=text]:focus,
+.focus, input[type=text]:focus,
 input[type=file]:focus,
 input[type=number]:focus,
+input[type=email]:focus,
 textarea:focus {
   box-shadow: none;
   font-weight: bold;
   border-color: dodgerblue;
   outline: 0; }
+
+input[type=email]:invalid {
+  background-color: white;
+  border-color: red; }
 
 textarea {
   height: 45px;
@@ -425,9 +432,12 @@ textarea {
 
 .textarea-tip {
   height: 54px; }
-  .textarea-tip label {
+  .textarea-tip .form-tip {
     position: absolute;
     bottom: -1px; }
+
+.form-tip {
+  border-bottom-left-radius: 0; }
 
 .logo {
   background: url("/img/logo-small-bg.png"); }
