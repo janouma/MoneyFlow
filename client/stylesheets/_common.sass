@@ -1,0 +1,139 @@
+$shadow: rgba(#000, 0.5)
+
+.tiny-input
+	+size(auto 11px)
+	margin-top: 8px
+	margin-bottom: 8px
+
+input[type=file]
+	cursor: pointer
+	width: 145px
+
+	&::-webkit-file-upload-button
+		visibility: hidden
+		width: 0
+
+	&::before
+		content: "\f07c"
+		display: inline-block
+		font-family: FontAwesome
+		font-style: normal
+		font-weight: normal
+		line-height: 1
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+		-webkit-user-select: none
+
+.button-like
+	cursor: pointer
+
+.disabled
+	cursor: not-allowed !important
+
+.no-box-shadow
+	box-shadow: none
+
+.no-text-decoration
+	&, &:hover
+		text-decoration: none
+
+.pull-right
+	float: right
+
+.pull-left
+	float: left
+
+.capitalize
+	text-transform: capitalize
+
+.capitalize-first::first-letter
+	@extend .capitalize
+
+.lowercase
+	text-transform: lowercase
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right
+
+.inline-block
+	display: inline-block
+
+.stretch
+	width: 100%
+
+.hidden
+	opacity: 0
+	visibility: hidden
+
+.visible
+	opacity: 1
+	visibility: visible
+
+.animated
+	+transition-duration(0.5s)
+	+transition-timing-function(ease-in-out)
+	+transition-property(color, background-color, opacity, visibility, margin, padding)
+
+.collapse-left
+	&, &.small-radius, &.medium-radius, &.big-radius, &.huge-radius
+		border-top-left-radius: 0
+		border-bottom-left-radius: 0
+		padding-left: 7px
+
+.collapse-right
+	&, &.small-radius, &.medium-radius, &.big-radius, &.huge-radius
+		border-top-right-radius: 0
+		border-bottom-right-radius: 0
+		padding-right: 7px
+
+.small-shadow
+	box-shadow: 0 1px 2px $shadow
+
+.medium-shadow
+	box-shadow: 0 3px 6px $shadow
+
+.big-shadow
+	box-shadow: 0 5px 10px $shadow
+
+.no-radius
+	border-radius: 0
+
+.round
+	border-radius: 50%
+
+.small-radius
+	border-radius: 3px
+
+.medium-radius
+	border-radius: 5px
+
+.big-radius
+	border-radius: 10px
+
+.huge-radius
+	border-radius: 15px
+
+.spaced-letters
+	letter-spacing: 2px
+
+.engraved
+	text-shadow: 0 1px 1px #dfdfdf
+
+@for $z from 1 through 5
+	.z#{$z}
+		z-index: $z
+
+.z-infinite
+	z-index: 10000
+
+.up-triangle::before
+	content: ""
+	position: relative
+	display: block
+	margin: 0 auto
+	+triangle(18px, white, up)
+	border-top-width: 0
+	@extend .z1

@@ -1,6 +1,30 @@
 @import bourbon/bourbon
 @import _colors
 @import _fontawesome-extension
+@import _borders
+@import _spaces
+@import _common
+
+input[type=text],
+input[type=file],
+input[type=number],
+textarea
+	&:focus
+		@extend .brbm
+		box-shadow: none
+		font-weight: bold
+		border-color: dodgerblue
+		outline: 0
+
+textarea
+	height: 45px
+	width: 145px
+
+.textarea-tip
+	height: 54px
+	label
+		position: absolute
+		bottom: -1px
 
 .logo
 	background: url('/img/logo-small-bg.png')
@@ -13,22 +37,6 @@
 	width: 150px
 	height: 56px
 	display: block
-
-.no-box-shadow
-	box-shadow: none
-
-.no-text-decoration
-	&, &:hover
-		text-decoration: none
-
-.pull-right
-	float: right
-
-.capitalize
-	text-transform: capitalize
-
-.text-center
-	text-align: center
 
 #signature
 	width: 156px

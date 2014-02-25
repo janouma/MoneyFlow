@@ -1,28 +1,23 @@
-$header-color: #000055
+@import _color-mixins
+
+$darkblue: #000055
 $emerald: #228055
 $jade: #88bb00
-
-=color($name, $main, $hover: $main, $active: $main)
-    .color-#{$name}
-        &,a
-            color: $main !important
-        a:hover
-            color: $hover !important
-        .active, &.active
-            &,a
-                color: $active !important
-
+$ash: #505050
 
 .background-transparent
     background-color: transparent
 
 .gradient-nightfall
-    +background-image(linear-gradient(rgba(darken($header-color, 10%), 0.95) 10%, rgba($header-color, 0.85) 65%, rgba($header-color, 0.75)))
+    +background-image(linear-gradient(rgba(darken($darkblue, 10%), 0.95) 10%, rgba($darkblue, 0.85) 65%, rgba($darkblue, 0.75)))
 
++color('sky', dodgerblue, darken(dodgerblue, 5%), darken(dodgerblue, 10%))
 +color('blue', darken(steelblue, 10%), steelblue, lighten(dodgerblue, 5%))
 +color('jade', $jade)
 +color('emerald', $emerald, lighten($emerald, 7%), $jade)
 +color('black', #555, #ccc, black)
 +color('red', #ff6000)
++color('ash', $ash)
 
++theme('sky', dodgerblue, darken(dodgerblue, 5%), darken(dodgerblue, 10%))
 

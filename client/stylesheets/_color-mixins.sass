@@ -1,0 +1,26 @@
+=color($name, $main, $hover: $main, $active: $main)
+	.color-#{$name}
+		&, a
+			color: $main !important
+		&.input[type=submit]:hover, &.button:hover, a:hover, .button-like:hover
+			color: $hover !important
+		.active, &.active
+			&, a
+				color: $active !important
+
+
+=theme($name, $main, $hover: $main, $active: $main)
+	.theme-#{$name}
+		background-color: $main !important
+		border-color: darken($main, 5%) !important
+
+		&:active
+			background-color: $active !important
+			border-color: darken($active, 5%) !important
+
+	input[type=submit].theme-#{$name}:hover,
+	a.theme-#{$name}:hover,
+	.button.theme-#{$name}:hover,
+	.button-like.theme-#{$name}:hover
+		background-color: $hover !important
+		border-color: darken($hover, 5%) !important
