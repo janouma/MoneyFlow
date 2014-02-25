@@ -4,7 +4,7 @@ focus = (e, template) ->
 	$tip.addClass('visible')
 
 mouseenter = (e, template) ->
-	$field = $(e.target)
+	$field = $(e.target).addClass 'focus'
 	$tip = $(template.find(".form-tip[for=#{$field.attr('id')}]"))
 	$tip.removeClass('hidden')
 
@@ -14,7 +14,7 @@ blur = (e, template) ->
 	$tip.removeClass 'visible'
 
 mouseleave = (e, template) ->
-	$field = $(e.target)
+	$field = $(e.target).removeClass 'focus'
 	$tip = $(template.find(".form-tip[for=#{$field.attr('id')}]"))
 	$tip.addClass 'hidden'
 

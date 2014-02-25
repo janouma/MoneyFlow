@@ -60,6 +60,24 @@ textarea
 		display: inline-block
 		width: 52px
 
+@media (max-width: 767px)
+	.textarea-tip
+		height: 28px
+
+	.form-tip
+		border-bottom-left-radius: 5px
+
+		&::before
+			content: ""
+			position: absolute
+			top: -7px
+			left: 7px
+			display: block
+			margin: 0 auto
+			+triangle(15px, dodgerblue, up)
+			border-top-width: 0
+			@extend .z1
+
 
 @media (min-device-width: 1600px)
 	.site-body
