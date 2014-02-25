@@ -70,6 +70,16 @@ a.theme-sky:hover,
 
 .fa.fa-10x {
   font-size: 10em; }
+.fa.fa-percent::before {
+  content: "%";
+  display: inline-block;
+  font-family: "Arial Black";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none; }
 
 /* border helpers
  * br = border
