@@ -18,9 +18,19 @@ textarea
 	&:focus
 		@extend .focus
 
-input[type=email]:invalid
+input[type]:invalid,
+input[required]
+	background-repeat: no-repeat, no-repeat
+	background-size: 13px, 13px
+	background-position: right 7px center, right 7px center
+
+input[type]:invalid
 	background-color: #ffffff
-	border-color: red
+	color: red
+	background-image: url("data:image/png;base64,#{$forbidden-light-img}"), url("data:image/png;base64,#{$forbidden-dark-img}")
+
+input[required]
+	background-image: url("data:image/png;base64,#{$asterisk-light-img}"), url("data:image/png;base64,#{$asterisk-dark-img}")
 
 textarea
 	height: 45px

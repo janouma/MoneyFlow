@@ -6,7 +6,7 @@
 					<div class="col">
 						<div class="col width-2of7">
 							<div class="cell brbs">
-								<input type="text" id="company" placeholder="{{i18n 'company'}}" class="text capitalize stretch spaced-letters bran">
+								<input type="text" id="company" placeholder="{{i18n 'company'}}" class="text capitalize stretch spaced-letters bran" required>
 							</div>
 						</div>
 						<div class="col width-1of5">
@@ -19,7 +19,7 @@
 					<div class="col">
 						<div class="col width-2of7">
 							<div class="cell brbs">
-								<input type="text" id="companyid" placeholder="{{i18n 'companyid'}}" class="text capitalize stretch spaced-letters bran">
+								<input type="text" id="companyid" placeholder="{{i18n 'companyid'}}" class="text capitalize stretch spaced-letters bran" required pattern="(\w|\d)+">
 							</div>
 						</div>
 						<div class="col width-1of5">
@@ -58,7 +58,7 @@
 					<div class="col">
 						<div class="col width-2of7">
 							<div class="cell brbs">
-								<input type="text" id="taxerate" placeholder="{{i18n 'taxerate'}} ({{taxerate}}%)" class="text stretch spaced-letters bran">
+								<input type="text" id="taxerate" placeholder="{{i18n 'taxerate'}} ({{taxerate}}%)" class="text stretch spaced-letters bran" pattern="\d+(,|\.)?\d+">
 							</div>
 						</div>
 						<div class="col width-1of5">
