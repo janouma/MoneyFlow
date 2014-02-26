@@ -6,10 +6,8 @@
 @import _common
 
 .focus
-	@extend .brbm
 	box-shadow: none
 	font-weight: bold
-	border-color: dodgerblue
 	outline: 0
 
 input[type=text],
@@ -38,6 +36,16 @@ textarea
 	@extend .capitalize-first
 	@extend .medium-radius
 	border-bottom-left-radius: 0
+
+	&::before
+		content: ""
+		position: absolute
+		bottom: 0
+		left: -7px
+		display: block
+		+triangle(15px, $silver, down-right)
+		border-right-width: 0
+		@extend .z1
 
 .logo
 	background: url('/img/logo-small-bg.png')
@@ -73,8 +81,7 @@ textarea
 			top: -7px
 			left: 7px
 			display: block
-			margin: 0 auto
-			+triangle(15px, dodgerblue, up)
+			+triangle(15px, $silver, up)
 			border-top-width: 0
 			@extend .z1
 

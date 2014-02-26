@@ -68,6 +68,20 @@ a.theme-sky:hover,
   background-color: #0483ff !important;
   border-color: #0077ea !important; }
 
+.theme-silver {
+  background-color: #dadada !important;
+  border-color: #cdcdcd !important; }
+  .theme-silver:active {
+    background-color: #c1c1c1 !important;
+    border-color: #b4b4b4 !important; }
+
+input[type=submit].theme-silver:hover,
+a.theme-silver:hover,
+.button.theme-silver:hover,
+.button-like.theme-silver:hover {
+  background-color: #cdcdcd !important;
+  border-color: #c1c1c1 !important; }
+
 .fa.fa-10x {
   font-size: 10em; }
 .fa.fa-percent::before {
@@ -85,11 +99,7 @@ a.theme-sky:hover,
  * br = border
  * a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
  * s,m,l,n = small(1px),medium(2px),large(5px),none(0px) */
-.brts, .brvs, .bras, .brtm, .brvm, .bram, .brtl, .brvl, .bral, .brrs, .brhs, .brrm, .brhm, .brrl, .brhl, .brbs, .brbm, .focus, input[type=text]:focus,
-input[type=file]:focus,
-input[type=number]:focus,
-input[type=email]:focus,
-textarea:focus, .brbl, .brls, .brlm, .brll {
+.brts, .brvs, .bras, .brtm, .brvm, .bram, .brtl, .brvl, .bral, .brrs, .brhs, .brrm, .brhm, .brrl, .brhl, .brbs, .brbm, .brbl, .brls, .brlm, .brll {
   border-style: solid;
   border-color: inherit;
   border-width: 0; }
@@ -124,11 +134,7 @@ textarea:focus, .brbl, .brls, .brlm, .brll {
 .brbs, .brvs, .bras {
   border-bottom-width: 1px; }
 
-.brbm, .focus, input[type=text]:focus,
-input[type=file]:focus,
-input[type=number]:focus,
-input[type=email]:focus,
-textarea:focus, .brvm, .bram {
+.brbm, .brvm, .bram {
   border-bottom-width: 2px; }
 
 .brbl, .brvl, .bral {
@@ -391,7 +397,7 @@ input[type=file] {
 .engraved {
   text-shadow: 0 1px 1px #dfdfdf; }
 
-.z1, .up-triangle::before {
+.z1, .up-triangle::before, .form-tip::before {
   z-index: 1; }
 
 .z2 {
@@ -429,7 +435,6 @@ input[type=email]:focus,
 textarea:focus {
   box-shadow: none;
   font-weight: bold;
-  border-color: dodgerblue;
   outline: 0; }
 
 input[type=email]:invalid {
@@ -448,6 +453,17 @@ textarea {
 
 .form-tip {
   border-bottom-left-radius: 0; }
+  .form-tip::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -7px;
+    display: block;
+    height: 0;
+    width: 0;
+    border-bottom: 15px solid #dadada;
+    border-left: 15px solid transparent;
+    border-right-width: 0; }
 
 .logo {
   background: url("/img/logo-small-bg.png"); }
@@ -481,13 +497,12 @@ textarea {
       top: -7px;
       left: 7px;
       display: block;
-      margin: 0 auto;
       height: 0;
       width: 0;
       border-color: transparent;
       border-style: solid;
       border-width: 7.5px;
-      border-bottom-color: dodgerblue;
+      border-bottom-color: #dadada;
       border-top-width: 0; } }
 @media (min-device-width: 1600px) {
   .site-body {
