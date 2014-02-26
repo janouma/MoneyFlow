@@ -36,22 +36,24 @@ textarea
 	height: 45px
 	width: 145px
 
+.input-tip
+	height: 28px
+
 .textarea-tip
 	height: 54px
-	.form-tip
-		position: absolute
-		bottom: -1px
 
 .form-tip
 	@extend .capitalize-first
 	@extend .medium-radius
 	border-bottom-left-radius: 0
+	position: absolute
+	bottom: 0
 
 	&::before
 		content: ""
 		position: absolute
 		bottom: 0
-		left: -7px
+		left: -9px
 		display: block
 		+triangle(15px, $silver, down-right)
 		border-right-width: 0

@@ -458,19 +458,21 @@ textarea {
   height: 45px;
   width: 145px; }
 
+.input-tip {
+  height: 28px; }
+
 .textarea-tip {
   height: 54px; }
-  .textarea-tip .form-tip {
-    position: absolute;
-    bottom: -1px; }
 
 .form-tip {
-  border-bottom-left-radius: 0; }
+  border-bottom-left-radius: 0;
+  position: absolute;
+  bottom: 0; }
   .form-tip::before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: -7px;
+    left: -9px;
     display: block;
     height: 0;
     width: 0;
