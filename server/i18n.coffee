@@ -14,6 +14,7 @@ I18nEasy.mapAll {
 		email: "e-mail"
 		address: "address"
 		taxerate: "taxe rate"
+		taxeid: "taxe id"
 
 	fr:
 		client: "client"
@@ -33,6 +34,7 @@ I18nEasy.mapAll {
 		email: "courriel"
 		address: "adresse"
 		taxerate: "T.V.A."
+		taxeid: "code T.V.A."
 }
 
 
