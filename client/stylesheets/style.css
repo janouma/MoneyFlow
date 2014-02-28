@@ -54,17 +54,26 @@
 .color-ash .active, .color-ash .active a, .color-ash.active, .color-ash.active a {
   color: #505050 !important; }
 
-.theme-sky {
+.theme-sky, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit {
   background-color: dodgerblue !important;
   border-color: #0483ff !important; }
-  .theme-sky:active {
+  .theme-sky:active, .accounts-dialog .login-button .text-besides-image:active,
+  .accounts-dialog .login-button-form-submit:active {
     background-color: #0077ea !important;
     border-color: #006ad1 !important; }
 
-input[type=submit].theme-sky:hover,
+input[type=submit].theme-sky:hover, .accounts-dialog .login-button input[type=submit].text-besides-image:hover,
+.accounts-dialog input[type=submit].login-button-form-submit:hover,
 a.theme-sky:hover,
+.accounts-dialog .login-button a.text-besides-image:hover,
+.accounts-dialog a.login-button-form-submit:hover,
 .button.theme-sky:hover,
-.button-like.theme-sky:hover {
+.accounts-dialog .login-button .button.text-besides-image:hover,
+.accounts-dialog .button.login-button-form-submit:hover,
+.button-like.theme-sky:hover,
+.accounts-dialog .login-button .button-like.text-besides-image:hover,
+.accounts-dialog .button-like.login-button-form-submit:hover {
   background-color: #0483ff !important;
   border-color: #0077ea !important; }
 
@@ -99,7 +108,8 @@ a.theme-silver:hover,
  * br = border
  * a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
  * s,m,l,n = small(1px),medium(2px),large(5px),none(0px) */
-.brts, .brvs, .bras, .brtm, .brvm, .bram, .brtl, .brvl, .bral, .brrs, .brhs, .brrm, .brhm, .brrl, .brhl, .brbs, .brbm, .brbl, .brls, .brlm, .brll {
+.brts, .brvs, .bras, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit, .brtm, .brvm, .bram, .brtl, .brvl, .bral, .brrs, .brhs, .brrm, .brhm, .brrl, .brhl, .brbs, .brbm, .brbl, .brls, .brlm, .brll {
   border-style: solid;
   border-color: inherit;
   border-width: 0; }
@@ -107,7 +117,8 @@ a.theme-silver:hover,
 .brtn, .brvn, .bran {
   border-top: none; }
 
-.brts, .brvs, .bras {
+.brts, .brvs, .bras, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit {
   border-top-width: 1px; }
 
 .brtm, .brvm, .bram {
@@ -119,7 +130,8 @@ a.theme-silver:hover,
 .brrn, .brhn, .bran {
   border-right: none; }
 
-.brrs, .brhs, .bras {
+.brrs, .brhs, .bras, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit {
   border-right-width: 1px; }
 
 .brrm, .brhm, .bram {
@@ -131,7 +143,8 @@ a.theme-silver:hover,
 .brbn, .brvn, .bran {
   border-bottom: none; }
 
-.brbs, .brvs, .bras {
+.brbs, .brvs, .bras, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit {
   border-bottom-width: 1px; }
 
 .brbm, .brvm, .bram {
@@ -143,7 +156,8 @@ a.theme-silver:hover,
 .brln, .brhn, .bran {
   border-left: none; }
 
-.brls, .brhs, .bras {
+.brls, .brhs, .bras, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit {
   border-left-width: 1px; }
 
 .brlm, .brhm, .bram {
@@ -180,49 +194,51 @@ a.theme-silver:hover,
  * p,m = padding,margin
  * a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
  * s,m,l,n = small(5px),medium(10px),large(20px),none(0px) */
-.ptn, .pvn, .pan {
+.ptn, .pvn, .pan, .accounts-dialog label {
   padding-top: 0px !important; }
 
-.pts, .pvs, .pas {
+.pts, .pvs, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit, .accounts-dialog .message, .pas {
   padding-top: 5px !important; }
 
-.ptm, .pvm, .pam {
+.ptm, .pvm, .pam, .accounts-dialog {
   padding-top: 10px !important; }
 
 .ptl, .pvl, .pal {
   padding-top: 20px !important; }
 
-.prn, .phn, .pan {
+.prn, .phn, .pan, .accounts-dialog label {
   padding-right: 0px !important; }
 
 .prs, .phs, .pas {
   padding-right: 5px !important; }
 
-.prm, .phm, .pam {
+.prm, .phm, .pam, .accounts-dialog {
   padding-right: 10px !important; }
 
 .prl, .phl, .pal {
   padding-right: 20px !important; }
 
-.pbn, .pvn, .pan {
+.pbn, .pvn, .pan, .accounts-dialog label {
   padding-bottom: 0px !important; }
 
-.pbs, .pvs, .pas {
+.pbs, .pvs, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit, .accounts-dialog .message, .pas {
   padding-bottom: 5px !important; }
 
-.pbm, .pvm, .pam {
+.pbm, .pvm, .pam, .accounts-dialog {
   padding-bottom: 10px !important; }
 
 .pbl, .pvl, .pal {
   padding-bottom: 20px !important; }
 
-.pln, .phn, .pan {
+.pln, .phn, .pan, .accounts-dialog label {
   padding-left: 0px !important; }
 
 .pls, .phs, .pas {
   padding-left: 5px !important; }
 
-.plm, .phm, .pam {
+.plm, .phm, .pam, .accounts-dialog {
   padding-left: 10px !important; }
 
 .pll, .phl, .pal {
@@ -255,10 +271,11 @@ a.theme-silver:hover,
 .mbn, .mvn, .man {
   margin-bottom: 0px !important; }
 
-.mbs, .mvs, .mas {
+.mbs, .accounts-dialog .message, .mvs, .mas {
   margin-bottom: 5px !important; }
 
-.mbm, .mvm, .mam {
+.mbm, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit, .mvm, .mam {
   margin-bottom: 10px !important; }
 
 .mbl, .mvl, .mal {
@@ -335,7 +352,8 @@ input[type=file] {
 .inline-block {
   display: inline-block; }
 
-.stretch {
+.stretch, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit {
   width: 100%; }
 
 .hidden {
@@ -346,7 +364,8 @@ input[type=file] {
   opacity: 1;
   visibility: visible; }
 
-.animated {
+.animated, .login-link-text, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit {
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   transition-duration: 0.5s;
@@ -357,17 +376,19 @@ input[type=file] {
   -moz-transition-property: color, background-color, opacity, visibility, margin, padding;
   transition-property: color, background-color, opacity, visibility, margin, padding; }
 
-.collapse-left, .collapse-left.small-radius, .collapse-left.medium-radius, .collapse-left.form-tip, .collapse-left.big-radius, .collapse-left.huge-radius {
+.collapse-left, .collapse-left.small-radius, .collapse-left.medium-radius, .collapse-left.form-tip, .collapse-left.accounts-dialog, .accounts-dialog .login-button .collapse-left.text-besides-image,
+.accounts-dialog .collapse-left.login-button-form-submit, .accounts-dialog .collapse-left.message, .collapse-left.big-radius, .collapse-left.huge-radius {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding-left: 7px; }
 
-.collapse-right, .collapse-right.small-radius, .collapse-right.medium-radius, .collapse-right.form-tip, .collapse-right.big-radius, .collapse-right.huge-radius {
+.collapse-right, .collapse-right.small-radius, .collapse-right.medium-radius, .collapse-right.form-tip, .collapse-right.accounts-dialog, .accounts-dialog .login-button .collapse-right.text-besides-image,
+.accounts-dialog .collapse-right.login-button-form-submit, .accounts-dialog .collapse-right.message, .collapse-right.big-radius, .collapse-right.huge-radius {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   padding-right: 7px; }
 
-.small-shadow {
+.small-shadow, .accounts-dialog {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
 
 .medium-shadow {
@@ -385,7 +406,8 @@ input[type=file] {
 .small-radius {
   border-radius: 3px; }
 
-.medium-radius, .form-tip {
+.medium-radius, .form-tip, .accounts-dialog, .accounts-dialog .login-button .text-besides-image,
+.accounts-dialog .login-button-form-submit, .accounts-dialog .message {
   border-radius: 5px; }
 
 .big-radius {
@@ -415,8 +437,8 @@ input[type=file] {
 .z5 {
   z-index: 5; }
 
-.z-infinite {
-  z-index: 10000; }
+.z-infinite, .site-header .login-wrapper {
+  z-index: 999999; }
 
 .up-triangle::before {
   content: "";
@@ -435,6 +457,7 @@ input[type=file] {
 input[type=file]:focus,
 input[type=number]:focus,
 input[type=email]:focus,
+input[type=password]:focus,
 textarea:focus {
   box-shadow: none;
   font-weight: bold;
@@ -454,8 +477,10 @@ input[type]:invalid {
 input[required] {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACnRSTlMAf3EcEAYrYEw7wouO0QAAAblJREFUSMftlj1PAkEQhle5O6AcQD7KC4mxxMLYHoWhBRuxAxK1daMxlpBgD4Xx70p099495pbhChMSeaoN9yTMzc7Hqf/FU0xEF8k+6h390FEyoaZfVrJbJUNDdk+J9g6ib92W7F5at3Z0d7vB1/sDd/HEZU1Ekzw3XGxOPVYEtR53wzVKI3Ox7YS5Mx66NuUy3HIH5jyBGpGhmXXH9nwG95YsXdetkqXtZiFlCTeK8XOSJpccFmTRBJ6tWyGRunVPZLeN7Iq0irnFY6jIbhM5k0DO1FRSa5iEpVhwP9gQ8/KiXMbyi4FBnoSqzjLzXkOS8dBZDDSmS7Bgnn+8l7Q3W5yp7xI417lFgyQIKfasjXvy0GUqmpbxup0wTX4+4ZlpuIMJy5afVs9d1wIdRBCTxAqVLtJg63qPIEZ/NHdGBeZOucDciWQXC0M7L4wdMMi95T7iSuCitd0FV3GaFq6zc+pwQ/yV66L85gqsUahw07LGykLWlnx3RzHruSBOGwsu2nCe7cyYzhVzTXu/bTfcjWKufXKA31GH5fYLuCO0jUgZbSMSYF3LTE24QyUTaCwgWX7ccKUOk299lZsnnOQ8FwAAAABJRU5ErkJggg=="), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAG1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUUeIgAAAACXRSTlMAfx4OZ3QzRVbtmxagAAABoElEQVRIx+2WT0/CQBDFoavA0cECPZZEjMcSTejR5aBc+w3KpfFI48UjpF/cRFxn19n2tYkmTfSdCP013Z1582fwt3SXEdFz0gZN6UPzNqyms3KMjuhT15i9NOwCs2vDhphdGnb2zzaz6mWX+1n1totddn82gGRVSTSLhQnC2MPu2RpOYqNEsCuZbs12cdhU+jMwz+cuu2F/Sh/S1mZH5PFnSV+qmA00/50YVJGlk/WLdTTsmKCmhh1idsHRhQq7sd3PMOlwN4XZR8uRQLOE/aABW4kmJsQusbWpB2V7fcDxYq3q0IjvhYIRxr6yPwlOtPfmyL1aADhFmPjRG28QvHAKg4tTt5UXy7AZZMCkDi5aUpNyEC2RO2EcbB9NSHkLp4tGefGzfSf6pb4T4fNKBwWYvfLFd8EzIPVmeW0VLbNsfnvAja3EM2vZZMqs4k/ZLNvvKH12+D43leaR5UatkrM7yNyaM+9vfTvBSBbGOKMn/66xkdWp7ut2GJX0cI/qF9tlVx5y2UBN2IdQisc11pInBZTS3HQxfFsURTzop94BA7SPNXqIEjgAAAAASUVORK5CYII="); }
 
-textarea {
-  height: 45px;
+.textarea-valign {
+  height: 45px; }
+
+.textarea-halign {
   width: 145px; }
 
 .input-tip {
@@ -531,3 +556,88 @@ textarea {
 @media (max-device-width: 479px) {
   .site-body {
     min-height: 240px; } }
+.site-header .login-wrapper {
+  position: relative; }
+.site-header .accounts-dialog label {
+  z-index: -1; }
+
+.accounts-dialog {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f7f7f9; }
+  .accounts-dialog .login-close-text::before,
+  .accounts-dialog .sign-in-text-google::before,
+  .accounts-dialog .sign-in-text-twitter::before,
+  .accounts-dialog .login-button-form-submit::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-right: 3px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none; }
+  .accounts-dialog a:not(.login-close-text) {
+    font-weight: normal !important; }
+  .accounts-dialog .login-close-text {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .accounts-dialog .login-close-text::before {
+      content: "\f0d8"; }
+  .accounts-dialog .login-close-text-clear {
+    height: 30px; }
+  .accounts-dialog .login-image {
+    display: none; }
+  .accounts-dialog .login-button .text-besides-image,
+  .accounts-dialog .login-button-form-submit {
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    box-shadow: inset 0 1px 1px rgba(106, 182, 255, 0.75); }
+    .accounts-dialog .login-button .text-besides-image:hover,
+    .accounts-dialog .login-button-form-submit:hover {
+      background-color: #007df7 !important; }
+  .accounts-dialog .sign-in-text-google::before {
+    content: "\f0d5"; }
+  .accounts-dialog .sign-in-text-twitter::before {
+    content: "\f099"; }
+  .accounts-dialog .or {
+    text-align: center;
+    font-weight: bold;
+    color: #707070; }
+  .accounts-dialog .hline {
+    text-decoration: line-through; }
+  .accounts-dialog label {
+    width: 100%;
+    position: relative;
+    top: 10px;
+    left: 3px;
+    height: 0;
+    color: #dadada; }
+  .accounts-dialog input {
+    background-color: transparent;
+    border-radius: 0;
+    border-width: 0; }
+    .accounts-dialog input:focus, .accounts-dialog input:invalid {
+      background-color: transparent; }
+    .accounts-dialog input[type=email], .accounts-dialog input[type=password] {
+      width: 145px; }
+  .accounts-dialog #login-email-label-and-input,
+  .accounts-dialog #login-password-label-and-input {
+    position: relative;
+    border-bottom-width: 1px; }
+  .accounts-dialog #login-email-label-and-input {
+    top: -10px; }
+  .accounts-dialog #login-password-label-and-input {
+    top: -22px; }
+  .accounts-dialog .message {
+    text-align: center;
+    background-color: #dadada;
+    color: white; }
+  .accounts-dialog .login-button-form-submit::before {
+    content: "\f090"; }
