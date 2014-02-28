@@ -109,7 +109,7 @@ a.theme-silver:hover,
  * a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
  * s,m,l,n = small(1px),medium(2px),large(5px),none(0px) */
 .brts, .brvs, .bras, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit, .brtm, .brvm, .bram, .brtl, .brvl, .bral, .brrs, .brhs, .brrm, .brhm, .brrl, .brhl, .brbs, .brbm, .brbl, .brls, .brlm, .brll {
+.accounts-dialog .login-button-form-submit, .accounts-dialog .message, .brtm, .brvm, .bram, .brtl, .brvl, .bral, .brrs, .brhs, .brrm, .brhm, .brrl, .brhl, .brbs, .brbm, .brbl, .brls, .brlm, .brll {
   border-style: solid;
   border-color: inherit;
   border-width: 0; }
@@ -118,7 +118,7 @@ a.theme-silver:hover,
   border-top: none; }
 
 .brts, .brvs, .bras, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit {
+.accounts-dialog .login-button-form-submit, .accounts-dialog .message {
   border-top-width: 1px; }
 
 .brtm, .brvm, .bram {
@@ -131,7 +131,7 @@ a.theme-silver:hover,
   border-right: none; }
 
 .brrs, .brhs, .bras, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit {
+.accounts-dialog .login-button-form-submit, .accounts-dialog .message {
   border-right-width: 1px; }
 
 .brrm, .brhm, .bram {
@@ -144,7 +144,7 @@ a.theme-silver:hover,
   border-bottom: none; }
 
 .brbs, .brvs, .bras, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit {
+.accounts-dialog .login-button-form-submit, .accounts-dialog .message {
   border-bottom-width: 1px; }
 
 .brbm, .brvm, .bram {
@@ -157,7 +157,7 @@ a.theme-silver:hover,
   border-left: none; }
 
 .brls, .brhs, .bras, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit {
+.accounts-dialog .login-button-form-submit, .accounts-dialog .message {
   border-left-width: 1px; }
 
 .brlm, .brhm, .bram {
@@ -194,7 +194,7 @@ a.theme-silver:hover,
  * p,m = padding,margin
  * a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
  * s,m,l,n = small(5px),medium(10px),large(20px),none(0px) */
-.ptn, .pvn, .pan, .accounts-dialog label {
+.ptn, .pvn, .pan, .accounts-dialog label, .accounts-dialog .additional-link {
   padding-top: 0px !important; }
 
 .pts, .pvs, .accounts-dialog .login-button .text-besides-image,
@@ -207,7 +207,7 @@ a.theme-silver:hover,
 .ptl, .pvl, .pal {
   padding-top: 20px !important; }
 
-.prn, .phn, .pan, .accounts-dialog label {
+.prn, .phn, .pan, .accounts-dialog label, .accounts-dialog .additional-link {
   padding-right: 0px !important; }
 
 .prs, .phs, .pas {
@@ -219,7 +219,7 @@ a.theme-silver:hover,
 .prl, .phl, .pal {
   padding-right: 20px !important; }
 
-.pbn, .pvn, .pan, .accounts-dialog label {
+.pbn, .pvn, .pan, .accounts-dialog label, .accounts-dialog .additional-link {
   padding-bottom: 0px !important; }
 
 .pbs, .pvs, .accounts-dialog .login-button .text-besides-image,
@@ -232,7 +232,7 @@ a.theme-silver:hover,
 .pbl, .pvl, .pal {
   padding-bottom: 20px !important; }
 
-.pln, .phn, .pan, .accounts-dialog label {
+.pln, .phn, .pan, .accounts-dialog label, .accounts-dialog .additional-link {
   padding-left: 0px !important; }
 
 .pls, .phs, .pas {
@@ -271,7 +271,7 @@ a.theme-silver:hover,
 .mbn, .mvn, .man {
   margin-bottom: 0px !important; }
 
-.mbs, .accounts-dialog .message, .mvs, .mas {
+.mbs, .accounts-dialog .message, .accounts-dialog .additional-link, .mvs, .mas {
   margin-bottom: 5px !important; }
 
 .mbm, .accounts-dialog .login-button .text-besides-image,
@@ -569,7 +569,8 @@ input[required] {
   .accounts-dialog .login-close-text::before,
   .accounts-dialog .sign-in-text-google::before,
   .accounts-dialog .sign-in-text-twitter::before,
-  .accounts-dialog .login-button-form-submit::before {
+  .accounts-dialog .login-button-form-submit::before,
+  .accounts-dialog .additional-link::before {
     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
@@ -598,7 +599,8 @@ input[required] {
     display: inline-block;
     color: white;
     font-weight: bold;
-    box-shadow: inset 0 1px 1px rgba(106, 182, 255, 0.75); }
+    box-shadow: inset 0 1px 1px rgba(106, 182, 255, 0.75);
+    letter-spacing: 0; }
     .accounts-dialog .login-button .text-besides-image:hover,
     .accounts-dialog .login-button-form-submit:hover {
       background-color: #007df7 !important; }
@@ -638,6 +640,24 @@ input[required] {
   .accounts-dialog .message {
     text-align: center;
     background-color: #dadada;
+    border-color: #707070;
     color: white; }
+  .accounts-dialog .error-message {
+    background-color: #ff8f66;
+    border-color: #ff7d4d; }
   .accounts-dialog .login-button-form-submit::before {
+    content: "\f090"; }
+  .accounts-dialog .additional-link-container {
+    text-align: center; }
+  .accounts-dialog .additional-link {
+    width: 100%;
+    font-size: 1em !important;
+    color: dodgerblue !important; }
+    .accounts-dialog .additional-link:hover, .accounts-dialog .additional-link:active, .accounts-dialog .additional-link:visited {
+      color: #007df7 !important; }
+  .accounts-dialog #signup-link::before {
+    content: "\f007"; }
+  .accounts-dialog #forgot-password-link::before {
+    content: "\f059"; }
+  .accounts-dialog #back-to-login-link::before {
     content: "\f090"; }
