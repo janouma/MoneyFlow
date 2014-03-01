@@ -21,6 +21,18 @@ I18nEasy.mapAll {
 		password: "password"
 		createaccount: "create account"
 		forgotPassword: "forgot password"
+		changePassword: "change password"
+		signout: "sign out"
+		currentPassword: "current password"
+		newPassword: "new password"
+		reset: "reset"
+		verifiedEmail: "verified e-mail"
+		hidde: "hidde"
+		internalservererror: "internal server error"
+		invalidemail: "invalid email"
+		usernamemustbeatleast3characterslong: "user name must be at least 3 characters long"
+		incorrectpassword: "incorrect password"
+		emailsent: "email sent"
 
 	fr:
 		client: "client"
@@ -47,6 +59,18 @@ I18nEasy.mapAll {
 		password: "mot de passe"
 		createaccount: "créer un compte"
 		forgotPassword: "mot de passe oublié"
+		changePassword: "Changer de mot de passe"
+		signout: "déconnexion"
+		currentPassword: "mot de passe actuel"
+		newPassword: "nouveau mot de passe"
+		reset: "réinitialiser"
+		verifiedEmail: "courriel vérifié"
+		hidde: "masquer"
+		internalservererror: "erreur interne serveur"
+		invalidemail: "courriel invalide"
+		usernamemustbeatleast3characterslong: "le pseudo doit comporter au moins 3 caratères"
+		incorrectpassword: "mot de passe incorrecte"
+		emailsent: "courriel envoyé"
 }
 
 
