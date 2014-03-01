@@ -15,6 +15,12 @@ I18nEasy.mapAll {
 		address: "address"
 		taxerate: "taxe rate"
 		taxeid: "taxe id"
+		close: "close"
+		with: "with"
+		or: "or"
+		password: "password"
+		createaccount: "create account"
+		forgotPassword: "forgot password"
 
 	fr:
 		client: "client"
@@ -35,6 +41,12 @@ I18nEasy.mapAll {
 		address: "adresse"
 		taxerate: "T.V.A."
 		taxeid: "code T.V.A."
+		close: "fermer"
+		with: "avec"
+		or: "ou"
+		password: "mot de passe"
+		createaccount: "créer un compte"
+		forgotPassword: "mot de passe oublié"
 }
 
 
