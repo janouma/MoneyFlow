@@ -93,5 +93,6 @@ Template[templateName].helpers(
 )
 
 Template[templateName].rendered = ->
-	$(@find "#login-sign-in-link").text "▾ #{I18nEasy.i18n 'signin'}" if I18nEasy.getLanguage() isnt 'en'
-	translateLoginWidget.call(@) if $(@find "#login-dropdown-list").css('display')
+	Meteor.defer =>
+		$(@find "#login-sign-in-link").text "▾ #{I18nEasy.i18n 'signin'}" if I18nEasy.getLanguage() isnt 'en'
+		translateLoginWidget.call(@) if $(@find "#login-dropdown-list").css('display')
