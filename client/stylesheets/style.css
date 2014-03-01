@@ -573,7 +573,8 @@ input[required] {
   .accounts-dialog .sign-in-text-google::before,
   .accounts-dialog .sign-in-text-twitter::before,
   .accounts-dialog .login-button-form-submit::before,
-  .accounts-dialog .additional-link::before {
+  .accounts-dialog .additional-link::before,
+  .accounts-dialog #login-buttons-forgot-password::before {
     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
@@ -652,3 +653,5 @@ input[required] {
     content: "\f059"; }
   .accounts-dialog #back-to-login-link::before {
     content: "\f090"; }
+  .accounts-dialog #login-buttons-forgot-password::before {
+    content: "\f12d"; }

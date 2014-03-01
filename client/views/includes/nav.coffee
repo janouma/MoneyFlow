@@ -31,7 +31,7 @@ translateLoginWidget = ->
 	$(@find "#login-buttons-open-change-password").text recurrentTranslations.changePassword
 	$(@find "#login-buttons-do-change-password").text recurrentTranslations.changePassword
 	$(@find "#login-buttons-logout").text I18nEasy.i18n('signout')
-	$(@find "#login-buttons-reset-password-button").text I18nEasy.i18n('reset')
+	$(@find "#login-buttons-forgot-password").text(I18nEasy.i18n('reset'))
 	$(@find "#just-verified-dismiss-button").parent().html "#{I18nEasy.i18n 'verifiedEmail'} <div class='btn btn-warning' id='just-verified-dismiss-button'>#{I18nEasy.i18n 'hidde'}</div>"
 
 	$actionButton = $(@find "#login-buttons-password")
@@ -40,12 +40,12 @@ translateLoginWidget = ->
 	if recurrentTranslations[signInKey] isnt $actionButton.text() and actionButtonKey is signInKey
 		$actionButton.text recurrentTranslations[signInKey]
 		$actionButton.removeClass('fa-user')
-		.addClass('fa-sign-in')
+			.addClass('fa-sign-in')
 
 	if recurrentTranslations[createAccountKey] isnt $actionButton.text() and actionButtonKey is createAccountKey
 		$actionButton.text recurrentTranslations[createAccountKey]
 		$actionButton.removeClass('fa-sign-in')
-		.addClass('fa-user')
+			.addClass('fa-user')
 
 	invalidUserNameLengthKey = 'usernamemustbeatleast3characterslong'
 	incorrectPasswordKey = 'incorrectpassword'
