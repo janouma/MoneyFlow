@@ -2,6 +2,7 @@ templateName = 'nav'
 
 toKey = (message)-> message?.replace(/\W*/g, '').toLowerCase()
 
+#===============================
 translateLoginWidget = ->
 	recurrentTranslations = {
 		email: I18nEasy.i18n('email')
@@ -97,15 +98,15 @@ translateLoginWidget = ->
 		$infoMessage.text recurrentTranslations[passwordChangedKey]
 
 
-
-
-Template[templateName].helpers(
+#===============================
+Template[templateName].helpers {
     activeRouteClass: (routeNames...)->
         activeRoutePattern = new RegExp "^(\w{2}\/)?#{Router.current().route.name}\/?"
         # routeNames[0...] gets rid of the hash added by handlebars
         return 'active' for route in routeNames[0...] when activeRoutePattern.test route
-)
+}
 
+#===============================
 Template[templateName].rendered = ->
 	Meteor.defer =>
 		if Meteor.user()
@@ -123,4 +124,10 @@ Template[templateName].rendered = ->
 					opacity: 1
 				}
 
-		translateLoginWidget.call(@) if $(@find "#login-dropdown-list").css('display')
+		$loginWrapper = $(@find ".login-wrapper")
+
+		if @find("#login-dropdown-list")
+			translateLoginWidget.call(@)
+			$loginWrapper.removeClass('closed')
+		else
+			$loginWrapper.addClass('closed')

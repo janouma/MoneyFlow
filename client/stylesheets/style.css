@@ -386,7 +386,7 @@ input[type=file] {
 .accounts-dialog #login-buttons-logout {
   width: 100%; }
 
-.hidden, .login-link-text {
+.hidden, .login-link-text, .closed .accounts-dialog {
   opacity: 0;
   visibility: hidden; }
 
@@ -394,7 +394,7 @@ input[type=file] {
   opacity: 1;
   visibility: visible; }
 
-.animated, .login-link-text, .accounts-dialog .login-close-text, .accounts-dialog .login-button .text-besides-image,
+.animated, .login-link-text, .accounts-dialog, .accounts-dialog .login-close-text, .accounts-dialog .login-button .text-besides-image,
 .accounts-dialog .login-button-form-submit,
 .accounts-dialog #login-buttons-open-change-password,
 .accounts-dialog #login-buttons-logout {
