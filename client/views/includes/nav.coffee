@@ -110,9 +110,9 @@ Template[templateName].helpers {
 Template[templateName].rendered = ->
 	Meteor.defer =>
 		if Meteor.user()
-			$(@find '#login-name-link').html("<i class='fa fa-user'></i> #{Meteor.user().emails?[0]?.address}")
+			$(@find '#login-name-link').html("<i class='fa fa-user'></i> <span class='login-menu-item'>#{Meteor.user().emails?[0]?.address}</span>")
 		else
-			$(@find "#login-sign-in-link").html("<i class='fa fa-chevron-down'></i> #{I18nEasy.i18n 'signin'}")
+			$(@find "#login-sign-in-link").html("<i class='fa fa-chevron-down'></i> <span class='login-menu-item'>#{I18nEasy.i18n 'signin'}</span>")
 
 		$loginWrapper = $(@find ".login-wrapper")
 

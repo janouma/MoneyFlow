@@ -605,11 +605,18 @@ input[required] {
 #login-name-link {
   text-transform: lowercase; }
 
+.login-menu-item {
+  display: inline-block;
+  max-width: 135px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
 .accounts-dialog {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #f7f7f9; }
+  background-color: #f7f7f9;
+  min-width: 200px; }
   .accounts-dialog .login-close-text::before,
   .accounts-dialog .sign-in-text-google::before,
   .accounts-dialog .sign-in-text-twitter::before,
@@ -648,7 +655,7 @@ input[required] {
     cursor: pointer;
     display: inline-block;
     color: white;
-    font-size: 0.88em;
+    font-size: 1em;
     font-weight: bold;
     box-shadow: inset 0 1px 1px rgba(106, 182, 255, 0.75);
     letter-spacing: 0; }
@@ -676,7 +683,7 @@ input[required] {
     .accounts-dialog input:focus, .accounts-dialog input:invalid {
       background-color: transparent; }
     .accounts-dialog input[type=email], .accounts-dialog input[type=password] {
-      width: 145px; }
+      width: 100%; }
   .accounts-dialog #login-email-label-and-input,
   .accounts-dialog #login-password-label-and-input,
   .accounts-dialog #login-old-password-label-and-input {
@@ -686,7 +693,7 @@ input[required] {
     background-color: #cdcdcd;
     border-color: #cdcdcd;
     color: white;
-    font-size: 0.88em;
+    font-size: 1em;
     font-weight: bold; }
   .accounts-dialog .additional-link-container {
     text-align: center; }
