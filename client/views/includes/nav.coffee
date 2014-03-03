@@ -5,21 +5,24 @@ toKey = (message)-> message?.replace(/\W*/g, '').toLowerCase()
 translateLoginWidget = ->
 	recurrentTranslations = {
 		email: I18nEasy.i18n('email')
+		changePassword: I18nEasy.i18n('changePassword')
+		with: I18nEasy.i18n('with')
 	}
-
-	$(@find "#login-email").attr(placeholder: recurrentTranslations.email)
-	$(@find "#forgot-password-email").attr(placeholder: recurrentTranslations.email)
-	$(@find "#login-password").attr(placeholder: I18nEasy.i18n('password'))
-
-	return if I18nEasy.getLanguage() is 'en'
 
 	signInKey = 'signin'
 	createAccountKey = 'createaccount'
 
-	recurrentTranslations.changePassword = I18nEasy.i18n('changePassword')
-	recurrentTranslations.with = I18nEasy.i18n 'with'
 	recurrentTranslations[signInKey] = I18nEasy.i18n signInKey
 	recurrentTranslations[createAccountKey] = I18nEasy.i18n createAccountKey
+
+	$(@find "#login-email").attr(placeholder: recurrentTranslations.email)
+	$(@find "#forgot-password-email").attr(placeholder: recurrentTranslations.email)
+	$(@find "#login-old-password").attr(placeholder: I18nEasy.i18n('currentPassword'))
+
+	if @find '#login-old-password'
+		$(@find "#login-password").attr(placeholder: I18nEasy.i18n('newPassword'))
+	else
+		$(@find "#login-password").attr(placeholder: I18nEasy.i18n('password'))
 
 	$(@find ".login-close-text").text I18nEasy.i18n('close')
 	$(@find ".sign-in-text-google").text "#{recurrentTranslations[signInKey]} #{recurrentTranslations.with} google"
@@ -50,12 +53,14 @@ translateLoginWidget = ->
 	invalidUserNameLengthKey = 'usernamemustbeatleast3characterslong'
 	incorrectPasswordKey = 'incorrectpassword'
 	invalidEmailKey = 'invalidemail'
-	internalServerErrorKey = "internalservererror"
+	internalServerErrorKey = 'internalservererror'
+	userNotFoundKey = 'usernotfound'
 
 	recurrentTranslations[invalidUserNameLengthKey] = I18nEasy.i18n invalidUserNameLengthKey
 	recurrentTranslations[incorrectPasswordKey] = I18nEasy.i18n incorrectPasswordKey
 	recurrentTranslations[invalidEmailKey] = I18nEasy.i18n invalidEmailKey
 	recurrentTranslations[internalServerErrorKey] = I18nEasy.i18n internalServerErrorKey
+	recurrentTranslations[userNotFoundKey] = I18nEasy.i18n userNotFoundKey
 
 	$errorMessage = $(@find ".error-message")
 	errorMessageKey = toKey $errorMessage.text()
@@ -72,15 +77,24 @@ translateLoginWidget = ->
 	if recurrentTranslations[incorrectPasswordKey] isnt $errorMessage.text() and errorMessageKey is incorrectPasswordKey
 		$errorMessage.text recurrentTranslations[incorrectPasswordKey]
 
+	if recurrentTranslations[userNotFoundKey] isnt $errorMessage.text() and errorMessageKey is userNotFoundKey
+		$errorMessage.text recurrentTranslations[userNotFoundKey]
+
 
 	emailSentKey = 'emailsent'
+	passwordChangedKey = 'passwordchanged'
+
 	recurrentTranslations[emailSentKey] = I18nEasy.i18n emailSentKey
+	recurrentTranslations[passwordChangedKey] = I18nEasy.i18n passwordChangedKey
 
 	$infoMessage = $(@find ".info-message")
 	infoMessageKey = toKey $infoMessage.text()
 
 	if recurrentTranslations[emailSentKey] isnt $infoMessage.text() and infoMessageKey is emailSentKey
 		$infoMessage.text recurrentTranslations[emailSentKey]
+
+	if recurrentTranslations[passwordChangedKey] isnt $infoMessage.text() and infoMessageKey is passwordChangedKey
+		$infoMessage.text recurrentTranslations[passwordChangedKey]
 
 
 
@@ -94,5 +108,5 @@ Template[templateName].helpers(
 
 Template[templateName].rendered = ->
 	Meteor.defer =>
-		$(@find "#login-sign-in-link").text "▾ #{I18nEasy.i18n 'signin'}" if I18nEasy.getLanguage() isnt 'en'
+		$(@find "#login-sign-in-link").text "▾ #{I18nEasy.i18n 'signin'}"
 		translateLoginWidget.call(@) if $(@find "#login-dropdown-list").css('display')

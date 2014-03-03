@@ -55,25 +55,37 @@
   color: #505050 !important; }
 
 .theme-sky, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout {
   background-color: dodgerblue !important;
   border-color: #0483ff !important; }
   .theme-sky:active, .accounts-dialog .login-button .text-besides-image:active,
-  .accounts-dialog .login-button-form-submit:active {
+  .accounts-dialog .login-button-form-submit:active,
+  .accounts-dialog #login-buttons-open-change-password:active,
+  .accounts-dialog #login-buttons-logout:active {
     background-color: #0077ea !important;
     border-color: #006ad1 !important; }
 
 input[type=submit].theme-sky:hover, .accounts-dialog .login-button input[type=submit].text-besides-image:hover,
 .accounts-dialog input[type=submit].login-button-form-submit:hover,
+.accounts-dialog input[type=submit]#login-buttons-open-change-password:hover,
+.accounts-dialog input[type=submit]#login-buttons-logout:hover,
 a.theme-sky:hover,
 .accounts-dialog .login-button a.text-besides-image:hover,
 .accounts-dialog a.login-button-form-submit:hover,
+.accounts-dialog a#login-buttons-open-change-password:hover,
+.accounts-dialog a#login-buttons-logout:hover,
 .button.theme-sky:hover,
 .accounts-dialog .login-button .button.text-besides-image:hover,
 .accounts-dialog .button.login-button-form-submit:hover,
+.accounts-dialog .button#login-buttons-open-change-password:hover,
+.accounts-dialog .button#login-buttons-logout:hover,
 .button-like.theme-sky:hover,
 .accounts-dialog .login-button .button-like.text-besides-image:hover,
-.accounts-dialog .button-like.login-button-form-submit:hover {
+.accounts-dialog .button-like.login-button-form-submit:hover,
+.accounts-dialog .button-like#login-buttons-open-change-password:hover,
+.accounts-dialog .button-like#login-buttons-logout:hover {
   background-color: #0483ff !important;
   border-color: #0077ea !important; }
 
@@ -109,7 +121,9 @@ a.theme-silver:hover,
  * a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
  * s,m,l,n = small(1px),medium(2px),large(5px),none(0px) */
 .brts, .brvs, .bras, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit, .accounts-dialog .message, .brtm, .brvm, .bram, .brtl, .brvl, .bral, .brrs, .brhs, .brrm, .brhm, .brrl, .brhl, .brbs, .brbm, .brbl, .brls, .brlm, .brll {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout, .accounts-dialog .message, .brtm, .brvm, .bram, .brtl, .brvl, .bral, .brrs, .brhs, .brrm, .brhm, .brrl, .brhl, .brbs, .brbm, .brbl, .brls, .brlm, .brll {
   border-style: solid;
   border-color: inherit;
   border-width: 0; }
@@ -118,7 +132,9 @@ a.theme-silver:hover,
   border-top: none; }
 
 .brts, .brvs, .bras, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit, .accounts-dialog .message {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout, .accounts-dialog .message {
   border-top-width: 1px; }
 
 .brtm, .brvm, .bram {
@@ -131,7 +147,9 @@ a.theme-silver:hover,
   border-right: none; }
 
 .brrs, .brhs, .bras, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit, .accounts-dialog .message {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout, .accounts-dialog .message {
   border-right-width: 1px; }
 
 .brrm, .brhm, .bram {
@@ -144,7 +162,9 @@ a.theme-silver:hover,
   border-bottom: none; }
 
 .brbs, .brvs, .bras, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit, .accounts-dialog .message {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout, .accounts-dialog .message {
   border-bottom-width: 1px; }
 
 .brbm, .brvm, .bram {
@@ -157,7 +177,9 @@ a.theme-silver:hover,
   border-left: none; }
 
 .brls, .brhs, .bras, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit, .accounts-dialog .message {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout, .accounts-dialog .message {
   border-left-width: 1px; }
 
 .brlm, .brhm, .bram {
@@ -198,7 +220,9 @@ a.theme-silver:hover,
   padding-top: 0px !important; }
 
 .pts, .pvs, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit, .accounts-dialog .message, .pas {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout, .accounts-dialog .message, .pas {
   padding-top: 5px !important; }
 
 .ptm, .pvm, .pam, .accounts-dialog {
@@ -223,7 +247,9 @@ a.theme-silver:hover,
   padding-bottom: 0px !important; }
 
 .pbs, .pvs, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit, .accounts-dialog .message, .pas {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout, .accounts-dialog .message, .pas {
   padding-bottom: 5px !important; }
 
 .pbm, .pvm, .pam, .accounts-dialog {
@@ -275,7 +301,9 @@ a.theme-silver:hover,
   margin-bottom: 5px !important; }
 
 .mbm, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit, .accounts-dialog #login-password-label-and-input, .accounts-dialog .message, .mvm, .mam {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout, .accounts-dialog #login-password-label-and-input, .accounts-dialog .message, .mvm, .mam {
   margin-bottom: 10px !important; }
 
 .mbl, .mvl, .mal {
@@ -353,7 +381,9 @@ input[type=file] {
   display: inline-block; }
 
 .stretch, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout {
   width: 100%; }
 
 .hidden {
@@ -365,7 +395,9 @@ input[type=file] {
   visibility: visible; }
 
 .animated, .login-link-text, .accounts-dialog .login-close-text, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout {
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   transition-duration: 0.5s;
@@ -377,13 +409,17 @@ input[type=file] {
   transition-property: color, background-color, opacity, visibility, margin, padding; }
 
 .collapse-left, .collapse-left.small-radius, .collapse-left.medium-radius, .collapse-left.form-tip, .collapse-left.accounts-dialog, .accounts-dialog .login-button .collapse-left.text-besides-image,
-.accounts-dialog .collapse-left.login-button-form-submit, .accounts-dialog .collapse-left.message, .collapse-left.big-radius, .collapse-left.huge-radius {
+.accounts-dialog .collapse-left.login-button-form-submit,
+.accounts-dialog .collapse-left#login-buttons-open-change-password,
+.accounts-dialog .collapse-left#login-buttons-logout, .accounts-dialog .collapse-left.message, .collapse-left.big-radius, .collapse-left.huge-radius {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding-left: 7px; }
 
 .collapse-right, .collapse-right.small-radius, .collapse-right.medium-radius, .collapse-right.form-tip, .collapse-right.accounts-dialog, .accounts-dialog .login-button .collapse-right.text-besides-image,
-.accounts-dialog .collapse-right.login-button-form-submit, .accounts-dialog .collapse-right.message, .collapse-right.big-radius, .collapse-right.huge-radius {
+.accounts-dialog .collapse-right.login-button-form-submit,
+.accounts-dialog .collapse-right#login-buttons-open-change-password,
+.accounts-dialog .collapse-right#login-buttons-logout, .accounts-dialog .collapse-right.message, .collapse-right.big-radius, .collapse-right.huge-radius {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   padding-right: 7px; }
@@ -407,7 +443,9 @@ input[type=file] {
   border-radius: 3px; }
 
 .medium-radius, .form-tip, .accounts-dialog, .accounts-dialog .login-button .text-besides-image,
-.accounts-dialog .login-button-form-submit, .accounts-dialog .message {
+.accounts-dialog .login-button-form-submit,
+.accounts-dialog #login-buttons-open-change-password,
+.accounts-dialog #login-buttons-logout, .accounts-dialog .message {
   border-radius: 5px; }
 
 .big-radius {
@@ -574,7 +612,10 @@ input[required] {
   .accounts-dialog .sign-in-text-twitter::before,
   .accounts-dialog .login-button-form-submit::before,
   .accounts-dialog .additional-link::before,
-  .accounts-dialog #login-buttons-forgot-password::before {
+  .accounts-dialog #login-buttons-forgot-password::before,
+  .accounts-dialog #login-buttons-open-change-password::before,
+  .accounts-dialog #login-buttons-do-change-password::before,
+  .accounts-dialog #login-buttons-logout::before {
     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
@@ -597,7 +638,9 @@ input[required] {
   .accounts-dialog .login-image {
     display: none; }
   .accounts-dialog .login-button .text-besides-image,
-  .accounts-dialog .login-button-form-submit {
+  .accounts-dialog .login-button-form-submit,
+  .accounts-dialog #login-buttons-open-change-password,
+  .accounts-dialog #login-buttons-logout {
     text-align: center;
     cursor: pointer;
     display: inline-block;
@@ -607,7 +650,9 @@ input[required] {
     box-shadow: inset 0 1px 1px rgba(106, 182, 255, 0.75);
     letter-spacing: 0; }
     .accounts-dialog .login-button .text-besides-image:hover,
-    .accounts-dialog .login-button-form-submit:hover {
+    .accounts-dialog .login-button-form-submit:hover,
+    .accounts-dialog #login-buttons-open-change-password:hover,
+    .accounts-dialog #login-buttons-logout:hover {
       background-color: #007df7 !important; }
   .accounts-dialog .sign-in-text-google::before {
     content: "\f0d5"; }
@@ -630,7 +675,8 @@ input[required] {
     .accounts-dialog input[type=email], .accounts-dialog input[type=password] {
       width: 145px; }
   .accounts-dialog #login-email-label-and-input,
-  .accounts-dialog #login-password-label-and-input {
+  .accounts-dialog #login-password-label-and-input,
+  .accounts-dialog #login-old-password-label-and-input {
     border-bottom-width: 1px; }
   .accounts-dialog .message {
     text-align: center;
@@ -655,3 +701,9 @@ input[required] {
     content: "\f090"; }
   .accounts-dialog #login-buttons-forgot-password::before {
     content: "\f12d"; }
+  .accounts-dialog #login-buttons-open-change-password::before {
+    content: "\f044"; }
+  .accounts-dialog #login-buttons-do-change-password::before {
+    content: "\f00c"; }
+  .accounts-dialog #login-buttons-logout::before {
+    content: "\f08b"; }

@@ -24,7 +24,10 @@
 	.sign-in-text-twitter::before,
 	.login-button-form-submit::before,
 	.additional-link::before,
-	#login-buttons-forgot-password::before
+	#login-buttons-forgot-password::before,
+	#login-buttons-open-change-password::before,
+	#login-buttons-do-change-password::before,
+	#login-buttons-logout::before
 		display: inline-block
 		font-family: FontAwesome
 		font-style: normal
@@ -54,7 +57,9 @@
 		display: none
 
 	.login-button .text-besides-image,
-	.login-button-form-submit
+	.login-button-form-submit,
+	#login-buttons-open-change-password,
+	#login-buttons-logout
 		@extend .medium-radius
 		@extend .pvs
 		@extend .stretch
@@ -106,7 +111,8 @@
 			width: 145px
 
 	#login-email-label-and-input,
-	#login-password-label-and-input
+	#login-password-label-and-input,
+	#login-old-password-label-and-input
 		border-bottom-width: 1px
 
 	#login-password-label-and-input
@@ -148,3 +154,12 @@
 
 	#login-buttons-forgot-password::before
 		content: "\f12d" // fa-eraser
+
+	#login-buttons-open-change-password::before
+		content: "\f044" // fa-edit
+
+	#login-buttons-do-change-password::before
+		content: "\f00c" // fa-check
+
+	#login-buttons-logout::before
+		content: "\f08b" // fa-sign-out

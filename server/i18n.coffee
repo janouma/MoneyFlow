@@ -33,6 +33,8 @@ I18nEasy.mapAll {
 		usernamemustbeatleast3characterslong: "user name must be at least 3 characters long"
 		incorrectpassword: "incorrect password"
 		emailsent: "email sent"
+		usernotfound: "user not found"
+		passwordchanged: "password changed"
 
 	fr:
 		client: "client"
@@ -59,7 +61,7 @@ I18nEasy.mapAll {
 		password: "mot de passe"
 		createaccount: "créer un compte"
 		forgotPassword: "mot de passe oublié"
-		changePassword: "Changer de mot de passe"
+		changePassword: "Changer mot de passe"
 		signout: "déconnexion"
 		currentPassword: "mot de passe actuel"
 		newPassword: "nouveau mot de passe"
@@ -71,6 +73,8 @@ I18nEasy.mapAll {
 		usernamemustbeatleast3characterslong: "le pseudo doit comporter au moins 3 caratères"
 		incorrectpassword: "mot de passe incorrecte"
 		emailsent: "courriel envoyé"
+		usernotfound: "utilisateur inconnu"
+		passwordchanged: "mot de passe modifié"
 }
 
 
