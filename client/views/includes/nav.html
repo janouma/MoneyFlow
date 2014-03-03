@@ -14,7 +14,9 @@
             </ul>
             <div class="col width-fill mobile-width-fill side-nav">
 				<div class="nav color-emerald login-wrapper pull-right">
-					{{loginButtons align="right"}}
+					{{#unless ghostSuffix}}
+						{{loginButtons align="right"}}
+					{{/unless}}
 				</div>
                 <ul class="nav color-emerald pull-right">
                     <li><a class="animated" href="https://github.com/janouma/MoneyFlow/releases" target="_blank"><i class="fa fa-download"></i> {{i18n 'download'}}</a></li>
