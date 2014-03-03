@@ -8,7 +8,11 @@
 			z-index: -1
 
 .login-link-text
+	@extend .hidden
 	@extend .animated
+
+#login-name-link
+	text-transform: lowercase
 
 .accounts-dialog
 	@extend .small-shadow
@@ -48,7 +52,7 @@
 		right: 0
 
 		&::before
-			content: "\f0d8" // fa-caret-up
+			content: "\f077" // fa-chevron-up
 
 	.login-close-text-clear
 		height: 30px

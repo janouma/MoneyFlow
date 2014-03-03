@@ -386,7 +386,7 @@ input[type=file] {
 .accounts-dialog #login-buttons-logout {
   width: 100%; }
 
-.hidden {
+.hidden, .login-link-text {
   opacity: 0;
   visibility: hidden; }
 
@@ -602,6 +602,9 @@ input[required] {
 .site-header .accounts-dialog label {
   z-index: -1; }
 
+#login-name-link {
+  text-transform: lowercase; }
+
 .accounts-dialog {
   position: absolute;
   top: 0;
@@ -632,7 +635,7 @@ input[required] {
     top: 0;
     right: 0; }
     .accounts-dialog .login-close-text::before {
-      content: "\f0d8"; }
+      content: "\f077"; }
   .accounts-dialog .login-close-text-clear {
     height: 30px; }
   .accounts-dialog .login-image {

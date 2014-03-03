@@ -108,5 +108,19 @@ Template[templateName].helpers(
 
 Template[templateName].rendered = ->
 	Meteor.defer =>
-		$(@find "#login-sign-in-link").text "▾ #{I18nEasy.i18n 'signin'}"
+		if Meteor.user()
+			$(@find '#login-name-link')
+				.html("<i class='fa fa-user'></i> #{Meteor.user().emails?[0]?.address}")
+				.css {
+					visibility: 'visible'
+					opacity: 1
+				}
+		else
+			$(@find "#login-sign-in-link")
+				.html("<i class='fa fa-chevron-down'></i> #{I18nEasy.i18n 'signin'}")
+				.css {
+					visibility: 'visible'
+					opacity: 1
+				}
+
 		translateLoginWidget.call(@) if $(@find "#login-dropdown-list").css('display')
