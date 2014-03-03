@@ -386,7 +386,7 @@ input[type=file] {
 .accounts-dialog #login-buttons-logout {
   width: 100%; }
 
-.hidden, .login-link-text, .closed .accounts-dialog {
+.hidden, .closed .accounts-dialog {
   opacity: 0;
   visibility: hidden; }
 
