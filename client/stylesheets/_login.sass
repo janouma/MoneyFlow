@@ -35,11 +35,13 @@
 	width: 180px
 
 	&.accounts-centered-dialog
+		@extend .hidden
 		@extend .z-infinite
+		@extend .animated
+		text-transform: capitalize
 		position: fixed
 		top: 75px
 		right: 10px
-		opacity: 0.75
 
 	.login-close-text::before,
 	.sign-in-text-google::before,
@@ -81,7 +83,8 @@
 	.login-button .text-besides-image,
 	.login-button-form-submit,
 	#login-buttons-open-change-password,
-	#login-buttons-logout
+	#login-buttons-logout,
+	#just-verified-dismiss-button
 		@extend .medium-radius
 		@extend .pvs
 		@extend .stretch
@@ -100,6 +103,9 @@
 
 		&:hover
 			background-color: darken(dodgerblue, 7.5%) !important
+
+	#just-verified-dismiss-button
+		margin-bottom: 0 !important
 
 	.sign-in-text-google::before
 		content: "\f0d5" // fa-google-plus

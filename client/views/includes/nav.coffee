@@ -36,7 +36,6 @@ translateLoginWidget = ->
 	$(@find "#login-buttons-do-change-password").text recurrentTranslations.changePassword
 	$(@find "#login-buttons-logout").text I18nEasy.i18n('signout')
 	$(@find "#login-buttons-forgot-password").text(I18nEasy.i18n('reset'))
-	$(@find "#just-verified-dismiss-button").parent().html "#{I18nEasy.i18n 'verifiedEmail'} <div class='btn btn-warning' id='just-verified-dismiss-button'>#{I18nEasy.i18n 'hidde'}</div>"
 
 	$actionButton = $(@find "#login-buttons-password")
 	actionButtonKey = toKey $actionButton.text()
@@ -115,3 +114,11 @@ Template[templateName].rendered = ->
 			$loginWrapper.removeClass('closed')
 		else
 			$loginWrapper.addClass('closed')
+
+		$("#just-verified-dismiss-button").parent()
+			.html("""<div class='message info-message'>#{I18nEasy.i18n 'verifiedEmail'}</div>
+<div class='login-button' id='just-verified-dismiss-button'><i class='fa fa-times'></i> #{I18nEasy.i18n 'hidde'}</div>""")
+			.css {
+				visibility: 'visible'
+				opacity: 1
+			}

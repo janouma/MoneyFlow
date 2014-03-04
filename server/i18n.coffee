@@ -38,6 +38,38 @@ I18nEasy.mapAll {
 		passwordmustbeatleast6characterslong: "password must be at least 6 characters long"
 		emailalreadyexists: "email already exists"
 		emaildoesntmatchthecriteria: "unauthorized email"
+		verifyEmailSubject: 'verify your email #{email} on MoneyFlow'
+		verifyEmailText: '''
+Hello,
+
+To verify your account, simply click the link below.
+
+#{url}
+
+Thanks.
+'''
+		enrollAccountSubject: 'create your account #{email} on MoneyFlow'
+		enrollAccountText: '''
+Hello,
+
+To create your account, simply click the link below.
+
+#{url}
+
+Thanks.
+'''
+		resetPasswordSubject: 'reset your password for #{email} on MoneyFlow'
+		resetPasswordText: '''
+Hello,
+
+To reset your password, simply click the link below.
+
+#{url}
+
+Thanks.
+'''
+
+
 
 	fr:
 		client: "client"
@@ -81,6 +113,37 @@ I18nEasy.mapAll {
 		passwordmustbeatleast6characterslong: "le mot de passe doit avoir ou moins 6 caractères"
 		emailalreadyexists: "l'e-mail exists déjà"
 		emaildoesntmatchthecriteria: "courriel non-autorisé"
+		verifyEmailSubject: 'vérifiez votre courriel #{email} sur MoneyFlow'
+		verifyEmailText: '''
+Bonjour,
+
+Pour confirmer votre compte, cliquez simplement sur le lien ci-dessous.
+
+#{url}
+
+Merci.
+'''
+		enrollAccountSubject: 'créez votre compte #{email} sur MoneyFlow'
+		enrollAccountText: '''
+Bonjour,
+
+Pour créer votre compte, cliquez simplement sur le lien ci-dessous.
+
+#{url}
+
+Merci.
+'''
+		resetPasswordSubject: 'réinitialisez votre mot de passe pour #{email} sur MoneyFlow'
+		resetPasswordText: '''
+Bonjour,
+
+Pour réinitialiser votre mot de passe, cliquez simplement sur le lien ci-dessous.
+
+#{url}
+
+Merci.
+'''
+
 }
 
 
