@@ -61,6 +61,7 @@ translateLoginWidget = ->
 	userNotFoundKey = 'usernotfound'
 	passwordToShortKey = 'passwordmustbeatleast6characterslong'
 	emailConflictKey = 'emailalreadyexists'
+	unauthorizedEmailKey = 'emaildoesntmatchthecriteria'
 
 	$errorMessage = $(@find ".error-message")
 	errorMessageKey = toKey $errorMessage.text()
@@ -74,6 +75,7 @@ translateLoginWidget = ->
 			when userNotFoundKey then I18nEasy.i18n(userNotFoundKey)
 			when passwordToShortKey then I18nEasy.i18n(passwordToShortKey)
 			when emailConflictKey then I18nEasy.i18n(emailConflictKey)
+			when unauthorizedEmailKey then I18nEasy.i18n(unauthorizedEmailKey)
 	)
 
 	emailSentKey = 'emailsent'

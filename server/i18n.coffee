@@ -36,7 +36,8 @@ I18nEasy.mapAll {
 		usernotfound: "user not found"
 		passwordchanged: "password changed"
 		passwordmustbeatleast6characterslong: "password must be at least 6 characters long"
-		emailalreadyexists: 'email already exists'
+		emailalreadyexists: "email already exists"
+		emaildoesntmatchthecriteria: "unauthorized email"
 
 	fr:
 		client: "client"
@@ -79,6 +80,7 @@ I18nEasy.mapAll {
 		passwordchanged: "mot de passe modifié"
 		passwordmustbeatleast6characterslong: "le mot de passe doit avoir ou moins 6 caractères"
 		emailalreadyexists: "l'e-mail exists déjà"
+		emaildoesntmatchthecriteria: "courriel non-autorisé"
 }
 
 

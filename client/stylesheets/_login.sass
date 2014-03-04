@@ -34,6 +34,13 @@
 	background-color: $flour
 	width: 180px
 
+	&.accounts-centered-dialog
+		@extend .z-infinite
+		position: fixed
+		top: 75px
+		right: 10px
+		opacity: 0.75
+
 	.login-close-text::before,
 	.sign-in-text-google::before,
 	.sign-in-text-twitter::before,
@@ -178,3 +185,16 @@
 
 	#login-buttons-logout::before
 		content: "\f08b" // fa-sign-out
+
+
+
+
+@media (max-width: 1000px) //900px
+	.accounts-dialog
+		&.accounts-centered-dialog
+			top: 100px
+
+@media (max-width: 480px)
+	.accounts-dialog
+		&.accounts-centered-dialog
+			top: 240px

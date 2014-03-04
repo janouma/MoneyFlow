@@ -475,7 +475,7 @@ input[type=file] {
 .z5 {
   z-index: 5; }
 
-.z-infinite, .site-header .login-wrapper {
+.z-infinite, .site-header .login-wrapper, .accounts-dialog.accounts-centered-dialog {
   z-index: 999999; }
 
 .up-triangle::before {
@@ -617,6 +617,11 @@ input[required] {
   right: 0;
   background-color: #f7f7f9;
   width: 180px; }
+  .accounts-dialog.accounts-centered-dialog {
+    position: fixed;
+    top: 75px;
+    right: 10px;
+    opacity: 0.75; }
   .accounts-dialog .login-close-text::before,
   .accounts-dialog .sign-in-text-google::before,
   .accounts-dialog .sign-in-text-twitter::before,
@@ -717,3 +722,10 @@ input[required] {
     content: "\f00c"; }
   .accounts-dialog #login-buttons-logout::before {
     content: "\f08b"; }
+
+@media (max-width: 1000px) {
+  .accounts-dialog.accounts-centered-dialog {
+    top: 100px; } }
+@media (max-width: 480px) {
+  .accounts-dialog.accounts-centered-dialog {
+    top: 240px; } }
