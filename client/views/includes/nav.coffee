@@ -41,61 +41,53 @@ translateLoginWidget = ->
 	$actionButton = $(@find "#login-buttons-password")
 	actionButtonKey = toKey $actionButton.text()
 
-	if recurrentTranslations[signInKey] isnt $actionButton.text() and actionButtonKey is signInKey
-		$actionButton.text recurrentTranslations[signInKey]
-		$actionButton.removeClass('fa-user')
-			.addClass('fa-sign-in')
+	switch actionButtonKey
+		when signInKey
+			$actionButton.text recurrentTranslations[signInKey]
+			$actionButton
+				.removeClass('fa-user')
+				.addClass('fa-sign-in')
 
-	if recurrentTranslations[createAccountKey] isnt $actionButton.text() and actionButtonKey is createAccountKey
-		$actionButton.text recurrentTranslations[createAccountKey]
-		$actionButton.removeClass('fa-sign-in')
-			.addClass('fa-user')
+		when createAccountKey
+			$actionButton.text recurrentTranslations[createAccountKey]
+			$actionButton
+				.removeClass('fa-sign-in')
+				.addClass('fa-user')
 
 	invalidUserNameLengthKey = 'usernamemustbeatleast3characterslong'
 	incorrectPasswordKey = 'incorrectpassword'
 	invalidEmailKey = 'invalidemail'
 	internalServerErrorKey = 'internalservererror'
 	userNotFoundKey = 'usernotfound'
-
-	recurrentTranslations[invalidUserNameLengthKey] = I18nEasy.i18n invalidUserNameLengthKey
-	recurrentTranslations[incorrectPasswordKey] = I18nEasy.i18n incorrectPasswordKey
-	recurrentTranslations[invalidEmailKey] = I18nEasy.i18n invalidEmailKey
-	recurrentTranslations[internalServerErrorKey] = I18nEasy.i18n internalServerErrorKey
-	recurrentTranslations[userNotFoundKey] = I18nEasy.i18n userNotFoundKey
+	passwordToShortKey = 'passwordmustbeatleast6characterslong'
+	emailConflictKey = 'emailalreadyexists'
 
 	$errorMessage = $(@find ".error-message")
 	errorMessageKey = toKey $errorMessage.text()
 
-	if recurrentTranslations[invalidEmailKey] isnt $errorMessage.text() and errorMessageKey is invalidEmailKey
-		$errorMessage.text recurrentTranslations[invalidEmailKey]
-
-	if recurrentTranslations[internalServerErrorKey] isnt $errorMessage.text() and errorMessageKey is internalServerErrorKey
-		$errorMessage.text recurrentTranslations[internalServerErrorKey]
-
-	if recurrentTranslations[invalidUserNameLengthKey] isnt $errorMessage.text() and errorMessageKey is invalidUserNameLengthKey
-		$errorMessage.text recurrentTranslations[invalidUserNameLengthKey]
-
-	if recurrentTranslations[incorrectPasswordKey] isnt $errorMessage.text() and errorMessageKey is incorrectPasswordKey
-		$errorMessage.text recurrentTranslations[incorrectPasswordKey]
-
-	if recurrentTranslations[userNotFoundKey] isnt $errorMessage.text() and errorMessageKey is userNotFoundKey
-		$errorMessage.text recurrentTranslations[userNotFoundKey]
-
+	$errorMessage.text(
+		switch errorMessageKey
+			when invalidEmailKey then I18nEasy.i18n(invalidEmailKey)
+			when internalServerErrorKey then I18nEasy.i18n(internalServerErrorKey)
+			when invalidUserNameLengthKey then I18nEasy.i18n(invalidUserNameLengthKey)
+			when incorrectPasswordKey then I18nEasy.i18n(incorrectPasswordKey)
+			when userNotFoundKey then I18nEasy.i18n(userNotFoundKey)
+			when passwordToShortKey then I18nEasy.i18n(passwordToShortKey)
+			when emailConflictKey then I18nEasy.i18n(emailConflictKey)
+	)
 
 	emailSentKey = 'emailsent'
 	passwordChangedKey = 'passwordchanged'
 
-	recurrentTranslations[emailSentKey] = I18nEasy.i18n emailSentKey
-	recurrentTranslations[passwordChangedKey] = I18nEasy.i18n passwordChangedKey
-
 	$infoMessage = $(@find ".info-message")
 	infoMessageKey = toKey $infoMessage.text()
 
-	if recurrentTranslations[emailSentKey] isnt $infoMessage.text() and infoMessageKey is emailSentKey
-		$infoMessage.text recurrentTranslations[emailSentKey]
+	$infoMessage.text(
+		switch infoMessageKey
+			when emailSentKey then I18nEasy.i18n(emailSentKey)
+			when passwordChangedKey then I18nEasy.i18n(passwordChangedKey)
+	)
 
-	if recurrentTranslations[passwordChangedKey] isnt $infoMessage.text() and infoMessageKey is passwordChangedKey
-		$infoMessage.text recurrentTranslations[passwordChangedKey]
 
 
 #===============================
