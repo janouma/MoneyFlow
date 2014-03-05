@@ -31,7 +31,7 @@ unless Meteor.isServer
 		->
 			unless Meteor.user()
 				do @stop
-				@render 'forbidden'
+				Router.go '/'
 
 		except: ['notFound','home']
 	)
