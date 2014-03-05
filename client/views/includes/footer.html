@@ -9,6 +9,11 @@
 							<a href="{{pathToLanguage this}}"><i class="fa {{activeFlagClass this}} fa-lg"></i> {{i18n this}}</a>
 						</li>
 						{{/each}}
+						{{#if currentUser}}
+						<li>
+							<a href="{{pathFor 'i18n_easy_admin'}}"><i class="fa fa-edit fa-lg"></i> {{i18n 'translationAdmin'}}</a>
+						</li>
+						{{/if}}
 					</ul>
                 </div>
                 <div class="col width-fill mobile-width-fill">

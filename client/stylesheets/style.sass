@@ -43,19 +43,19 @@ input[required]
 	min-height: 29px
 	box-sizing: border-box
 
-label
-	&::after
-		content: ""
-		position: absolute
-		right: -8px
-		bottom: 0
-		+size(0)
-		border-color: transparent transparent transparent $silver
-		border-style: solid
-		border-width: 15px 0 15px 8px
+	label
+		&::after
+			content: ""
+			position: absolute
+			right: -8px
+			bottom: 0
+			+size(0)
+			border-color: transparent transparent transparent $silver
+			border-style: solid
+			border-width: 15px 0 15px 8px
 
-	&.textarea-valign::after
-		border-width: 28px 0 28px 8px
+		&.textarea-valign::after
+			border-width: 28px 0 28px 8px
 
 .logo
 	background: url('/img/logo-small-bg.png')
@@ -79,21 +79,22 @@ label
 		width: 52px
 
 @media (max-width: 767px)
-	label
-		&::after
-			content: ""
-			position: absolute
-			left: 0
-			bottom: -8px
-			margin: 0 auto
-			+triangle(16px, $silver, down)
-			border-bottom-width: 0
-
-		&.textarea-valign
-			height: 19px
-
+	.form-cell
+		label
 			&::after
-				border-width: 8px 8px 0 8px
+				content: ""
+				position: absolute
+				left: 0
+				bottom: -8px
+				margin: 0 auto
+				+triangle(16px, $silver, down)
+				border-bottom-width: 0
+
+			&.textarea-valign
+				height: 19px
+
+				&::after
+					border-width: 8px 8px 0 8px
 
 
 @media (max-width: 1050px)

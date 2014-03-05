@@ -5,6 +5,10 @@
   background-image: -webkit-linear-gradient( rgba(0, 0, 59, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75));
   background-image: linear-gradient( rgba(0, 0, 59, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75)); }
 
+.gradient-fog {
+  background-image: -webkit-linear-gradient( rgba(247, 247, 249, 0.95) 10%, rgba(255, 255, 255, 0.85) 65%, rgba(255, 255, 255, 0.75));
+  background-image: linear-gradient( rgba(247, 247, 249, 0.95) 10%, rgba(255, 255, 255, 0.85) 65%, rgba(255, 255, 255, 0.75)); }
+
 .color-sky, .color-sky a {
   color: #5586e8 !important; }
 .color-sky.input[type=submit]:hover, .color-sky.button:hover, .color-sky a:hover, .color-sky .button-like:hover {
@@ -534,19 +538,18 @@ input[required] {
 .form-cell {
   min-height: 29px;
   box-sizing: border-box; }
-
-label::after {
-  content: "";
-  position: absolute;
-  right: -8px;
-  bottom: 0;
-  width: 0px;
-  height: 0px;
-  border-color: transparent transparent transparent #dadada;
-  border-style: solid;
-  border-width: 15px 0 15px 8px; }
-label.textarea-valign::after {
-  border-width: 28px 0 28px 8px; }
+  .form-cell label::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    bottom: 0;
+    width: 0px;
+    height: 0px;
+    border-color: transparent transparent transparent #dadada;
+    border-style: solid;
+    border-width: 15px 0 15px 8px; }
+  .form-cell label.textarea-valign::after {
+    border-width: 28px 0 28px 8px; }
 
 .logo {
   background: url("/img/logo-small-bg.png"); }
@@ -569,7 +572,7 @@ label.textarea-valign::after {
     width: 52px; }
 
 @media (max-width: 767px) {
-  label::after {
+  .form-cell label::after {
     content: "";
     position: absolute;
     left: 0;
@@ -582,9 +585,9 @@ label.textarea-valign::after {
     border-width: 8px;
     border-top-color: #dadada;
     border-bottom-width: 0; }
-  label.textarea-valign {
+  .form-cell label.textarea-valign {
     height: 19px; }
-    label.textarea-valign::after {
+    .form-cell label.textarea-valign::after {
       border-width: 8px 8px 0 8px; } }
 @media (max-width: 1050px) {
   .side-nav {

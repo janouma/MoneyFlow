@@ -28,12 +28,8 @@ unless Meteor.isServer
 	)
 
 	Router.before(
-		->
-			unless Meteor.user()
-				do @stop
-				Router.go '/'
-
-		except: ['notFound','home']
+		-> Router.go '/' unless Meteor.user()
+		except: ['notFound','home','i18n_easy_admin']
 	)
 
 Router.map ->
