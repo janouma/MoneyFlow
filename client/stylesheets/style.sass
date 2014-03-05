@@ -39,28 +39,23 @@ input[required]
 .textarea-halign
 	width: 145px
 
-.input-tip
-	height: 28px
+.form-cell
+	min-height: 29px
+	box-sizing: border-box
 
-.textarea-tip
-	height: 54px
-
-.form-tip
-	@extend .capitalize-first
-	@extend .medium-radius
-	border-bottom-left-radius: 0
-	position: absolute
-	bottom: 0
-
-	&::before
+label
+	&::after
 		content: ""
 		position: absolute
+		right: -8px
 		bottom: 0
-		left: -9px
-		display: block
-		+triangle(15px, $silver, down-right)
-		border-right-width: 0
-		@extend .z1
+		+size(0)
+		border-color: transparent transparent transparent $silver
+		border-style: solid
+		border-width: 15px 0 15px 8px
+
+	&.textarea-valign::after
+		border-width: 28px 0 28px 8px
 
 .logo
 	background: url('/img/logo-small-bg.png')
@@ -84,42 +79,26 @@ input[required]
 		width: 52px
 
 @media (max-width: 767px)
-	.textarea-tip
-		height: 28px
-
-	.form-tip
-		border-bottom-left-radius: 5px
-
-		&::before
+	label
+		&::after
 			content: ""
 			position: absolute
-			top: -7px
-			left: 7px
-			display: block
-			+triangle(15px, $silver, up)
-			border-top-width: 0
-			@extend .z1
+			left: 0
+			bottom: -8px
+			margin: 0 auto
+			+triangle(16px, $silver, down)
+			border-bottom-width: 0
+
+		&.textarea-valign
+			height: 19px
+
+			&::after
+				border-width: 8px 8px 0 8px
+
 
 @media (max-width: 1000px) // 900px
 	.side-nav
 		.pull-right
 			float: left !important
-
-//@media (min-device-width: 1600px)
-//	.site-body
-//		min-height: 780px
-//
-//@media (max-device-width: 1599px)
-//	.site-body
-//		min-height: 640px
-//
-//@media (max-device-width: 767px)
-//	.site-body
-//		min-height: 440px
-//
-//@media (max-device-width: 479px)
-//	.site-body
-//		min-height: 240px
-
 
 @import _login

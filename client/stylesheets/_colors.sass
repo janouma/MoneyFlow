@@ -10,10 +10,10 @@ $dust: #707070
 $sky: #5586e8
 
 .background-transparent
-    background-color: transparent
+	background-color: transparent
 
 .gradient-nightfall
-    +background-image(linear-gradient(rgba(darken($darkblue, 10%), 0.95) 10%, rgba($darkblue, 0.85) 65%, rgba($darkblue, 0.75)))
+	+background-image(linear-gradient(rgba(darken($darkblue, 5%), 0.95) 10%, rgba($darkblue, 0.85) 65%, rgba($darkblue, 0.75)))
 
 +color('sky', $sky, darken($sky, 5%), darken($sky, 10%))
 +color('blue', darken(steelblue, 10%), steelblue, lighten($sky, 5%))

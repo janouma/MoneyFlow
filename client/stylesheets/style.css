@@ -2,8 +2,8 @@
   background-color: transparent; }
 
 .gradient-nightfall {
-  background-image: -webkit-linear-gradient( rgba(0, 0, 34, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75));
-  background-image: linear-gradient( rgba(0, 0, 34, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75)); }
+  background-image: -webkit-linear-gradient( rgba(0, 0, 59, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75));
+  background-image: linear-gradient( rgba(0, 0, 59, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75)); }
 
 .color-sky, .color-sky a {
   color: #5586e8 !important; }
@@ -376,7 +376,7 @@ input[type=file] {
 .pull-left {
   float: left; }
 
-.capitalize, .capitalize-first::first-letter, .form-tip::first-letter {
+.capitalize, .capitalize-first::first-letter {
   text-transform: capitalize; }
 
 .lowercase {
@@ -424,12 +424,12 @@ input[type=file] {
   -moz-transition-property: color, background-color, opacity, visibility, margin, padding;
   transition-property: color, background-color, opacity, visibility, margin, padding; }
 
-.collapse-left, .collapse-left.small-radius, .collapse-left.medium-radius, .collapse-left.form-tip, .collapse-left.big-radius, .collapse-left.huge-radius {
+.collapse-left, .collapse-left.small-radius, .collapse-left.medium-radius, .collapse-left.big-radius, .collapse-left.huge-radius {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding-left: 7px; }
 
-.collapse-right, .collapse-right.small-radius, .collapse-right.medium-radius, .collapse-right.form-tip, .collapse-right.big-radius, .collapse-right.huge-radius {
+.collapse-right, .collapse-right.small-radius, .collapse-right.medium-radius, .collapse-right.big-radius, .collapse-right.huge-radius {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   padding-right: 7px; }
@@ -452,7 +452,7 @@ input[type=file] {
 .small-radius {
   border-radius: 3px; }
 
-.medium-radius, .form-tip {
+.medium-radius {
   border-radius: 5px; }
 
 .big-radius {
@@ -462,12 +462,12 @@ input[type=file] {
   border-radius: 15px; }
 
 .spaced-letters, .accounts-dialog input {
-  letter-spacing: 1px; }
+  letter-spacing: 2px; }
 
 .engraved {
   text-shadow: 0 1px 1px #dfdfdf; }
 
-.z1, .up-triangle::before, .form-tip::before {
+.z1, .up-triangle::before {
   z-index: 1; }
 
 .z2 {
@@ -528,27 +528,22 @@ input[required] {
 .textarea-halign {
   width: 145px; }
 
-.input-tip {
-  height: 28px; }
+.form-cell {
+  min-height: 29px;
+  box-sizing: border-box; }
 
-.textarea-tip {
-  height: 54px; }
-
-.form-tip {
-  border-bottom-left-radius: 0;
+label::after {
+  content: "";
   position: absolute;
-  bottom: 0; }
-  .form-tip::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -9px;
-    display: block;
-    height: 0;
-    width: 0;
-    border-bottom: 15px solid #dadada;
-    border-left: 15px solid transparent;
-    border-right-width: 0; }
+  right: -8px;
+  bottom: 0;
+  width: 0px;
+  height: 0px;
+  border-color: transparent transparent transparent #dadada;
+  border-style: solid;
+  border-width: 15px 0 15px 8px; }
+label.textarea-valign::after {
+  border-width: 28px 0 28px 8px; }
 
 .logo {
   background: url("/img/logo-small-bg.png"); }
@@ -571,24 +566,23 @@ input[required] {
     width: 52px; }
 
 @media (max-width: 767px) {
-  .textarea-tip {
-    height: 28px; }
-
-  .form-tip {
-    border-bottom-left-radius: 5px; }
-    .form-tip::before {
-      content: "";
-      position: absolute;
-      top: -7px;
-      left: 7px;
-      display: block;
-      height: 0;
-      width: 0;
-      border-color: transparent;
-      border-style: solid;
-      border-width: 7.5px;
-      border-bottom-color: #dadada;
-      border-top-width: 0; } }
+  label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    margin: 0 auto;
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 8px;
+    border-top-color: #dadada;
+    border-bottom-width: 0; }
+  label.textarea-valign {
+    height: 19px; }
+    label.textarea-valign::after {
+      border-width: 8px 8px 0 8px; } }
 @media (max-width: 1000px) {
   .side-nav .pull-right {
     float: left !important; } }
