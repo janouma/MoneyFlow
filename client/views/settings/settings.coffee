@@ -2,6 +2,7 @@ templateName = 'settings'
 
 Template[templateName].helpers {
 	taxerate: -> App.taxerate
+	userEmail: -> Meteor.user().emails?[0]?.address
 }
 
 Template[templateName].events {

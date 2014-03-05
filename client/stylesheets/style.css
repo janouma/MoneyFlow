@@ -583,9 +583,14 @@ label.textarea-valign::after {
     height: 19px; }
     label.textarea-valign::after {
       border-width: 8px 8px 0 8px; } }
-@media (max-width: 1000px) {
-  .side-nav .pull-right {
-    float: left !important; } }
+@media (max-width: 1050px) {
+  .side-nav {
+    padding: 0 !important;
+    display: block !important;
+    float: left !important;
+    width: 100% !important; }
+    .side-nav .pull-right {
+      float: left !important; } }
 .site-header .login-wrapper {
   position: relative; }
 .site-header .accounts-dialog label {
@@ -734,7 +739,7 @@ label.textarea-valign::after {
       animation: spin 2s infinite linear;
       color: #dadada; }
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
   .accounts-dialog.accounts-centered-dialog {
     top: 100px; } }
 @media (max-width: 480px) {
