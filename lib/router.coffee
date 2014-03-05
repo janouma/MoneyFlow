@@ -27,6 +27,15 @@ unless Meteor.isServer
 		except: 'notFound'
 	)
 
+	Router.before(
+		->
+			unless Meteor.user()
+				do @stop
+				@render 'forbidden'
+
+		except: ['notFound','home']
+	)
+
 Router.map ->
 
     @route(

@@ -68,6 +68,10 @@ To reset your password, simply click the link below.
 
 Thanks.
 '''
+		resourceForbidden: "access forbidden"
+		resourceForbiddenBody: "you are not allowed to access this resource"
+
+
 
 
 
@@ -143,7 +147,8 @@ Pour réinitialiser votre mot de passe, cliquez simplement sur le lien ci-dessou
 
 Merci.
 '''
-
+		resourceForbidden: "accès non-autorisé"
+		resourceForbiddenBody: "vous n'êtes pas autorisé à accéder à cette ressource"
 }
 
 

@@ -6,12 +6,14 @@
     </div>
     <div class="col width-fill mobile-width-fill">
         <div class="cell capitalize">
+			{{#if currentUser}}
             <ul class="col width-fit mobile-width-fit nav color-blue">
                 <li class="{{activeRouteClass 'invoices'}}"><a class="animated" href="{{pathFor 'invoices'}}"><i class="fa fa-file-text"></i> {{i18n 'invoices'}}</a></li>
                 <li class="{{activeRouteClass 'orders'}}"><a class="animated" href="{{pathFor 'orders'}}"><i class="fa fa-barcode"></i> {{i18n 'orders'}}</a></li>
                 <li class="{{activeRouteClass 'clients'}}"><a class="animated" href="{{pathFor 'clients'}}"><i class="fa fa-group"></i> {{i18n 'clients'}}</a></li>
                 <li class="{{activeRouteClass 'settings'}}"><a class="animated" href="{{pathFor 'settings'}}"><i class="fa fa-gear"></i> {{i18n 'settings'}}</a></li>
             </ul>
+			{{/if}}
             <div class="col width-fill mobile-width-fill side-nav">
 				<div class="nav color-emerald login-wrapper pull-right closed animated">
 					{{#unless ghostSuffix}}
