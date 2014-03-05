@@ -7,6 +7,7 @@ $ash: #505050
 $silver: #dadada
 $flour: #f7f7f9
 $dust: #707070
+$sky: #5586e8
 
 .background-transparent
     background-color: transparent
@@ -14,14 +15,14 @@ $dust: #707070
 .gradient-nightfall
     +background-image(linear-gradient(rgba(darken($darkblue, 10%), 0.95) 10%, rgba($darkblue, 0.85) 65%, rgba($darkblue, 0.75)))
 
-+color('sky', dodgerblue, darken(dodgerblue, 5%), darken(dodgerblue, 10%))
-+color('blue', darken(steelblue, 10%), steelblue, lighten(dodgerblue, 5%))
++color('sky', $sky, darken($sky, 5%), darken($sky, 10%))
++color('blue', darken(steelblue, 10%), steelblue, lighten($sky, 5%))
 +color('jade', $jade)
 +color('emerald', $emerald, lighten($emerald, 7%), $jade)
 +color('black', #555, #ccc, black)
 +color('red', #ff6000)
 +color('ash', $ash)
 
-+theme('sky', dodgerblue, darken(dodgerblue, 5%), darken(dodgerblue, 10%))
++theme('sky', $sky, darken($sky, 5%), darken($sky, 10%))
 +theme('silver', $silver, darken($silver, 5%), darken($silver, 10%))
 
