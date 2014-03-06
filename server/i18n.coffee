@@ -89,7 +89,7 @@ Thanks.
 		signin: "connexion"
 		save: "enregistrer"
 		company: "société"
-		companyid: "siren"
+		companyid: "siret"
 		email: "courriel"
 		address: "adresse"
 		taxerate: "T.V.A."

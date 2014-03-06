@@ -1,0 +1,1 @@
+Meteor.publish 'settings', (userId)-> Settings.find userId: userId

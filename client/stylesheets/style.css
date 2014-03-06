@@ -17,11 +17,11 @@
   color: #2866e2 !important; }
 
 .color-blue, .color-blue a {
-  color: #38678f !important; }
+  color: #6b96eb !important; }
 .color-blue.input[type=submit]:hover, .color-blue.button:hover, .color-blue a:hover, .color-blue .button-like:hover {
   color: steelblue !important; }
 .color-blue .active, .color-blue .active a, .color-blue.active, .color-blue.active a {
-  color: #6b96eb !important; }
+  color: #38678f !important; }
 
 .color-jade, .color-jade a {
   color: #88bb00 !important; }
@@ -57,6 +57,13 @@
   color: #505050 !important; }
 .color-ash .active, .color-ash .active a, .color-ash.active, .color-ash.active a {
   color: #505050 !important; }
+
+.color-dust, .color-dust a {
+  color: #c1c1c1 !important; }
+.color-dust.input[type=submit]:hover, .color-dust.button:hover, .color-dust a:hover, .color-dust .button-like:hover {
+  color: #707070 !important; }
+.color-dust .active, .color-dust .active a, .color-dust.active, .color-dust.active a {
+  color: #707070 !important; }
 
 .theme-sky, .accounts-dialog .login-button .text-besides-image,
 .accounts-dialog .login-button-form-submit,
@@ -379,7 +386,8 @@ input[type=file] {
 .button-like {
   cursor: pointer; }
 
-.disabled {
+.disabled,
+[disabled] {
   cursor: not-allowed !important; }
 
 .no-box-shadow {

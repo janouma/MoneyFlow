@@ -3,15 +3,15 @@
         <div class="site-footer">
             <div class="cell">
                 <div class="col width-fit mobile-width-fit">
-					<ul class="nav capitalize">
+					<ul class="nav capitalize color-dust">
 						{{#each languages}}
 						<li class="{{activeLanguageClass this}}">
-							<a href="{{pathToLanguage this}}"><i class="fa {{activeFlagClass this}} fa-lg"></i> {{i18n this}}</a>
+							<a href="{{pathToLanguage this}}" class="animated"><i class="fa {{activeFlagClass this}} fa-lg"></i> {{i18n this}}</a>
 						</li>
 						{{/each}}
 						{{#if currentUser}}
 						<li>
-							<a href="{{pathFor 'i18n_easy_admin'}}"><i class="fa fa-edit fa-lg"></i> {{i18n 'translationAdmin'}}</a>
+							<a href="{{pathFor 'i18n_easy_admin'}}" class="animated"><i class="fa fa-edit fa-lg"></i> {{i18n 'translationAdmin'}}</a>
 						</li>
 						{{/if}}
 					</ul>
