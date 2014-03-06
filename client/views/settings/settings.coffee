@@ -7,7 +7,7 @@ Template[templateName].helpers {
 }
 
 Template[templateName].events {
-	'input input, blur input': (e, template)->
+	'input input, blur input, input textarea, blur textarea': (e, template)->
 		$save = $(template.find '#save')
 
 		if template.find ':invalid'
@@ -29,19 +29,17 @@ Template[templateName].events {
 
 			hasErrors = yes if $(@).attr('required') and not value.length
 
-			if $(@).attr('pattern')
+			if $(@).attr('pattern') and value.length
 				pattern = new RegExp $(@).attr('pattern')
 				hasErrors and= not pattern.test(value)
 
-			if $(@).attr('type') is 'email'
+			if $(@).attr('type') is 'email' and value.length
 				pattern = /^[.-_\w]+@[.-_\w]+$/i
-				hasErrors and= not pattern.test(value)
-
-			if $(@).attr('type') is 'number'
-				pattern = /^\d+(,|\.)?\d+$/
 				hasErrors and= not pattern.test(value)
 
 			settings[$(@).attr 'id'] = value if value.length
 
-		Meteor.call('updateSettings', settings) unless hasErrors
+		unless hasErrors
+			settings.taxerate = parseFloat(settings.taxerate.replace /,/, '.') if settings.taxerate
+			Meteor.call('updateSettings', settings)
 }

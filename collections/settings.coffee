@@ -13,11 +13,7 @@ Meteor.methods {
 			settings
 			company: String
 			companyid: String
-
-			email: Match.Where (email)->
-				check email, Match.Optional(String)
-				email.length and (/^[.-_\w]+@[.-_\w]+$/i).test email
-
+			email: Match.Optional(Match.Where (email)-> not email.length or (/^[.-_\w]+@[.-_\w]+$/i).test email)
 			address: Match.Optional(String)
 			taxerate: Match.Optional(Number)
 			taxeid: Match.Optional(String)
