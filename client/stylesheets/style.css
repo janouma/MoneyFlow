@@ -6,8 +6,8 @@
   background-image: linear-gradient( rgba(0, 0, 59, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75)); }
 
 .gradient-fog {
-  background-image: -webkit-linear-gradient( rgba(247, 247, 249, 0.95) 10%, rgba(255, 255, 255, 0.85) 65%, rgba(255, 255, 255, 0.75));
-  background-image: linear-gradient( rgba(247, 247, 249, 0.95) 10%, rgba(255, 255, 255, 0.85) 65%, rgba(255, 255, 255, 0.75)); }
+  background-image: -webkit-linear-gradient( rgba(241, 241, 245, 0.95) 10%, rgba(254, 254, 254, 0.85) 65%, rgba(254, 254, 254, 0.5));
+  background-image: linear-gradient( rgba(241, 241, 245, 0.95) 10%, rgba(254, 254, 254, 0.85) 65%, rgba(254, 254, 254, 0.5)); }
 
 .color-sky, .color-sky a {
   color: #5586e8 !important; }
@@ -112,6 +112,20 @@ a.theme-silver:hover,
 .button-like.theme-silver:hover {
   background-color: #cdcdcd !important;
   border-color: #c1c1c1 !important; }
+
+.theme-snow {
+  background-color: white !important;
+  border-color: #f2f2f2 !important; }
+  .theme-snow:active {
+    background-color: white !important;
+    border-color: #f2f2f2 !important; }
+
+input[type=submit].theme-snow:hover,
+a.theme-snow:hover,
+.button.theme-snow:hover,
+.button-like.theme-snow:hover {
+  background-color: white !important;
+  border-color: #f2f2f2 !important; }
 
 .fa.fa-10x {
   font-size: 10em; }
@@ -450,6 +464,9 @@ input[type=file] {
 .big-shadow {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
 
+.big-glow {
+  box-shadow: 0 0 20px #fefefe; }
+
 .no-radius {
   border-radius: 0; }
 
@@ -550,6 +567,8 @@ input[required] {
     border-width: 15px 0 15px 8px; }
   .form-cell label.textarea-valign::after {
     border-width: 28px 0 28px 8px; }
+  .form-cell label:active::after {
+    border-left-color: #c1c1c1; }
 
 .logo {
   background: url("/img/logo-small-bg.png"); }
@@ -588,7 +607,9 @@ input[required] {
   .form-cell label.textarea-valign {
     height: 19px; }
     .form-cell label.textarea-valign::after {
-      border-width: 8px 8px 0 8px; } }
+      border-width: 8px 8px 0 8px; }
+  .form-cell label:active::after {
+    border-color: #c1c1c1 transparent transparent transparent; } }
 @media (max-width: 1050px) {
   .side-nav {
     padding: 0 !important;

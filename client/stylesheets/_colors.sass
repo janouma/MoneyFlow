@@ -8,6 +8,7 @@ $silver: #dadada
 $flour: #f7f7f9
 $dust: #707070
 $sky: #5586e8
+$milk: #fefefe
 
 .background-transparent
 	background-color: transparent
@@ -16,7 +17,7 @@ $sky: #5586e8
 	+background-image(linear-gradient(rgba(darken($darkblue, 5%), 0.95) 10%, rgba($darkblue, 0.85) 65%, rgba($darkblue, 0.75)))
 
 .gradient-fog
-	+background-image(linear-gradient(rgba($flour, 0.95) 10%, rgba(#ffffff, 0.85) 65%, rgba(#ffffff, 0.75)))
+	+background-image(linear-gradient(rgba(darken($flour, 2%), 0.95) 10%, rgba($milk, 0.85) 65%, rgba($milk, 0.5)))
 
 +color('sky', $sky, darken($sky, 5%), darken($sky, 10%))
 +color('blue', darken(steelblue, 10%), steelblue, lighten($sky, 5%))
@@ -28,4 +29,5 @@ $sky: #5586e8
 
 +theme('sky', $sky, darken($sky, 5%), darken($sky, 10%))
 +theme('silver', $silver, darken($silver, 5%), darken($silver, 10%))
++theme('snow', white)
 

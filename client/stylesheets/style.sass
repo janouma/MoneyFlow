@@ -57,6 +57,9 @@ input[required]
 		&.textarea-valign::after
 			border-width: 28px 0 28px 8px
 
+		&:active::after
+			border-left-color: darken($silver, 10%)
+
 .logo
 	background: url('/img/logo-small-bg.png')
 
@@ -92,9 +95,11 @@ input[required]
 
 			&.textarea-valign
 				height: 19px
-
 				&::after
 					border-width: 8px 8px 0 8px
+
+			&:active::after
+				border-color: darken($silver, 10%) transparent transparent transparent
 
 
 @media (max-width: 1050px)
