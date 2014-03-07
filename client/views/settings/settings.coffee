@@ -21,12 +21,14 @@ Template[templateName].events {
 		Meteor.clearTimeout template._toast
 
 		hasErrors = no
+		hasUpdates = no
 		settings = {}
 
 		$(e.target).find('input,textarea').each ->
 			return if hasErrors
-
 			value = $(@).val().trim()
+
+			hasUpdates or= value isnt $(@).attr('data-initial-value')
 
 			hasErrors = yes if $(@).attr('required') and not value.length
 
@@ -42,21 +44,30 @@ Template[templateName].events {
 
 		unless hasErrors
 			settings.taxerate = parseFloat(settings.taxerate.replace /,/, '.') if settings.taxerate
-
 			$saveButton = $(e.target).find('#save').attr(disabled:yes)
-			$saveIcon = $saveButton.find('.fa').removeClass('fa-check').addClass('fa-cog fa-spin')
+			$saveButton.find('.fa').removeClass('fa-check').addClass('fa-cog fa-spin')
 
-			Meteor.call(
-				'updateSettings'
-				settings
-				(error)->
-					unless error
-						$saveButton.removeClass('theme-sky').addClass('theme-jade')
-						template._toast = Meteor.setTimeout(
-							->
-								$saveIcon.removeClass('fa-cog fa-spin').addClass('fa-check')
-								$saveButton.removeClass('theme-jade')
-							3000
-						)
-			)
+			if hasUpdates
+				Meteor.call(
+					'updateSettings'
+					settings
+					(error)->
+						if not error
+							$saveButton.find('.fa').removeClass('fa-check').addClass('fa-cog fa-spin')
+							$saveButton.removeClass('theme-sky').addClass('theme-jade')
+							template._toast = Meteor.setTimeout(
+								->
+									$saveButton.find('.fa').removeClass('fa-cog fa-spin').addClass('fa-check')
+									$saveButton.removeClass('theme-jade')
+								3000
+							)
+				)
+			else
+				$saveButton.removeClass('theme-sky').addClass('theme-jade')
+				template._toast = Meteor.setTimeout(
+					->
+						$saveButton.find('.fa').removeClass('fa-cog fa-spin').addClass('fa-check')
+						$saveButton.removeClass('theme-jade')
+					3000
+				)
 }
