@@ -1,6 +1,9 @@
 .background-transparent {
   background-color: transparent; }
 
+.backgrounds-transparent, .backgrounds-transparent div, .backgrounds-transparent span {
+  background-color: transparent; }
+
 .gradient-nightfall {
   background-image: -webkit-linear-gradient( rgba(0, 0, 59, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75));
   background-image: linear-gradient( rgba(0, 0, 59, 0.95) 10%, rgba(0, 0, 85, 0.85) 65%, rgba(0, 0, 85, 0.75)); }
@@ -10,17 +13,10 @@
   background-image: linear-gradient( rgba(241, 241, 245, 0.95) 10%, rgba(254, 254, 254, 0.85) 65%, rgba(254, 254, 254, 0.5)); }
 
 .color-sky, .color-sky a {
-  color: #5586e8 !important; }
-.color-sky.input[type=submit]:hover, .color-sky.button:hover, .color-sky a:hover, .color-sky .button-like:hover {
-  color: #3f76e5 !important; }
-.color-sky .active, .color-sky .active a, .color-sky.active, .color-sky.active a {
-  color: #2866e2 !important; }
-
-.color-blue, .color-blue a {
   color: #6b96eb !important; }
-.color-blue.input[type=submit]:hover, .color-blue.button:hover, .color-blue a:hover, .color-blue .button-like:hover {
+.color-sky.input[type=submit]:hover, .color-sky.button:hover, .color-sky a:hover, .color-sky .button-like:hover {
   color: steelblue !important; }
-.color-blue .active, .color-blue .active a, .color-blue.active, .color-blue.active a {
+.color-sky .active, .color-sky .active a, .color-sky.active, .color-sky.active a {
   color: #38678f !important; }
 
 .color-jade, .color-jade a {
@@ -70,15 +66,15 @@
 .accounts-dialog #login-buttons-open-change-password,
 .accounts-dialog #login-buttons-logout,
 .accounts-dialog #just-verified-dismiss-button {
-  background-color: #5586e8 !important;
-  border-color: #3f76e5 !important; }
+  background-color: #6b96eb !important;
+  border-color: #5586e8 !important; }
   .theme-sky:active, .accounts-dialog .login-button .text-besides-image:active,
   .accounts-dialog .login-button-form-submit:active,
   .accounts-dialog #login-buttons-open-change-password:active,
   .accounts-dialog #login-buttons-logout:active,
   .accounts-dialog #just-verified-dismiss-button:active {
-    background-color: #2866e2 !important;
-    border-color: #1d5ad4 !important; }
+    background-color: #38678f !important;
+    border-color: #315a7d !important; }
 
 input[type=submit].theme-sky:hover, .accounts-dialog .login-button input[type=submit].text-besides-image:hover,
 .accounts-dialog input[type=submit].login-button-form-submit:hover,
@@ -103,8 +99,8 @@ a.theme-sky:hover,
 .accounts-dialog .button-like#login-buttons-open-change-password:hover,
 .accounts-dialog .button-like#login-buttons-logout:hover,
 .accounts-dialog .button-like#just-verified-dismiss-button:hover {
-  background-color: #3f76e5 !important;
-  border-color: #2866e2 !important; }
+  background-color: steelblue !important;
+  border-color: #3f75a2 !important; }
 
 .theme-silver {
   background-color: #dadada !important;
@@ -583,6 +579,9 @@ input[required] {
   .logo:hover {
     background: url("/img/logo-small-bg-selected.png"); }
 
+.site-body.soft-border {
+  box-shadow: 0 20px 20px #f1f1f5; }
+
 .powered-by {
   background: url("/img/powered-by.png");
   width: 150px;
@@ -598,7 +597,36 @@ input[required] {
     display: inline-block;
     width: 52px; }
 
+@media (min-width: 768px) {
+  .site-header .primary-nav li::before, .site-header .primary-nav li::after {
+    content: "";
+    position: absolute;
+    left: 0; }
+  .site-header .primary-nav li::before {
+    top: -15px;
+    width: 100%;
+    height: 50px; }
+  .site-header .primary-nav li.active::before {
+    background-color: #f7f7f9;
+    box-shadow: inset 0 0 20px #e3e3ea; }
+  .site-header .primary-nav li:not(.active):hover::before {
+    background-color: #fefefe;
+    box-shadow: inset 0 0 20px #dce6fa; }
+  .site-header .primary-nav li.active::after, .site-header .primary-nav li:not(.active):hover::after {
+    bottom: -16px;
+    width: 100%;
+    height: 16px;
+    background-position: bottom;
+    background-size: 100% 100%; }
+  .site-header .primary-nav li.active::after {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAAQCAMAAACbbLIlAAAAeFBMVEUAAADl5efn5+3m5ujo6Orm5urn5+rn5+rn5+ro6Ozn5+ro7O/6+vro6Ozr6+3o6Ozo6Ozo6O3n5+rf6/fq6u7p6e7p6e7q6u/k5Ofp6e7r6+/t7fLm5url5ejp6e3k5Obf3+Ho6Ozq6u7o6Ozp6e3p6e3p6e3p6e3MnoB3AAAAGnRSTlMA3EWYc8W4Z4FPOhkHiyRboOSrD84yLPHw+ir4n/sAAAFqSURBVFjD7ZXpboMwEIS57xsSEGCM/f4P2cWmWIgcosTFVP0y0i4xK/ixzGjlzXfjzM67f56S21ns+rdSW4gSI/VMp6q7FujaDgTN+56Jw6//yHxdOaaXGkmkvSIMfCsuqpy2+6AtBbWCK84PeVXElh+E2k7Ku+F6maOTlq5hLwVa9a9Qfp7oTua5xr3UDhMlQTotW00HOjwEDkDbXlyzqtg8rac1SgP41GQQQh54kAfTM8lAQKICc7+unM29580P4NgeOHaoSUfkgTXlAX+bnvQgItj89/Tst+aHybEt5tinIPIAlg31agJrxB1bKVgemI6O+49ADg1j3TG5YyvOnAd2g1b0qAehLeKcIe7ZP9/Y3459PeY80DHCiAENiFdg7lcV2PTv5nXu2Ip9asfyoKga/DlQUxWnO7ZcwmBetp/C10g5x5aJyIMRc8aHv4XxKo4tFZEH4wLGTNBd2bHlAnnAl21aI/Uc+wul8hDAFyjN8QAAAABJRU5ErkJggg=="); }
+  .site-header .primary-nav li:not(.active):hover::after {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAAQCAMAAACbbLIlAAAAclBMVEUAAADn6/Xo7/np7vfn6/Tn6/Xo7fjm7ffp7fbo7Pbo7fbl8Pr1///o7PXm7/jq7vfo7ffq7vfo6/Xr9/zl6/Pm6/Xk6fHs8Pnq8Pjs8Pno7fbu8/zl6vPk6PHp7vfq7vfq7/jr7/jq7/jm6/Tq7/jq7/htPLVrAAAAGXRSTlMAxVCglns+MYdtuBkH7CTPYeCsD0la3fP6Tz7IPAAAAWhJREFUWMPtlttugzAMhqGcQynHtgqEJKjv/45zGJkV1nWDihbQPizsHCxx8dvGKoNDFDp23vzzI7nthNEhKK0vjic/81ySXhsKNLQB6/0ArjHWnhp3dpJ/TYnrZf7paD0i9kFsRZrQeTQ62GS+TNICZOTH1kTKoMo8h+Sc7h6eE8fLKii1+WCJniNXiU128i6d7Dp9RiUFU5G5VndWlg8ycqOzKrUliId50EkhuOBccgnGIRRCij4GM71GcMwR78yXQ8eOrdeA80DUvOZgtULHv+wZ+6/KF9ix3wSKLbnVt/ohcAFsvMZ4ofxEy2hV9PPAJRc2fDi8RuAGou+ah2r5VD67EPezY6+cfh6EBYiNwaNeCh0rD2CM59/2J+djx94eeh6whclXWWrPiM1TPx/MpGUtmOkBcHg+ihElI2+jMpomtnY2+5LRtHnQ/pGtdOxFwXnQ3iGxi3CrHXtZ4qCKlNi0jFZWah8iHwVnY/oufgAAAABJRU5ErkJggg=="); } }
 @media (max-width: 767px) {
+  .site-header .primary-nav .active {
+    background-color: #f7f7f9;
+    box-shadow: inset 0 0 20px #e3e3ea; }
+
   .form-cell label::after {
     content: "";
     position: absolute;
@@ -702,7 +730,7 @@ input[required] {
     .accounts-dialog #login-buttons-open-change-password:hover,
     .accounts-dialog #login-buttons-logout:hover,
     .accounts-dialog #just-verified-dismiss-button:hover {
-      background-color: #336ee3 !important; }
+      background-color: steelblue !important; }
   .accounts-dialog #just-verified-dismiss-button {
     margin-bottom: 0 !important; }
   .accounts-dialog .sign-in-text-google::before {
