@@ -53,7 +53,7 @@ input[required]
 			right: -8px
 			bottom: 0
 			+size(0)
-			border-color: transparent transparent transparent $silver
+			border-color: transparent transparent transparent $lightsilver
 			border-style: solid
 			border-width: 15px 0 15px 8px
 
@@ -61,7 +61,7 @@ input[required]
 			border-width: 28px 0 28px 8px
 
 		&:active::after
-			border-left-color: darken($silver, 10%)
+			border-left-color: darken($lightsilver, 10%)
 
 .logo
 	background: url('/img/logo-small-bg.png')
@@ -104,7 +104,7 @@ input[required]
 
 				&.active::before
 					background-color: $flour
-					box-shadow: inset 0 0 20px darken($flour, 7%)
+					box-shadow: inset 0 0 20px $lightsilver
 
 				&:not(.active):hover::before
 					background-color: $milk
@@ -130,7 +130,7 @@ input[required]
 		.primary-nav
 			.active
 				background-color: $flour
-				box-shadow: inset 0 0 20px darken($flour, 7%)
+				box-shadow: inset 0 0 20px $lightsilver
 
 	.form-cell
 		label
@@ -140,7 +140,7 @@ input[required]
 				left: 0
 				bottom: -8px
 				margin: 0 auto
-				+triangle(16px, $silver, down)
+				+triangle(16px, $lightsilver, down)
 				border-bottom-width: 0
 
 			&.textarea-valign
@@ -149,7 +149,7 @@ input[required]
 					border-width: 8px 8px 0 8px
 
 			&:active::after
-				border-color: darken($silver, 10%) transparent transparent transparent
+				border-color: darken($lightsilver, 10%) transparent transparent transparent
 
 
 @media (max-width: 1050px)

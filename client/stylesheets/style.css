@@ -116,6 +116,20 @@ a.theme-silver:hover,
   background-color: #cdcdcd !important;
   border-color: #c1c1c1 !important; }
 
+.theme-lightsilver {
+  background-color: #e3e3ea !important;
+  border-color: #d4d4df !important; }
+  .theme-lightsilver:active {
+    background-color: #c5c5d4 !important;
+    border-color: #b7b7c9 !important; }
+
+input[type=submit].theme-lightsilver:hover,
+a.theme-lightsilver:hover,
+.button.theme-lightsilver:hover,
+.button-like.theme-lightsilver:hover {
+  background-color: #d4d4df !important;
+  border-color: #c5c5d4 !important; }
+
 .theme-snow {
   background-color: white !important;
   border-color: #f2f2f2 !important; }
@@ -129,6 +143,20 @@ a.theme-snow:hover,
 .button-like.theme-snow:hover {
   background-color: white !important;
   border-color: #f2f2f2 !important; }
+
+.theme-jade {
+  background-color: #88bb00 !important;
+  border-color: #75a200 !important; }
+  .theme-jade:active {
+    background-color: #88bb00 !important;
+    border-color: #75a200 !important; }
+
+input[type=submit].theme-jade:hover,
+a.theme-jade:hover,
+.button.theme-jade:hover,
+.button-like.theme-jade:hover {
+  background-color: #88bb00 !important;
+  border-color: #75a200 !important; }
 
 .fa.fa-10x {
   font-size: 10em; }
@@ -566,13 +594,13 @@ input[required] {
     bottom: 0;
     width: 0px;
     height: 0px;
-    border-color: transparent transparent transparent #dadada;
+    border-color: transparent transparent transparent #e3e3ea;
     border-style: solid;
     border-width: 15px 0 15px 8px; }
   .form-cell label.textarea-valign::after {
     border-width: 28px 0 28px 8px; }
   .form-cell label:active::after {
-    border-left-color: #c1c1c1; }
+    border-left-color: #c5c5d4; }
 
 .logo {
   background: url("/img/logo-small-bg.png"); }
@@ -638,14 +666,14 @@ input[required] {
     border-color: transparent;
     border-style: solid;
     border-width: 8px;
-    border-top-color: #dadada;
+    border-top-color: #e3e3ea;
     border-bottom-width: 0; }
   .form-cell label.textarea-valign {
     height: 19px; }
     .form-cell label.textarea-valign::after {
       border-width: 8px 8px 0 8px; }
   .form-cell label:active::after {
-    border-color: #c1c1c1 transparent transparent transparent; } }
+    border-color: #c5c5d4 transparent transparent transparent; } }
 @media (max-width: 1050px) {
   .side-nav {
     padding: 0 !important;

@@ -9,6 +9,7 @@ $flour: #f7f7f9
 $dust: #707070
 $sky: #5586e8
 $milk: #fefefe
+$lightsilver: darken($flour, 7%)
 
 .background-transparent
 	background-color: transparent
@@ -33,5 +34,7 @@ $milk: #fefefe
 
 +theme('sky', lighten($sky, 5%), steelblue, darken(steelblue, 10%))
 +theme('silver', $silver, darken($silver, 5%), darken($silver, 10%))
++theme('lightsilver', $lightsilver, darken($lightsilver, 5%), darken($lightsilver, 10%))
 +theme('snow', white)
++theme('jade', $jade)
 
