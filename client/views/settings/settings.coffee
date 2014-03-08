@@ -59,7 +59,7 @@ Template[templateName].events {
 								->
 									$saveButton.find('.fa').removeClass('fa-cog fa-spin').addClass('fa-check')
 									$saveButton.removeClass('theme-jade')
-								3000
+								2000
 							)
 				)
 			else
@@ -68,6 +68,6 @@ Template[templateName].events {
 					->
 						$saveButton.find('.fa').removeClass('fa-cog fa-spin').addClass('fa-check')
 						$saveButton.removeClass('theme-jade')
-					3000
+					2000
 				)
 }

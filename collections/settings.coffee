@@ -19,8 +19,10 @@ Meteor.methods {
 			taxeid: Match.Optional(String)
 		)
 
+		settings.userId = Meteor.userId()
+
 		Settings.upsert(
-			{userId: Meteor.userId()}
-			$set: settings
+			{userId: settings.userId}
+			settings
 		)
 }
