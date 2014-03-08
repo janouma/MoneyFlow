@@ -8,13 +8,18 @@ Template[templateName].helpers {
 
 Template[templateName].events {
 	'input input, blur input, input textarea, blur textarea': (e, template)->
-		$save = $(template.find '#save')
+		$saveButton = $(template.find '#save')
 
 		if template.find ':invalid'
-			$save.removeClass('theme-sky').attr disabled:yes
+			$saveButton.removeClass('theme-sky').attr disabled:yes
 		else
-			$save.addClass('theme-sky').removeAttr 'disabled'
+			$saveButton.addClass('theme-sky').removeAttr 'disabled'
 
+	#==================================
+	'reset form': (e, template)-> $(template.find '#save').removeClass('theme-sky').attr disabled:yes
+
+
+	#==================================
 	'submit form': (e, template)->
 		do e.preventDefault
 		return if template.find ':invalid'
