@@ -61,6 +61,20 @@
 .color-dust .active, .color-dust .active a, .color-dust.active, .color-dust.active a {
   color: #707070 !important; }
 
+.color-lead, .color-lead a {
+  color: #707070 !important; }
+.color-lead.input[type=submit]:hover, .color-lead.button:hover, .color-lead a:hover, .color-lead .button-like:hover {
+  color: #707070 !important; }
+.color-lead .active, .color-lead .active a, .color-lead.active, .color-lead.active a {
+  color: #707070 !important; }
+
+.color-lightsilver, .color-lightsilver a {
+  color: #e3e3ea !important; }
+.color-lightsilver.input[type=submit]:hover, .color-lightsilver.button:hover, .color-lightsilver a:hover, .color-lightsilver .button-like:hover {
+  color: #d4d4df !important; }
+.color-lightsilver .active, .color-lightsilver .active a, .color-lightsilver.active, .color-lightsilver.active a {
+  color: #c5c5d4 !important; }
+
 .theme-sky, .accounts-dialog .login-button .text-besides-image,
 .accounts-dialog .login-button-form-submit,
 .accounts-dialog #login-buttons-open-change-password,
@@ -384,11 +398,51 @@ a.theme-jade:hover,
 .mll, .mhl, .mal {
   margin-left: 20px !important; }
 
+.nmts {
+  margin-top: -5px !important; }
+
+.nmtm {
+  margin-top: -10px !important; }
+
+.nmtl {
+  margin-top: -20px !important; }
+
+.nmrs {
+  margin-right: -5px !important; }
+
+.nmrm {
+  margin-right: -10px !important; }
+
+.nmrl {
+  margin-right: -20px !important; }
+
+.nmbs {
+  margin-bottom: -5px !important; }
+
+.nmbm {
+  margin-bottom: -10px !important; }
+
+.nmbl {
+  margin-bottom: -20px !important; }
+
+.nmls {
+  margin-left: -5px !important; }
+
+.nmlm {
+  margin-left: -10px !important; }
+
+.nmll {
+  margin-left: -20px !important; }
+
 .tiny-input {
   width: auto;
   height: 11px;
   margin-top: 8px;
   margin-bottom: 8px; }
+
+.narrow-input {
+  width: 73px;
+  height: auto; }
 
 input[type=file] {
   cursor: pointer;
@@ -523,6 +577,9 @@ input[type=file] {
 .engraved {
   text-shadow: 0 1px 1px #dfdfdf; }
 
+.inverted-engraved {
+  text-shadow: 0 -1px 1px #707070; }
+
 .z1, .up-triangle::before {
   z-index: 1; }
 
@@ -559,13 +616,66 @@ input[type=file]:focus,
 input[type=number]:focus,
 input[type=email]:focus,
 input[type=password]:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   box-shadow: none;
   font-weight: bold;
+  color: #38678f;
   outline: 0; }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAIVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABt0UjBAAAAC3RSTlMAf3dcEEcFGTUnbCwCuW0AAAJcSURBVEjH1ZbPTxNBHMXHYhfridm6dvVkDxriyZpI4q1iRI8FEn/cNiRq4qmYaIInxUSuK4QQOFECIeGvJLDbfTN9b7oc4V1ohtdPv99588tcV315u3Q147vVrrU2frFV62yt2LHa/6Zbf1hXL6dZd6yv+bD1AK4682vLOtXWO1bpvbJGPel9ODSs71YrFRNrQxqQ93/Qm0zBnmwtmWhjNQxep2RbywHwbDXex8Rsjgd/e95vY2rfncUxueN5y9E4l03EmRhcMJ4WVXdrsonbXSuKWEYPLhZB0yykjOWZmEFVHhZ6MhFEm7BQOlHuPcJCcUVATYxtF39yb0O0NXah+NFn5fBdDhLYbM0rcB3fZGz5q6nX2lBjTeRV2EOnhK1QWbH0sBYYW5WYOwl3QljTQKhl8XMhrJlxWm/iM2HBOnRWzkBiUeOcE0UewprICaMBL2Ev5fR+C1EA63bQJS9hTdDbZ2yYS1jlbcDLWPRGc0ZYzBlnwVhkgYwlFhk/os+M9ddOC7ULLNYkak81dmKtm1FxvEks9pC/NzU26hYof88zFq0nXvEdicV/CzULmsaaP9hCOPs2JTaaOBhxwzO2aTENaA5YvqcTpBjA4iq5j4EwdhFXCRVMlwZdnK+AlY+VB5QNY1uK0MOguuj76hBNMnd026IE8YSZz8QzcECpl+TqoFhBExRlqfjT8MK5O+K5weqHnp4duUlmta9JxtY/5hLDmh1pb26EPkvrsZH6VfdK5UmGkCPEr0J+MbL5r2d9DKvSmxEC/GBqFO0+L55vHwmq9HVjf++nufk6B9aDpkey1HRFAAAAAElFTkSuQmCC");
+  cursor: pointer; }
+
+input[type=text],
+input[type=file],
+input[type=number],
+input[type=email],
+input[type=password],
+textarea,
+select {
+  border-width: 0; }
+  input[type=text]::-webkit-input-placeholder,
+  input[type=file]::-webkit-input-placeholder,
+  input[type=number]::-webkit-input-placeholder,
+  input[type=email]::-webkit-input-placeholder,
+  input[type=password]::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  select::-webkit-input-placeholder {
+    color: #c8c8c8; }
+  input[type=text]:-moz-placeholder,
+  input[type=file]:-moz-placeholder,
+  input[type=number]:-moz-placeholder,
+  input[type=email]:-moz-placeholder,
+  input[type=password]:-moz-placeholder,
+  textarea:-moz-placeholder,
+  select:-moz-placeholder {
+    color: #c8c8c8; }
+  input[type=text]::-moz-placeholder,
+  input[type=file]::-moz-placeholder,
+  input[type=number]::-moz-placeholder,
+  input[type=email]::-moz-placeholder,
+  input[type=password]::-moz-placeholder,
+  textarea::-moz-placeholder,
+  select::-moz-placeholder {
+    color: #c8c8c8; }
+  input[type=text]:-ms-input-placeholder,
+  input[type=file]:-ms-input-placeholder,
+  input[type=number]:-ms-input-placeholder,
+  input[type=email]:-ms-input-placeholder,
+  input[type=password]:-ms-input-placeholder,
+  textarea:-ms-input-placeholder,
+  select:-ms-input-placeholder {
+    color: #c8c8c8; }
+
 input[type]:invalid,
-input[required] {
+input[required],
+select {
   background-repeat: no-repeat, no-repeat;
   background-size: 13px, 13px;
   background-position: right 7px center, right 7px center; }
@@ -587,7 +697,9 @@ input[required] {
 .form-cell {
   min-height: 29px;
   box-sizing: border-box; }
-  .form-cell label::after {
+  .form-cell .cell-align {
+    line-height: 28px; }
+  .form-cell label[for]::after {
     content: "";
     position: absolute;
     right: -8px;
@@ -597,10 +709,14 @@ input[required] {
     border-color: transparent transparent transparent #e3e3ea;
     border-style: solid;
     border-width: 15px 0 15px 8px; }
-  .form-cell label.textarea-valign::after {
+  .form-cell label[for].textarea-valign::after {
     border-width: 28px 0 28px 8px; }
-  .form-cell label:active::after {
+  .form-cell label[for]:active::after {
     border-left-color: #c5c5d4; }
+
+.one-char {
+  width: 20px;
+  background-image: none; }
 
 .logo {
   background: url("/img/logo-small-bg.png"); }
@@ -655,7 +771,7 @@ input[required] {
     background-color: #f7f7f9;
     box-shadow: inset 0 0 20px #e3e3ea; }
 
-  .form-cell label::after {
+  .form-cell label[for]::after {
     content: "";
     position: absolute;
     left: 0;
@@ -668,11 +784,11 @@ input[required] {
     border-width: 8px;
     border-top-color: #e3e3ea;
     border-bottom-width: 0; }
-  .form-cell label.textarea-valign {
+  .form-cell label[for].textarea-valign {
     height: 19px; }
-    .form-cell label.textarea-valign::after {
+    .form-cell label[for].textarea-valign::after {
       border-width: 8px 8px 0 8px; }
-  .form-cell label:active::after {
+  .form-cell label[for]:active::after {
     border-color: #c5c5d4 transparent transparent transparent; } }
 @media (max-width: 1050px) {
   .side-nav {

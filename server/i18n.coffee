@@ -70,6 +70,10 @@ Thanks.
 '''
 		resourceForbidden: "access forbidden"
 		resourceForbiddenBody: "you are not allowed to access this resource"
+		editing: "editing"
+		price: "price"
+		day: "day"
+		hour: "hour"
 
 
 
@@ -85,7 +89,7 @@ Thanks.
 		order: "commande"
 		resourceNotFound: "ressource introuvable"
 		resourceNotFoundBody: "la ressource demandée est introuvable sur ce serveur"
-		setting: "préférence"
+		setting: "configuration"
 		signin: "connexion"
 		save: "enregistrer"
 		company: "société"
@@ -149,6 +153,10 @@ Merci.
 '''
 		resourceForbidden: "accès non-autorisé"
 		resourceForbiddenBody: "vous n'êtes pas autorisé à accéder à cette ressource"
+		editing: "édition"
+		price: "tarif"
+		day: "jour"
+		hour: "heure"
 }
 
 

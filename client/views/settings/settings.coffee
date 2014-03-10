@@ -3,7 +3,6 @@ templateName = 'settings'
 Template[templateName].helpers {
 	defaultTaxerate: -> App.taxerate
 	userEmail: -> Meteor.user().emails?[0]?.address
-	settings: -> Settings.findOne userId: Meteor.userId()
 }
 
 Template[templateName].events {

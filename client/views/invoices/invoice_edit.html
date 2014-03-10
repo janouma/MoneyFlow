@@ -1,0 +1,32 @@
+<template name="invoiceEdit">
+	<div class="template-header">
+		<h2 class="capitalize color-lead brbs">{{i18n 'editing'}}</h2>
+	</div>
+	<form class="mts" id="edit-form">
+		<div class="col">
+			<div class="col width-2of10">
+				<div class="cell form-cell theme-lightsilver mln">
+					<label class="capitalize color-white phm stretch fatty" for="price"><i class="fa fa-tag"></i> {{i18n 'price'}}</label>
+				</div>
+			</div>
+			<div class="col width-1of8 mobile-width-1of6">
+				<div class="cell form-cell brbs">
+					<input type="text" id="price" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
+				</div>
+			</div>
+			<div class="col width-1of6 mobile-width-1of3">
+				<div class="cell form-cell brbs">
+					<select id="currency" class="one-char phs">
+						<option value="€">€</option>
+						<option value="$">$</option>
+					</select>
+					<span class="cell-align fatty nmlm">&nbsp;/</span>
+					<select id="time-unit" class="narrow-input capitalize">
+						<option value="d">{{i18n 'day'}}</option>
+						<option value="h">{{i18n 'hour'}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</form>
+</template>

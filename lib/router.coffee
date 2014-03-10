@@ -3,7 +3,8 @@ Router.configure(
 
 	#CAUTION, this option is not for unmatched route but for null "data" on a matched route
 	notFoundTemplate: 'notFound'
-	waitOn: -> do I18nEasy.subscribe
+
+	waitOn: -> [I18nEasy.subscribe()..., Meteor.subscribe('settings', Meteor.userId())]
 )
 
 navigatorLanguage = ->
@@ -56,7 +57,6 @@ Router.map ->
 	@route(
 		'settings'
 		path: '/:language?/settings'
-		waitOn: -> [I18nEasy.subscribe()..., Meteor.subscribe('settings', Meteor.userId())]
 	)
 
 	@route(

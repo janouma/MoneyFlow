@@ -15,6 +15,9 @@ $forbidden-light-img: 'iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAIVBMVEUAA
 	margin-top: 8px
 	margin-bottom: 8px
 
+.narrow-input
+	+size(73px auto)
+
 input[type=file]
 	cursor: pointer
 	width: 145px
@@ -141,6 +144,9 @@ input[type=file]
 
 .engraved
 	text-shadow: 0 1px 1px #dfdfdf
+
+.inverted-engraved
+	text-shadow: 0 -1px 1px #707070
 
 @for $z from 1 through 5
 	.z#{$z}
