@@ -507,7 +507,7 @@ input[type=file] {
 .accounts-dialog #login-buttons-open-change-password,
 .accounts-dialog #login-buttons-logout,
 .accounts-dialog #just-verified-dismiss-button {
-  width: 100%; }
+  width: 100% !important; }
 
 .hidden, .closed .accounts-dialog, .accounts-dialog.accounts-centered-dialog {
   opacity: 0;
@@ -612,6 +612,9 @@ input[type=file] {
   border-bottom-color: white;
   border-top-width: 0; }
 
+@media (max-width: 767px) {
+  .mobile-stretch {
+    width: 100% !important; } }
 .template-header,
 .page-header {
   border-bottom-color: #a3a3a3; }
@@ -646,6 +649,12 @@ textarea:focus,
     width: 101px; }
   .select-style.one-char select {
     width: 48px; }
+  .select-style.stretch select, .accounts-dialog .login-button .select-style.text-besides-image select,
+  .accounts-dialog .select-style.login-button-form-submit select,
+  .accounts-dialog .select-style#login-buttons-open-change-password select,
+  .accounts-dialog .select-style#login-buttons-logout select,
+  .accounts-dialog .select-style#just-verified-dismiss-button select {
+    width: 119.31%; }
 
 .one-char {
   width: 20px;
@@ -809,7 +818,10 @@ input[required] {
     .form-cell label[for].textarea-valign::after {
       border-width: 8px 8px 0 8px; }
   .form-cell label[for]:active::after {
-    border-color: #c5c5d4 transparent transparent transparent; } }
+    border-color: #c5c5d4 transparent transparent transparent; }
+
+  .select-style.mobile-stretch select {
+    width: 119.31%; } }
 @media (max-width: 1050px) {
   .side-nav {
     padding: 0 !important;

@@ -87,7 +87,7 @@ input[type=file]
 	display: inline-block
 
 .stretch
-	width: 100%
+	width: 100% !important
 
 .hidden
 	opacity: 0
@@ -168,3 +168,7 @@ input[type=file]
 	+triangle(18px, white, up)
 	border-top-width: 0
 	@extend .z1
+
+@media (max-width: 767px)
+	.mobile-stretch
+		width: 100% !important

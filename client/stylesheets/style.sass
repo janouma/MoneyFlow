@@ -26,19 +26,17 @@ $one-char-size: 20px
 
 .select-style
 	$width: 145px
-	//$height: 19px
 	$select-arrow-width: 28px
 
 	display: inline-block
 	background-image: url("data:image/png;base64,#{$down-dark-img}")
-	width: $width //+size($width $height)
+	width: $width
 	overflow: hidden
 
 	select
 		cursor: pointer
 		background: transparent
-		//padding: 0 4px
-		width: ($width + $select-arrow-width) //+size(($width + $select-arrow-width) $height)
+		width: ($width + $select-arrow-width)
 		line-height: 1
 		+appearance(none)
 
@@ -50,6 +48,10 @@ $one-char-size: 20px
 		select
 			@extend .phs
 			width: ($one-char-size + $select-arrow-width)
+
+	&.stretch
+		select
+			width: 119.31%
 
 
 .one-char
@@ -219,6 +221,11 @@ input[required]
 
 			&:active::after
 				border-color: darken($lightsilver, 10%) transparent transparent transparent
+
+
+	.select-style.mobile-stretch
+		select
+			width: 119.31%
 
 
 @media (max-width: 1050px)
