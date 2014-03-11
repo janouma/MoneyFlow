@@ -496,8 +496,14 @@ input[type=file] {
 .text-right {
   text-align: right; }
 
+.medium-text {
+  font-size: 1.25em; }
+
 .big-text {
   font-size: 1.5em; }
+
+.text-multiline {
+  white-space: pre-line; }
 
 .inline-block {
   display: inline-block; }
@@ -741,6 +747,19 @@ input[required] {
     border-width: 28px 0 28px 8px; }
   .form-cell label[for]:active::after {
     border-left-color: #c5c5d4; }
+  .form-cell label[for].down-label::after {
+    left: 0;
+    bottom: -8px;
+    margin: 0 auto;
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 8px;
+    border-top-color: #e3e3ea;
+    border-bottom-width: 0; }
+  .form-cell label[for].down-label:active::after {
+    border-color: #c5c5d4 transparent transparent transparent; }
   .form-cell div, .form-cell span {
     vertical-align: middle; }
 

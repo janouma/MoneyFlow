@@ -75,6 +75,7 @@ Thanks.
 		day: "day"
 		hour: "hour"
 		documentType: "document type"
+		sender: "sender"
 
 
 
@@ -159,6 +160,7 @@ Merci.
 		day: "jour"
 		hour: "heure"
 		documentType: "type de document"
+		sender: "emetteur"
 }
 
 

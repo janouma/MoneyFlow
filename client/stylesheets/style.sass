@@ -127,6 +127,18 @@ input[required]
 		&:active::after
 			border-left-color: darken($lightsilver, 10%)
 
+		&.down-label
+			&::after
+				left: 0
+				bottom: -8px
+				margin: 0 auto
+				+triangle(16px, $lightsilver, down)
+				border-bottom-width: 0
+
+			&:active::after
+				border-color: darken($lightsilver, 10%) transparent transparent transparent
+
+
 	div,span
 		vertical-align: middle
 
