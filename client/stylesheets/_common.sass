@@ -10,13 +10,15 @@ $forbidden-dark-img: 'iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAIVBMVEUAAA
 $forbidden-white-img: 'iVBORw0KGgoAAAANSUhEUgAAAFUAAABVCAMAAAAPK1hoAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMAEdk8uAgtIO0FxK72j2ZXcZ2BSQLJ0v2YAAACh0lEQVRYw+2Y246mIBCEAeUgoKjY7/+qu5tM8rsUIs1ssjdTlwY/m+5qQMSPeqWlNVZe/4xnt3V29KXoj336LntJhyPUvMlxplnpUSEvQ8zsqSm38blZIQe5vAzbQF1SEwO6UbcO3cmUgRhSpq/yjnjaespEbJ2v0EQDWq8BqFo3Y+WfjJt8zlVsEzoRyJfdueSDlwSDxrFVl+yxv2Ralc1uH913lthHgxUzi5njFae7KhVks6cdJKs+qQhlbUJB1TVhpbt2NpTUUq8/H/r2UoAccaEUdTNUf3GhGCy6yo5ByS3FUOiTXqinm9LfY/f7OA501ufzqwp81wsVOmLusFaeBf3ME+t1FqFyoEI/heRvdeRAsSu/HpVfWzlQXOtzfQswHOiXYrEp4KmCBcVuD9XlyrOgGJX6PJ0hrb1QzOBV64E0ABWy2ge3dzID+lG12tADL1BY9OML1fCgONmpRrU9UDbV8KCYgan6KT4Uw0JnsaHoLFyyTh4Uu2CpdWxgQbFjXXXXciwori5z/XxnOFC0wFrP9s6G4qqNJlAcKO4w8mk35EJ1hJhwDqEPig5AY94hhge9incfUhAAGhBaD1U1Tm87BypbR82ZQAB9//GR4LkxaGr/IfohqCEIFYJlQ218+5kKPCi6OsraEP70I8HxHbQPFOr9NH2VBfNNnx7FaNvO/Uenfg60HJv7b3LiXuVeSXHuSDYCrXhCOB1WQLR0EsodyXxleLF5hTChAk9YVFS/5aguD05Ff7GFBkSlgTuyDhnFgibRJ330M5UV3Zp6w+XdFi9dRTukYErv8Y1pxYD05p+R7mQwoTlVFXlM4nuSafXxXvRjgyhH0WbKKeXJSPGj/6dfxyPsTkiWaYQAAAAASUVORK5CYII='
 $forbidden-light-img: 'iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAIVBMVEUAAAD////////////////////////////////////////PIev5AAAAC3RSTlMAf3dcEEcFGTUnbCwCuW0AAAJcSURBVEjH1ZbPTxNBHMXHYhfridm6dvVkDxriyZpI4q1iRI8FEn/cNiRq4qmYaIInxUSuK4QQOFECIeGvJLDbfTN9b7oc4V1ohtdPv99588tcV315u3Q147vVrrU2frFV62yt2LHa/6Zbf1hXL6dZd6yv+bD1AK4682vLOtXWO1bpvbJGPel9ODSs71YrFRNrQxqQ93/Qm0zBnmwtmWhjNQxep2RbywHwbDXex8Rsjgd/e95vY2rfncUxueN5y9E4l03EmRhcMJ4WVXdrsonbXSuKWEYPLhZB0yykjOWZmEFVHhZ6MhFEm7BQOlHuPcJCcUVATYxtF39yb0O0NXah+NFn5fBdDhLYbM0rcB3fZGz5q6nX2lBjTeRV2EOnhK1QWbH0sBYYW5WYOwl3QljTQKhl8XMhrJlxWm/iM2HBOnRWzkBiUeOcE0UewprICaMBL2Ev5fR+C1EA63bQJS9hTdDbZ2yYS1jlbcDLWPRGc0ZYzBlnwVhkgYwlFhk/os+M9ddOC7ULLNYkak81dmKtm1FxvEks9pC/NzU26hYof88zFq0nXvEdicV/CzULmsaaP9hCOPs2JTaaOBhxwzO2aTENaA5YvqcTpBjA4iq5j4EwdhFXCRVMlwZdnK+AlY+VB5QNY1uK0MOguuj76hBNMnd026IE8YSZz8QzcECpl+TqoFhBExRlqfjT8MK5O+K5weqHnp4duUlmta9JxtY/5hLDmh1pb26EPkvrsZH6VfdK5UmGkCPEr0J+MbL5r2d9DKvSmxEC/GBqFO0+L55vHwmq9HVjf++nufk6B9aDpkey1HRFAAAAAElFTkSuQmCC'
 
+$narrow-input-size: 73px
+
 .tiny-input
-	+size(auto 11px)
+	height: 11px !important
 	margin-top: 8px
 	margin-bottom: 8px
 
 .narrow-input
-	+size(73px auto)
+	width: $narrow-input-size !important
 
 input[type=file]
 	cursor: pointer

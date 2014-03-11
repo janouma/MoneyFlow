@@ -6,7 +6,7 @@
 		<div class="col">
 			<div class="col width-2of10">
 				<div class="cell form-cell theme-lightsilver mln">
-					<label class="capitalize color-white phm stretch fatty" for="price"><i class="fa fa-tag"></i> {{i18n 'price'}}</label>
+					<label class="capitalize color-white phm stretch fatty" for="price"><i class="fa fa-usd"></i> {{i18n 'price'}}</label>
 				</div>
 			</div>
 			<div class="col width-1of8 mobile-width-1of6">
@@ -14,17 +14,21 @@
 					<input type="text" id="price" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
 				</div>
 			</div>
-			<div class="col width-1of6 mobile-width-1of3">
+			<div class="col price-unit">
 				<div class="cell form-cell brbs">
-					<select id="currency" class="one-char phs">
-						<option value="€">€</option>
-						<option value="$">$</option>
-					</select>
+					<div class="select-style one-char">
+						<select id="currency">
+							<option value="€">€</option>
+							<option value="$">$</option>
+						</select>
+					</div>
 					<span class="cell-align fatty nmlm">&nbsp;/</span>
-					<select id="time-unit" class="narrow-input capitalize">
-						<option value="d">{{i18n 'day'}}</option>
-						<option value="h">{{i18n 'hour'}}</option>
-					</select>
+					<div class="select-style narrow-input">
+						<select id="time-unit" class="capitalize">
+							<option value="d">{{i18n 'day'}}</option>
+							<option value="h">{{i18n 'hour'}}</option>
+						</select>
+					</div>
 				</div>
 			</div>
 		</div>
