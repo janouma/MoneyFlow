@@ -74,6 +74,7 @@ Thanks.
 		price: "price"
 		day: "day"
 		hour: "hour"
+		documentType: "document type"
 
 
 
@@ -157,6 +158,7 @@ Merci.
 		price: "tarif"
 		day: "jour"
 		hour: "heure"
+		documentType: "type de document"
 }
 
 

@@ -14,20 +14,47 @@
 					<input type="text" id="price" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
 				</div>
 			</div>
-			<div class="col price-unit">
-				<div class="cell form-cell brbs">
-					<div class="select-style one-char">
-						<select id="currency">
-							<option value="€">€</option>
-							<option value="$">$</option>
-						</select>
+			<div class="col width-fit mobile-width-fill">
+				<div class="col width-fit mobile-width-fit">
+					<div class="cell form-cell brbs">
+						<div class="select-style one-char">
+							<select id="currency">
+								<option value="€">€</option>
+								<option value="$">$</option>
+							</select>
+						</div>
 					</div>
-					<span class="cell-align fatty nmlm">&nbsp;/</span>
-					<div class="select-style narrow-input">
-						<select id="time-unit" class="capitalize">
-							<option value="d">{{i18n 'day'}}</option>
-							<option value="h">{{i18n 'hour'}}</option>
-						</select>
+				</div>
+				<div class="col width-fit mobile-width-fit">
+					<div class="cell form-cell mhn">
+						<span class="cell-align big-text">/</span>
+					</div>
+				</div>
+				<div class="col width-fit mobile-width-fill">
+					<div class="cell form-cell brbs">
+						<div class="select-style narrow-input">
+							<select id="time-unit" class="capitalize spaced-letters">
+								<option value="d">{{i18n 'day'}}</option>
+								<option value="h">{{i18n 'hour'}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col width-fit pull-right">
+				<div class="col width-fit">
+					<div class="cell form-cell theme-lightsilver mln">
+						<label class="capitalize color-white phm stretch fatty" for="document-type"><i class="fa fa-file"></i> {{i18n 'documentType'}}</label>
+					</div>
+				</div>
+				<div class="col width-fit">
+					<div class="cell form-cell brbs mrn">
+						<div class="select-style">
+							<select id="document-type" class="capitalize pls spaced-letters">
+								<option value="f">{{i18n 'invoice'}}</option>
+								<option value="c">{{i18n 'order'}}</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>
