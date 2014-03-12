@@ -24,7 +24,7 @@
 						</div>
 						<div class="col width-3of10">
 							<div class="cell form-cell brbs">
-								<input type="text" id="companyid" value="{{settings.companyid}}" data-initial-value="{{settings.companyid}}" placeholder="{{i18n 'companyid'}}" class="text uppercase stretch spaced-letters pls" required pattern="(\w|\d)+">
+								<input type="text" id="companyid" value="{{settings.companyid}}" data-initial-value="{{settings.companyid}}" placeholder="{{i18n 'companyid'}}" class="text uppercase stretch spaced-letters pls" required pattern="^[a-zA-Z0-9]+$">
 							</div>
 						</div>
 					</div>
@@ -63,29 +63,7 @@
 						</div>
 						<div class="col width-3of10">
 							<div class="cell form-cell brbs">
-								<input type="text" id="taxerate" value="{{settings.taxerate}}" data-initial-value="{{settings.taxerate}}" placeholder="{{i18n 'taxerate'}} ({{defaultTaxerate}}%)" class="text stretch spaced-letters pls" pattern="\d+(,|\.)?\d+">
-							</div>
-						</div>
-					</div>
-
-					<div class="col">
-						<div class="col width-1of5">
-							<div class="cell form-cell theme-lightsilver">
-								<label class="capitalize color-lightlead engraved phm stretch fatty" for="taxeid"><i class="fa fa-legal"></i> {{i18n 'taxeid'}}</label>
-							</div>
-						</div>
-						<div class="col width-3of10">
-							<div class="cell form-cell brbs">
-								<input type="text" id="taxeid" value="{{settings.taxeid}}" data-initial-value="{{settings.taxeid}}" placeholder="{{i18n 'taxeid'}}" class="text uppercase stretch spaced-letters pls" pattern="(\w|\d)+">
-							</div>
-						</div>
-					</div>
-
-					<div class="col mtl">
-						<div class="col width-fill">
-							<div class="cell">
-								<button id="save" type="submit" class="button icon-button active-button capitalize color-white phm mrm no-radius animated" disabled="yes"><i class="fa fa-check"></i> <strong>{{i18n 'save'}}</strong></button>
-								<button id="reset" type="reset" class="button icon-button active-button capitalize theme-sky color-white phm no-radius animated"><i class="fa fa-eraser"></i> <strong>{{i18n 'reset'}}</strong></button>
+								<input type="text" id="taxerate" value="{{settings.taxerate}}" data-initial-value="{{settings.taxerate}}" placeholder="{{i18n 'taxerate'}} ({{defaultTaxerate}}%)" class="text stretch spaced-letters pls" pattern="^\d+(,|\.)?\d+$">
 							</div>
 						</div>
 					</div>

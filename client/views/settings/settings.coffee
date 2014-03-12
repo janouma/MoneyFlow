@@ -1,76 +1,39 @@
 templateName = 'settings'
 
+valid = ($input)->
+	return false unless $input
+	value = $input.val().trim()
+	validated = value isnt $input.attr('data-initial-value')
+	validated and= not $input.attr('required') or value.length
+	validated and= not value.length or not $input.attr('pattern') or (new RegExp $input.attr('pattern')).test(value)
+	validated and= not value.length or $input.attr('type') isnt 'email' or (/^[.-_\w]+@[.-_\w]+$/i).test(value)
+
+
 Template[templateName].helpers {
 	defaultTaxerate: -> App.taxerate
 }
 
 Template[templateName].events {
-	'input input, blur input, input textarea, blur textarea': (e, template)->
-		$saveButton = $(template.find '#save')
-
-		if template.find ':invalid'
-			$saveButton.removeClass('theme-sky').attr disabled:yes
-		else
-			$saveButton.addClass('theme-sky').removeAttr 'disabled'
+	'submit form': (e)-> do e.preventDefault
 
 	#==================================
-	'reset form': (e, template)-> $(template.find '#save').removeClass('theme-sky').attr disabled:yes
+	'blur input, blur textarea': (e, template)->
+		$input = $(e.target)
 
+		if valid $input
+			settings =
+				field: $input.attr 'id'
+				value: $input.val().trim()
 
-	#==================================
-	'submit form': (e, template)->
-		do e.preventDefault
-		return if template.find ':invalid'
-		Meteor.clearTimeout template._toast
+			settings.value = parseFloat(settings.value.replace /,/g, '.') if settings.value.match /^\d+(,|\.)?\d+$/
 
-		hasErrors = no
-		hasUpdates = no
-		settings = {}
+			Meteor.call(
+				'updateSettings'
+				settings
+				(error)->
+					#DEBUG
+					Meteor._debug error
+					##
+			)
 
-		$(e.target).find('input,textarea').each ->
-			return if hasErrors
-			value = $(@).val().trim()
-
-			hasUpdates or= value isnt $(@).attr('data-initial-value')
-
-			hasErrors = yes if $(@).attr('required') and not value.length
-
-			if $(@).attr('pattern') and value.length
-				pattern = new RegExp $(@).attr('pattern')
-				hasErrors and= not pattern.test(value)
-
-			if $(@).attr('type') is 'email' and value.length
-				pattern = /^[.-_\w]+@[.-_\w]+$/i
-				hasErrors and= not pattern.test(value)
-
-			settings[$(@).attr 'id'] = value if value.length
-
-		unless hasErrors
-			settings.taxerate = parseFloat(settings.taxerate.replace /,/, '.') if settings.taxerate
-			$saveButton = $(e.target).find('#save').attr(disabled:yes)
-			$saveButton.find('.fa').removeClass('fa-check').addClass('fa-cog fa-spin')
-
-			if hasUpdates
-				Meteor.call(
-					'updateSettings'
-					settings
-					(error)->
-						if not error
-							$saveButton.find('.fa').removeClass('fa-check').addClass('fa-cog fa-spin')
-							$saveButton.removeClass('theme-sky').addClass('theme-jade')
-							template._toast = Meteor.setTimeout(
-								->
-									$saveButton.find('.fa').removeClass('fa-cog fa-spin').addClass('fa-check')
-									$saveButton.removeClass('theme-jade')
-								2000
-							)
-				)
-			else
-				$saveButton.removeClass('theme-sky').addClass('theme-jade')
-				template._toast = Meteor.setTimeout(
-					->
-						$saveButton.find('.fa').removeClass('fa-cog fa-spin').addClass('fa-check')
-						$saveButton.removeClass('theme-jade')
-					2000
-				)
 }

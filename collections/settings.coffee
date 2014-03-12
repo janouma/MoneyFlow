@@ -9,20 +9,27 @@ ownsDocument = (userId, doc)-> doc?.userId is userId
 
 Meteor.methods {
 	updateSettings: (settings)->
+		throw new Meteor.Error(403, 'Authetication required') unless Meteor.user()
+
 		check(
 			settings
-			company: String
-			companyid: String
-			email: Match.Optional(Match.Where (email)-> not email.length or (/^[.-_\w]+@[.-_\w]+$/i).test email)
-			address: Match.Optional(String)
-			taxerate: Match.Optional(Number)
-			taxeid: Match.Optional(String)
+
+			field: Match.Where (field)->
+				check field, String
+				field in ["company", "companyid", "email", "address", "taxerate"]
+
+			value: Match.Optional(Match.OneOf String, Number)
 		)
 
-		settings.userId = Meteor.userId()
+		updateOperator = if settings.value?.toString().length then "$set" else "$unset"
+
+		modifier = {}
+		modifier[updateOperator] = {}
+		modifier[updateOperator][settings.field] = settings.value
+
 
 		Settings.upsert(
-			{userId: settings.userId}
-			settings
+			{userId: Meteor.userId()}
+			modifier
 		)
 }
