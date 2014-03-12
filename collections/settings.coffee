@@ -13,12 +13,22 @@ Meteor.methods {
 
 		check(
 			settings
+			Match.OneOf(
+				{
+					field: Match.Where (field)->
+						check field, String
+						field in ["email", "address", "taxerate"]
 
-			field: Match.Where (field)->
-				check field, String
-				field in ["company", "companyid", "email", "address", "taxerate"]
+					value: Match.Optional(Match.OneOf String, Number)
+				}
+				{
+					field: Match.Where (field)->
+						check field, String
+						field in ["company", "companyid"]
 
-			value: Match.Optional(Match.OneOf String, Number)
+					value: Match.OneOf String, Number
+				}
+			)
 		)
 
 		updateOperator = if settings.value?.toString().length then "$set" else "$unset"

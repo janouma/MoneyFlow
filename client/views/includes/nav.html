@@ -8,7 +8,7 @@
         <div class="cell capitalize">
 			{{#if currentUser}}
             <ul class="col width-fit mobile-width-fit nav color-sky primary-nav">
-				{{#if settings}}
+				{{#if configIsReady}}
                 <li class="{{activeRouteClass 'invoices'}}"><a class="animated" href="{{pathFor 'invoices'}}"><i class="fa fa-file-text"></i> {{i18n 'invoices'}}</a></li>
                 <li class="{{activeRouteClass 'orders'}}"><a class="animated" href="{{pathFor 'orders'}}"><i class="fa fa-barcode"></i> {{i18n 'orders'}}</a></li>
                 <li class="{{activeRouteClass 'clients'}}"><a class="animated" href="{{pathFor 'clients'}}"><i class="fa fa-group"></i> {{i18n 'clients'}}</a></li>
@@ -24,7 +24,6 @@
 				</div>
                 <ul class="nav color-dust pull-right">
                     <li><a class="animated" href="https://github.com/janouma/MoneyFlow/releases" target="_blank"><i class="fa fa-download"></i> {{i18n 'download'}}</a></li>
-                    <!-- <li><a class="animated"><i class="fa fa-lock"></i> {{i18n 'signin'}}</a></li> -->
                 </ul>
             </div>
         </div>

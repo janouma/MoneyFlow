@@ -589,7 +589,7 @@ input[type=file] {
   letter-spacing: 1px; }
 
 .engraved {
-  text-shadow: 0 1px 1px whitesmoke; }
+  text-shadow: 0 1px 1px #fafafa; }
 
 .z1, .up-triangle::before {
   z-index: 1; }
@@ -1003,7 +1003,7 @@ input[required] {
       -webkit-animation: spin 2s infinite linear;
       -moz-animation: spin 2s infinite linear;
       animation: spin 2s infinite linear;
-      color: #dadada; }
+      color: #88bb00; }
 
 @media (max-width: 1050px) {
   .accounts-dialog.accounts-centered-dialog {
