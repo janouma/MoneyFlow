@@ -17,7 +17,7 @@ $one-char-size: 20px
 
 .template-header,
 .page-header
-	border-bottom-color: lighten($dust, 20%)
+	border-bottom-color: lighten($lead, 20%)
 
 .focus
 	box-shadow: none
@@ -111,6 +111,10 @@ input[required]
 		line-height: ($height - 1)
 
 	label[for]
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+
 		&::after
 			content: ""
 			position: absolute

@@ -6,7 +6,7 @@ $jade: #88bb00
 $ash: #505050
 $silver: #dadada
 $flour: #f7f7f9
-$dust: #707070
+$lead: #707070
 $sky: #5586e8
 $milk: #fefefe
 $lightsilver: darken($flour, 7%)
@@ -30,8 +30,9 @@ $lightsilver: darken($flour, 7%)
 +color('black', #555, #ccc, black)
 +color('red', #ff6000)
 +color('ash', $ash)
-+color('dust', darken($silver, 10%), $dust, $dust)
-+color('lead', $dust)
++color('dust', darken($silver, 10%), $lead, $lead)
++color('lead', $lead)
++color('lightlead', lighten($lead, 7.5%))
 +color('lightsilver', $lightsilver, darken($lightsilver, 5%), darken($lightsilver, 10%))
 
 +theme('sky', lighten($sky, 5%), steelblue, darken(steelblue, 10%))
