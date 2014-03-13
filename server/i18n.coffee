@@ -76,11 +76,10 @@ Thanks.
 		hour: "hour"
 		documentType: "document type"
 		sender: "sender"
+		name: "name"
 
 
-
-
-
+	#================================================================================================
 	fr:
 		client: "client"
 		download: "télécharger"
@@ -161,6 +160,7 @@ Merci.
 		hour: "heure"
 		documentType: "type de document"
 		sender: "emetteur"
+		name: "nom"
 }
 
 

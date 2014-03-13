@@ -14,3 +14,11 @@ Handlebars.registerHelper(
 		settings = Settings.findOne(userId: Meteor.userId())
 		settings?.company and settings?.companyid
 )
+
+Handlebars.registerHelper(
+	'clients'
+	-> Clients.find(
+		{}
+		{sort: name: 1}
+	)
+)

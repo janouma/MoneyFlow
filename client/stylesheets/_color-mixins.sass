@@ -8,6 +8,10 @@
 			&, a
 				color: $active !important
 
+=color-alias($name, $aliased)
+	.color-#{$name}
+		@extend .color-#{$aliased}
+
 
 =theme($name, $main, $hover: $main, $active: $main)
 	.theme-#{$name}
@@ -24,3 +28,7 @@
 	.button-like.theme-#{$name}:hover
 		background-color: $hover !important
 		border-color: darken($hover, 5%) !important
+
+=theme-alias($name, $aliased)
+	.theme-#{$name}
+		@extend .theme-#{$aliased}

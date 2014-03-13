@@ -83,17 +83,22 @@ textarea,
 
 input[type]:invalid,
 input[required],
+textarea:invalid,
+textarea[required],
 .select-style
 	background-repeat: no-repeat, no-repeat
 	background-size: 13px, 13px
 	background-position: right 7px center, right 7px center
 
-input[type]:invalid
+input[type]:invalid,
+textarea:invalid,
+textarea[required]:invalid
 	background-color: #ffffff
-	color: orangered
+	color: $error-text-color
 	background-image: url("data:image/png;base64,#{$forbidden-light-img}"), url("data:image/png;base64,#{$forbidden-dark-img}")
 
-input[required]
+input[required],
+textarea[required]
 	background-image: url("data:image/png;base64,#{$asterisk-light-img}"), url("data:image/png;base64,#{$asterisk-dark-img}")
 
 .textarea-valign
@@ -142,6 +147,15 @@ input[required]
 			&:active::after
 				border-color: darken($lightsilver, 10%) transparent transparent transparent
 
+	&.theme-error
+		label[for]::after,
+		label[for]:active::after
+			border-color: transparent transparent transparent $error-theme-color
+
+		.down-label
+			&::after,
+			&:active::after
+				border-color: $error-theme-color transparent transparent transparent
 
 	div,span
 		vertical-align: middle
@@ -237,6 +251,11 @@ input[required]
 
 			&:active::after
 				border-color: darken($lightsilver, 10%) transparent transparent transparent
+
+		&.theme-error
+			label[for]::after,
+			label[for]:active::after
+				border-color: $error-theme-color transparent transparent transparent
 
 
 	.select-style.mobile-stretch

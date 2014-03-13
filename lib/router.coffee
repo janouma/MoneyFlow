@@ -51,7 +51,7 @@ Router.map ->
 
 	@route(
 		'clients'
-		path: '/:language?/clients'
+		path: '/:language?/clients/:id?'
 	)
 
 	@route(

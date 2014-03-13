@@ -1,0 +1,43 @@
+<template name="clientEdit">
+	<div class="template-header">
+		<h2 class="capitalize color-lead brbs">{{i18n 'editing'}}</h2>
+	</div>
+	<form class="mts" id="edit-form" data-client-id="{{client._id}}">
+		<div class="col">
+			<div class="col width-1of5">
+				<div class="cell form-cell theme-lightsilver mln">
+					<label class="capitalize color-lightlead engraved phm stretch fatty" for="name"><i class="fa fa-user"></i> {{i18n 'name'}}</label>
+				</div>
+			</div>
+			<div class="col width-3of10">
+				<div class="cell form-cell brbs">
+					<input type="text" id="name" value="{{client.name}}" data-initial-value="{{client.name}}" placeholder="{{i18n 'name'}}" class="text capitalize stretch spaced-letters pls" required>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="col width-1of5">
+				<div class="cell form-cell theme-lightsilver mln">
+					<label class="capitalize color-lightlead engraved phm stretch fatty" for="email"><i class="fa fa-envelope"></i> {{i18n 'email'}}</label>
+				</div>
+			</div>
+			<div class="col width-3of10">
+				<div class="cell form-cell brbs">
+					<input type="email" id="email" value="{{client.email}}" data-initial-value="{{client.email}}" placeholder="{{i18n 'email'}}" class="text capitalize stretch spaced-letters pls">
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="col width-1of5">
+				<div class="cell form-cell theme-lightsilver mln">
+					<label class="capitalize color-lightlead engraved textarea-valign phm stretch fatty" for="address"><i class="fa fa-home"></i> {{i18n 'address'}}</label>
+				</div>
+			</div>
+			<div class="col width-3of10">
+				<div class="cell form-cell brbs">
+					<textarea id="address" class="capitalize textarea-valign stretch spaced-letters pls" placeholder="{{i18n 'address'}}" rows="3" data-initial-value="{{client.address}}">{{client.address}}</textarea>
+				</div>
+			</div>
+		</div>
+	</form>
+</template>

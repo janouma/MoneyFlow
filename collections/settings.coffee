@@ -1,7 +1,5 @@
 @Settings = new Meteor.Collection 'settings'
 
-ownsDocument = (userId, doc)-> doc?.userId is userId
-
 @Settings.allow {
 	insert: ownsDocument
 	update: ownsDocument

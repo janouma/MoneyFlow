@@ -1,14 +1,5 @@
 templateName = 'settings'
 
-valid = ($input)->
-	return false unless $input
-	value = $input.val().trim()
-	validated = value isnt $input.attr('data-initial-value')
-	validated and= not $input.attr('required') or value.length
-	validated and= not value.length or not $input.attr('pattern') or (new RegExp $input.attr('pattern')).test(value)
-	validated and= not value.length or $input.attr('type') isnt 'email' or (/^[.-_\w]+@[.-_\w]+$/i).test(value)
-
-
 Template[templateName].helpers {
 	defaultTaxerate: -> App.taxerate
 }
@@ -20,7 +11,7 @@ Template[templateName].events {
 	'blur input, blur textarea': (e, template)->
 		$input = $(e.target)
 
-		if valid $input
+		if Validation.valid $input
 			settings =
 				field: $input.attr 'id'
 				value: $input.val().trim()
@@ -31,9 +22,21 @@ Template[templateName].events {
 				'updateSettings'
 				settings
 				(error)->
-					#DEBUG
-					Meteor._debug error
-					##
+					$label = $(template.find "label[for=#{$input.attr 'id'}]")
+					$formCell = $label.parent '.form-cell'
+
+					validColorClass = 'color-lightlead'
+					validThemeClass = 'theme-lightsilver'
+					errorColorClass = 'color-error'
+					errorThemeClass = 'theme-error'
+
+					if error
+						$formCell.removeClass(validThemeClass).addClass(errorThemeClass)
+						$label.removeClass(validColorClass).addClass(errorColorClass)
+					else
+						$formCell.removeClass(errorThemeClass).addClass(validThemeClass)
+						$label.removeClass(errorColorClass).addClass(validColorClass)
+
 			)
 
 }

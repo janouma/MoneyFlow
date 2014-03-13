@@ -10,6 +10,9 @@ $lead: #707070
 $sky: #5586e8
 $milk: #fefefe
 $lightsilver: darken($flour, 7%)
+$darkorange: darken(orange, 5%)
+$error-theme-color: lighten(red,40%)
+$error-text-color: lighten(red,25%)
 
 .background-transparent
 	background-color: transparent
@@ -32,12 +35,17 @@ $lightsilver: darken($flour, 7%)
 +color('ash', $ash)
 +color('dust', darken($silver, 10%), $lead, $lead)
 +color('lead', $lead)
-+color('lightlead', lighten($lead, 7.5%))
++color('lightlead', lighten($lead, 15%))
 +color('lightsilver', $lightsilver, darken($lightsilver, 5%), darken($lightsilver, 10%))
+
++color('error', $error-text-color)
 
 +theme('sky', lighten($sky, 5%), steelblue, darken(steelblue, 10%))
 +theme('silver', $silver, darken($silver, 5%), darken($silver, 10%))
 +theme('lightsilver', $lightsilver, darken($lightsilver, 5%), darken($lightsilver, 10%))
 +theme('snow', white)
 +theme('jade', $jade)
++theme('orange', $darkorange)
+
++theme('error', $error-theme-color)
 
