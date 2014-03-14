@@ -1,13 +1,18 @@
 <template name="clientEdit">
-	<div class="template-header brbs col width-1of2">
-		<h2 class="capitalize color-lead">
-			<i class="fa fa-pencil"></i>
-			{{#with client}}
+	<div class="template-header brbs col width-1of2 capitalize">
+		<div class="col width-fit mobile-width-fit">
+			<h2 class="color-lead">
+				<i class="fa fa-pencil"></i>
+				{{#with client}}
 				{{#if name}}{{name}}{{/if}}
 				{{#unless name}} — {{/unless}}
-			{{/with}}
-			{{#unless client}}{{i18n 'newItem'}}{{/unless}}
-		</h2>
+				{{/with}}
+				{{#unless client}}{{i18n 'newItem'}}{{/unless}}
+			</h2>
+		</div>
+		<div class="col width-fill mobile-width-fill text-right list-nav color-sky">
+			<a href="{{pathFor 'clients'}}" class="no-text-decoration fatty animated"><i class="fa fa-times"></i> {{i18n 'close'}}</a>
+		</div>
 	</div>
 	<form class="mts" id="edit-form">
 		<div class="col">

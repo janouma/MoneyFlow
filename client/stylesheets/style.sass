@@ -192,6 +192,26 @@ textarea[required]
 	height: 36px
 	vertical-align: bottom
 
+.active-row
+	$glow-color: darken($flour, 1.5%)
+	+background-image(linear-gradient($glow-color, $flour 13px, $flour 18px, $glow-color))
+
+	td:first-child
+		+background-image(linear-gradient(left, $glow-color, rgba($flour, 0) 20px))
+
+	td:last-child
+		+background-image(linear-gradient(right, $glow-color, rgba($flour, 0) 20px))
+
+tr.clickable:hover
+	$glow-color: lighten($sky, 33.5%)
+	$bg-color: lighten($sky, 35%)
+	+background-image(linear-gradient($glow-color, $bg-color 13px, $bg-color 18px, $glow-color))
+
+	td:first-child
+		+background-image(linear-gradient(left, $glow-color, rgba($bg-color, 0) 20px))
+
+	td:last-child
+		+background-image(linear-gradient(right, $glow-color, rgba($bg-color, 0) 20px))
 
 @media (min-width: 768px)
 	.site-header

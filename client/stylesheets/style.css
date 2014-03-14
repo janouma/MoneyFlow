@@ -887,6 +887,26 @@ textarea[required] {
   height: 36px;
   vertical-align: bottom; }
 
+.active-row {
+  background-image: -webkit-linear-gradient( #f3f3f6, #f7f7f9 13px, #f7f7f9 18px, #f3f3f6);
+  background-image: linear-gradient( #f3f3f6, #f7f7f9 13px, #f7f7f9 18px, #f3f3f6); }
+  .active-row td:first-child {
+    background-image: -webkit-linear-gradient(left, #f3f3f6, rgba(247, 247, 249, 0) 20px);
+    background-image: linear-gradient(to right, #f3f3f6, rgba(247, 247, 249, 0) 20px); }
+  .active-row td:last-child {
+    background-image: -webkit-linear-gradient(right, #f3f3f6, rgba(247, 247, 249, 0) 20px);
+    background-image: linear-gradient(to left, #f3f3f6, rgba(247, 247, 249, 0) 20px); }
+
+tr.clickable:hover {
+  background-image: -webkit-linear-gradient( #ebf1fc, #f2f6fd 13px, #f2f6fd 18px, #ebf1fc);
+  background-image: linear-gradient( #ebf1fc, #f2f6fd 13px, #f2f6fd 18px, #ebf1fc); }
+  tr.clickable:hover td:first-child {
+    background-image: -webkit-linear-gradient(left, #ebf1fc, rgba(242, 246, 253, 0) 20px);
+    background-image: linear-gradient(to right, #ebf1fc, rgba(242, 246, 253, 0) 20px); }
+  tr.clickable:hover td:last-child {
+    background-image: -webkit-linear-gradient(right, #ebf1fc, rgba(242, 246, 253, 0) 20px);
+    background-image: linear-gradient(to left, #ebf1fc, rgba(242, 246, 253, 0) 20px); }
+
 @media (min-width: 768px) {
   .site-header .primary-nav li::before, .site-header .primary-nav li::after {
     content: "";
