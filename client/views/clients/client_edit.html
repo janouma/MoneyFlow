@@ -1,8 +1,15 @@
 <template name="clientEdit">
-	<div class="template-header">
-		<h2 class="capitalize color-lead brbs">{{i18n 'editing'}}</h2>
+	<div class="template-header brbs col width-1of2">
+		<h2 class="capitalize color-lead">
+			<i class="fa fa-pencil"></i>
+			{{#with client}}
+				{{#if name}}{{name}}{{/if}}
+				{{#unless name}} — {{/unless}}
+			{{/with}}
+			{{#unless client}}{{i18n 'newItem'}}{{/unless}}
+		</h2>
 	</div>
-	<form class="mts" id="edit-form" data-client-id="{{client._id}}">
+	<form class="mts" id="edit-form">
 		<div class="col">
 			<div class="col width-1of5">
 				<div class="cell form-cell theme-lightsilver mln">
@@ -23,7 +30,7 @@
 			</div>
 			<div class="col width-3of10">
 				<div class="cell form-cell brbs">
-					<input type="email" id="email" value="{{client.email}}" data-initial-value="{{client.email}}" placeholder="{{i18n 'email'}}" class="text capitalize stretch spaced-letters pls">
+					<input type="email" id="email" value="{{client.email}}" data-initial-value="{{client.email}}" placeholder="{{i18n 'email'}}" class="text stretch spaced-letters pls">
 				</div>
 			</div>
 		</div>

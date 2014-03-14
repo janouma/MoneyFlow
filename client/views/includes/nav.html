@@ -9,7 +9,7 @@
 			{{#if currentUser}}
             <ul class="col width-fit mobile-width-fit nav color-sky primary-nav">
 				{{#if configIsReady}}
-					{{#if clients.count}}
+					{{#if clientsAreReady}}
 					<li class="{{activeRouteClass 'invoices'}}"><a class="animated" href="{{pathFor 'invoices'}}"><i class="fa fa-file-text"></i> {{i18n 'invoices'}}</a></li>
 					<li class="{{activeRouteClass 'orders'}}"><a class="animated" href="{{pathFor 'orders'}}"><i class="fa fa-barcode"></i> {{i18n 'orders'}}</a></li>
 					{{/if}}

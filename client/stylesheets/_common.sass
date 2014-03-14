@@ -46,6 +46,9 @@ input[type=file]
 [disabled]
 	cursor: not-allowed !important
 
+.clickable
+	cursor: pointer
+
 .no-box-shadow
 	box-shadow: none
 
@@ -71,8 +74,14 @@ input[type=file]
 .uppercase
 	text-transform: uppercase
 
+.valign-top
+	vertical-align: top
+
 .valign-middle
 	vertical-align: middle
+
+.valign-bottom
+	vertical-align: bottom
 
 .text-center
 	text-align: center
@@ -80,14 +89,28 @@ input[type=file]
 .text-right
 	text-align: right
 
+.text-justify
+	$hyphens: auto
+	text-align: justify
+	-webkit-hyphens: $hyphens
+	-moz-hyphens: $hyphens
+	-ms-hyphens: $hyphens
+	-o-hyphens: $hyphens
+	hyphens: $hyphens
+
+.text-multiline
+	white-space: pre-line
+
+.text-ellipsis
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+
 .medium-text
 	font-size: 1.25em
 
 .big-text
 	font-size: 1.5em
-
-.text-multiline
-	white-space: pre-line
 
 .inline-block
 	display: inline-block

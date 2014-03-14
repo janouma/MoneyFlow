@@ -18,14 +18,15 @@
 		background-color: $main !important
 		border-color: darken($main, 5%) !important
 
-		&:active
+		&:active,
+		&[class*=active]
 			background-color: $active !important
 			border-color: darken($active, 5%) !important
 
 	input[type=submit].theme-#{$name}:hover,
 	a.theme-#{$name}:hover,
 	.button.theme-#{$name}:hover,
-	.button-like.theme-#{$name}:hover
+	.clickable.theme-#{$name}:hover
 		background-color: $hover !important
 		border-color: darken($hover, 5%) !important
 

@@ -9,7 +9,7 @@
 							<a href="{{pathToLanguage this}}" class="animated"><i class="fa {{activeFlagClass this}} fa-lg"></i> {{i18n this}}</a>
 						</li>
 						{{/each}}
-						{{#if currentUser}}
+						{{#if writeIsAllowed}}
 						<li>
 							<a href="{{pathFor 'i18n_easy_admin'}}" class="animated"><i class="fa fa-pencil fa-lg"></i> {{i18n 'translationAdmin'}}</a>
 						</li>

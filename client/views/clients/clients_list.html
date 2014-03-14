@@ -1,0 +1,24 @@
+<template name="clientsList">
+	<div class="template-header capitalize brbs mbs">
+		<div class="col width-fit mobile-width-fit">
+			<h2 class="color-lead"><i class="fa fa-list"></i> {{i18n 'list'}}</h2>
+		</div>
+		<div class="col width-fill mobile-width-fill text-right list-nav color-sky">
+			<a href="{{pathFor 'clients'}}?new=yes" class="no-text-decoration fatty animated"><i class="fa fa-pencil"></i> {{i18n 'newItem'}}</a>
+		</div>
+	</div>
+	<table>
+		<thead class="theme-lightsilver color-lightlead engraved capitalize">
+			<tr>
+				<th class="width-1of3">{{i18n 'name'}}</th>
+				<th class="width-1of3">{{i18n 'email'}}</th>
+				<th>{{i18n 'address'}}</th>
+			</tr>
+		</thead>
+		<tbody class="spaced-letters">
+			{{#each clients}}
+			{{>clientRow}}
+			{{/each}}
+		</tbody>
+	</table>
+</template>

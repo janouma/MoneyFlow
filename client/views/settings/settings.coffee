@@ -16,7 +16,7 @@ Template[templateName].events {
 				field: $input.attr 'id'
 				value: $input.val().trim()
 
-			settings.value = parseFloat(settings.value.replace /,/g, '.') if settings.value.match /^\d+(,|\.)?\d+$/
+			settings.value = Validation.parseFloat settings.value
 
 			Meteor.call(
 				'updateSettings'

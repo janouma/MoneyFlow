@@ -70,13 +70,14 @@ Thanks.
 '''
 		resourceForbidden: "access forbidden"
 		resourceForbiddenBody: "you are not allowed to access this resource"
-		editing: "editing"
+		newItem: "new item"
 		price: "price"
 		day: "day"
 		hour: "hour"
 		documentType: "document type"
 		sender: "sender"
 		name: "name"
+		list: "list"
 
 
 	#================================================================================================
@@ -154,13 +155,14 @@ Merci.
 '''
 		resourceForbidden: "accès non-autorisé"
 		resourceForbiddenBody: "vous n'êtes pas autorisé à accéder à cette ressource"
-		editing: "édition"
+		newItem: "nouvel enregistrement"
 		price: "tarif"
 		day: "jour"
 		hour: "heure"
 		documentType: "type de document"
 		sender: "emetteur"
 		name: "nom"
+		list: "liste"
 }
 
 

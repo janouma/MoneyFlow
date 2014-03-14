@@ -1,4 +1,5 @@
 <template name="clients">
+	{{#if clientEdition}}
     <div class="col content">
         <div class="col">
             <div class="cell">
@@ -6,4 +7,14 @@
             </div>
         </div>
     </div>
+	{{/if}}
+	{{#if clients.count}}
+	<div class="col content">
+		<div class="col">
+			<div class="cell">
+				{{>clientsList}}
+			</div>
+		</div>
+	</div>
+	{{/if}}
 </template>

@@ -100,7 +100,11 @@
   .accounts-dialog .login-button-form-submit:active,
   .accounts-dialog #login-buttons-open-change-password:active,
   .accounts-dialog #login-buttons-logout:active,
-  .accounts-dialog #just-verified-dismiss-button:active {
+  .accounts-dialog #just-verified-dismiss-button:active, .theme-sky[class*=active], .accounts-dialog .login-button [class*=active].text-besides-image,
+  .accounts-dialog [class*=active].login-button-form-submit,
+  .accounts-dialog [class*=active]#login-buttons-open-change-password,
+  .accounts-dialog [class*=active]#login-buttons-logout,
+  .accounts-dialog [class*=active]#just-verified-dismiss-button {
     background-color: #38678f !important;
     border-color: #315a7d !important; }
 
@@ -121,96 +125,110 @@ a.theme-sky:hover,
 .accounts-dialog .button#login-buttons-open-change-password:hover,
 .accounts-dialog .button#login-buttons-logout:hover,
 .accounts-dialog .button#just-verified-dismiss-button:hover,
-.button-like.theme-sky:hover,
-.accounts-dialog .login-button .button-like.text-besides-image:hover,
-.accounts-dialog .button-like.login-button-form-submit:hover,
-.accounts-dialog .button-like#login-buttons-open-change-password:hover,
-.accounts-dialog .button-like#login-buttons-logout:hover,
-.accounts-dialog .button-like#just-verified-dismiss-button:hover {
+.clickable.theme-sky:hover,
+.accounts-dialog .login-button .clickable.text-besides-image:hover,
+.accounts-dialog .clickable.login-button-form-submit:hover,
+.accounts-dialog .clickable#login-buttons-open-change-password:hover,
+.accounts-dialog .clickable#login-buttons-logout:hover,
+.accounts-dialog .clickable#just-verified-dismiss-button:hover {
   background-color: steelblue !important;
   border-color: #3f75a2 !important; }
 
 .theme-silver {
   background-color: #dadada !important;
   border-color: #cdcdcd !important; }
-  .theme-silver:active {
+  .theme-silver:active, .theme-silver[class*=active] {
     background-color: #c1c1c1 !important;
     border-color: #b4b4b4 !important; }
 
 input[type=submit].theme-silver:hover,
 a.theme-silver:hover,
 .button.theme-silver:hover,
-.button-like.theme-silver:hover {
+.clickable.theme-silver:hover {
   background-color: #cdcdcd !important;
   border-color: #c1c1c1 !important; }
 
 .theme-lightsilver {
   background-color: #e3e3ea !important;
   border-color: #d4d4df !important; }
-  .theme-lightsilver:active {
+  .theme-lightsilver:active, .theme-lightsilver[class*=active] {
     background-color: #c5c5d4 !important;
     border-color: #b7b7c9 !important; }
 
 input[type=submit].theme-lightsilver:hover,
 a.theme-lightsilver:hover,
 .button.theme-lightsilver:hover,
-.button-like.theme-lightsilver:hover {
+.clickable.theme-lightsilver:hover {
   background-color: #d4d4df !important;
   border-color: #c5c5d4 !important; }
 
 .theme-snow {
   background-color: white !important;
   border-color: #f2f2f2 !important; }
-  .theme-snow:active {
+  .theme-snow:active, .theme-snow[class*=active] {
     background-color: white !important;
     border-color: #f2f2f2 !important; }
 
 input[type=submit].theme-snow:hover,
 a.theme-snow:hover,
 .button.theme-snow:hover,
-.button-like.theme-snow:hover {
+.clickable.theme-snow:hover {
   background-color: white !important;
   border-color: #f2f2f2 !important; }
 
 .theme-jade {
   background-color: #88bb00 !important;
   border-color: #75a200 !important; }
-  .theme-jade:active {
+  .theme-jade:active, .theme-jade[class*=active] {
     background-color: #88bb00 !important;
     border-color: #75a200 !important; }
 
 input[type=submit].theme-jade:hover,
 a.theme-jade:hover,
 .button.theme-jade:hover,
-.button-like.theme-jade:hover {
+.clickable.theme-jade:hover {
   background-color: #88bb00 !important;
   border-color: #75a200 !important; }
 
 .theme-orange {
   background-color: #e69500 !important;
   border-color: #cc8400 !important; }
-  .theme-orange:active {
+  .theme-orange:active, .theme-orange[class*=active] {
     background-color: #e69500 !important;
     border-color: #cc8400 !important; }
 
 input[type=submit].theme-orange:hover,
 a.theme-orange:hover,
 .button.theme-orange:hover,
-.button-like.theme-orange:hover {
+.clickable.theme-orange:hover {
   background-color: #e69500 !important;
   border-color: #cc8400 !important; }
+
+.theme-tide {
+  background-color: white !important;
+  border-color: #f2f2f2 !important; }
+  .theme-tide:active, .theme-tide[class*=active] {
+    background-color: #f7f7f9 !important;
+    border-color: #e8e8ee !important; }
+
+input[type=submit].theme-tide:hover,
+a.theme-tide:hover,
+.button.theme-tide:hover,
+.clickable.theme-tide:hover {
+  background-color: #f2f6fd !important;
+  border-color: #dce6fa !important; }
 
 .theme-error {
   background-color: #ffcccc !important;
   border-color: #ffb3b3 !important; }
-  .theme-error:active {
+  .theme-error:active, .theme-error[class*=active] {
     background-color: #ffcccc !important;
     border-color: #ffb3b3 !important; }
 
 input[type=submit].theme-error:hover,
 a.theme-error:hover,
 .button.theme-error:hover,
-.button-like.theme-error:hover {
+.clickable.theme-error:hover {
   background-color: #ffcccc !important;
   border-color: #ffb3b3 !important; }
 
@@ -508,6 +526,9 @@ input[type=file] {
 [disabled] {
   cursor: not-allowed !important; }
 
+.clickable {
+  cursor: pointer; }
+
 .no-box-shadow {
   box-shadow: none; }
 
@@ -529,8 +550,14 @@ input[type=file] {
 .uppercase {
   text-transform: uppercase; }
 
+.valign-top {
+  vertical-align: top; }
+
 .valign-middle {
   vertical-align: middle; }
+
+.valign-bottom {
+  vertical-align: bottom; }
 
 .text-center {
   text-align: center; }
@@ -538,14 +565,27 @@ input[type=file] {
 .text-right {
   text-align: right; }
 
+.text-justify {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto; }
+
+.text-multiline {
+  white-space: pre-line; }
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
 .medium-text {
   font-size: 1.25em; }
 
 .big-text {
   font-size: 1.5em; }
-
-.text-multiline {
-  white-space: pre-line; }
 
 .inline-block {
   display: inline-block; }
@@ -841,6 +881,11 @@ textarea[required] {
 
 .price-unit {
   width: 110px !important; }
+
+.list-nav {
+  display: table-cell;
+  height: 36px;
+  vertical-align: bottom; }
 
 @media (min-width: 768px) {
   .site-header .primary-nav li::before, .site-header .primary-nav li::after {

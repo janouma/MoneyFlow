@@ -1,0 +1,16 @@
+<template name="clientRow">
+	<tr class="clickable theme-tide animated {{activeRowClass this}}">
+		<td class="fatty medium-text capitalize valign-top">
+			{{#if name}}{{name}}{{/if}}
+			{{#unless name}} <span class="color-lightlead">—</span> {{/unless}}
+		</td>
+		<td class="valign-top">
+			{{#if email}}{{email}}{{/if}}
+			{{#unless email}} <span class="color-lightlead">—</span> {{/unless}}
+		</td>
+		<td class="capitalize text-justify valign-top">
+			{{#if address}}{{address}}{{/if}}
+			{{#unless address}} <span class="color-lightlead">—</span> {{/unless}}
+		</td>
+	</tr>
+</template>

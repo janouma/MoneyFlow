@@ -22,3 +22,8 @@ Handlebars.registerHelper(
 		{sort: name: 1}
 	)
 )
+
+Handlebars.registerHelper(
+	'clientsAreReady'
+	-> Clients.findOne name: exists: yes
+)
