@@ -25,5 +25,5 @@ Handlebars.registerHelper(
 
 Handlebars.registerHelper(
 	'clientsAreReady'
-	-> Clients.findOne name: exists: yes
+	-> Clients.findOne name: $exists: yes
 )

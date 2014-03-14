@@ -21,13 +21,13 @@ Template[templateName].events {
 			client.value = Validation.parseFloat client.value
 			client._id = Router.current().params._id if Router.current().params._id
 
+			$label = $(template.find "label[for=#{$input.attr 'id'}]")
+			$formCell = $label.parent '.form-cell'
+
 			Meteor.call(
 				'updateClient'
 				client
 				(error, newId)->
-					$label = $(template.find "label[for=#{$input.attr 'id'}]")
-					$formCell = $label.parent '.form-cell'
-
 					validColorClass = 'color-lightlead'
 					validThemeClass = 'theme-lightsilver'
 					errorColorClass = 'color-error'

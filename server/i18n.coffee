@@ -78,6 +78,7 @@ Thanks.
 		sender: "sender"
 		name: "name"
 		list: "list"
+		companyInfo: "company's infos"
 
 
 	#================================================================================================
@@ -163,6 +164,7 @@ Merci.
 		sender: "emetteur"
 		name: "nom"
 		list: "liste"
+		companyInfo: "informations de la société"
 }
 
 
