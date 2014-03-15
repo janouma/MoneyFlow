@@ -1,6 +1,9 @@
 <template name="invoiceEdit">
 	<div class="template-header brbs">
-		<h2 class="capitalize color-lead">{{i18n 'newItem'}}</h2>
+		<h2 class="capitalize color-lead">
+			<i class="fa fa-pencil"></i>
+			{{i18n 'newItem'}}
+		</h2>
 	</div>
 	<form class="mts" id="edit-form">
 		<div class="col">
@@ -86,8 +89,10 @@
 					<div class="form-cell capitalize brbs mbs">
 						<div class="select-style stretch">
 							<select id="client" class="capitalize spaced-letters medium-text fatty">
-								<option>toto</option>
-								<option>titi</option>
+								<option>{{i18n 'choose'}}</option>
+								{{#each clients}}
+								<option value="{{_id}}">{{name}}</option>
+								{{/each}}
 							</select>
 						</div>
 					</div>

@@ -79,6 +79,7 @@ Thanks.
 		name: "name"
 		list: "list"
 		companyInfo: "company's infos"
+		choose: "choose"
 
 
 	#================================================================================================
@@ -165,6 +166,7 @@ Merci.
 		name: "nom"
 		list: "liste"
 		companyInfo: "informations de la société"
+		choose: "choisissez"
 }
 
 

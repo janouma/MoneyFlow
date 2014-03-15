@@ -1,5 +1,8 @@
 <template name="clientRow">
 	<tr class="clickable {{activeRowClass this}}">
+		<td class="valign-middle">
+			<input type="checkbox" name="client" id="{{_id}}">
+		</td>
 		<td class="fatty medium-text capitalize valign-top">
 			{{#if name}}{{name}}{{/if}}
 			{{#unless name}} <span class="color-lightlead">—</span> {{/unless}}

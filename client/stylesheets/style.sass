@@ -101,6 +101,17 @@ input[required],
 textarea[required]
 	background-image: url("data:image/png;base64,#{$asterisk-light-img}"), url("data:image/png;base64,#{$asterisk-dark-img}")
 
+input[type=checkbox]
+	+appearance(none)
+	border-radius: 0
+	+size(13px)
+	border: $lead 1px solid
+	border-color: lighten($sky, 5%)
+	background-color: transparent
+
+	&:checked
+		background-color: lighten($sky, 15%)
+
 .textarea-valign
 	height: 45px
 
