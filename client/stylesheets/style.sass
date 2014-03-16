@@ -111,19 +111,22 @@ input[required],
 textarea[required]
 	+background-image(url($asterisk-light-img), url($asterisk-dark-img))
 
-input[type=checkbox]
-	+prefixer(appearance, none, webkit ms o spec)
-	+size(17px)
-	background-color: transparent
+.checkbox-style
+	display: inline-block
+	+size(18px)
+	overflow: hidden
 	background-repeat: no-repeat, no-repeat, no-repeat
 	background-size: 100%, 100%, 100%
 	+background-image(url($circle-light-img), url($circle-light-img), url($circle-dark-img))
 
-	&:focus
-		@extend .focus
-
-	&:checked
+	&.checked
 		background-image: url($circle-check-black-img)
+
+	input[type=checkbox]
+		opacity: 0
+		cursor: pointer
+		margin: 2px 0 0 2px
+
 
 .textarea-valign
 	height: 45px
