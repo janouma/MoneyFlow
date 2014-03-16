@@ -6,4 +6,5 @@ Template[templateName].helpers {
 
 Template[templateName].events {
 	'click tr.clickable': (e, template)-> Router.go 'clients', @
+	'click input[type=checkbox]': (e)-> e.stopPropagation()
 }
