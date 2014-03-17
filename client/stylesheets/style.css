@@ -907,6 +907,8 @@ textarea[required] {
   display: table-cell;
   height: 36px;
   vertical-align: bottom; }
+  .list-nav li {
+    border-color: #e3e3ea; }
 
 .active-row {
   background-image: -webkit-linear-gradient( #f3f3f6, #f7f7f9 7px, #f7f7f9 15px, #f3f3f6);
@@ -927,6 +929,14 @@ tr.clickable:hover {
   tr.clickable:hover td:last-child {
     background-image: -webkit-linear-gradient(right, #ebf1fc, rgba(242, 246, 253, 0) 20px);
     background-image: linear-gradient(to left, #ebf1fc, rgba(242, 246, 253, 0) 20px); }
+
+.striked-row {
+  font-style: italic;
+  color: #ff8080;
+  text-decoration: line-through;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAADUlEQVQI12P439DwHwAHgAL/wvah9QAAAABJRU5ErkJggg==");
+  background-repeat: repeat-x;
+  background-position: center; }
 
 @media (min-width: 768px) {
   .site-header .primary-nav li::before, .site-header .primary-nav li::after {
