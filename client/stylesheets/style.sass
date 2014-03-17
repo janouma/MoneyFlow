@@ -229,10 +229,10 @@ textarea[required]
 	+background-image(linear-gradient($glow-color, $flour 7px, $flour 15px, $glow-color))
 
 	td:first-child
-		+background-image(linear-gradient(left, $glow-color, rgba($flour, 0) 20px))
+		+background-image(linear-gradient(left, darken($glow-color, 2%), rgba($flour, 0) 40px))
 
 	td:last-child
-		+background-image(linear-gradient(right, $glow-color, rgba($flour, 0) 20px))
+		+background-image(linear-gradient(right, darken($glow-color, 2%), rgba($flour, 0) 40px))
 
 tr.clickable:hover
 	$glow-color: lighten($sky, 33.5%)
@@ -240,18 +240,30 @@ tr.clickable:hover
 	+background-image(linear-gradient($glow-color, $bg-color 7px, $bg-color 15px, $glow-color))
 
 	td:first-child
-		+background-image(linear-gradient(left, $glow-color, rgba($bg-color, 0) 20px))
+		+background-image(linear-gradient(left, darken($glow-color, 2%), rgba($bg-color, 0) 40px))
 
 	td:last-child
-		+background-image(linear-gradient(right, $glow-color, rgba($bg-color, 0) 20px))
+		+background-image(linear-gradient(right, darken($glow-color, 2%), rgba($bg-color, 0) 40px))
 
 .striked-row
+	$lighterred: lighten($electricred, 22%)
 	font-style: italic
 	color: $electricred
-	text-decoration: line-through
-	background-image: url($electric-red-dot-img)
+	+background-image(url($electric-red-dot-img), linear-gradient($lighterred, lighten($lighterred, 1.5%) 7px, lighten($lighterred, 1.5%) 15px, $lighterred))
 	background-repeat: repeat-x
 	background-position: center
+
+	&.active-row,
+	&.clickable:hover
+		$lighterred: lighten($electricred, 17.5%)
+		+background-image(url($electric-red-dot-img), linear-gradient($lighterred, lighten($lighterred, 1.5%) 7px, lighten($lighterred, 1.5%) 15px, $lighterred))
+
+		td:first-child
+			+background-image(linear-gradient(left, darken($lighterred, 2%), rgba($lighterred, 0) 40px))
+
+		td:last-child
+			+background-image(linear-gradient(right, darken($lighterred, 2%), rgba($lighterred, 0) 40px))
+
 
 @media (min-width: 768px)
 	.site-header

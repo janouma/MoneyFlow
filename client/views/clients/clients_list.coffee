@@ -16,7 +16,12 @@ showHideDeleteLink = (template, fade = no)->
 
 
 Template[templateName].events {
-	'click input[type=checkbox]': (e, template)-> showHideDeleteLink template, yes
+	'click input[type=checkbox]': (e, template)->
+		showHideDeleteLink template, yes
+
+		$list = $(template.find 'table')
+		strikedRowClass = 'striked-row'
+		$list.find(".#{strikedRowClass}").removeClass strikedRowClass
 
 	#==========================================
 	'transitionend #delete': (e)->
