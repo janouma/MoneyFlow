@@ -80,6 +80,7 @@ Thanks.
 		list: "list"
 		companyInfo: "company's infos"
 		choose: "choose"
+		delete: "delete"
 
 
 	#================================================================================================
@@ -167,6 +168,7 @@ Merci.
 		list: "liste"
 		companyInfo: "informations de la société"
 		choose: "choisissez"
+		delete: "supprimer"
 }
 
 
