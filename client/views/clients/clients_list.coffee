@@ -34,14 +34,29 @@ Template[templateName].events {
 
 	#==========================================
 	'click #delete': (e, template)->
-		Meteor.clearTimeout @_toast
+		Meteor.clearTimeout template._toast
+
 		$list = $(template.find 'table')
 		$rows = $list.find('input[name=client]:checked').parents('tr')
 		strikedRowClass = 'striked-row'
 		$rows.addClass strikedRowClass
 
-		@_toast = Meteor.setTimeout(
-			-> $rows.removeClass strikedRowClass
+		$dialog = $(template.find '.confirm-buttons')
+		$deleteLink = $(e.target)
+		offset = $deleteLink.offset()
+
+		$dialog.offset(
+			top: offset.top - $dialog.height() + 4
+			left: offset.left + $deleteLink.width()/2 + 9 - $dialog.width()/2
+		).removeClass 'hidden'
+
+		template._cancel = no
+
+		template._toast = Meteor.setTimeout(
+			->
+				template._cancel = yes
+				$dialog.addClass 'hidden'
+				$rows.removeClass strikedRowClass
 			5000
 		)
 }
