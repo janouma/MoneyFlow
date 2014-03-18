@@ -81,6 +81,8 @@ Thanks.
 		companyInfo: "company's infos"
 		choose: "choose"
 		delete: "delete"
+		confirm: "confirm"
+		cancel: "cancel"
 
 
 	#================================================================================================
@@ -169,6 +171,8 @@ Merci.
 		companyInfo: "informations de la société"
 		choose: "choisissez"
 		delete: "supprimer"
+		confirm: "confirmer"
+		cancel: "annuler"
 }
 
 

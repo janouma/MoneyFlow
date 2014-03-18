@@ -8,6 +8,7 @@ $silver: #dadada
 $flour: #f7f7f9
 $lead: #707070
 $sky: #5586e8
+$lightsky: lighten($sky, 5%)
 $milk: #fefefe
 $lightsilver: darken($flour, 7%)
 $darkorange: darken(orange, 5%)
@@ -28,7 +29,7 @@ $error-text-color: lighten(red,25%)
 .gradient-fog
 	+background-image(linear-gradient(rgba(darken($flour, 2%), 0.95) 10%, rgba($milk, 0.85) 65%, rgba($milk, 0.5)))
 
-+color('sky', lighten($sky, 5%), steelblue, darken(steelblue, 10%))
++color('sky', $lightsky, steelblue, darken(steelblue, 10%))
 +color('jade', $jade)
 +color('emerald', $emerald, lighten($emerald, 7%), $jade)
 +color('black', #555, #ccc, black)
@@ -41,7 +42,7 @@ $error-text-color: lighten(red,25%)
 
 +color('error', $error-text-color)
 
-+theme('sky', lighten($sky, 5%), steelblue, darken(steelblue, 10%))
++theme('sky', $lightsky, steelblue, darken(steelblue, 10%))
 +theme('silver', $silver, darken($silver, 5%), darken($silver, 10%))
 +theme('lightsilver', $lightsilver, darken($lightsilver, 5%), darken($lightsilver, 10%))
 +theme('snow', white)
@@ -50,4 +51,6 @@ $error-text-color: lighten(red,25%)
 +theme('tide', white, lighten($sky, 35%), $flour)
 
 +theme('error', $error-theme-color)
+
++border('sky', $lightsky)
 

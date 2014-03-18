@@ -1,4 +1,4 @@
-=color($name, $main, $hover: $main, $active: $main)
+=color($name, $main, $hover: $main, $active: $hover)
 	.color-#{$name}
 		&, a
 			color: $main !important
@@ -8,28 +8,53 @@
 			&, a
 				color: $active !important
 
+//=============================================================
 =color-alias($name, $aliased)
 	.color-#{$name}
 		@extend .color-#{$aliased}
 
+//=============================================================
+=border($name, $main, $hover: $main, $active: $hover)
+	.border-#{$name}
+		border-color: $main !important
 
-=theme($name, $main, $hover: $main, $active: $main)
+		&:active,
+		&[class*=active]
+			border-color: darken($active, 5%) !important
+
+	input[type=submit].border-#{$name}:hover,
+	a.border-#{$name}:hover,
+	.button.border-#{$name}:hover,
+	.clickable.border-#{$name}:hover
+		border-color: darken($hover, 5%) !important
+
+//=============================================================
+=theme($name, $main, $hover: $main, $active: $hover)
 	.theme-#{$name}
 		background-color: $main !important
-		border-color: darken($main, 5%) !important
+
+		&:not([class*=border-])
+			border-color: darken($main, 5%) !important
 
 		&:active,
 		&[class*=active]
 			background-color: $active !important
-			border-color: darken($active, 5%) !important
 
-	input[type=submit].theme-#{$name}:hover,
-	a.theme-#{$name}:hover,
-	.button.theme-#{$name}:hover,
-	.clickable.theme-#{$name}:hover
-		background-color: $hover !important
-		border-color: darken($hover, 5%) !important
+			&:not([class*=border-])
+				border-color: darken($active, 5%) !important
 
+
+	input[type=submit].theme-#{$name},
+	a.theme-#{$name},
+	.button.theme-#{$name},
+	.clickable.theme-#{$name}
+		&:hover
+			background-color: $hover !important
+
+		&:not([class*=border-]):hover
+			border-color: darken($hover, 5%) !important
+
+//=============================================================
 =theme-alias($name, $aliased)
 	.theme-#{$name}
 		@extend .theme-#{$aliased}

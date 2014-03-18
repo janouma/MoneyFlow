@@ -34,8 +34,16 @@ Template[templateName].events {
 
 	#==========================================
 	'click #delete': (e, template)->
+		Meteor.clearTimeout @_toast
 		$list = $(template.find 'table')
-		$list.find('input[name=client]:checked').parents('tr').addClass 'striked-row'
+		$rows = $list.find('input[name=client]:checked').parents('tr')
+		strikedRowClass = 'striked-row'
+		$rows.addClass strikedRowClass
+
+		@_toast = Meteor.setTimeout(
+			-> $rows.removeClass strikedRowClass
+			5000
+		)
 }
 
 

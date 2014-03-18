@@ -264,6 +264,12 @@ tr.clickable:hover
 		td:last-child
 			+background-image(linear-gradient(right, darken($lighterred, 2%), rgba($lighterred, 0) 40px))
 
+.confirm-buttons
+	position: absolute
+
+	&:after
+		border-top-color: $lightsky
+
 
 @media (min-width: 768px)
 	.site-header
