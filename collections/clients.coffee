@@ -3,6 +3,7 @@
 @Clients.allow {
 	insert: ownsDocument
 	update: ownsDocument
+	remove: ownsDocument
 }
 
 Meteor.methods {

@@ -49,7 +49,7 @@ Template[templateName].events {
 		offset = $deleteLink.offset()
 
 		$dialog.offset(
-			top: offset.top - $dialog.height() + 4
+			top: offset.top - $dialog.height() + 3
 			left: offset.left + $deleteLink.width()/2 + 9 - $dialog.width()/2
 		).removeClass 'hidden'
 
@@ -62,6 +62,25 @@ Template[templateName].events {
 				$rows.removeClass strikedRowClass
 			5000
 		)
+
+	#==========================================
+	'click .confirm-buttons .cancel': (e, template)->
+		do e.preventDefault
+
+		template._cancel = yes
+		Meteor.clearTimeout template._toast
+		$(template.find '.confirm-buttons').addClass 'hidden'
+		$("tr").removeClass 'striked-row'
+
+	#==========================================
+	'click .confirm-buttons .confirm': (e, template)->
+		do e.preventDefault
+		return if template._cancel
+
+		$(template.find '.confirm-buttons').addClass 'hidden'
+		$("tr").removeClass 'striked-row'
+
+		$('input[name=client]:checked').each -> Clients.remove _id: $(@).attr('id')
 }
 
 
