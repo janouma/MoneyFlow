@@ -18,9 +18,8 @@ showHideDeleteLink = (template, fade = no)->
 Template[templateName].events {
 	'click input[type=checkbox]': (e, template)->
 		Meteor.clearTimeout template._toast
-
 		showHideDeleteLink template, yes
-
+		template._cancel = yes
 		$list = $(template.find 'table')
 		strikedRowClass = 'striked-row'
 		$(template.find '.confirm-buttons').addClass 'hidden'
