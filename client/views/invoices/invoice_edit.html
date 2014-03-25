@@ -107,11 +107,15 @@
 			<table class="horizontal-border">
 				<thead class="theme-lightsilver color-lightlead engraved capitalize">
 					<tr>
-						<th class="width-3of8 brbn phs">{{i18n 'item'}}</th>
-						<th class="width-1of8 brbn phs">{{i18n 'price'}}</th>
-						<th class="width-1of8 brbn phs">{{i18n 'amount'}}</th>
-						<th class="width-1of8 brbn phs">{{i18n 'unit'}}</th>
-						<th class="width-1of4 brbn phs text-ellipsis">{{i18n 'sum'}} <span class="small-text color-dust">({{i18n 'taxeFree'}})</span></th>
+						<th class="width-3of8 mobile-width-2of6 brbn phs">{{i18n 'item'}}</th>
+						<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'price'}}</th>
+						<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'amount'}}</th>
+						<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'unit'}}</th>
+						<th class="width-1of4 mobile-width-1of6 brbn phs">
+							{{i18n 'sum'}}&nbsp;
+							<span class="small-text color-dust text-ellipsis phone-hidden">({{i18n 'taxeFree'}})</span>
+							<span class="small-text color-dust text-ellipsis tablet-hidden desktop-hidden uppercase">({{initials 'taxeFree'}})</span>
+						</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -127,7 +131,7 @@
 						</td>
 						<td class="valign-middle pas">
 							<div class="select-style stretch">
-								<select id="document-type" class="capitalize pls spaced-letters">
+								<select id="document-type" class="capitalize spaced-letters">
 									<option value="f">{{i18n 'time'}}</option>
 									<option value="c">{{i18n 'amount'}}</option>
 								</select>
