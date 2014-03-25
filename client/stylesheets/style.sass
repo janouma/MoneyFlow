@@ -41,6 +41,10 @@ td, th
 		height: 18px
 		padding: 0
 
+tr:hover
+	.delete-item-row
+		@extend .visible
+
 .select-style
 	$width: 145px
 	$select-arrow-width: 28px
@@ -269,11 +273,18 @@ tr.clickable:hover
 		td:last-child
 			+background-image(linear-gradient(right, darken($lighterred, 2%), rgba($lighterred, 0) 40px))
 
-.confirm-buttons
+.confirm-buttons,
+.inline-confirm-buttons
 	position: absolute
 
+.confirm-buttons
 	&:after
 		border-top-color: $lightsky
+
+.inline-confirm-buttons
+	&:after
+		top: 5px
+		border-left-color: $silver
 
 
 @media (min-width: 768px)

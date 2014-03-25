@@ -322,6 +322,17 @@ a.border-sky:hover,
 .clickable.border-sky:hover {
   border-color: #5586e8 !important; }
 
+.border-silver {
+  border-color: #dadada !important; }
+  .border-silver:active, .border-silver[class*=active] {
+    border-color: #cdcdcd !important; }
+
+input[type=submit].border-silver:hover,
+a.border-silver:hover,
+.button.border-silver:hover,
+.clickable.border-silver:hover {
+  border-color: #cdcdcd !important; }
+
 .fa.fa-10x {
   font-size: 10em; }
 .fa.fa-percent::before {
@@ -697,7 +708,7 @@ input[type=file] {
 .no-display {
   display: none !important; }
 
-.visible {
+.visible, tr:hover .delete-item-row {
   opacity: 1;
   visibility: visible; }
 
@@ -762,7 +773,7 @@ input[type=file] {
 .engraved {
   text-shadow: 0 1px 1px #fafafa; }
 
-.z1, .up-triangle::before, .down-triangle::after {
+.z1, .up-triangle::before, .down-triangle::after, .right-triangle::after {
   z-index: 1; }
 
 .z2 {
@@ -806,9 +817,29 @@ input[type=file] {
   border-top-color: white;
   border-bottom-width: 0; }
 
+.right-triangle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -9px;
+  display: block;
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 9px;
+  border-left-color: white;
+  border-right-width: 0; }
+
+@media (min-width: 768px) {
+  .desktop-spaced-letters {
+    letter-spacing: 1px; } }
 @media (max-width: 767px) {
   .mobile-stretch {
     width: 100% !important; } }
+@media (min-width: 481px) and (max-width: 767px) {
+  .tablet-spaced-letters {
+    letter-spacing: 1px; } }
 .template-header,
 .page-header {
   border-bottom-color: #a3a3a3; }
@@ -1057,10 +1088,16 @@ tr.clickable:hover {
       background-image: -webkit-linear-gradient(right, #ffcfcf, rgba(255, 217, 217, 0) 40px);
       background-image: linear-gradient(to left, #ffcfcf, rgba(255, 217, 217, 0) 40px); }
 
-.confirm-buttons {
+.confirm-buttons,
+.inline-confirm-buttons {
   position: absolute; }
-  .confirm-buttons:after {
-    border-top-color: #6b96eb; }
+
+.confirm-buttons:after {
+  border-top-color: #6b96eb; }
+
+.inline-confirm-buttons:after {
+  top: 5px;
+  border-left-color: #dadada; }
 
 @media (min-width: 768px) {
   .site-header .primary-nav li::before, .site-header .primary-nav li::after {

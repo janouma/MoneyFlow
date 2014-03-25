@@ -210,7 +210,24 @@ input[type=file]
 	border-bottom-width: 0
 	@extend .z1
 
+.right-triangle::after
+	content: ""
+	position: absolute
+	top: 0
+	right: -9px
+	display: block
+	+triangle(18px, white, right)
+	border-right-width: 0
+	@extend .z1
+
+@media (min-width: 768px)
+	.desktop-spaced-letters
+		letter-spacing: 1px
 
 @media (max-width: 767px)
 	.mobile-stretch
 		width: 100% !important
+
+@media (min-width: 481px) and (max-width: 767px)
+	.tablet-spaced-letters
+		letter-spacing: 1px

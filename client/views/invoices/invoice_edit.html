@@ -119,28 +119,15 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td class="valign-middle pas">
-							<input type="text" placeholder="{{i18n 'item'}}" class="text capitalize stretch spaced-letters">
-						</td>
-						<td class="valign-middle pas">
-							<input type="text" placeholder="000" class="text stretch spaced-letters" required pattern="\d+">
-						</td>
-						<td class="valign-middle pas">
-							<input type="text" placeholder="000" class="text stretch spaced-letters" required pattern="\d+">
-						</td>
-						<td class="valign-middle pas">
-							<div class="select-style stretch">
-								<select id="document-type" class="capitalize spaced-letters">
-									<option value="f">{{i18n 'time'}}</option>
-									<option value="c">{{i18n 'amount'}}</option>
-								</select>
-							</div>
-						</td>
-						<td class="valign-middle pas">000</td>
-					</tr>
+					{{>invoiceItemRow}}
 				</tbody>
 			</table>
+			<div class="inline-confirm-buttons animated right-triangle hidden">
+				<span class="button-group small-shadow no-radius border-silver man">
+					<button class="confirm button icon-button theme-sky color-white capitalize no-radius border-silver animated"><i class="fa fa-check"></i> <strong class="prs">{{i18n 'confirm'}}</strong></button>
+					<button class="cancel button icon-button theme-silver color-white capitalize no-radius border-silver animated"><strong class="pls">{{i18n 'cancel'}}</strong> <i class="fa fa-times"></i></button>
+				</span>
+			</div>
 		</div>
 	</form>
 </template>

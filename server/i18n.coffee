@@ -88,6 +88,8 @@ Thanks.
 		sum: "sum"
 		taxeFree: "taxe free"
 		amount: "amount"
+		time: "time"
+		without: "without"
 
 
 	#================================================================================================
@@ -183,6 +185,8 @@ Merci.
 		sum: "total"
 		taxeFree: "hors taxes"
 		amount: "quantité"
+		time: "temps"
+		without: "sans"
 }
 
 
