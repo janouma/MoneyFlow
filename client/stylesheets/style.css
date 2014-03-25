@@ -671,6 +671,9 @@ input[type=file] {
   overflow: hidden;
   text-overflow: ellipsis; }
 
+.small-text {
+  font-size: 0.88em; }
+
 .medium-text {
   font-size: 1.25em; }
 
@@ -820,6 +823,10 @@ textarea:focus,
   box-shadow: none;
   font-weight: bold;
   outline: 0; }
+
+td .select-style select, th .select-style select {
+  height: 18px;
+  padding: 0; }
 
 .select-style {
   display: inline-block;

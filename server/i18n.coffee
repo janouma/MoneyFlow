@@ -83,6 +83,11 @@ Thanks.
 		delete: "delete"
 		confirm: "confirm"
 		cancel: "cancel"
+		item: "item"
+		unit: "unit"
+		sum: "sum"
+		taxeFree: "taxe free"
+		amount: "amount"
 
 
 	#================================================================================================
@@ -173,6 +178,11 @@ Merci.
 		delete: "supprimer"
 		confirm: "confirmer"
 		cancel: "annuler"
+		item: "article"
+		unit: "unité"
+		sum: "total"
+		taxeFree: "hors taxes"
+		amount: "quantité"
 }
 
 

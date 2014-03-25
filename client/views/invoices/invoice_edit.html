@@ -101,5 +101,42 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- =============================================================== -->
+		<div class="col mtm">
+			<table class="horizontal-border">
+				<thead class="theme-lightsilver color-lightlead engraved capitalize">
+					<tr>
+						<th class="width-3of8 brbn phs">{{i18n 'item'}}</th>
+						<th class="width-1of8 brbn phs">{{i18n 'price'}}</th>
+						<th class="width-1of8 brbn phs">{{i18n 'amount'}}</th>
+						<th class="width-1of8 brbn phs">{{i18n 'unit'}}</th>
+						<th class="width-1of4 brbn phs text-ellipsis">{{i18n 'sum'}} <span class="small-text color-dust">({{i18n 'taxeFree'}})</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="valign-middle pas">
+							<input type="text" placeholder="{{i18n 'item'}}" class="text capitalize stretch spaced-letters">
+						</td>
+						<td class="valign-middle pas">
+							<input type="text" placeholder="000" class="text stretch spaced-letters" required pattern="\d+">
+						</td>
+						<td class="valign-middle pas">
+							<input type="text" placeholder="000" class="text stretch spaced-letters" required pattern="\d+">
+						</td>
+						<td class="valign-middle pas">
+							<div class="select-style stretch">
+								<select id="document-type" class="capitalize pls spaced-letters">
+									<option value="f">{{i18n 'time'}}</option>
+									<option value="c">{{i18n 'amount'}}</option>
+								</select>
+							</div>
+						</td>
+						<td class="valign-middle pas">000</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</form>
 </template>
