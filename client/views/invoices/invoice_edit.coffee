@@ -1,4 +1,7 @@
 Template.invoiceEdit.events {
+	'submit form': (e)-> do e.preventDefault
+
+	#==========================================
 	'click .delete-item-row': (e, template)->
 		Meteor.clearTimeout template._toast
 
@@ -25,4 +28,12 @@ Template.invoiceEdit.events {
 	'transitionend .inline-confirm-buttons': (e)->
 		$dialog = $(e.target)
 		$dialog.css left: 0 if $dialog.hasClass 'hidden'
+
+	#==========================================
+	'click .inline-confirm-buttons .cancel': (e, template)->
+		do e.preventDefault
+		template._cancel = yes
+		Meteor.clearTimeout template._toast
+		$(template.find '.inline-confirm-buttons').addClass 'hidden'
+		$(template.find '.delete-item-row').addClass 'hidden'
 }
