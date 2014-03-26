@@ -11,7 +11,7 @@
 			<div class="col">
 				<div class="col width-2of10">
 					<div class="cell form-cell theme-lightsilver mln mtn">
-						<label class="capitalize color-lightlead engraved phm stretch fatty" for="price"><i class="fa fa-usd"></i> {{i18n 'price'}}</label>
+						<label class="capitalize color-lightlead engraved phm stretch fatty" for="price">{{i18n 'price'}}</label>
 					</div>
 				</div>
 				<div class="col width-1of8 mobile-width-1of6">
@@ -49,7 +49,7 @@
 				<div class="col width-2of5 pull-right">
 					<div class="col width-1of2">
 						<div class="cell form-cell theme-lightsilver mln mtn">
-							<label class="capitalize color-lightlead engraved phm stretch fatty" for="document-type"><i class="fa fa-file"></i> {{i18n 'documentType'}}</label>
+							<label class="capitalize color-lightlead engraved phm stretch fatty" for="document-type">{{i18n 'documentType'}}</label>
 						</div>
 					</div>
 					<div class="col width-1of2">
@@ -73,7 +73,7 @@
 				<div class="col width-2of5 tablet-width-1of2">
 					<div class="col">
 						<div class="cell form-cell theme-lightsilver mln mtn">
-							<label class="capitalize color-lightlead engraved phm stretch fatty down-label" for="company"><i class="fa fa-tag"></i> {{i18n 'sender'}}</label>
+							<label class="capitalize color-lightlead engraved phm stretch fatty down-label" for="company">{{i18n 'sender'}}</label>
 						</div>
 					</div>
 					<div class="col">
@@ -87,7 +87,7 @@
 				<div class="col width-2of5 tablet-width-1of2 pull-right">
 					<div class="col">
 						<div class="cell form-cell theme-lightsilver mhn mtn">
-							<label class="capitalize color-lightlead engraved phm stretch fatty down-label" for="client"><i class="fa fa-user"></i> {{i18n 'client'}}</label>
+							<label class="capitalize color-lightlead engraved phm stretch fatty down-label" for="client">{{i18n 'client'}}</label>
 						</div>
 					</div>
 					<div class="col">
@@ -114,12 +114,65 @@
 			<div class="col">
 				<div class="col width-2of10">
 					<div class="cell form-cell theme-lightsilver mln mtn">
-						<label class="capitalize color-lightlead engraved phm stretch fatty" for="group"><i class="fa fa-folder"></i> {{i18n 'group'}}</label>
+						<label class="capitalize color-lightlead engraved phm stretch fatty" for="group">{{i18n 'group'}}</label>
 					</div>
 				</div>
 				<div class="col width-3of10">
-					<div class="cell form-cell brbs mtn">
+					<div class="cell form-cell brbs mtn prs">
 						<input type="text" id="group" placeholder="{{i18n 'group'}}" class="text stretch spaced-letters pls capitalize">
+					</div>
+				</div>
+				<div class="col width-2of10">
+					<div class="cell form-cell theme-lightsilver mln mtn">
+						<label class="capitalize color-lightlead engraved phm stretch fatty" for="item">{{i18n 'item'}}</label>
+					</div>
+				</div>
+				<div class="col width-3of10">
+					<div class="cell form-cell brbs mtn prs">
+						<input type="text" id="item" placeholder="{{i18n 'item'}}" class="text stretch spaced-letters pls capitalize" required>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="col width-1of8">
+					<div class="cell form-cell theme-lightsilver mln mtn">
+						<label class="capitalize color-lightlead engraved phm stretch fatty" for="item-price">{{i18n 'price'}}</label>
+					</div>
+				</div>
+				<div class="col width-1of8">
+					<div class="cell form-cell brbs mtn prs">
+						<input type="text" id="item-price" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
+					</div>
+				</div>
+				<div class="col width-1of8">
+					<div class="cell form-cell theme-lightsilver mln mtn">
+						<label class="capitalize color-lightlead engraved phm stretch fatty" for="amount">{{i18n 'amount'}}</label>
+					</div>
+				</div>
+				<div class="col width-1of8">
+					<div class="cell form-cell brbs mtn prs">
+						<input type="text" id="amount" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
+					</div>
+				</div>
+				<div class="col width-1of8">
+					<div class="cell form-cell theme-lightsilver mln mtn">
+						<label class="capitalize color-lightlead engraved phm stretch fatty" for="unit">{{i18n 'unit'}}</label>
+					</div>
+				</div>
+				<div class="col width-1of8">
+					<div class="cell form-cell brbs mtn prs">
+						<div class="select-style stretch pls">
+							<select name="unit" class="capitalize tablet-spaced-letters desktop-spaced-letters">
+								<option value="t">{{i18n 'time'}}</option>
+								<option value="w">{{i18n 'without'}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col width-1of4">
+					<div class="cell text-right fatty medium-text">
+						<span class="color-lightsilver capitalize">{{i18n 'sum'}}</span>
+						<span class="color-lightlead">000 <i class="fa fa-usd"></i></span>
 					</div>
 				</div>
 			</div>

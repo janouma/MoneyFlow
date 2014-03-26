@@ -97,6 +97,7 @@ input[type=email],
 input[type=password],
 textarea,
 .select-style select
+	background-color: transparent
 	border-width: 0
 
 	&:focus
@@ -117,6 +118,7 @@ input[required],
 textarea:invalid,
 textarea[required],
 .select-style
+	background-color: transparent
 	background-repeat: no-repeat, no-repeat
 	background-size: 13px, 13px
 	background-position: right 7px center, right 7px center
@@ -124,7 +126,7 @@ textarea[required],
 input[type]:invalid,
 textarea:invalid,
 textarea[required]:invalid
-	background-color: #ffffff
+	background-color: transparent
 	color: $error-text-color
 	+background-image(url($forbidden-light-img), url($forbidden-dark-img))
 
