@@ -70,7 +70,7 @@ Thanks.
 '''
 		resourceForbidden: "access forbidden"
 		resourceForbiddenBody: "you are not allowed to access this resource"
-		newItem: "new item"
+		newRecord: "new record"
 		price: "price"
 		day: "day"
 		hour: "hour"
@@ -90,6 +90,10 @@ Thanks.
 		amount: "amount"
 		time: "time"
 		without: "without"
+		group: "group"
+		newItem: "new item"
+		header: "header"
+		parameter: "parameter"
 
 
 	#================================================================================================
@@ -167,7 +171,7 @@ Merci.
 '''
 		resourceForbidden: "accès non-autorisé"
 		resourceForbiddenBody: "vous n'êtes pas autorisé à accéder à cette ressource"
-		newItem: "nouvel enregistrement"
+		newRecord: "nouvel enregistrement"
 		price: "tarif"
 		day: "jour"
 		hour: "heure"
@@ -187,6 +191,10 @@ Merci.
 		amount: "quantité"
 		time: "temps"
 		without: "sans"
+		group: "groupe"
+		newItem: "nouvel article"
+		header: "entête"
+		parameter: "paramètre"
 }
 
 

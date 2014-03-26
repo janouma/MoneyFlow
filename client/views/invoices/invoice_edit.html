@@ -2,132 +2,157 @@
 	<div class="template-header brbs">
 		<h2 class="capitalize color-lead">
 			<i class="fa fa-pencil"></i>
-			{{i18n 'newItem'}}
+			{{i18n 'newRecord'}}
 		</h2>
 	</div>
 	<form class="mts" id="edit-form">
-		<div class="col">
-			<div class="col width-2of10">
-				<div class="cell form-cell theme-lightsilver mln">
-					<label class="capitalize color-lightlead engraved phm stretch fatty" for="price"><i class="fa fa-usd"></i> {{i18n 'price'}}</label>
-				</div>
-			</div>
-			<div class="col width-1of8 mobile-width-1of6">
-				<div class="cell form-cell brbs">
-					<input type="text" id="price" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
-				</div>
-			</div>
-			<div class="col width-fit mobile-width-fill">
-				<div class="col width-fit mobile-width-fit">
-					<div class="cell form-cell brbs">
-						<div class="select-style one-char">
-							<select id="currency">
-								<option value="€">€</option>
-								<option value="$">$</option>
-							</select>
-						</div>
+		<fieldset class="mtm">
+			<legend><h3><i class="fa fa-wrench"></i> {{i18n 'parameters'}}</h3></legend>
+			<div class="col">
+				<div class="col width-2of10">
+					<div class="cell form-cell theme-lightsilver mln mtn">
+						<label class="capitalize color-lightlead engraved phm stretch fatty" for="price"><i class="fa fa-usd"></i> {{i18n 'price'}}</label>
 					</div>
 				</div>
-				<div class="col width-fit mobile-width-fit">
-					<div class="cell form-cell mhn">
-						<span class="cell-align big-text">/</span>
+				<div class="col width-1of8 mobile-width-1of6">
+					<div class="cell form-cell brbs mtn">
+						<input type="text" id="price" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
 					</div>
 				</div>
 				<div class="col width-fit mobile-width-fill">
-					<div class="cell form-cell brbs">
-						<div class="select-style narrow-input mobile-stretch">
-							<select id="time-unit" class="capitalize spaced-letters">
-								<option value="d">{{i18n 'day'}}</option>
-								<option value="h">{{i18n 'hour'}}</option>
-							</select>
+					<div class="col width-fit mobile-width-fit">
+						<div class="cell form-cell brbs mtn">
+							<div class="select-style one-char">
+								<select id="currency">
+									<option value="€">€</option>
+									<option value="$">$</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col width-fit mobile-width-fit">
+						<div class="cell form-cell mhn mtn">
+							<span class="cell-align big-text">/</span>
+						</div>
+					</div>
+					<div class="col width-fit mobile-width-fill">
+						<div class="cell form-cell brbs mtn">
+							<div class="select-style narrow-input mobile-stretch">
+								<select id="time-unit" class="capitalize spaced-letters">
+									<option value="d">{{i18n 'day'}}</option>
+									<option value="h">{{i18n 'hour'}}</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col width-2of5 pull-right">
+					<div class="col width-1of2">
+						<div class="cell form-cell theme-lightsilver mln mtn">
+							<label class="capitalize color-lightlead engraved phm stretch fatty" for="document-type"><i class="fa fa-file"></i> {{i18n 'documentType'}}</label>
+						</div>
+					</div>
+					<div class="col width-1of2">
+						<div class="cell form-cell brbs mrn mtn">
+							<div class="select-style stretch">
+								<select id="document-type" class="capitalize pls spaced-letters">
+									<option value="f">{{i18n 'invoice'}}</option>
+									<option value="c">{{i18n 'order'}}</option>
+								</select>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col width-2of5 pull-right">
-				<div class="col width-1of2">
-					<div class="cell form-cell theme-lightsilver mln">
-						<label class="capitalize color-lightlead engraved phm stretch fatty" for="document-type"><i class="fa fa-file"></i> {{i18n 'documentType'}}</label>
-					</div>
-				</div>
-				<div class="col width-1of2">
-					<div class="cell form-cell brbs mrn">
-						<div class="select-style stretch">
-							<select id="document-type" class="capitalize pls spaced-letters">
-								<option value="f">{{i18n 'invoice'}}</option>
-								<option value="c">{{i18n 'order'}}</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		</fieldset>
 
 		<!-- =============================================================== -->
-		<div class="col">
-			<div class="col width-2of5 tablet-width-1of2">
-				<div class="col">
-					<div class="cell form-cell theme-lightsilver mln">
-						<label class="capitalize color-lightlead engraved phm stretch fatty down-label" for="company"><i class="fa fa-tag"></i> {{i18n 'sender'}}</label>
-					</div>
-				</div>
-				<div class="col">
-					<div id="company" class="spaced-letters">
-						<p class="capitalize fatty mvs medium-text">{{settings.company}}</p>
-						{{#if settings.email}}<p><i class="fa fa-envelope"></i> {{settings.email}}</p>{{/if}}
-						{{#if settings.address}}<p class="capitalize text-multiline mtm"><i class="fa fa-home fa-lg"></i> {{settings.address}}</p>{{/if}}
-					</div>
-				</div>
-			</div>
-			<div class="col width-2of5 tablet-width-1of2 pull-right">
-				<div class="col">
-					<div class="cell form-cell theme-lightsilver mhn">
-						<label class="capitalize color-lightlead engraved phm stretch fatty down-label" for="client"><i class="fa fa-user"></i> {{i18n 'client'}}</label>
-					</div>
-				</div>
-				<div class="col">
-					<div class="form-cell capitalize brbs mbs">
-						<div class="select-style stretch">
-							<select id="client" class="capitalize spaced-letters medium-text fatty">
-								<option>{{i18n 'choose'}}</option>
-								{{#each clients}}
-								<option value="{{_id}}">{{name}}</option>
-								{{/each}}
-							</select>
+		<fieldset>
+			<legend><h3><i class="fa fa-info-circle"></i> {{i18n 'header'}}</h3></legend>
+			<div class="col">
+				<div class="col width-2of5 tablet-width-1of2">
+					<div class="col">
+						<div class="cell form-cell theme-lightsilver mln mtn">
+							<label class="capitalize color-lightlead engraved phm stretch fatty down-label" for="company"><i class="fa fa-tag"></i> {{i18n 'sender'}}</label>
 						</div>
 					</div>
-					{{#if settings.email}}<p class="spaced-letters"><i class="fa fa-envelope"></i> the.client@email</p>{{/if}}
-					{{#if settings.address}}<p class="capitalize text-multiline mtm spaced-letters"><i class="fa fa-home fa-lg"></i> the client address</p>{{/if}}
+					<div class="col">
+						<div id="company" class="spaced-letters">
+							<p class="capitalize fatty mvs medium-text">{{settings.company}}</p>
+							{{#if settings.email}}<p><i class="fa fa-envelope"></i> {{settings.email}}</p>{{/if}}
+							{{#if settings.address}}<p class="capitalize text-multiline mtm"><i class="fa fa-home fa-lg"></i> {{settings.address}}</p>{{/if}}
+						</div>
+					</div>
+				</div>
+				<div class="col width-2of5 tablet-width-1of2 pull-right">
+					<div class="col">
+						<div class="cell form-cell theme-lightsilver mhn mtn">
+							<label class="capitalize color-lightlead engraved phm stretch fatty down-label" for="client"><i class="fa fa-user"></i> {{i18n 'client'}}</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-cell capitalize brbs mbs">
+							<div class="select-style stretch">
+								<select id="client" class="capitalize spaced-letters medium-text fatty">
+									<option>{{i18n 'choose'}}</option>
+									{{#each clients}}
+									<option value="{{_id}}">{{name}}</option>
+									{{/each}}
+								</select>
+							</div>
+						</div>
+						{{#if settings.email}}<p class="spaced-letters"><i class="fa fa-envelope"></i> the.client@email</p>{{/if}}
+						{{#if settings.address}}<p class="capitalize text-multiline mtm spaced-letters"><i class="fa fa-home fa-lg"></i> the client address</p>{{/if}}
+					</div>
 				</div>
 			</div>
-		</div>
+		</fieldset>
 
 		<!-- =============================================================== -->
-		<div class="col mtm">
-			<table class="horizontal-border">
-				<thead class="theme-lightsilver color-lightlead engraved capitalize">
-					<tr>
-						<th class="width-3of8 mobile-width-2of6 brbn phs">{{i18n 'item'}}</th>
-						<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'price'}}</th>
-						<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'amount'}}</th>
-						<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'unit'}}</th>
-						<th class="width-1of4 mobile-width-1of6 brbn phs">
-							{{i18n 'sum'}}&nbsp;
-							<span class="small-text color-dust text-ellipsis phone-hidden">({{i18n 'taxeFree'}})</span>
-							<span class="small-text color-dust text-ellipsis tablet-hidden desktop-hidden uppercase">({{initials 'taxeFree'}})</span>
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					{{>invoiceItemRow}}
-				</tbody>
-			</table>
-			<div class="inline-confirm-buttons animated right-triangle hidden">
-				<span class="button-group small-shadow no-radius border-silver man">
-					<button class="confirm button icon-button theme-sky color-white capitalize no-radius border-silver animated"><i class="fa fa-check"></i> <strong class="prs">{{i18n 'confirm'}}</strong></button>
-					<button class="cancel button icon-button theme-silver color-white capitalize no-radius border-silver animated"><strong class="pls">{{i18n 'cancel'}}</strong> <i class="fa fa-times"></i></button>
-				</span>
+		<fieldset>
+			<legend><h3><i class="fa fa-plus"></i> {{i18n 'newItem'}}</h3></legend>
+			<div class="col">
+				<div class="col width-2of10">
+					<div class="cell form-cell theme-lightsilver mln mtn">
+						<label class="capitalize color-lightlead engraved phm stretch fatty" for="group"><i class="fa fa-folder"></i> {{i18n 'group'}}</label>
+					</div>
+				</div>
+				<div class="col width-3of10">
+					<div class="cell form-cell brbs mtn">
+						<input type="text" id="group" placeholder="{{i18n 'group'}}" class="text stretch spaced-letters pls capitalize">
+					</div>
+				</div>
 			</div>
-		</div>
+		</fieldset>
+		<!-- =============================================================== -->
+		<fieldset>
+			<legend><h3><i class="fa fa-list-alt"></i> {{i18n 'items'}}</h3></legend>
+			<div class="col">
+				<table class="horizontal-border">
+					<thead class="theme-lightsilver color-lightlead engraved capitalize">
+						<tr>
+							<th class="width-3of8 mobile-width-2of6 brbn phs">{{i18n 'item'}}</th>
+							<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'price'}}</th>
+							<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'amount'}}</th>
+							<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'unit'}}</th>
+							<th class="width-1of4 mobile-width-1of6 brbn phs">
+								{{i18n 'sum'}}&nbsp;
+								<span class="small-text color-dust text-ellipsis phone-hidden">({{i18n 'taxeFree'}})</span>
+								<span class="small-text color-dust text-ellipsis tablet-hidden desktop-hidden uppercase">({{initials 'taxeFree'}})</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{>invoiceItemRow}}
+					</tbody>
+				</table>
+				<div class="inline-confirm-buttons animated right-triangle hidden">
+					<span class="button-group small-shadow no-radius border-silver man">
+						<button class="confirm button icon-button theme-sky color-white capitalize no-radius border-silver animated"><i class="fa fa-check"></i> <strong class="prs">{{i18n 'confirm'}}</strong></button>
+						<button class="cancel button icon-button theme-silver color-white capitalize no-radius border-silver animated"><strong class="pls">{{i18n 'cancel'}}</strong> <i class="fa fa-times"></i></button>
+					</span>
+				</div>
+			</div>
+		</fieldset>
 	</form>
 </template>

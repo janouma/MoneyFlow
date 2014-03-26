@@ -7,6 +7,7 @@ $ash: #505050
 $silver: #dadada
 $flour: #f7f7f9
 $lead: #707070
+$lightlead: lighten($lead, 15%)
 $sky: #5586e8
 $lightsky: lighten($sky, 5%)
 $milk: #fefefe
@@ -37,7 +38,7 @@ $error-text-color: lighten(red,25%)
 +color('ash', $ash)
 +color('dust', darken($silver, 10%), $lead, $lead)
 +color('lead', $lead)
-+color('lightlead', lighten($lead, 15%))
++color('lightlead', $lightlead)
 +color('lightsilver', $lightsilver, darken($lightsilver, 5%), darken($lightsilver, 10%))
 
 +color('error', $error-text-color)
@@ -49,6 +50,7 @@ $error-text-color: lighten(red,25%)
 +theme('jade', $jade)
 +theme('orange', $darkorange)
 +theme('tide', white, lighten($sky, 35%), $flour)
++theme('flour', $flour)
 
 +theme('error', $error-theme-color)
 
