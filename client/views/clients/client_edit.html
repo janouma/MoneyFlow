@@ -2,12 +2,12 @@
 	<div class="template-header brbs col width-1of2 capitalize">
 		<div class="col width-fit mobile-width-fit">
 			<h2 class="color-lead">
-				<i class="fa fa-pencil"></i>
 				{{#with client}}
+				<i class="fa fa-pencil"></i>
 				{{#if name}}{{name}}{{/if}}
 				{{#unless name}} — {{/unless}}
 				{{/with}}
-				{{#unless client}}{{i18n 'newRecord'}}{{/unless}}
+				{{#unless client}}<i class="fa fa-plus"></i> {{i18n 'newRecord'}}{{/unless}}
 			</h2>
 		</div>
 		<div class="col width-fill mobile-width-fill text-right list-nav color-sky">
@@ -17,8 +17,8 @@
 	<form class="mts" id="edit-form">
 		<div class="col">
 			<div class="col width-1of5">
-				<div class="cell form-cell theme-lightsilver mln">
-					<label class="capitalize color-lightlead engraved phm stretch fatty" for="name">{{i18n 'name'}}</label>
+				<div class="cell form-label mln">
+					<label for="name">{{i18n 'name'}}</label>
 				</div>
 			</div>
 			<div class="col width-3of10">
@@ -29,8 +29,8 @@
 		</div>
 		<div class="col">
 			<div class="col width-1of5">
-				<div class="cell form-cell theme-lightsilver mln">
-					<label class="capitalize color-lightlead engraved phm stretch fatty" for="email">{{i18n 'email'}}</label>
+				<div class="cell form-label mln">
+					<label for="email">{{i18n 'email'}}</label>
 				</div>
 			</div>
 			<div class="col width-3of10">
@@ -41,8 +41,8 @@
 		</div>
 		<div class="col">
 			<div class="col width-1of5">
-				<div class="cell form-cell theme-lightsilver mln">
-					<label class="capitalize color-lightlead engraved textarea-valign phm stretch fatty" for="address">{{i18n 'address'}}</label>
+				<div class="cell form-label mln">
+					<label class="textarea-valign" for="address">{{i18n 'address'}}</label>
 				</div>
 			</div>
 			<div class="col width-3of10">

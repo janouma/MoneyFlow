@@ -22,24 +22,22 @@ Template[templateName].events {
 			client._id = Router.current().params._id if Router.current().params._id
 
 			$label = $(template.find "label[for=#{$input.attr 'id'}]")
-			$formCell = $label.parent '.form-cell'
+			$formLabel = $label.parent '.form-label'
 
 			Meteor.call(
 				'updateClient'
 				client
 				(error, newId)->
-					validColorClass = 'color-lightlead'
-					validThemeClass = 'theme-lightsilver'
 					errorColorClass = 'color-error'
 					errorThemeClass = 'theme-error'
 
 					if error
-						$formCell.removeClass(validThemeClass).addClass(errorThemeClass)
-						$label.removeClass(validColorClass).addClass(errorColorClass)
+						$formLabel.addClass(errorThemeClass)
+						$label.addClass(errorColorClass)
 					else
 						if client._id
-							$formCell.removeClass(errorThemeClass).addClass(validThemeClass)
-							$label.removeClass(errorColorClass).addClass(validColorClass)
+							$formLabel.removeClass(errorThemeClass)
+							$label.removeClass(errorColorClass)
 						else
 							Router.go 'clients', _id: newId
 			)

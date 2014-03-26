@@ -1,7 +1,7 @@
 <template name="invoiceEdit">
 	<div class="template-header brbs">
 		<h2 class="capitalize color-lead">
-			<i class="fa fa-pencil"></i>
+			<i class="fa fa-plus"></i>
 			{{i18n 'newRecord'}}
 		</h2>
 	</div>
@@ -10,8 +10,8 @@
 			<legend><h3><i class="fa fa-wrench"></i> {{i18n 'parameters'}}</h3></legend>
 			<div class="col">
 				<div class="col width-2of10">
-					<div class="cell form-cell theme-lightsilver mln mtn">
-						<label class="capitalize color-lightlead engraved phm stretch fatty" for="price">{{i18n 'price'}}</label>
+					<div class="cell form-label mln mtn">
+						<label for="price">{{i18n 'price'}}</label>
 					</div>
 				</div>
 				<div class="col width-1of8 mobile-width-1of6">
@@ -48,8 +48,8 @@
 				</div>
 				<div class="col width-2of5 pull-right">
 					<div class="col width-1of2">
-						<div class="cell form-cell theme-lightsilver mln mtn">
-							<label class="capitalize color-lightlead engraved phm stretch fatty" for="document-type">{{i18n 'documentType'}}</label>
+						<div class="cell form-label mln mtn">
+							<label for="document-type">{{i18n 'documentType'}}</label>
 						</div>
 					</div>
 					<div class="col width-1of2">
@@ -72,8 +72,8 @@
 			<div class="col">
 				<div class="col width-2of5 tablet-width-1of2">
 					<div class="col">
-						<div class="cell form-cell theme-lightsilver mln mtn">
-							<label class="capitalize color-lightlead engraved phm stretch fatty down-label" for="company">{{i18n 'sender'}}</label>
+						<div class="cell form-label mln mtn">
+							<label class="down-label" for="company">{{i18n 'sender'}}</label>
 						</div>
 					</div>
 					<div class="col">
@@ -86,8 +86,8 @@
 				</div>
 				<div class="col width-2of5 tablet-width-1of2 pull-right">
 					<div class="col">
-						<div class="cell form-cell theme-lightsilver mhn mtn">
-							<label class="capitalize color-lightlead engraved phm stretch fatty down-label" for="client">{{i18n 'client'}}</label>
+						<div class="cell form-label mhn mtn">
+							<label class="down-label" for="client">{{i18n 'client'}}</label>
 						</div>
 					</div>
 					<div class="col">
@@ -113,18 +113,8 @@
 			<legend><h3><i class="fa fa-plus"></i> {{i18n 'newItem'}}</h3></legend>
 			<div class="col">
 				<div class="col width-2of10">
-					<div class="cell form-cell theme-lightsilver mln mtn">
-						<label class="capitalize color-lightlead engraved phm stretch fatty" for="group">{{i18n 'group'}}</label>
-					</div>
-				</div>
-				<div class="col width-3of10">
-					<div class="cell form-cell brbs mtn prs">
-						<input type="text" id="group" placeholder="{{i18n 'group'}}" class="text stretch spaced-letters pls capitalize">
-					</div>
-				</div>
-				<div class="col width-2of10">
-					<div class="cell form-cell theme-lightsilver mln mtn">
-						<label class="capitalize color-lightlead engraved phm stretch fatty" for="item">{{i18n 'item'}}</label>
+					<div class="cell form-label mln mtn">
+						<label for="item">{{i18n 'item'}}</label>
 					</div>
 				</div>
 				<div class="col width-3of10">
@@ -132,11 +122,21 @@
 						<input type="text" id="item" placeholder="{{i18n 'item'}}" class="text stretch spaced-letters pls capitalize" required>
 					</div>
 				</div>
+				<div class="col width-2of10">
+					<div class="cell form-label mln mtn">
+						<label for="group">{{i18n 'group'}}</label>
+					</div>
+				</div>
+				<div class="col width-3of10">
+					<div class="cell form-cell brbs mtn prs">
+						<input type="text" id="group" placeholder="{{i18n 'group'}}" class="text stretch spaced-letters pls capitalize">
+					</div>
+				</div>
 			</div>
 			<div class="col">
 				<div class="col width-1of8">
-					<div class="cell form-cell theme-lightsilver mln mtn">
-						<label class="capitalize color-lightlead engraved phm stretch fatty" for="item-price">{{i18n 'price'}}</label>
+					<div class="cell form-label mln mtn">
+						<label for="item-price">{{i18n 'price'}}</label>
 					</div>
 				</div>
 				<div class="col width-1of8">
@@ -145,8 +145,8 @@
 					</div>
 				</div>
 				<div class="col width-1of8">
-					<div class="cell form-cell theme-lightsilver mln mtn">
-						<label class="capitalize color-lightlead engraved phm stretch fatty" for="amount">{{i18n 'amount'}}</label>
+					<div class="cell form-label mln mtn">
+						<label for="amount">{{i18n 'amount'}}</label>
 					</div>
 				</div>
 				<div class="col width-1of8">
@@ -155,8 +155,8 @@
 					</div>
 				</div>
 				<div class="col width-1of8">
-					<div class="cell form-cell theme-lightsilver mln mtn">
-						<label class="capitalize color-lightlead engraved phm stretch fatty" for="unit">{{i18n 'unit'}}</label>
+					<div class="cell form-label mln mtn">
+						<label for="unit">{{i18n 'unit'}}</label>
 					</div>
 				</div>
 				<div class="col width-1of8">
@@ -182,7 +182,7 @@
 			<legend><h3><i class="fa fa-list-alt"></i> {{i18n 'items'}}</h3></legend>
 			<div class="col">
 				<table class="horizontal-border">
-					<thead class="theme-lightsilver color-lightlead engraved capitalize">
+					<thead class="form-list">
 						<tr>
 							<th class="width-3of8 mobile-width-2of6 brbn phs">{{i18n 'item'}}</th>
 							<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'price'}}</th>

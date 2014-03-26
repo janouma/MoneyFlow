@@ -790,7 +790,8 @@ input[type=file] {
 .spaced-letters, .accounts-dialog input {
   letter-spacing: 1px; }
 
-.engraved {
+.engraved, .form-list, .form-cell label[for],
+.form-label label[for] {
   text-shadow: 0 1px 1px #fafafa; }
 
 .z1, .up-triangle::before, .down-triangle::after, .right-triangle::after {
@@ -1006,17 +1007,37 @@ textarea[required] {
 .textarea-halign {
   width: 145px; }
 
-.form-cell {
+.form-label {
+  background-color: #e3e3ea; }
+  .form-label:active {
+    background-color: #c5c5d4; }
+
+.form-list {
+  background-color: #e3e3ea;
+  color: #969696;
+  text-transform: capitalize; }
+
+.form-cell,
+.form-label {
   min-height: 29px;
   box-sizing: border-box;
   position: relative; }
-  .form-cell .cell-align {
+  .form-cell .cell-align,
+  .form-label .cell-align {
     line-height: 28px; }
-  .form-cell label[for] {
+  .form-cell label[for],
+  .form-label label[for] {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; }
-    .form-cell label[for]::after {
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    color: #969696;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    font-weight: bold; }
+    .form-cell label[for]::after,
+    .form-label label[for]::after {
       content: "";
       position: absolute;
       right: -8px;
@@ -1026,11 +1047,14 @@ textarea[required] {
       border-color: transparent transparent transparent #e3e3ea;
       border-style: solid;
       border-width: 15px 0 15px 8px; }
-    .form-cell label[for].textarea-valign::after {
+    .form-cell label[for].textarea-valign::after,
+    .form-label label[for].textarea-valign::after {
       border-width: 28px 0 28px 8px; }
-    .form-cell label[for]:active::after {
+    .form-cell label[for]:active::after,
+    .form-label label[for]:active::after {
       border-left-color: #c5c5d4; }
-    .form-cell label[for].down-label::after {
+    .form-cell label[for].down-label::after,
+    .form-label label[for].down-label::after {
       left: 0;
       bottom: -8px;
       margin: 0 auto;
@@ -1041,14 +1065,21 @@ textarea[required] {
       border-width: 8px;
       border-top-color: #e3e3ea;
       border-bottom-width: 0; }
-    .form-cell label[for].down-label:active::after {
+    .form-cell label[for].down-label:active::after,
+    .form-label label[for].down-label:active::after {
       border-color: #c5c5d4 transparent transparent transparent; }
   .form-cell.theme-error label[for]::after,
-  .form-cell.theme-error label[for]:active::after {
+  .form-cell.theme-error label[for]:active::after,
+  .form-label.theme-error label[for]::after,
+  .form-label.theme-error label[for]:active::after {
     border-color: transparent transparent transparent #ffcccc; }
-  .form-cell.theme-error .down-label::after, .form-cell.theme-error .down-label:active::after {
+  .form-cell.theme-error .down-label::after, .form-cell.theme-error .down-label:active::after,
+  .form-label.theme-error .down-label::after,
+  .form-label.theme-error .down-label:active::after {
     border-color: #ffcccc transparent transparent transparent; }
-  .form-cell div, .form-cell span {
+  .form-cell div, .form-cell span,
+  .form-label div,
+  .form-label span {
     vertical-align: middle; }
 
 .logo {
@@ -1162,7 +1193,8 @@ tr.clickable:hover {
     background-color: #f7f7f9;
     box-shadow: inset 0 0 20px #e3e3ea; }
 
-  .form-cell label[for]::after {
+  .form-cell label[for]::after,
+  .form-label label[for]::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1175,14 +1207,19 @@ tr.clickable:hover {
     border-width: 8px;
     border-top-color: #e3e3ea;
     border-bottom-width: 0; }
-  .form-cell label[for].textarea-valign {
+  .form-cell label[for].textarea-valign,
+  .form-label label[for].textarea-valign {
     height: 19px; }
-    .form-cell label[for].textarea-valign::after {
+    .form-cell label[for].textarea-valign::after,
+    .form-label label[for].textarea-valign::after {
       border-width: 8px 8px 0 8px; }
-  .form-cell label[for]:active::after {
+  .form-cell label[for]:active::after,
+  .form-label label[for]:active::after {
     border-color: #c5c5d4 transparent transparent transparent; }
   .form-cell.theme-error label[for]::after,
-  .form-cell.theme-error label[for]:active::after {
+  .form-cell.theme-error label[for]:active::after,
+  .form-label.theme-error label[for]::after,
+  .form-label.theme-error label[for]:active::after {
     border-color: #ffcccc transparent transparent transparent; }
 
   .select-style.mobile-stretch select {

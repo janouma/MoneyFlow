@@ -157,7 +157,20 @@ textarea[required]
 .textarea-halign
 	width: 145px
 
-.form-cell
+.form-label
+	background-color: $lightsilver
+
+	&:active
+		background-color: darken($lightsilver, 10%)
+
+.form-list
+	background-color: $lightsilver
+	color: $lightlead
+	@extend .engraved
+	text-transform: capitalize
+
+.form-cell,
+.form-label
 	$height: 29px
 	min-height: $height
 	box-sizing: border-box
@@ -170,6 +183,13 @@ textarea[required]
 		white-space: nowrap
 		overflow: hidden
 		text-overflow: ellipsis
+		text-transform: capitalize
+		color: $lightlead
+		@extend .engraved
+		padding-left: 10px
+		padding-right: 10px
+		width: 100%
+		font-weight: bold
 
 		&::after
 			content: ""
@@ -345,7 +365,8 @@ tr.clickable:hover
 				background-color: $flour
 				box-shadow: inset 0 0 20px $lightsilver
 
-	.form-cell
+	.form-cell,
+	.form-label
 		label[for]
 			&::after
 				content: ""

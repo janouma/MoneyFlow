@@ -23,19 +23,17 @@ Template[templateName].events {
 				settings
 				(error)->
 					$label = $(template.find "label[for=#{$input.attr 'id'}]")
-					$formCell = $label.parent '.form-cell'
+					$formLabel = $label.parent '.form-label'
 
-					validColorClass = 'color-lightlead'
-					validThemeClass = 'theme-lightsilver'
 					errorColorClass = 'color-error'
 					errorThemeClass = 'theme-error'
 
 					if error
-						$formCell.removeClass(validThemeClass).addClass(errorThemeClass)
-						$label.removeClass(validColorClass).addClass(errorColorClass)
+						$formLabel.addClass(errorThemeClass)
+						$label.addClass(errorColorClass)
 					else
-						$formCell.removeClass(errorThemeClass).addClass(validThemeClass)
-						$label.removeClass(errorColorClass).addClass(validColorClass)
+						$formLabel.removeClass(errorThemeClass)
+						$label.removeClass(errorColorClass)
 
 			)
 
