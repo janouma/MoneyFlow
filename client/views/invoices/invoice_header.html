@@ -1,0 +1,42 @@
+<template name="invoiceHeader">
+	<fieldset>
+		<legend><h3><i class="fa fa-info-circle"></i> {{i18n 'header'}}</h3></legend>
+		<div class="col">
+			<div class="col width-2of5 tablet-width-1of2">
+				<div class="col">
+					<div class="cell form-label mln mtn">
+						<label class="down-label" for="company">{{i18n 'sender'}}</label>
+					</div>
+				</div>
+				<div class="col">
+					<div id="company" class="spaced-letters">
+						<p class="capitalize fatty mvs medium-text">{{settings.company}}</p>
+						{{#if settings.email}}<p><i class="fa fa-envelope"></i> {{settings.email}}</p>{{/if}}
+						{{#if settings.address}}<p class="capitalize text-multiline mtm"><i class="fa fa-home fa-lg"></i> {{settings.address}}</p>{{/if}}
+					</div>
+				</div>
+			</div>
+			<div class="col width-2of5 tablet-width-1of2 pull-right">
+				<div class="col">
+					<div class="cell form-label mhn mtn">
+						<label class="down-label" for="client">{{i18n 'client'}}</label>
+					</div>
+				</div>
+				<div class="col">
+					<div class="form-cell capitalize brbs mbs">
+						<div class="select-style stretch">
+							<select id="client" class="capitalize spaced-letters medium-text fatty">
+								<option>{{i18n 'choose'}}</option>
+								{{#each clients}}
+								<option value="{{_id}}">{{name}}</option>
+								{{/each}}
+							</select>
+						</div>
+					</div>
+					{{#if settings.email}}<p class="spaced-letters"><i class="fa fa-envelope"></i> the.client@email</p>{{/if}}
+					{{#if settings.address}}<p class="capitalize text-multiline mtm spaced-letters"><i class="fa fa-home fa-lg"></i> the client address</p>{{/if}}
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</template>

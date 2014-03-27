@@ -1,0 +1,61 @@
+<template name="invoiceSettings">
+	<fieldset class="mtm">
+		<legend><h3><i class="fa fa-wrench"></i> {{i18n 'parameters'}}</h3></legend>
+		<div class="col">
+			<div class="col width-2of10">
+				<div class="cell form-label mln mtn">
+					<label for="price">{{i18n 'price'}}</label>
+				</div>
+			</div>
+			<div class="col width-1of8 mobile-width-1of6">
+				<div class="cell form-cell brbs mtn">
+					<input type="text" id="price" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
+				</div>
+			</div>
+			<div class="col width-fit mobile-width-fill">
+				<div class="col width-fit mobile-width-fit">
+					<div class="cell form-cell brbs mtn">
+						<div class="select-style one-char">
+							<select id="currency">
+								<option value="€">€</option>
+								<option value="$">$</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col width-fit mobile-width-fit">
+					<div class="cell form-cell mhn mtn">
+						<span class="cell-align big-text">/</span>
+					</div>
+				</div>
+				<div class="col width-fit mobile-width-fill">
+					<div class="cell form-cell brbs mtn">
+						<div class="select-style narrow-input mobile-stretch">
+							<select id="time-unit" class="capitalize spaced-letters">
+								<option value="d">{{i18n 'day'}}</option>
+								<option value="h">{{i18n 'hour'}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col width-2of5 pull-right">
+				<div class="col width-1of2">
+					<div class="cell form-label mln mtn">
+						<label for="document-type">{{i18n 'documentType'}}</label>
+					</div>
+				</div>
+				<div class="col width-1of2">
+					<div class="cell form-cell brbs mrn mtn">
+						<div class="select-style stretch">
+							<select id="document-type" class="capitalize pls spaced-letters">
+								<option value="f">{{i18n 'invoice'}}</option>
+								<option value="c">{{i18n 'order'}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</template>

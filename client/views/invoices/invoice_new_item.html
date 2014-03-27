@@ -1,0 +1,72 @@
+<template name="invoiceNewItem">
+	<fieldset id="new-item-fieldset" class="hover-reveal animated">
+		<legend><h3><i class="fa fa-plus"></i> {{i18n 'newItem'}}</h3></legend>
+		<div class="col reveal-content animated">
+			<div class="col">
+				<div class="col width-2of10">
+					<div class="cell form-label mln mtn">
+						<label for="item">{{i18n 'item'}}</label>
+					</div>
+				</div>
+				<div class="col width-3of10">
+					<div class="cell form-cell brbs mtn prs">
+						<input type="text" id="item" placeholder="{{i18n 'item'}}" class="text stretch spaced-letters pls capitalize" required>
+					</div>
+				</div>
+				<div class="col width-2of10">
+					<div class="cell form-label mln mtn">
+						<label for="group">{{i18n 'group'}}</label>
+					</div>
+				</div>
+				<div class="col width-3of10">
+					<div class="cell form-cell brbs mtn prs">
+						<input type="text" id="group" placeholder="{{i18n 'group'}}" class="text stretch spaced-letters pls capitalize">
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="col width-1of8">
+					<div class="cell form-label mln mtn">
+						<label for="item-price">{{i18n 'price'}}</label>
+					</div>
+				</div>
+				<div class="col width-1of8">
+					<div class="cell form-cell brbs mtn prs">
+						<input type="text" id="item-price" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
+					</div>
+				</div>
+				<div class="col width-1of8">
+					<div class="cell form-label mln mtn">
+						<label for="amount">{{i18n 'amount'}}</label>
+					</div>
+				</div>
+				<div class="col width-1of8">
+					<div class="cell form-cell brbs mtn prs">
+						<input type="text" id="amount" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
+					</div>
+				</div>
+				<div class="col width-1of8">
+					<div class="cell form-label mln mtn">
+						<label for="unit">{{i18n 'unit'}}</label>
+					</div>
+				</div>
+				<div class="col width-1of8">
+					<div class="cell form-cell brbs mtn prs">
+						<div class="select-style stretch pls">
+							<select name="unit" class="capitalize tablet-spaced-letters desktop-spaced-letters">
+								<option value="t">{{i18n 'time'}}</option>
+								<option value="w">{{i18n 'without'}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col width-1of4">
+					<div class="cell text-right fatty medium-text">
+						<span class="color-lightsilver capitalize">{{i18n 'sum'}}</span>
+						<span class="color-lightlead">000 <i class="fa fa-usd"></i></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</template>

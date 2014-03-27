@@ -1,0 +1,31 @@
+<template name="invoiceItems">
+	<fieldset>
+		<legend><h3><i class="fa fa-list-alt"></i> {{i18n 'items'}}</h3></legend>
+		<div class="col">
+			<table class="horizontal-border">
+				<thead class="form-list">
+				<tr>
+					<th class="width-3of8 mobile-width-2of6 brbn phs">{{i18n 'item'}}</th>
+					<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'price'}}</th>
+					<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'amount'}}</th>
+					<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'unit'}}</th>
+					<th class="width-1of4 mobile-width-1of6 brbn phs">
+						{{i18n 'sum'}}&nbsp;
+						<span class="small-text color-dust text-ellipsis phone-hidden">({{i18n 'taxeFree'}})</span>
+						<span class="small-text color-dust text-ellipsis tablet-hidden desktop-hidden uppercase">({{initials 'taxeFree'}})</span>
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+				{{>invoiceItemRow}}
+				</tbody>
+			</table>
+			<div class="inline-confirm-buttons animated right-triangle hidden">
+				<span class="button-group small-shadow no-radius border-silver man">
+					<button class="confirm button icon-button theme-sky color-white capitalize no-radius border-silver animated"><i class="fa fa-check"></i> <strong class="prs">{{i18n 'confirm'}}</strong></button>
+					<button class="cancel button icon-button theme-silver color-white capitalize no-radius border-silver animated"><strong class="pls">{{i18n 'cancel'}}</strong> <i class="fa fa-times"></i></button>
+				</span>
+			</div>
+		</div>
+	</fieldset>
+</template>

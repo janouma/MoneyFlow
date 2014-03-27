@@ -135,7 +135,7 @@ input[type=file]
 .animated
 	+transition-duration(0.5s)
 	+transition-timing-function(ease-in-out)
-	+transition-property(color, background-color, opacity, visibility, margin, padding)
+	+transition-property(color, background-color, opacity, visibility, margin, padding, height, width)
 
 .collapse-left
 	&, &.small-radius, &.medium-radius, &.big-radius, &.huge-radius
@@ -220,9 +220,24 @@ input[type=file]
 	border-right-width: 0
 	@extend .z1
 
+
 @media (min-width: 768px)
 	.desktop-spaced-letters
 		letter-spacing: 1px
+
+	.hover-reveal
+		&.reveal-content,
+		.reveal-content
+			opacity: 0
+			visibility: hidden
+			height: 0
+			overflow: hidden
+
+		&:hover .reveal-content,
+		&.reveal-content:hover
+			opacity: 1
+			visibility: visible
+			height: auto
 
 @media (max-width: 767px)
 	.mobile-stretch
