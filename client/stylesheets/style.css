@@ -831,7 +831,9 @@ input[type=file] {
   letter-spacing: 1px; }
 
 .engraved, .form-list, .form-cell label[for],
-.form-label label[for] {
+.form-cell .label-like,
+.form-label label[for],
+.form-label .label-like {
   text-shadow: 0 1px 1px #fafafa; }
 
 .z1, .up-triangle::before, .down-triangle::after, .right-triangle::after {
@@ -1075,7 +1077,9 @@ textarea[required] {
   position: relative;
   line-height: 1.5; }
   .form-cell label[for],
-  .form-label label[for] {
+  .form-cell .label-like,
+  .form-label label[for],
+  .form-label .label-like {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1086,7 +1090,9 @@ textarea[required] {
     font-weight: bold;
     line-height: 1.5; }
     .form-cell label[for]::after,
-    .form-label label[for]::after {
+    .form-cell .label-like::after,
+    .form-label label[for]::after,
+    .form-label .label-like::after {
       content: "";
       position: absolute;
       right: -8px;
@@ -1097,13 +1103,19 @@ textarea[required] {
       border-style: solid;
       border-width: 15px 0 15px 8px; }
     .form-cell label[for].textarea-valign::after,
-    .form-label label[for].textarea-valign::after {
+    .form-cell .label-like.textarea-valign::after,
+    .form-label label[for].textarea-valign::after,
+    .form-label .label-like.textarea-valign::after {
       border-width: 28px 0 28px 8px; }
     .form-cell label[for]:active::after,
-    .form-label label[for]:active::after {
+    .form-cell .label-like:active::after,
+    .form-label label[for]:active::after,
+    .form-label .label-like:active::after {
       border-left-color: #c5c5d4; }
     .form-cell label[for].down-label::after,
-    .form-label label[for].down-label::after {
+    .form-cell .label-like.down-label::after,
+    .form-label label[for].down-label::after,
+    .form-label .label-like.down-label::after {
       left: 0;
       bottom: -8px;
       margin: 0 auto;
@@ -1115,7 +1127,9 @@ textarea[required] {
       border-top-color: #e3e3ea;
       border-bottom-width: 0; }
     .form-cell label[for].down-label:active::after,
-    .form-label label[for].down-label:active::after {
+    .form-cell .label-like.down-label:active::after,
+    .form-label label[for].down-label:active::after,
+    .form-label .label-like.down-label:active::after {
       border-color: #c5c5d4 transparent transparent transparent; }
   .form-cell.theme-error label[for]::after,
   .form-cell.theme-error label[for]:active::after,
@@ -1249,7 +1263,9 @@ tr.clickable:hover {
     box-shadow: inset 0 0 20px #e3e3ea; }
 
   .form-cell label[for]::after,
-  .form-label label[for]::after {
+  .form-cell .label-like::after,
+  .form-label label[for]::after,
+  .form-label .label-like::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1263,13 +1279,19 @@ tr.clickable:hover {
     border-top-color: #e3e3ea;
     border-bottom-width: 0; }
   .form-cell label[for].textarea-valign,
-  .form-label label[for].textarea-valign {
+  .form-cell .label-like.textarea-valign,
+  .form-label label[for].textarea-valign,
+  .form-label .label-like.textarea-valign {
     height: 19px; }
     .form-cell label[for].textarea-valign::after,
-    .form-label label[for].textarea-valign::after {
+    .form-cell .label-like.textarea-valign::after,
+    .form-label label[for].textarea-valign::after,
+    .form-label .label-like.textarea-valign::after {
       border-width: 8px 8px 0 8px; }
   .form-cell label[for]:active::after,
-  .form-label label[for]:active::after {
+  .form-cell .label-like:active::after,
+  .form-label label[for]:active::after,
+  .form-label .label-like:active::after {
     border-color: #c5c5d4 transparent transparent transparent; }
   .form-cell.theme-error label[for]::after,
   .form-cell.theme-error label[for]:active::after,

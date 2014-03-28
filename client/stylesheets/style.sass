@@ -181,7 +181,8 @@ textarea[required]
 
 	line-height: $medium-line-height
 
-	label[for]
+	label[for],
+	.label-like
 		white-space: nowrap
 		overflow: hidden
 		text-overflow: ellipsis
@@ -377,7 +378,8 @@ tr.clickable:hover
 
 	.form-cell,
 	.form-label
-		label[for]
+		label[for],
+		.label-like
 			&::after
 				content: ""
 				position: absolute
