@@ -103,6 +103,7 @@ Thanks.
 		onReceive: "on receive"
 		reference: "reference"
 		invoiceDate: "invoice date"
+		orderDate: "order date"
 
 
 	#================================================================================================
@@ -214,6 +215,7 @@ Merci.
 		description: "description"
 		reference: "référence"
 		invoiceDate: "date de facturation"
+		orderDate: "date de commande"
 }
 
 
