@@ -3,6 +3,7 @@
 @import _fontawesome-extension
 @import _borders
 @import _spaces
+@import _line-heights
 @import _common
 
 $grey-triangle-down-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAARCAMAAABQMGGAAAAAaVBMVEUAAADT09TNz9HR0dLS0tPS0tLT09Th5enc4+nT09TR0dHQ0NHPz8/P0NHT09TS0tPT09TS0tPOzs/U1NTT09Ts7PDq6u/n5+zp6e7o6O3m5urk5Oji4ubX19je3uHg4OPV1dba2tzc3N7QqjyrAAAAFXRSTlMA/RFSjnDRBQLjYDdEH6l/wpwr8bWA2zs/AAACQ0lEQVRYw+WVi1KDMBBFoU+offniGQjw/x/pLrvklsGp7QgW9YxtEjHj9PTurlcVRVE3TVlakxNZnKZJEinv0fv/ImrfoiRJ0jjOyIcxtiybpq6Lqqq8xdNyvTpuwqoiaXXdlNYaQ9Iy0pbQtQtrsmuJHNjj3Ps7MNP7ehRJaUqOCGNJEjsqyFJ4Pq7Wy6eF53mBFwTb7Xbxst+dns9qTcPGaSNtsaSN3f0l+NNojDKNkeaIFfnh+fm0278sSE4QBF6fgNgSh/1uvXrbvFZFp80ap43LlOHUDcGjq7+PZPdz9wGnhxbJEMGKTJsiUVS9bt44RgdWRHjXgTYp0XPoX9SoestJGv0w/I+BHrASg2cMdrLX87j3QaKvmHsRY3qV5nelds3R19ZQohw2SRuVaCnaJG8ML60/2qtGXUHM9M/YYv/9+3gYE6pIQkSKGqq0oouRlJoqGomuRLt5IGGDNtNaU2/xQ8n4RUgjIoxLkToKN8deqU3DcB740CbWpLs9hFiWXEIkvQiVho4NRdMznAcnngfO2kXagHzL2XjkBLaCGJKRRo5EUduxdxojb3JH988DaLNOm3He8jHIhoYw0wYd++GObpgHbA2tzRohF3XfgK9/qsh17LkqumEe+H1tRKdN36+D50iRzjQpta5jzzZGd86D5RrzoKhVW2kZcwPWKeIYuVL7fTG6dx5oiaK1NSUz9GYHitCx93Pp2BMCbQfMA7JGQBsLEkdQRDH6E6U21jzotLUp+s0dezqgDfNgnh37A2z7D60w1dmvAAAAAElFTkSuQmCC'
@@ -176,8 +177,9 @@ textarea[required]
 	box-sizing: border-box
 	position: relative
 
-	.cell-align
-		line-height: ($height - 1)
+	$medium-line-height: 1.5
+
+	line-height: $medium-line-height
 
 	label[for]
 		white-space: nowrap
@@ -186,10 +188,10 @@ textarea[required]
 		text-transform: capitalize
 		color: $lightlead
 		@extend .engraved
-		padding-left: 10px
-		padding-right: 10px
+		padding: 5px 10px
 		width: 100%
 		font-weight: bold
+		line-height: $medium-line-height
 
 		&::after
 			content: ""
@@ -319,6 +321,10 @@ tr.clickable:hover
 		top: 5px
 		border-left-color: $silver
 
+#new-item-fieldset
+	legend
+		color: $lightsky
+
 
 @media (min-width: 768px)
 	.site-header
@@ -357,9 +363,7 @@ tr.clickable:hover
 					background-image: url($cyan-triangle-down-img)
 
 	#new-item-fieldset
-		opacity: 0.4
 		&:hover
-			opacity: 1
 			.reveal-content
 				height: 66px
 

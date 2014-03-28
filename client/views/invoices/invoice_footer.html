@@ -1,0 +1,50 @@
+<template name="invoiceFooter">
+	<!--
+	<div class="col medium-text theme-flour color-lead fatty">
+		<td class="valign-middle capitalize pas brbn" colspan="4">{{i18n 'sum'}}</td>
+		<td class="valign-middle pas brbn">000 <i class="fa fa-usd"></td>
+	</div>
+	-->
+	<fieldset>
+		<legend><h3><i class="fa fa-credit-card"></i> {{i18n 'payment'}}</h3></legend>
+		<div class="col">
+			<div class="col width-2of5 tablet-width-1of2">
+				<div class="col">
+					<div class="col width-1of2">
+						<div class="cell form-label mln mtn">
+							<label class="lhs" for="term">
+								<span class="valign-middle">{{i18n 'term'}}</span>
+								<span class="small-text color-dust text-ellipsis valign-middle">({{i18n 'days'}})</span>
+							</label>
+						</div>
+					</div>
+					<div class="col width-1of2">
+						<div class="cell form-cell brbs mtn prs">
+							<input type="number" id="term" placeholder="{{i18n 'onReceive'}}" class="text capitalize stretch spaced-letters pls" required step="15" pattern="\d+">
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="col width-1of2">
+						<div class="cell form-label mln">
+							<label for="paymentMode">{{i18n 'paymentMode'}}</label>
+						</div>
+					</div>
+					<div class="col width-1of2">
+						<div class="cell form-cell brbs prs">
+							<div class="select-style stretch pls">
+								<select name="paymentMode" class="capitalize spaced-letters">
+									<option value="t">{{i18n 'transfer'}}</option>
+									<option value="c">{{i18n 'check'}}</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col width-2of5 tablet-width-1of2 pull-right">
+
+			</div>
+		</div>
+	</fieldset>
+</template>

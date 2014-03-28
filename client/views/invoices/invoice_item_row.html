@@ -1,15 +1,15 @@
 <template name="invoiceItemRow">
 	<tr>
-		<td class="valign-middle pas">
-			<input type="text" name="item" placeholder="{{i18n 'item'}}" class="text capitalize stretch tablet-spaced-letters desktop-spaced-letters" required>
+		<td class="valign-middle pas border-lightsilver">
+			<input type="text" name="item" placeholder="{{i18n 'description'}}" class="text capitalize stretch tablet-spaced-letters desktop-spaced-letters" required>
 		</td>
-		<td class="valign-middle pas">
+		<td class="valign-middle pas border-lightsilver">
 			<input type="text" name="price" placeholder="000" class="text stretch tablet-spaced-letters desktop-spaced-letters" required pattern="\d+">
 		</td>
-		<td class="valign-middle pas">
+		<td class="valign-middle pas border-lightsilver">
 			<input type="text" name="amount" placeholder="000" class="text stretch tablet-spaced-letters desktop-spaced-letters" required pattern="\d+">
 		</td>
-		<td class="valign-middle pas">
+		<td class="valign-middle pas border-lightsilver">
 			<div class="select-style stretch">
 				<select name="unit" class="capitalize tablet-spaced-letters desktop-spaced-letters">
 					<option value="t">{{i18n 'time'}}</option>
@@ -17,7 +17,7 @@
 				</select>
 			</div>
 		</td>
-		<td class="valign-middle pas">
+		<td class="valign-middle pas border-lightsilver">
 			000
 			<i class="delete-item-row fa fa-trash-o color-red pull-right clickable animated hidden"></i>
 		</td>

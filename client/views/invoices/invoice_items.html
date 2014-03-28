@@ -1,15 +1,15 @@
 <template name="invoiceItems">
-	<fieldset>
+	<fieldset class="mtm">
 		<legend><h3><i class="fa fa-list-alt"></i> {{i18n 'items'}}</h3></legend>
 		<div class="col">
-			<table class="horizontal-border">
+			<table class="block border-lightsilver">
 				<thead class="form-list">
 				<tr>
-					<th class="width-3of8 mobile-width-2of6 brbn phs">{{i18n 'item'}}</th>
+					<th class="width-3of8 mobile-width-2of6 brbn phs">{{i18n 'description'}}</th>
 					<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'price'}}</th>
 					<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'amount'}}</th>
 					<th class="width-1of8 mobile-width-1of6 brbn phs">{{i18n 'unit'}}</th>
-					<th class="width-1of4 mobile-width-1of6 brbn phs">
+					<th class="width-1of4 mobile-width-1of6 brbn phs border-lightsilver">
 						{{i18n 'sum'}}&nbsp;
 						<span class="small-text color-dust text-ellipsis phone-hidden">({{i18n 'taxeFree'}})</span>
 						<span class="small-text color-dust text-ellipsis tablet-hidden desktop-hidden uppercase">({{initials 'taxeFree'}})</span>
@@ -17,7 +17,13 @@
 				</tr>
 				</thead>
 				<tbody>
-				{{>invoiceItemRow}}
+					{{>invoiceItemRow}}
+					<tr class="medium-text color-lightlead fatty">
+						<td class="valign-middle capitalize pas brts" colspan="4">{{i18n 'discount'}}</td>
+						<td class="valign-middle pas brts">
+							<input type="text" id="discount" placeholder="-000" class="text stretch tablet-spaced-letters desktop-spaced-letters" pattern="\d+">
+						</td>
+					</tr>
 				</tbody>
 			</table>
 			<div class="inline-confirm-buttons animated right-triangle hidden">

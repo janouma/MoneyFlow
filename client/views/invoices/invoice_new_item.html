@@ -1,16 +1,16 @@
 <template name="invoiceNewItem">
-	<fieldset id="new-item-fieldset" class="hover-reveal animated">
+	<fieldset id="new-item-fieldset" class="hover-reveal animated mbn">
 		<legend><h3><i class="fa fa-plus"></i> {{i18n 'newItem'}}</h3></legend>
 		<div class="col reveal-content animated">
 			<div class="col">
 				<div class="col width-2of10">
 					<div class="cell form-label mln mtn">
-						<label for="item">{{i18n 'item'}}</label>
+						<label for="item">{{i18n 'description'}}</label>
 					</div>
 				</div>
 				<div class="col width-3of10">
 					<div class="cell form-cell brbs mtn prs">
-						<input type="text" id="item" placeholder="{{i18n 'item'}}" class="text stretch spaced-letters pls capitalize" required>
+						<input type="text" id="item" placeholder="{{i18n 'description'}}" class="text stretch spaced-letters pls capitalize" required>
 					</div>
 				</div>
 				<div class="col width-2of10">
@@ -61,7 +61,7 @@
 					</div>
 				</div>
 				<div class="col width-1of4">
-					<div class="cell text-right fatty medium-text">
+					<div class="cell form-cell text-right fatty medium-text brbs border-flour mtn mrn prn">
 						<span class="color-lightsilver capitalize">{{i18n 'sum'}}</span>
 						<span class="color-lightlead">000 <i class="fa fa-usd"></i></span>
 					</div>

@@ -94,6 +94,15 @@ Thanks.
 		newItem: "new item"
 		header: "header"
 		parameter: "parameter"
+		discount: "discount"
+		payment: "payment"
+		term: "term"
+		paymentMode: "paymentMode"
+		transfer: "transfer"
+		check: "check"
+		onReceive: "on receive"
+		reference: "reference"
+		invoiceDate: "invoice date"
 
 
 	#================================================================================================
@@ -195,6 +204,16 @@ Merci.
 		newItem: "nouvel article"
 		header: "entête"
 		parameter: "paramètre"
+		discount: "remise"
+		payment: "règlement"
+		term: "échéance"
+		paymentMode: "mode de règlement"
+		transfer: "virement"
+		check: "chèque"
+		onReceive: "à réception"
+		description: "description"
+		reference: "référence"
+		invoiceDate: "date de facturation"
 }
 
 
