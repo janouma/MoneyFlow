@@ -12,5 +12,4 @@ Template[templateName].events {
 }
 
 
-Template[templateName].rendered = ->
-	$('input[type=checkbox]:checked').parent('.checkbox-style').each -> $(@).addClass 'checked'
+Template[templateName].rendered = -> $('input[type=checkbox]:checked').parent('.checkbox-style').addClass 'checked'

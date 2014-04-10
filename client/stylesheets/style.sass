@@ -6,6 +6,11 @@
 @import _line-heights
 @import _common
 
++font-face(Lato, '/fonts/lato/lato-light')
++font-face(Lato, '/fonts/lato/lato-regular', bold)
++font-face(Lato, '/fonts/lato/lato-light-italic', normal, italic)
++font-face(Lato, '/fonts/lato/lato-regular-italic', bold, italic)
+
 $grey-triangle-down-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAARCAMAAABQMGGAAAAAaVBMVEUAAADT09TNz9HR0dLS0tPS0tLT09Th5enc4+nT09TR0dHQ0NHPz8/P0NHT09TS0tPT09TS0tPOzs/U1NTT09Ts7PDq6u/n5+zp6e7o6O3m5urk5Oji4ubX19je3uHg4OPV1dba2tzc3N7QqjyrAAAAFXRSTlMA/RFSjnDRBQLjYDdEH6l/wpwr8bWA2zs/AAACQ0lEQVRYw+WVi1KDMBBFoU+offniGQjw/x/pLrvklsGp7QgW9YxtEjHj9PTurlcVRVE3TVlakxNZnKZJEinv0fv/ImrfoiRJ0jjOyIcxtiybpq6Lqqq8xdNyvTpuwqoiaXXdlNYaQ9Iy0pbQtQtrsmuJHNjj3Ps7MNP7ehRJaUqOCGNJEjsqyFJ4Pq7Wy6eF53mBFwTb7Xbxst+dns9qTcPGaSNtsaSN3f0l+NNojDKNkeaIFfnh+fm0278sSE4QBF6fgNgSh/1uvXrbvFZFp80ap43LlOHUDcGjq7+PZPdz9wGnhxbJEMGKTJsiUVS9bt44RgdWRHjXgTYp0XPoX9SoestJGv0w/I+BHrASg2cMdrLX87j3QaKvmHsRY3qV5nelds3R19ZQohw2SRuVaCnaJG8ML60/2qtGXUHM9M/YYv/9+3gYE6pIQkSKGqq0oouRlJoqGomuRLt5IGGDNtNaU2/xQ8n4RUgjIoxLkToKN8deqU3DcB740CbWpLs9hFiWXEIkvQiVho4NRdMznAcnngfO2kXagHzL2XjkBLaCGJKRRo5EUduxdxojb3JH988DaLNOm3He8jHIhoYw0wYd++GObpgHbA2tzRohF3XfgK9/qsh17LkqumEe+H1tRKdN36+D50iRzjQpta5jzzZGd86D5RrzoKhVW2kZcwPWKeIYuVL7fTG6dx5oiaK1NSUz9GYHitCx93Pp2BMCbQfMA7JGQBsLEkdQRDH6E6U21jzotLUp+s0dezqgDfNgnh37A2z7D60w1dmvAAAAAElFTkSuQmCC'
 $cyan-triangle-down-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAARCAMAAABQMGGAAAAAkFBMVEUAAADG0ui+0uTH1OnF0+fH1enI1eng7vrh8Prb5+7I1enG0+nE0ujG1OnF0+jC0ubH1OnH1OnC0eXF0+jD0efI1unr8Prs8frq7/nq7vjo7Pbm6/Tp7fbs8Pnl6fPo7ffP2+zk6PHK1+rn7PXX4O/T3e7k6vbe5vPh6PTh5vDa4u/b4/Hr7/ne5PDI1enL2OvC/pf1AAAAFnRSTlMAVBGhOczqAQMG25Nih28fr70se0f2FL2/OAAAAqlJREFUWMPllolyokAQhvEK3kk0B3LKITAi8P5vt909FyxVumuhq9mvigoyTISv+u/WiOp6fzgkRVFkeZ6naRAEO8v64niW533/P3jfXxwwEAQpkOdZVhyT5LDf13VlDMeD9eJt8lKBNLSWFFmWobUUrO0swIPd5Mz7iZAlekPvZKGjGBS1HNXVy+RttR6Mh4ZhmMZ0Op3NhpuP5Wr0Pv+sSVuSHKnYUq4NIHX4PxHveTlx4MyCPzsE4iTLqABF5Cj6nL+PVsuPzXA2A0Gm0cY0ydrsdbzcimKrebEVWGwozg6QHYLf0+X8kr7hpE/vu18s4VsEqaoiKKODLqPFdjB+5YpM4yLmlLRhRFejyTyKdEaVNjuwXdfl6gLFrote5meNi907et0fNKDP8Ly2bTtSkU5aVGEZrQeboXR0BaapIrrFiKI1zKiqNj9NHTsG4CHcM5BW9zz97w/4Nng0O5ZVVIIi4SjCqC22EDVQRFHrCRlROQ9UsR2LMuPeHCdW2mKJizQ8crOuusOmaxp98fr9Ys0hciBrJS0SHVtH7TZ050EV8c6mtYW+7xAx2XMEcQux0Dzt0lyPz+xvfoPDP/o5Y9yQati6Y4syuh/deaA6G2kDb2Hoozc6HDx6xveb5z4ePgNHJTpSZdTu2MY9HV2eBxjRRkZBG2OoTeP4vYCGiDBkrARIkSgj2bHHomP/c0d/MA+iCK1pbUBI+OTvekKuCIvoCM1IlRF1bBW1B1R0ptj0PIhqoQ1ergSUNzJ3AX0DA0pAKdpDFfGoYcd+2DL6q2LT86CRUe2NzHXpGmoljTr2s5XRVfOgqmqV0QSsgTcmCJmkZFJRohQ9Wse+JTqich5U9KONV5tIaUvRnhRRx/4BUetrHuiMkiJ09Jwd+6aYv8+Dx+zYvwCBekwxgT4u8AAAAABJRU5ErkJggg=='
 
@@ -13,6 +18,7 @@ $down-black-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK
 $down-dark-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAGFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWNxwqAAAACHRSTlMBf2F3GAYlSZ/kOMwAAAEBSURBVEjH7dKxSkNBFEXRQUxsPQlo6wPtfZWt6A+IhXUKebXi/4MkGdiBk8v5gMzu7mVYDMO00WhUtFq+W9n18no6/kmPrWg9a7Nj/JS07bP1K+meG0ySdNfOdqN9P7CHdhXbYVhgZ4GvJAE7C8wI7Ky2x3ebBXyW5RJrCbhiped+FrhkdctZYGdxVzIYlh4Om6mAYVHefeXspv+52WBnn/rSYWc/Wg07W8POlrCzNexsCTtbw87WsLM17GwNO1vDk7E17GwNGxtg2AzDRhg2w7ARhs0wbIRhMwwbYdgMw0YYNsOwGYbNMGyGYTMMm2HYDMNmGDb2Jr0whb6WNhpdcv8QfVf0/Sb4OgAAAABJRU5ErkJggg=='
 $down-white-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAJFBMVEX////////////////////////////////////////////////Vd7HLAAAAC3RSTlMDyQwx90iZW4Ad7WEp7a8AAAERSURBVEjH7dUxSgNRFIXhUVGxEy2n0R3Yu4Q0drb2NjYidvapBO1dghZCyNlcksmDP3ByOQvI+7v7uHwMj4E39Hq9ouPH96Hs5O1ud5xL19Xq+UzLB8ZbrWuz9SxpwReMWve/f/VMmz52WWBnGwwL7CzwkdTgigWeS8DOtrb3JgFXrPS0GU8l4JLVz3TXcthZ/eICO8vuhQyGpcvpZDQYll6moy+Hnf1r/5wMdvaqHd4b7OzNUMPO1rCzJexsDTtbws7WsLM17GwNO1vDztbwaGwNO1vDxgYYNsOwEYbNMGyEYTMMG2HYDMNGGDbDsBGGzTBshGEzDJth2AzDZhg2w7AZnsHGPnl/c9+vQ693yK0AS/11+MQutMcAAAAASUVORK5CYII='
 $down-light-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAGFBMVEX///////////////////////////////8pK8DIAAAACHRSTlMBf2F3GAYlSZ/kOMwAAAEASURBVEjH7dKxSgNBFIXhi5jYeiJo64L2bmUr+gJiYZ1CtlZ8fxCThb84uZwHyPzdHYaPyzA1Go2aNstXtV0uL1X0Kz1U03bWbs/4Ielmna0fSXdsMEnSbZ3sSv99wx7ad+wKwwI7C3whCdhZYEZgZ6Xju80CPsmyxFYCblk9rXeBW1bX3AV2Fncjg2Hp/nAyNTAsypsfObtb/9xssLOPVQ3s7Hv1sLM97GwLO9vDzrawsz3sbA8728PO9rCzPTwZ28PO9rCxAYbNMGyEYTMMG2HYDMNGGDbDsBGGzTBshGEzDJth2AzDZhg2w7AZhs0wbIZhY6/SM1Poc6nR6Jz7A/weV/KT+zmCAAAAAElFTkSuQmCC'
+$down-sky-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAJFBMVEWAgP9zof9wof90o/9zov90o/9zov9zo/9zo/9zov9yo/90o/9d/27WAAAAC3RSTlMEF1H4c9bTjLntZLapwdcAAAEPSURBVEjH7dUtTgRBFEXhbn4TFAksAEtQYDE4LJ4ljCEYEhR+DH42QQICcjdHpkucSV7d3AVMHVevX750ytQ0Go1M8+Or/3j2drV7XEt3bvVU0gPHC3EurST98gfa9tNfPda2D1h5+FkS8HyvBlsW+FAC7rLAawnYsFK7NwnYsdLTctUSsGX11e66D8Oye6Q+DMvurALD0ucy2RQYll6W0U2FK/vXRgfqwycS3baZg1ei7/PJwI6tsGEtXFkPV9bClfVwZT1cWQ9X1sOV9fDGs8DkWWCCjTBshmEjDJth2AjDZhg2wrAZho0wbIZhIwybYdgIw2YYNsOwGYbNMGyGYTMMm7vm/c1dvk+j0T73Dwd3dn6kYlfGAAAAAElFTkSuQmCC'
 
 $circle-black-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVCAMAAAAPK1hoAAAAOVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8dlA9AAAAEnRSTlMDKVCBqTZg6JUdB830cEIQ2r4tWuvuAAACWElEQVRYw+2ZR3LDMAxFIfYmisL9D5ulFYgNpFeZvKXHpoiPKhj++VscRqq72JSsjcoZHWAXf974IkoN61xnwQZJHouGO+xy5wXTHQ6JXCEkTqEujvEFJ0kCZjmRsn/d60YW9phxU0EueSypRT5mdCjWKOo0ImthThcXjvUJXygR4Il2iSfC9dLUmgBv8tuhnYS4X2dCA02/mvxsQrkAbQxN39bzyUX1IATJdU+oEQo+ieOcIQXoGNuvAju14zBSFUxhRlGr8EEMKxUzha6r7HzZVF2HKRLSs1y2c1mPDyQwyETZlj4lAAfXDoOnHQIYEDOPlq8KMHEt8SS5KgvfkiA+/AgEXnQ9YjLgBwdsRN3STKo6k0CFfVcJgC0JbuJFIvfi/GSrncXBAqJqayE5txNbn/6ViA/Z0OyiH+rdU3X9UUyosfl7p9r+qfsK5O6H+7razRi4qpEVmd2l10pDLY8VELhjQT+Px4zqiCC6cCnVOuLJpMDkaPTutFUKZSOL1FZ22UbXE9zGNfXjCzf8VUgzrEvg1q+aOjOYZmVr6lzI4gcbOP21J57BNQ1Ed+4PFh8YRgJ0g9Ig8kc4n0avKJG87vJ3Cb5uDFOEI9FfjNctkvFGQCasjgYYj26cOvyNn11knKEdURZnFctISI1zRUSc18sgJTn93nMWpCj2Js8+dq5eyIhv7rC4ILQl2oQPWLsEg2xUYNSLPtzBRFvm4m2O4HCayOhH2eIY/vRwySk3+e8vtm8NC1yyp4M7YJXs6gcrE3b/L3GF7GJ1gK9wHVkII7L28M8UP1F2oMp1jQGSAAAAAElFTkSuQmCC'
 $circle-dark-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVBAMAAADK27VpAAAAJFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmWAJHAAAADHRSTlMBf29hEVB5HCczQQZjKtFRAAACdElEQVRIx+VWO08bQRDemCS2oZqzfQGn4UCJ8mhiFCUFzSVRorjjQpQiaXJSIkRng4QooeEhGhASCNHYIKA1ICj4dUi3Pmb2ZsaWOyS+6m72u71vnrvmQeH7ydTExOTv/U5fZv0DdFE6680c2QWCN6HR8fgXOCg1dGqEtH7kU2CoKB5+AQGvROpwDBL+SCGogQgvVBVwzPEYBBrXX8lyv+Hii4P15c1ZVD+mbvt/y1ryR5Ais/Flan+NAV1UFNdSKjUuiqEYBouqm6Y9sHhHjc3uBo2MFzXBu65tmuWyG7aQmNRC2WEiPlnLjGEoMhGRLVYjoG0duftjHhK8lbhP7For894QO9AmdNyVWzUimq7gNn6qiEBfAqwQQYQtuJC65lECj0SLZmJU417TbAwlL385iwp+bl/OMWkSCvS3TYyuiNhGFOvDF2lYASX2rAfCI8Vb1bmriUbCHZN5WAIdTNuozn1kfUc/n+ncp4SbPJZ1bm5g7srAGuIBfNPjQOslZLnQu6iDOa7oXKwXmu/+tbOa6uFAfyo039vqaUqbPsdnLJ+VZdpQ5d5pG6cNVeldvjNsWjCwSRPhl1obe+QvevVcuIMxh/OYI3I9L4IuopBdC0BtzyWc4ygYfeXnNA3okHZTMJ/tyj/ydWxN23xbvrAD8pGxBukJwETAe5d6BSiBifAPnXgFIGlrgoVHyIUaiNKKkJLPUlPdUoUktfFqtJ/cgo/xUsmrH+FPTr0ExLTQ2RxaExRihdsyHAsydV48eCOJWpJbKx9wqq+NjRsu+afR8DVL/mh03ASOANxV1PwDIHtj1VGfjTHVfTGyvLGxHpr7iVuCV5lBjKhldgAAAABJRU5ErkJggg=='
@@ -27,6 +33,18 @@ $circle-check-light-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABV
 $electric-red-dot-img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAADUlEQVQI12P439DwHwAHgAL/wvah9QAAAABJRU5ErkJggg=='
 
 $one-char-size: 20px
+
+body
+	font-size: 90%
+
+*
+	font-family: Lato
+
+input,
+select,
+textarea,
+p
+	font-family: Lato !important
 
 .template-header,
 .page-header
@@ -61,7 +79,7 @@ tr:hover
 	$select-arrow-width: 28px
 
 	display: inline-block
-	background-image: url($down-dark-img)
+	background-image: url($down-sky-img)
 	width: $width
 	overflow: hidden
 
@@ -152,17 +170,23 @@ textarea[required]
 		margin: 2px 0 0 2px
 
 
-.textarea-valign
-	height: 45px
+textarea.textarea-valign
+	height: 43px
 
-.textarea-halign
-	width: 145px
+label.textarea-valign,
+.label-like.textarea-valign
+	height: 52px
+	white-space: normal
+	text-overflow: inherit
 
 .form-label
 	background-color: $lightsilver
+	+background-image(linear-gradient(left, white, rgba($lightsilver,0)))
 
 	&:active
 		background-color: darken($lightsilver, 10%)
+
+
 
 .form-list
 	background-color: $lightsilver
@@ -174,7 +198,7 @@ textarea[required]
 .form-label
 	$height: 29px
 	min-height: $height
-	box-sizing: border-box
+	+box-sizing(border-box)
 	position: relative
 
 	$medium-line-height: 1.5
@@ -189,10 +213,12 @@ textarea[required]
 		text-transform: capitalize
 		color: $lightlead
 		@extend .engraved
-		padding: 5px 10px
+		padding: 4px 10px
+		vertical-align: middle
 		width: 100%
 		font-weight: bold
 		line-height: $medium-line-height
+		+box-sizing(inherit)
 
 		&::after
 			content: ""
@@ -205,12 +231,18 @@ textarea[required]
 			border-width: 15px 0 15px 8px
 
 		&.textarea-valign::after
-			border-width: 28px 0 28px 8px
+			border-width: 26px 0 26px 8px
 
 		&:active::after
 			border-left-color: darken($lightsilver, 10%)
 
-		&.down-label
+
+	&.down-label
+		border-radius: 0 0 5px 5px
+		+background-image(linear-gradient(white, rgba($lightsilver,0)))
+
+		label[for],
+		.label-like
 			&::after
 				left: 0
 				bottom: -8px
@@ -226,13 +258,17 @@ textarea[required]
 		label[for]:active::after
 			border-color: transparent transparent transparent $error-theme-color
 
-		.down-label
-			&::after,
-			&:active::after
+		&.down-label
+			label[for]::after,
+			label[for]:active::after
 				border-color: $error-theme-color transparent transparent transparent
 
 	div,span
 		vertical-align: middle
+
+.adjust-line-height
+	line-height: 29px
+
 
 .logo
 	background: url('/img/logo-small-bg.png')
@@ -250,7 +286,7 @@ textarea[required]
 	display: block
 
 #signature
-	width: 156px
+	width: 160px
 
 .socialicons
 	white-space: nowrap
@@ -327,54 +363,17 @@ tr.clickable:hover
 		color: $lightsky
 
 
+
 @media (min-width: 768px)
-	.site-header
-		.primary-nav
-			li
-				&::before,
-				&::after
-					content: ""
-					position: absolute
-					left: 0
-
-				&::before
-					top: -15px
-					+size(100% 50px)
-
-				&.active::before
-					background-color: $flour
-					box-shadow: inset 0 0 20px $lightsilver
-
-				&:not(.active):hover::before
-					background-color: $milk
-					box-shadow: inset 0 0 20px lighten($sky, 30%)
-
-				&.active::after,
-				&:not(.active):hover::after
-					$height: 16px
-					bottom: -($height)
-					+size(100% ($height+1))
-					background-size: 100% $height
-					background-repeat: no-repeat
-
-				&.active::after
-					background-image: url($grey-triangle-down-img)
-
-				&:not(.active):hover::after
-					background-image: url($cyan-triangle-down-img)
-
 	#new-item-fieldset
 		&:hover
 			.reveal-content
 				height: 66px
 
-
 @media (max-width: 767px)
-	.site-header
-		.primary-nav
-			.active
-				background-color: $flour
-				box-shadow: inset 0 0 20px $lightsilver
+	.form-label
+		border-radius: 0 0 5px 5px
+		+background-image(linear-gradient(white, rgba($lightsilver,0)))
 
 	.form-cell,
 	.form-label
@@ -407,8 +406,50 @@ tr.clickable:hover
 		select
 			width: 119.31%
 
+	.primary-nav,
+	.side-nav
+		font-size: 80%
 
-@media (max-width: 1050px)
+
+@media (min-width: 1081px)
+	.primary-nav
+		li
+			&::before
+				content: ""
+				position: absolute
+				left: 0
+				top: -15px
+				+size(100% 65px)
+
+			&.active::before,
+			&:not(.active):hover::before
+				background-color: $flour
+
+			&.active::before
+				box-shadow: inset 0 0 20px darken($lightsilver, 2.5%)
+
+			&:not(.active):hover::before
+				box-shadow: inset 0 0 20px lighten($sky, 27.5%)
+
+	.large-desktop-medium-text
+		font-size: $medium-text-size
+
+
+@media (min-width: 1200px)
+	.primary-nav
+		li::before
+			+size(100% 70px)
+
+
+@media (max-width: 1080px)
+	.primary-nav
+		margin-bottom: 10px
+
+		& .active
+			background-color: $flour
+			box-shadow: inset 0 0 20px darken($lightsilver, 2.5%)
+			border-radius: 5px
+
 	.side-nav
 		padding: 0 !important
 		display: block !important
@@ -417,5 +458,9 @@ tr.clickable:hover
 
 		.pull-right
 			float: left !important
+
+@media (max-width: 980px)
+	h2
+		font-size: 150%
 
 @import _login

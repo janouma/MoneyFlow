@@ -1,21 +1,21 @@
-Handlebars.registerHelper(
+UI.registerHelper(
 	'settings'
 	-> Settings.findOne userId: Meteor.userId()
 )
 
-Handlebars.registerHelper(
+UI.registerHelper(
 	'userEmail'
 	-> Meteor.user().emails?[0]?.address
 )
 
-Handlebars.registerHelper(
+UI.registerHelper(
 	'configIsReady'
 	->
 		settings = Settings.findOne(userId: Meteor.userId())
 		settings?.company and settings?.companyid
 )
 
-Handlebars.registerHelper(
+UI.registerHelper(
 	'clients'
 	-> Clients.find(
 		{}
@@ -23,12 +23,12 @@ Handlebars.registerHelper(
 	)
 )
 
-Handlebars.registerHelper(
+UI.registerHelper(
 	'clientsAreReady'
 	-> Clients.findOne name: $exists: yes
 )
 
-Handlebars.registerHelper(
+UI.registerHelper(
 	'initials'
 	(key)->
 		translation = I18nEasy.i18n(key)

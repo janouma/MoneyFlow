@@ -79,7 +79,11 @@ Template[templateName].events {
 		$(template.find '.confirm-buttons').addClass 'hidden'
 		$("tr").removeClass 'striked-row'
 
-		$('input[name=client]:checked').each -> Clients.remove _id: $(@).attr('id')
+		$('input[name=client]:checked').each( -> Clients.remove _id: $(@).attr('id') )
+			.attr('checked', no)
+			.parent('.checkbox-style').removeClass('checked')
+
+		showHideDeleteLink template, yes
 }
 
 

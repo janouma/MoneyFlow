@@ -7,7 +7,7 @@
     <div class="col width-fill mobile-width-fill">
         <div class="cell capitalize">
 			{{#if currentUser}}
-            <ul class="col width-fit mobile-width-fit nav color-sky primary-nav mbm">
+			<ul class="col width-fit mobile-width-fit nav color-sky primary-nav">
 				{{#if configIsReady}}
 					{{#if clientsAreReady}}
 					<li class="{{activeRouteClass 'invoices'}}"><a class="animated" href="{{pathFor 'invoices'}}"><i class="fa fa-file-text"></i> {{i18n 'invoices'}}</a></li>
@@ -19,12 +19,12 @@
             </ul>
 			{{/if}}
             <div class="col width-fill mobile-width-fill side-nav">
-				<div class="nav color-dust login-wrapper pull-right closed animated">
+				<div class="nav color-water login-wrapper pull-right">
 					{{#unless ghostSuffix}}
-						{{loginButtons align="right"}}
+						{{>loginButtons align="right"}}
 					{{/unless}}
 				</div>
-                <ul class="nav color-dust pull-right">
+                <ul class="nav color-water pull-right">
                     <li><a class="animated" href="https://github.com/janouma/MoneyFlow/releases" target="_blank"><i class="fa fa-download"></i> {{i18n 'download'}}</a></li>
                 </ul>
             </div>

@@ -16,6 +16,11 @@ $darkorange: darken(orange, 5%)
 $electricred: lighten(red,25%)
 $error-theme-color: lighten(red,40%)
 $error-text-color: lighten(red,25%)
+$shadow: rgba(#000, 0.5)
+$light-shadow: rgba(#000, 0.25)
+$water: #3bb6db
+$middlewater: darken($water, 7.5%)
+$deepwater: darken($water, 15%)
 
 .background-transparent
 	background-color: transparent
@@ -27,10 +32,18 @@ $error-text-color: lighten(red,25%)
 .gradient-nightfall
 	+background-image(linear-gradient(rgba(darken($darkblue, 5%), 0.95) 10%, rgba($darkblue, 0.85) 65%, rgba($darkblue, 0.75)))
 
+.gradient-nightbreaks
+	+background-image(linear-gradient(rgba($darkblue, 0.95) 10%, rgba($darkblue, 0.85) 65%, rgba(darken($darkblue, 5%), 0.75)))
+
 .gradient-fog
 	+background-image(linear-gradient(rgba(darken($flour, 2%), 0.95) 10%, rgba($milk, 0.85) 65%, rgba($milk, 0.5)))
 
+.gradient-silver
+	+background-image(linear-gradient($flour 65%, darken($flour, 2%) ))
+
+
 +color('sky', $lightsky, steelblue, darken(steelblue, 10%))
++color('water', $water, $lightsky, $deepwater)
 +color('jade', $jade)
 +color('emerald', $emerald, lighten($emerald, 7%), $jade)
 +color('black', #555, #ccc, black)

@@ -4,22 +4,22 @@
 		<div class="col">
 			<div class="col width-2of5 tablet-width-1of2">
 				<div class="col">
-					<div class="cell form-label mln mtn">
-						<div class="label-like down-label">{{i18n 'sender'}}</div>
+					<div class="cell form-label down-label mln mtn">
+						<div class="label-like">{{i18n 'sender'}}</div>
 					</div>
 				</div>
 				<div class="col">
 					<div id="company" class="spaced-letters">
 						<p class="capitalize fatty mvs medium-text">{{settings.company}}</p>
-						{{#if settings.address}}<p class="capitalize text-multiline mtm">{{settings.address}}</p>{{/if}}
+						{{#if settings.address}}<p class="capitalize text-multiline mtm lhs">{{settings.address}}</p>{{/if}}
 						{{#if settings.email}}<p><i class="fa fa-envelope-o color-lightlead"></i> {{settings.email}}</p>{{/if}}
 					</div>
 				</div>
 			</div>
 			<div class="col width-2of5 tablet-width-1of2 pull-right">
 				<div class="col">
-					<div class="cell form-label mhn mtn">
-						<label class="down-label" for="client">{{i18n 'client'}}</label>
+					<div class="cell form-label down-label mhn mtn">
+						<label for="client">{{i18n 'client'}}</label>
 					</div>
 				</div>
 				<div class="col">
@@ -33,7 +33,7 @@
 							</select>
 						</div>
 					</div>
-					{{#if settings.address}}<p class="capitalize text-multiline mtm spaced-letters">the client address</p>{{/if}}
+					{{#if settings.address}}<p class="capitalize text-multiline mtm spaced-letters lhs">the client address</p>{{/if}}
 					{{#if settings.email}}<p class="spaced-letters"><i class="fa fa-envelope-o color-lightlead"></i> the.client@email</p>{{/if}}
 				</div>
 			</div>

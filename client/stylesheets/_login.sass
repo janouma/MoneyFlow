@@ -19,13 +19,9 @@
 	overflow: hidden
 	text-overflow: ellipsis
 
-.closed
-	.accounts-dialog
-		@extend .hidden
-
 .accounts-dialog
 	@extend .animated
-	@extend .small-shadow
+	@extend .medium-shadow
 	@extend .pam
 	border-radius: 0
 	position: absolute
@@ -35,7 +31,6 @@
 	width: 180px
 
 	&.accounts-centered-dialog
-		@extend .hidden
 		@extend .z-infinite
 		@extend .animated
 		text-transform: capitalize
@@ -43,7 +38,7 @@
 		top: 75px
 		right: 10px
 
-	.login-close-text::before,
+	.login-close-text::after,
 	.sign-in-text-google::before,
 	.sign-in-text-twitter::before,
 	.login-button-form-submit::before,
@@ -72,8 +67,10 @@
 		top: 0
 		right: 0
 
-		&::before
-			content: "\f077" // fa-chevron-up
+		&::after
+			content: "\f0d8" // fa-caret-up
+			margin-right: 0
+			margin-left: 3px
 
 	.login-close-text-clear
 		height: 30px
@@ -123,7 +120,11 @@
 		text-decoration: line-through
 
 	label
-		display: none
+		color: darken($silver, 5%)
+		position: absolute
+		top: 0
+		left: 0
+		letter-spacing: 1px
 
 	input
 		@extend .spaced-letters
@@ -141,10 +142,13 @@
 
 	#login-email-label-and-input,
 	#login-password-label-and-input,
-	#login-old-password-label-and-input
+	#login-old-password-label-and-input,
+	#forgot-password-email-label-and-input
 		border-bottom-width: 1px
+		position: relative
 
-	#login-password-label-and-input
+	#login-password-label-and-input,
+	#forgot-password-email-label-and-input
 		@extend .mbm
 
 	.message

@@ -1,5 +1,6 @@
 Router.configure(
 	layoutTemplate: 'layout'
+	loadingTemplate: 'loading'
 
 	#CAUTION, this option is not for unmatched route but for null "data" on a matched route
 	notFoundTemplate: 'notFound'
@@ -27,15 +28,17 @@ setLanguage = ->
 
 
 unless Meteor.isServer
-	Router.before(
+	Router.onBeforeAction(
 		setLanguage
 		except: 'notFound'
 	)
 
-	Router.before(
+	Router.onBeforeAction(
 		-> Router.go '/' unless Meteor.user()
 		except: ['notFound', 'home', 'i18n_easy_admin']
 	)
+
+	Router.onBeforeAction('loading')
 
 Router.map ->
 	@route(
@@ -66,7 +69,7 @@ Router.map ->
 	@route(
 		'notFound'
 		path: '*'
-		before: ->
+		onBeforeAction: ->
 			fallback = appLanguage()
 			unless I18nEasy.getLanguage() is fallback
 				I18nEasy.setLanguage fallback
