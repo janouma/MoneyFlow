@@ -919,6 +919,19 @@ input[type=file] {
   border-left-color: white;
   border-right-width: 0; }
 
+.click-reveal-container {
+  cursor: pointer; }
+  .click-reveal-container:not(.reveal-toggle) .reveal-hidden, .click-reveal-container.reveal-toggle .reveal-visible {
+    opacity: 0;
+    visibility: hidden;
+    width: 0px;
+    height: 0px; }
+  .click-reveal-container:not(.reveal-toggle) .reveal-visible, .click-reveal-container.reveal-toggle .reveal-hidden {
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+    height: auto; }
+
 @media (min-width: 768px) {
   .desktop-spaced-letters {
     letter-spacing: 1px; }
@@ -927,8 +940,7 @@ input[type=file] {
   .hover-reveal .reveal-content {
     opacity: 0;
     visibility: hidden;
-    height: 0;
-    overflow: hidden; }
+    height: 0; }
   .hover-reveal:hover .reveal-content, .hover-reveal.reveal-content:hover {
     opacity: 1;
     visibility: visible;
@@ -1090,6 +1102,12 @@ textarea[required],
   background-size: 13px, 13px;
   background-position: right 7px center, right 7px center; }
 
+input[type]:invalid.text-right,
+input[required].text-right,
+textarea:invalid.text-right,
+textarea[required].text-right {
+  background-position: left 7px center, left 7px center; }
+
 input[type]:invalid,
 textarea:invalid,
 textarea[required]:invalid {
@@ -1139,6 +1157,15 @@ label.textarea-valign,
   background-color: #e3e3ea;
   color: #969696;
   text-transform: capitalize; }
+
+.form-cell input[type=text],
+.form-cell input[type=file],
+.form-cell input[type=number],
+.form-cell input[type=email],
+.form-cell input[type=password],
+.form-cell textarea,
+.form-cell .select-style select {
+  line-height: 19px; }
 
 .form-cell,
 .form-label {
@@ -1235,8 +1262,10 @@ label.textarea-valign,
   .logo:hover {
     background: url("/img/logo-small-bg-selected.png"); }
 
-.site-body.soft-border {
-  box-shadow: 0 20px 20px #f1f1f5; }
+.site-body {
+  min-width: 767px; }
+  .site-body.soft-border {
+    box-shadow: 0 20px 20px #f1f1f5; }
 
 .powered-by {
   background: url("/img/powered-by.png");
@@ -1311,12 +1340,6 @@ tr.clickable:hover {
   top: 5px;
   border-left-color: #dadada; }
 
-#new-item-fieldset legend {
-  color: #6b96eb; }
-
-@media (min-width: 768px) {
-  #new-item-fieldset:hover .reveal-content {
-    height: 66px; } }
 @media (max-width: 767px) {
   .form-label {
     border-radius: 0 0 5px 5px;

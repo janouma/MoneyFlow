@@ -1,7 +1,15 @@
 <template name="invoiceHeader">
-	<fieldset>
-		<legend><h3><i class="fa fa-info-circle"></i> {{i18n 'header'}}</h3></legend>
-		<div class="col">
+	<fieldset class="click-reveal-container animated">
+		<legend class="click-reveal">
+			<h3>
+				<span class="color-sky"><i class="fa fa-info-circle reveal-visible"></i><i class="fa fa-chevron-up reveal-hidden"></i> {{i18n 'header'}}</span>
+				<ul class="nav pipes pull-right reveal-visible animated">
+					<li>{{settings.company}}</li>
+					<li>The Client</li>
+				</ul>
+			</h3>
+		</legend>
+		<div class="col stretch reveal-hidden animated">
 			<div class="col width-2of5 tablet-width-1of2">
 				<div class="col">
 					<div class="cell form-label down-label mln mtn">

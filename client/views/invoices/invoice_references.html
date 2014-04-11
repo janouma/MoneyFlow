@@ -1,58 +1,73 @@
 <template name="invoiceReferences">
-	<div class="col mbl">
-		<h3 class="capitalize color-lightlead brbs border-silver mbs"><i class="fa fa-tag"></i> {{i18n 'references'}}</h3>
-		<div class="col width-2of5 tablet-width-1of2">&nbsp;</div>
-		<div class="col width-2of5 tablet-width-1of2 pull-right">
-			<div class="col">
-				<div class="col width-1of2">
-					<div class="cell form-label mln mtn">
-						<div class="label-like">{{i18n 'reference'}}</div>
-					</div>
-				</div>
-				<div class="col width-1of2">
-					<div class="cell form-cell mtn mrn uppercase fatty large-desktop-medium-text text-right brbs border-flour">fa1830893-003</div>
-				</div>
+	<fieldset class="click-reveal-container animated">
+		<legend class="click-reveal">
+			<h3>
+				<span class="color-sky"><i class="fa fa-tag reveal-visible"></i><i class="fa fa-chevron-up reveal-hidden"></i> {{i18n 'references'}}</span>
+				<ul class="nav pipes pull-right reveal-visible animated">
+					<li class="uppercase">fa1830893-003</li>
+					<li>02/11/2013</li>
+					<li>02/12/2013</li>
+				</ul>
+			</h3>
+		</legend>
+		<div class="col reveal-hidden animated">
+			<div class="col width-2of5 tablet-width-1of2">
+				<div class="cell capitalize fatty mvs big-text">{{settings.company}}</div>
 			</div>
-			<div class="col">
-				<div class="col width-1of2">
-					<div class="cell form-label mln mtn">
-						<div class="label-like">{{i18n 'invoiceDate'}}</div>
+			<div class="col width-2of5 tablet-width-1of2 pull-right">
+				<div class="col">
+					<div class="col width-1of2">
+						<div class="cell form-label mln mtn">
+							<div class="label-like">{{i18n 'reference'}}</div>
+						</div>
+					</div>
+					<div class="col width-1of2">
+						<div class="cell form-cell mtn mrn uppercase fatty large-desktop-medium-text text-right brbs border-flour">fa1830893-003</div>
 					</div>
 				</div>
-				<div class="col width-1of2">
-					<div class="cell form-cell mtn mrn medium-text text-right brbs border-flour">02/12/2013</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="col width-1of2">
-					<div class="cell form-label mln mtn">
-						<div class="label-like">{{i18n 'term'}}</div>
+				<div class="col">
+					<div class="col width-1of2">
+						<div class="cell form-label mln mtn">
+							<label for="invoiceDate">{{i18n 'invoiceDate'}}</label>
+						</div>
+					</div>
+					<div class="col width-1of2">
+						<div class="cell form-cell mtn mrn brbs">
+							<input type="text" id="invoiceDate" placeholder="{{i18n 'datePattern'}}" class="text medium-text uppercase text-right stretch pln" pattern="\d{2}/\d{2}/\d{4}">
+						</div>
 					</div>
 				</div>
-				<div class="col width-1of2">
-					<div class="cell form-cell mtn mrn medium-text text-right brbs border-flour">02/12/2013</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="col width-1of2">
-					<div class="cell form-label mln mtn">
-						<div class="label-like">{{i18n 'order'}}</div>
+				<div class="col">
+					<div class="col width-1of2">
+						<div class="cell form-label mln mtn">
+							<div class="label-like">{{i18n 'term'}}</div>
+						</div>
+					</div>
+					<div class="col width-1of2">
+						<div class="cell form-cell mtn mrn medium-text text-right brbs border-flour">02/12/2013</div>
 					</div>
 				</div>
-				<div class="col width-1of2">
-					<div class="cell form-cell mtn mrn uppercase text-right brbs border-flour small-text adjust-line-height">co1830893-003</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="col width-1of2">
-					<div class="cell form-label mln mtn">
-						<div class="label-like">{{i18n 'orderDate'}}</div>
+				<div class="col">
+					<div class="col width-1of2">
+						<div class="cell form-label mln mtn">
+							<div class="label-like">{{i18n 'order'}}</div>
+						</div>
+					</div>
+					<div class="col width-1of2">
+						<div class="cell form-cell mtn mrn uppercase text-right brbs border-flour small-text adjust-line-height">co1830893-003</div>
 					</div>
 				</div>
-				<div class="col width-1of2">
-					<div class="cell form-cell mtn mrn text-right brbs border-flour small-text adjust-line-height">09/09/2013</div>
+				<div class="col">
+					<div class="col width-1of2">
+						<div class="cell form-label mln mtn">
+							<div class="label-like">{{i18n 'orderDate'}}</div>
+						</div>
+					</div>
+					<div class="col width-1of2">
+						<div class="cell form-cell mtn mrn text-right brbs border-flour small-text adjust-line-height">09/09/2013</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</fieldset>
 </template>

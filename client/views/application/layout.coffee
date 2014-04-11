@@ -9,6 +9,11 @@ Template[templateName].events {
 			'checked'
 			$checkbox.val()
 		)
+
+	'click .click-reveal': (e)->
+		$(e.target)
+			.parents('.click-reveal-container')
+			.toggleClass('reveal-toggle')
 }
 
 

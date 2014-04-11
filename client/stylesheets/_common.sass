@@ -234,6 +234,21 @@ input[type=file]
 	border-right-width: 0
 	@extend .z1
 
+.click-reveal-container
+	cursor: pointer
+
+	&:not(.reveal-toggle) .reveal-hidden,
+	&.reveal-toggle .reveal-visible
+		opacity: 0
+		visibility: hidden
+		+size(0)
+
+	&:not(.reveal-toggle) .reveal-visible,
+	&.reveal-toggle .reveal-hidden
+		opacity: 1
+		visibility: visible
+		+size(auto)
+
 
 @media (min-width: 768px)
 	.desktop-spaced-letters
@@ -245,13 +260,13 @@ input[type=file]
 			opacity: 0
 			visibility: hidden
 			height: 0
-			overflow: hidden
 
 		&:hover .reveal-content,
 		&.reveal-content:hover
 			opacity: 1
 			visibility: visible
 			height: auto
+
 
 @media (max-width: 767px)
 	.mobile-stretch

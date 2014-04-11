@@ -143,6 +143,13 @@ textarea[required],
 	background-position: right 7px center, right 7px center
 
 input[type]:invalid,
+input[required],
+textarea:invalid,
+textarea[required]
+	&.text-right
+		background-position: left 7px center, left 7px center
+
+input[type]:invalid,
 textarea:invalid,
 textarea[required]:invalid
 	background-color: transparent
@@ -193,6 +200,16 @@ label.textarea-valign,
 	color: $lightlead
 	@extend .engraved
 	text-transform: capitalize
+
+.form-cell
+	input[type=text],
+	input[type=file],
+	input[type=number],
+	input[type=email],
+	input[type=password],
+	textarea,
+	.select-style select
+		line-height: 19px
 
 .form-cell,
 .form-label
@@ -276,8 +293,11 @@ label.textarea-valign,
 	&:hover
 		background: url('/img/logo-small-bg-selected.png')
 
-.site-body.soft-border
-	box-shadow: 0 20px 20px darken($flour, 2%)
+.site-body
+	min-width: 767px
+
+	&.soft-border
+		box-shadow: 0 20px 20px darken($flour, 2%)
 
 .powered-by
 	background: url('/img/powered-by.png')
@@ -358,17 +378,17 @@ tr.clickable:hover
 		top: 5px
 		border-left-color: $silver
 
-#new-item-fieldset
-	legend
-		color: $lightsky
+//#new-item-fieldset
+//	legend
+//		color: $lightsky
 
 
 
-@media (min-width: 768px)
-	#new-item-fieldset
-		&:hover
-			.reveal-content
-				height: 66px
+//@media (min-width: 768px)
+//	#new-item-fieldset
+//		&:hover
+//			.reveal-content
+//				height: 66px
 
 @media (max-width: 767px)
 	.form-label

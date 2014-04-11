@@ -85,6 +85,15 @@ Thanks.
 		withTaxe: "with taxe"
 		paid: "paid"
 		toBePaid: "to be paid"
+		previousPayment: "previous payment"
+		bank: "bank"
+		bankCode: "bank code"
+		wicketCode: "wicket code"
+		account: "account"
+		key: "key"
+		IBANCode: "IBAN code"
+		BIC_SWIFTCode: "BIC/SWIFT code"
+		datePattern: "dd/mm/yyyy"
 
 
 	#================================================================================================
@@ -178,6 +187,15 @@ Merci.
 		withTaxe: "taxe incluse"
 		paid: "payé"
 		toBePaid: "reste à payé"
+		previousPayment: ["versement déjà effectué", "versements déjà effectués"]
+		bank: "banque"
+		bankCode: "code banque"
+		wicketCode: "code guichet"
+		account: "compte"
+		key: "clé"
+		IBANCode: "code IBAN"
+		BIC_SWIFTCode: "code BIC/SWIFT"
+		datePattern: "jj/mm/aaaa"
 }
 
 

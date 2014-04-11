@@ -1,10 +1,4 @@
 <template name="invoiceFooter">
-	<!--
-	<div class="col medium-text theme-flour color-lead fatty">
-		<td class="valign-middle capitalize pas brbn" colspan="4">{{i18n 'sum'}}</td>
-		<td class="valign-middle pas brbn">000 <i class="fa fa-usd"></td>
-	</div>
-	-->
 	<fieldset>
 		<legend><h3><i class="fa fa-credit-card"></i> {{i18n 'payment'}}</h3></legend>
 		<div class="col">
@@ -24,14 +18,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="col">
+				<div class="col mbm">
 					<div class="col width-1of2">
-						<div class="cell form-label mln">
+						<div class="cell form-label mln mtn">
 							<label for="paymentMode">{{i18n 'paymentMode'}}</label>
 						</div>
 					</div>
 					<div class="col width-1of2">
-						<div class="cell form-cell brbs prs">
+						<div class="cell form-cell brbs prs mtn">
 							<div class="select-style stretch pls">
 								<select name="paymentMode" class="capitalize spaced-letters">
 									<option value="t">{{i18n 'transfer'}}</option>
@@ -39,6 +33,34 @@
 								</select>
 							</div>
 						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="cell">
+						<h4 class="capitalize-first color-lightlead pls brbs border-lightsilver">{{i18n 'bank'}}: <span class="capitalize">boursorama banque</span></h4>
+
+						<table class="block small-text brtn border-lightsilver mbm">
+							<thead>
+								<tr>
+									<th class="width-1of4 pas pls brbn border-lightsilver capitalize-first">{{i18n 'bankCode'}}</th>
+									<th class="width-1of4 pas brbn border-lightsilver capitalize-first">{{i18n 'wicketCode'}}</th>
+									<th class="width-1of4 pas brbn border-lightsilver capitalize-first">{{i18n 'account'}}</th>
+									<th class="width-1of4 pas brbn border-lightsilver capitalize-first">{{i18n 'key'}}</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="valign-middle pas pls border-lightsilver">42536</td>
+									<td class="valign-middle pas border-lightsilver">567652</td>
+									<td class="valign-middle pas border-lightsilver">00087832328</td>
+									<td class="valign-middle pas border-lightsilver">07</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="small-text pls"><strong class="capitalize mrm">{{i18n 'IBANCode'}}:</strong> FR56 6787 6797 7897 7897 789</div>
+						<div class="small-text pls"><strong class="capitalize mrm">{{i18n 'BIC_SWIFTCode'}}:</strong> BOUSFRUUAAA</div>
 					</div>
 				</div>
 			</div>
@@ -83,7 +105,7 @@
 						<div class="cell form-cell mtn mrn uppercase text-right brbs border-flour small-text adjust-line-height">000 <i class="fa fa-usd"></i></div>
 					</div>
 				</div>
-				<div class="col">
+				<div class="col mbm">
 					<div class="col width-1of2">
 						<div class="cell form-label mln mtn">
 							<div class="label-like medium-text lhn color-lead">{{i18n 'toBePaid'}}</div>
@@ -93,6 +115,30 @@
 						<div class="cell form-cell mtn mrn text-right brbs border-flour fatty medium-text color-lead">000 <i class="fa fa-usd"></i></div>
 					</div>
 				</div>
+
+				<div class="col">
+					<div class="cell">
+						<h4 class="capitalize-first color-lightlead pls brbs">{{i18n 'previousPayments'}}</h4>
+
+						<table class="horizontal-border small-text">
+							<thead class="form-list">
+								<tr>
+									<th class="width-1of3 pas pls brbn">{{i18n 'payment'}}</th>
+									<th class="width-1of3 pas brbn">{{i18n 'amount'}}</th>
+									<th class="width-1of3 pas brbn">{{i18n 'paymentMode'}}</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="valign-middle pas pls border-lightsilver">13/12/2013</td>
+									<td class="valign-middle pas border-lightsilver">000 <i class="fa fa-usd"></i></td>
+									<td class="valign-middle pas border-lightsilver">{{i18n 'transfer'}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</fieldset>
