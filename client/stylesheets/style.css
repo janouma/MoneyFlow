@@ -931,6 +931,9 @@ input[type=file] {
     visibility: visible;
     width: auto;
     height: auto; }
+  .click-reveal-container .reveal-hidden.delay-shrink {
+    width: auto;
+    height: auto; }
 
 @media (min-width: 768px) {
   .desktop-spaced-letters {

@@ -10,10 +10,17 @@ Template[templateName].events {
 			$checkbox.val()
 		)
 
+	#==========================================
 	'click .click-reveal': (e)->
+		$('.reveal-toggle [data-delay-shrink]').addClass 'delay-shrink'
+
 		$(e.target)
 			.parents('.click-reveal-container')
 			.toggleClass('reveal-toggle')
+
+	#==========================================
+	'transitionend .click-reveal-container:not(.reveal-toggle) .delay-shrink': (e)->
+		$(e.target).removeClass 'delay-shrink'
 }
 
 
