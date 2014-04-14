@@ -335,16 +335,6 @@ label.textarea-valign,
 	td:last-child
 		+background-image(linear-gradient(right, darken($glow-color, 2%), rgba($flour, 0) 40px))
 
-tr.clickable:hover
-	$glow-color: lighten($sky, 33.5%)
-	$bg-color: lighten($sky, 35%)
-	+background-image(linear-gradient($glow-color, $bg-color 7px, $bg-color 15px, $glow-color))
-
-	td:first-child
-		+background-image(linear-gradient(left, darken($glow-color, 2%), rgba($bg-color, 0) 40px))
-
-	td:last-child
-		+background-image(linear-gradient(right, darken($glow-color, 2%), rgba($bg-color, 0) 40px))
 
 .striked-row
 	$lighterred: lighten($electricred, 22%)
@@ -354,8 +344,7 @@ tr.clickable:hover
 	background-repeat: repeat-x
 	background-position: center
 
-	&.active-row,
-	&.clickable:hover
+	&.active-row
 		$lighterred: lighten($electricred, 17.5%)
 		+background-image(url($electric-red-dot-img), linear-gradient($lighterred, lighten($lighterred, 1.5%) 7px, lighten($lighterred, 1.5%) 15px, $lighterred))
 
@@ -377,6 +366,25 @@ tr.clickable:hover
 	&:after
 		top: 5px
 		border-left-color: $silver
+
+.folder
+	margin-top: -35px
+
+.folder-tab
+	box-shadow: 0 -5px 5px rgba(#000, 0.2)
+	border-radius: 4px 4px 0 0
+	padding-left: 5px
+	border-top: 1px solid rgba(#000, 0.3)
+
+.folder-tab:not(.last-tab)
+	background-color: $flour
+
+.last-tab,
+.unfolded .folder-tab
+	background-color: white
+
+.unfolded + .folder
+	margin-top: 20px
 
 
 

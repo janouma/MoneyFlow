@@ -14,9 +14,10 @@ Template[templateName].events {
 	'click .click-reveal': (e)->
 		$('.reveal-toggle [data-delay-shrink]').addClass 'delay-shrink'
 
-		$(e.target)
-			.parents('.click-reveal-container')
-			.toggleClass('reveal-toggle')
+		$container = $(e.target).parents('.click-reveal-container')
+		$container.toggleClass('reveal-toggle')
+		$container.toggleClass('unfolded') if $container.hasClass 'folder'
+
 
 	#==========================================
 	'transitionend .click-reveal-container:not(.reveal-toggle) .delay-shrink': (e)->
