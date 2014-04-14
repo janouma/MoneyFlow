@@ -370,6 +370,9 @@ label.textarea-valign,
 .folder
 	margin-top: -35px
 
+	&:not(.last-folder):hover
+		padding-bottom: 20px
+
 .folder-tab
 	box-shadow: 0 -5px 5px rgba(#000, 0.2)
 	border-radius: 4px 4px 0 0
@@ -379,12 +382,10 @@ label.textarea-valign,
 .folder-tab:not(.last-tab)
 	background-color: $flour
 
-.last-tab,
-.unfolded .folder-tab
-	background-color: white
-
-.unfolded + .folder
-	margin-top: 20px
+.last-folder,
+.unfolded
+	.folder-tab
+		background-color: white
 
 
 

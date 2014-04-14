@@ -1335,6 +1335,8 @@ label.textarea-valign,
 
 .folder {
   margin-top: -35px; }
+  .folder:not(.last-folder):hover {
+    padding-bottom: 20px; }
 
 .folder-tab {
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
@@ -1345,12 +1347,9 @@ label.textarea-valign,
 .folder-tab:not(.last-tab) {
   background-color: #f7f7f9; }
 
-.last-tab,
+.last-folder .folder-tab,
 .unfolded .folder-tab {
   background-color: white; }
-
-.unfolded + .folder {
-  margin-top: 20px; }
 
 @media (max-width: 767px) {
   .form-label {
