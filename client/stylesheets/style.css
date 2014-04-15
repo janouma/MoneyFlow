@@ -1335,14 +1335,16 @@ label.textarea-valign,
 
 .folder {
   margin-top: -35px; }
-  .folder:not(.last-folder):hover {
-    padding-bottom: 20px; }
+  .folder:nth-of-type(n+2) .folder-tab {
+    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.3); }
+  .folder:first-of-type .folder-tab {
+    border: solid rgba(0, 0, 0, 0.075);
+    border-width: 1px 1px 0 1px; }
 
 .folder-tab {
-  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px 4px 0 0;
-  padding-left: 5px;
-  border-top: 1px solid rgba(0, 0, 0, 0.3); }
+  padding-left: 5px; }
 
 .folder-tab:not(.last-tab) {
   background-color: #f7f7f9; }
@@ -1351,6 +1353,12 @@ label.textarea-valign,
 .unfolded .folder-tab {
   background-color: white; }
 
+.unfolded + .folder {
+  margin-top: 20px; }
+
+@media (min-width: 769px) {
+  .folder:not(.last-folder):not(.unfolded):hover {
+    padding-bottom: 20px; } }
 @media (max-width: 767px) {
   .form-label {
     border-radius: 0 0 5px 5px;
