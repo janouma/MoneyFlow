@@ -1,0 +1,33 @@
+<template name="invoicesList">
+	<div class="template-header capitalize brbs mbs">
+		<div class="col width-fit mobile-width-fit">
+			<h2 class="color-lead"><i class="fa fa-list"></i> {{i18n 'list'}}</h2>
+		</div>
+		<div class="col width-fill mobile-width-fill list-nav">
+			<ul class="nav pipes color-sky pull-right">
+				<li id="delete" class="animated hidden no-display"><a class="no-text-decoration fatty animated"><i class="fa fa-trash-o"></i> {{i18n 'delete'}}</a></li>
+				<li class="prn mrn"><a href="{{pathFor 'invoices'}}?new=yes" class="no-text-decoration fatty animated"><i class="fa fa-plus"></i> {{i18n 'newRecord'}}</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="confirm-buttons animated down-triangle hidden z-infinite">
+		<span class="button-group small-shadow no-radius border-sky">
+			<button class="confirm button icon-button theme-sky color-white capitalize no-radius border-sky animated"><i class="fa fa-check"></i> <strong class="prs">{{i18n 'confirm'}}</strong></button>
+			<button class="cancel button icon-button theme-silver color-white capitalize no-radius border-sky animated"><strong class="pls">{{i18n 'cancel'}}</strong> <i class="fa fa-times"></i></button>
+		</span>
+	</div>
+
+	<table class="horizontal-border">
+		<thead class="form-list">
+		<tr>
+			<th class="width-1of3 brbn" colspan="2">{{i18n 'reference'}}</th>
+			<th class="width-1of3 brbn">{{i18n 'client'}}</th>
+			<th class="width-1of3 brbn">{{i18n 'invoiceDate'}}</th>
+		</tr>
+		</thead>
+		<tbody class="spaced-letters">
+		{{>invoiceRow}}
+		</tbody>
+	</table>
+</template>

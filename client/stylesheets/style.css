@@ -935,6 +935,9 @@ input[type=file] {
     width: auto;
     height: auto; }
 
+.clear-both {
+  clear: both; }
+
 @media (min-width: 768px) {
   .desktop-spaced-letters {
     letter-spacing: 1px; }
@@ -1266,7 +1269,8 @@ label.textarea-valign,
     background: url("/img/logo-small-bg-selected.png"); }
 
 .site-body {
-  min-width: 767px; }
+  min-width: 768px;
+  overflow-x: hidden; }
   .site-body.soft-border {
     box-shadow: 0 20px 20px #f1f1f5; }
 
@@ -1339,8 +1343,10 @@ label.textarea-valign,
     box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
     border-top: 1px solid rgba(0, 0, 0, 0.3); }
   .folder:first-of-type .folder-tab {
-    border: solid rgba(0, 0, 0, 0.075);
-    border-width: 1px 1px 0 1px; }
+    border-left: solid rgba(0, 0, 0, 0.075);
+    border-top: solid rgba(0, 0, 0, 0.075);
+    border-right: solid rgba(0, 0, 0, 0.075);
+    border-width: 1px; }
 
 .folder-tab {
   border-radius: 4px 4px 0 0;
@@ -1355,6 +1361,13 @@ label.textarea-valign,
 
 .unfolded + .folder {
   margin-top: 20px; }
+
+.separator {
+  height: 20px;
+  width: 150%;
+  margin-left: -25%;
+  background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.15) 2px, rgba(255, 255, 255, 0));
+  background-image: linear-gradient( rgba(0, 0, 0, 0.15) 2px, rgba(255, 255, 255, 0)); }
 
 @media (min-width: 769px) {
   .folder:not(.last-folder):not(.unfolded):hover {

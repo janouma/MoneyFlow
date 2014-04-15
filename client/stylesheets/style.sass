@@ -294,7 +294,8 @@ label.textarea-valign,
 		background: url('/img/logo-small-bg-selected.png')
 
 .site-body
-	min-width: 767px
+	min-width: 768px
+	overflow-x: hidden
 
 	&.soft-border
 		box-shadow: 0 20px 20px darken($flour, 2%)
@@ -377,8 +378,11 @@ label.textarea-valign,
 
 	&:first-of-type
 		.folder-tab
-			border: solid rgba(#000, 0.075)
-			border-width: 1px 1px 0 1px
+			$border-style: solid rgba(#000, 0.075)
+			border-left: $border-style
+			border-top: $border-style
+			border-right: $border-style
+			border-width: 1px
 
 .folder-tab
 	border-radius: 4px 4px 0 0
@@ -394,6 +398,15 @@ label.textarea-valign,
 
 .unfolded + .folder
 	margin-top: 20px
+
+.separator
+	//background-color: $flour
+	//box-shadow: inset 0 1px 2px $silver
+	height: 20px //5px
+	width: 150%
+	margin-left: -25%
+
+	+background-image(linear-gradient(rgba(#000, 0.15) 2px, rgba(white, 0)))
 
 
 
