@@ -799,9 +799,9 @@ input[type=file] {
   -webkit-transition-timing-function: ease-in-out;
   -moz-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-  -webkit-transition-property: color, background-color, opacity, visibility, margin, padding, height, width;
-  -moz-transition-property: color, background-color, opacity, visibility, margin, padding, height, width;
-  transition-property: color, background-color, opacity, visibility, margin, padding, height, width; }
+  -webkit-transition-property: color, background-color, opacity, visibility, margin, padding, height, width, -webkit-transform;
+  -moz-transition-property: color, background-color, opacity, visibility, margin, padding, height, width, -moz-transform;
+  transition-property: color, background-color, opacity, visibility, margin, padding, height, width, transform; }
 
 .collapse-left, .collapse-left.small-radius, .collapse-left.medium-radius, .collapse-left.big-radius, .collapse-left.huge-radius {
   border-top-left-radius: 0;
@@ -1358,7 +1358,13 @@ label.textarea-valign,
 
 @media (min-width: 769px) {
   .folder:not(.last-folder):not(.unfolded):hover {
-    padding-bottom: 20px; } }
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+    transform: translateY(-8px); }
+    .folder:not(.last-folder):not(.unfolded):hover .folder-tab {
+      background-color: #fafafb; } }
 @media (max-width: 767px) {
   .form-label {
     border-radius: 0 0 5px 5px;

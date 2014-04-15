@@ -399,7 +399,10 @@ label.textarea-valign,
 
 @media (min-width: 769px)
 	.folder:not(.last-folder):not(.unfolded):hover
-		padding-bottom: 20px
+		+transform(translateY(-8px))
+
+		.folder-tab
+			background-color: lighten($flour, 1%)
 
 
 @media (max-width: 767px)
