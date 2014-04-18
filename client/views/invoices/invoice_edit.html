@@ -14,11 +14,11 @@
 	</div>
 	<form class="mts" id="edit-form">
 		{{>invoiceSettings invoice}}
-		{{>invoiceReferences}}
-		{{>invoiceHeader}}
-		{{>invoiceNewItem}}
-		{{>invoiceItems}}
-		{{>invoiceFooter}}
+		{{>invoiceReferences invoice}}
+		{{>invoiceHeader invoice}}
+		{{>invoiceNewItem invoice}}
+		{{>invoiceItems invoice}}
+		{{>invoiceFooter invoice}}
 	</form>
 	{{#if invoicesAreAvailable}}
 	<div class="clear-both"></div><div class="separator mtl"></div>

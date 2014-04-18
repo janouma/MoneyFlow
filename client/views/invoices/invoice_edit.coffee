@@ -1,7 +1,5 @@
 templateName = 'invoiceEdit'
 
-#Template[templateName].invoicesAreAvailable = -> AccountingDocuments.findOne(documentType: 'i')
-
 Template[templateName].helpers {
 	invoicesAreAvailable: -> AccountingDocuments.findOne(documentType: 'i')
 	invoice: ->

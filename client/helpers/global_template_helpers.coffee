@@ -38,6 +38,13 @@ UI.registerHelper(
 )
 
 UI.registerHelper(
+	'shorten'
+	(key)->
+		translation = I18nEasy.i18n(key)
+		translation.slice 0, 2
+)
+
+UI.registerHelper(
 	'activeRowClass'
 	(item)-> 'active-row' if item._id is Router.current().params._id
 )
