@@ -94,6 +94,7 @@ Thanks.
 		IBANCode: "IBAN code"
 		BIC_SWIFTCode: "BIC/SWIFT code"
 		datePattern: "dd/mm/yyyy"
+		dailyprice: "daily price"
 
 
 	#================================================================================================
@@ -196,6 +197,7 @@ Merci.
 		IBANCode: "code IBAN"
 		BIC_SWIFTCode: "code BIC/SWIFT"
 		datePattern: "jj/mm/aaaa"
+		dailyprice: "tarif journalier"
 }
 
 

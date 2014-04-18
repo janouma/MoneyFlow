@@ -22,7 +22,7 @@ Meteor.methods {
 				{
 					field: Match.Where (field)->
 						check field, String
-						field in ["company", "companyid"]
+						field in ["company", "companyid", "dailyprice"]
 
 					value: Match.OneOf String, Number
 				}

@@ -10,9 +10,11 @@
 				{{#unless client}}<i class="fa fa-plus"></i> {{i18n 'newRecord'}}{{/unless}}
 			</h2>
 		</div>
+		{{#if clients.count}}
 		<div class="col width-fill mobile-width-fill text-right list-nav color-sky">
 			<a href="{{pathFor 'clients'}}" class="no-text-decoration fatty animated"><i class="fa fa-times"></i> {{i18n 'close'}}</a>
 		</div>
+		{{/if}}
 	</div>
 	<form class="mts" id="edit-form">
 		<div class="col">
@@ -52,5 +54,7 @@
 			</div>
 		</div>
 	</form>
+	{{#if clients.count}}
 	<div class="clear-both"></div><div class="separator mtl"></div>
+	{{/if}}
 </template>

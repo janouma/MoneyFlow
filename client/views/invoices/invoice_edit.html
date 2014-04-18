@@ -1,17 +1,26 @@
 <template name="invoiceEdit">
-	<div class="template-header">
-		<h2 class="capitalize color-lead">
-			<i class="fa fa-plus"></i>
-			{{i18n 'newRecord'}}
-		</h2>
+	<div class="template-header brbs">
+		<div class="col width-fit mobile-width-fit">
+			<h2 class="capitalize color-lead">
+				<i class="fa fa-plus"></i>
+				{{i18n 'newRecord'}}
+			</h2>
+		</div>
+		{{#if invoicesAreAvailable}}
+		<div class="col width-fill mobile-width-fill text-right list-nav color-sky">
+			<a href="{{pathFor 'invoices'}}" class="no-text-decoration fatty animated"><i class="fa fa-times"></i> {{i18n 'close'}}</a>
+		</div>
+		{{/if}}
 	</div>
 	<form class="mts" id="edit-form">
-		{{>invoiceSettings}}
+		{{>invoiceSettings invoice}}
 		{{>invoiceReferences}}
 		{{>invoiceHeader}}
 		{{>invoiceNewItem}}
 		{{>invoiceItems}}
 		{{>invoiceFooter}}
 	</form>
+	{{#if invoicesAreAvailable}}
 	<div class="clear-both"></div><div class="separator mtl"></div>
+	{{/if}}
 </template>

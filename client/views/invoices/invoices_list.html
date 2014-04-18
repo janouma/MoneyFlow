@@ -18,7 +18,7 @@
 		</span>
 	</div>
 
-	<table class="horizontal-border">
+	<table id="invoices" class="horizontal-border">
 		<thead class="form-list">
 		<tr>
 			<th class="width-1of3 brbn" colspan="2">{{i18n 'reference'}}</th>
@@ -27,7 +27,9 @@
 		</tr>
 		</thead>
 		<tbody class="spaced-letters">
+		{{#each invoices}}
 		{{>invoiceRow}}
+		{{/each}}
 		</tbody>
 	</table>
 </template>

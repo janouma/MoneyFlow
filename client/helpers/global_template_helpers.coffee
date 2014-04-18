@@ -12,7 +12,7 @@ UI.registerHelper(
 	'configIsReady'
 	->
 		settings = Settings.findOne(userId: Meteor.userId())
-		settings?.company and settings?.companyid
+		settings?.company and settings?.companyid and settings?.dailyprice
 )
 
 UI.registerHelper(
@@ -35,4 +35,9 @@ UI.registerHelper(
 		words = translation.split /\s/
 		joinChar = '.'
 		(word[0] for word in words).join(joinChar) + joinChar
+)
+
+UI.registerHelper(
+	'activeRowClass'
+	(item)-> 'active-row' if item._id is Router.current().params._id
 )

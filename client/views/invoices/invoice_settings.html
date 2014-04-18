@@ -4,8 +4,7 @@
 			<h3>
 				<span class="color-sky"><i class="fa fa-wrench reveal-visible"></i><i class="fa fa-chevron-up reveal-hidden"></i> {{i18n 'parameters'}}</span>
 				<ul class="nav pipes pull-right reveal-visible animated">
-					<li>{{i18n 'invoice'}}</li>
-					<li>000 € / {{i18n 'day'}}</li>
+					<li>{{invoicePrice}} € / {{i18n 'day'}}</li>
 					<li>{{i18n 'taxerate'}}</li>
 				</ul>
 			</h3>
@@ -14,12 +13,12 @@
 			<div class="col">
 				<div class="col width-2of10">
 					<div class="cell form-label mln mtn">
-						<label for="price">{{i18n 'price'}}</label>
+						<label for="dailyprice">{{i18n 'dailyprice'}}</label>
 					</div>
 				</div>
 				<div class="col width-1of8 mobile-width-1of6">
 					<div class="cell form-cell brbs mtn">
-						<input type="text" id="price" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
+						<input type="text" id="dailyprice" placeholder="{{settings.dailyprice}}" class="text stretch spaced-letters pls" value="{{dailyprice}}" data-initial-value="{{dailyprice}}" pattern="\d+">
 					</div>
 				</div>
 				<div class="col width-fit mobile-width-fill">
@@ -35,32 +34,22 @@
 					</div>
 					<div class="col width-fit mobile-width-fit">
 						<div class="cell form-cell mhn mtn">
-							<span class="medium-text">/</span>
-						</div>
-					</div>
-					<div class="col width-fit mobile-width-fill">
-						<div class="cell form-cell brbs mtn">
-							<div class="select-style narrow-input mobile-stretch">
-								<select id="time-unit" class="capitalize spaced-letters">
-									<option value="d">{{i18n 'day'}}</option>
-									<option value="h">{{i18n 'hour'}}</option>
-								</select>
-							</div>
+							<span class="medium-text">/ {{i18n 'day'}}</span>
 						</div>
 					</div>
 				</div>
 				<div class="col width-2of5 pull-right">
 					<div class="col width-1of2">
 						<div class="cell form-label mln mtn">
-							<label for="document-type">{{i18n 'documentType'}}</label>
+							<label for="documentType">{{i18n 'documentType'}}</label>
 						</div>
 					</div>
 					<div class="col width-1of2">
 						<div class="cell form-cell brbs mrn mtn">
 							<div class="select-style stretch">
-								<select id="document-type" class="capitalize pls spaced-letters">
-									<option value="f">{{i18n 'invoice'}}</option>
-									<option value="c">{{i18n 'order'}}</option>
+								<select id="documentType" class="capitalize pls spaced-letters">
+									<option value="i">{{i18n 'invoice'}}</option>
+									<option value="o">{{i18n 'order'}}</option>
 								</select>
 							</div>
 						</div>
@@ -76,7 +65,7 @@
 				<div class="col width-1of8 mobile-width-1of6">
 					<div class="cell form-cell mtn">
 						<div class="checkbox-style checked mls mts">
-							<input type="checkbox" name="client" id="taxerate" checked="yes">
+							<input type="checkbox" id="taxerate" checked="yes">
 						</div>
 					</div>
 				</div>

@@ -40,6 +40,21 @@ unless Meteor.isServer
 
 	Router.onBeforeAction('loading')
 
+	Router.onBeforeAction(
+		->
+			settings = Settings.findOne(userId: Meteor.userId())
+			Router.go '/' unless settings?.company and settings?.companyid and settings?.dailyprice
+
+		except: ['notFound', 'home', 'settings']
+	)
+
+	Router.onBeforeAction(
+		-> Router.go '/' unless Clients.findOne name: $exists: yes
+		except: ['notFound', 'home', 'settings', 'clients']
+	)
+
+
+
 Router.map ->
 	@route(
 		'home'
@@ -48,7 +63,8 @@ Router.map ->
 
 	@route(
 		'invoices'
-		path: '/:language?/invoices'
+		path: '/:language?/invoices/:_id?'
+		waitOn: -> Meteor.subscribe 'invoices', Meteor.userId()
 	)
 
 	@route(

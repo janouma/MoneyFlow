@@ -70,6 +70,19 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="col">
+						<div class="col width-1of5">
+							<div class="cell form-label mln">
+								<label for="dailyprice">{{i18n 'dailyprice'}}</label>
+							</div>
+						</div>
+						<div class="col width-3of10">
+							<div class="cell form-cell brbs">
+								<input type="text" id="dailyprice" value="{{settings.dailyprice}}" data-initial-value="{{settings.dailyprice}}" placeholder="{{i18n 'dailyprice'}}" class="text capitalize stretch spaced-letters pls" required pattern="^\d+$">
+							</div>
+						</div>
+					</div>
 				</form>
             </div>
         </div>
