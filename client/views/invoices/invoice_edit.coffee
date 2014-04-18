@@ -16,11 +16,13 @@ Template[templateName].events {
 
 		if Validation.valid $input
 			field = $input.attr 'id'
-			invoice =
-				field: field
-				value: $input.val().trim()
+			invoice = field: field
 
-			invoice.value = Validation.parseFloat invoice.value
+			if $input.attr('type') is 'checkbox'
+				if $input.prop('checked')
+					invoice.value = $input.attr("value") or yes
+			else
+				invoice.value = Validation.parseFloat $input.val().trim()
 
 			if Router.current().params._id
 				invoice._id = Router.current().params._id
