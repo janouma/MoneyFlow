@@ -176,6 +176,56 @@ textarea[required]
 		cursor: pointer
 		margin: 2px 0 0 2px
 
+.switch-checkbox
+	display: inline-block
+	$size: 29px
+	min-width: ($size*2)
+	height: $size
+	overflow: hidden
+	background-color: $lightsilver
+	border-radius: 3px
+	box-shadow: inset 0 0 7px darken($silver, 5%)
+	position: relative
+
+	&.checked
+		background-color: $lightsky
+		box-shadow: inset 0 0 7px darken($sky, 5%)
+
+		.switch-on
+			display: inline-block
+
+		.switch-off
+			display: none
+
+
+	input[type=checkbox]
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		+size(100%)
+		cursor: pointer
+
+	.switch-on,
+	.switch-off
+		@extend .medium-text
+		letter-spacing: 1px
+		text-transform: uppercase
+		font-weight: bold
+		width: 100%
+		line-height: $size
+		text-align: center
+
+	.switch-on
+		display: none
+		color: white
+		text-shadow: 0 1px 2px darken($sky, 10%)
+
+	.switch-off
+		display: inline-block
+		@extend .engraved
+		color: lighten($lead, 20%)
+
 
 textarea.textarea-valign
 	height: 43px

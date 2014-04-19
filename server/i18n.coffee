@@ -95,6 +95,8 @@ Thanks.
 		BIC_SWIFTCode: "BIC/SWIFT code"
 		datePattern: "dd/mm/yyyy"
 		dailyprice: "daily price"
+		yes: "yes"
+		no: "no"
 
 
 	#================================================================================================
@@ -198,6 +200,8 @@ Merci.
 		BIC_SWIFTCode: "code BIC/SWIFT"
 		datePattern: "jj/mm/aaaa"
 		dailyprice: "tarif journalier"
+		yes: "oui"
+		no: "non"
 }
 
 
