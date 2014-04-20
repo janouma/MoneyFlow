@@ -42,23 +42,25 @@ Meteor.methods {
 			)
 		)
 
-		if accountingDocument._id
-			value = accountingDocument.value
-			field = accountingDocument.field
+		_id = accountingDocument._id
+		value = accountingDocument.value
+		field = accountingDocument.field
+		docType = accountingDocument.documentType
+
+		if _id
 			updateOperator = if value?.toString().length then "$set" else "$unset"
 			modifier = {}
 			modifier[updateOperator] = {}
 			modifier[updateOperator][field] = value
 
 			AccountingDocuments.update(
-				{_id: accountingDocument._id}
+				{_id: _id}
 				modifier
 			)
 		else
-			if accountingDocument.value?.toString().length
+			if field isnt 'documentType' or value?.toString().length
 				document = userId: Meteor.userId()
-				document[accountingDocument.field] = accountingDocument.value
-				docType = accountingDocument.documentType
+				document[field] = value
 				document.documentType = docType if docType
 				AccountingDocuments.insert document
 }

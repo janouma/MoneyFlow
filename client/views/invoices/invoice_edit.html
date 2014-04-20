@@ -1,9 +1,13 @@
 <template name="invoiceEdit">
 	<div class="template-header brbs">
 		<div class="col width-fit mobile-width-fit">
-			<h2 class="capitalize color-lead">
-				<i class="fa fa-plus"></i>
-				{{i18n 'newRecord'}}
+			<h2 class="color-lead">
+				{{#if invoice}}
+				<i class="fa fa-pencil"></i> <span class="uppercase">{{shorten 'invoice'}}{{invoice._id}}</span>
+				{{/if}}
+				{{#unless invoice}}
+				<i class="fa fa-plus"></i> <span class="capitalize">{{i18n 'newRecord'}}</span>
+				{{/unless}}
 			</h2>
 		</div>
 		{{#if invoicesAreAvailable}}
