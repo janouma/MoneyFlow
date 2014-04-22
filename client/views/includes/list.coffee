@@ -92,7 +92,14 @@ Template[templateName].events {
 
 
 	#============================================
-	'click tr.clickable': (e, template)-> Router.go "#{template.data.item}s", @ if $(e.target).prop('tagName').toLowerCase() is 'td'
+	'click tr.clickable': (e, template)->
+		if $(e.target).prop('tagName').toLowerCase() is 'td'
+			Router.go "#{template.data.item}s", @
+			$(window).scrollTop 0
+
+
+	#============================================
+	'click .new-item-link': -> $(window).scrollTop 0
 
 }
 

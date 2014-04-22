@@ -6,46 +6,40 @@
 	remove: ownsDocument
 }
 
+validate = (accountingDocument)->
+	expectedFields =
+		documentType: Match.Where (docType)-> docType in ['i','o']
+		currency: Match.Where (cur)-> cur in ['€','$']
+		dailyprice: Match.Optional Number
+		taxerate: Match.Optional Boolean
+
+	check(
+		accountingDocument
+		{
+			_id: Match.Optional(String)
+
+			defaults: Match.Optional {
+				taxerate: Match.Optional Boolean
+				documentType: Match.Optional String
+			}
+
+			field: Match.Where (field)->
+				check field, String
+				expectedFields.hasOwnProperty field
+
+			value: expectedFields[accountingDocument.field]
+		}
+	)
+
+
 Meteor.methods {
 	updateAccountingDocument: (accountingDocument)->
 		throw new Meteor.Error(403, 'Authetication required') unless Meteor.user()
-
-		docTypes = ['i','o']
-
-		check(
-			accountingDocument
-			Match.OneOf(
-				{
-					_id: Match.Optional(String)
-					field: Match.Where (field)->
-						check field, String
-						field in ["dailyprice", "taxerate"]
-
-					value: Match.Optional(Match.OneOf String, Number, Boolean)
-
-					documentType: Match.Optional(
-						Match.Where (docType)-> docType in docTypes
-					)
-				}
-				{
-					_id: Match.Optional(String)
-					field: Match.Where (field)->
-						check field, String
-						field in ["documentType", "currency"]
-
-					value: Match.OneOf String, Number
-
-					documentType: Match.Optional(
-						Match.Where (docType)-> docType in docTypes
-					)
-				}
-			)
-		)
+		validate accountingDocument
 
 		_id = accountingDocument._id
 		value = accountingDocument.value
 		field = accountingDocument.field
-		docType = accountingDocument.documentType
 
 		if _id
 			updateOperator = if value?.toString().length then "$set" else "$unset"
@@ -58,9 +52,8 @@ Meteor.methods {
 				modifier
 			)
 		else
-			if field isnt 'documentType' or value?.toString().length
-				document = userId: Meteor.userId()
-				document[field] = value
-				document.documentType = docType if docType
-				AccountingDocuments.insert document
+			document = userId: Meteor.userId()
+			document[defaultProperty] = defaultValue for defaultProperty, defaultValue of accountingDocument.defaults
+			document[field] = value if value?.toString().length
+			AccountingDocuments.insert document
 }

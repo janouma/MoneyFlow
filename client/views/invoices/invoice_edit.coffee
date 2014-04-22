@@ -1,5 +1,21 @@
 templateName = 'invoiceEdit'
 
+invoiceDefaults =
+	taxerate: yes
+	documentType: 'i'
+
+
+addDefaultsTo = (invoice)->
+	defaults = {}
+	hasDefaults = 0
+
+	for property, value of invoiceDefaults when property isnt invoice.field
+		hasDefaults++
+		defaults[property] = value
+
+	invoice.defaults = defaults if hasDefaults
+
+
 Template[templateName].helpers {
 	invoicesAreAvailable: -> AccountingDocuments.findOne(documentType: 'i')
 	invoice: ->
@@ -27,7 +43,7 @@ Template[templateName].events {
 			if Router.current().params._id
 				invoice._id = Router.current().params._id
 			else
-				invoice.documentType = 'i'
+				addDefaultsTo invoice
 
 			$label = $(template.find "label[for=#{$input.attr 'id'}]")
 			$formLabel = $label.parent '.form-label'
