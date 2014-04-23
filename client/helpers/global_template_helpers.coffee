@@ -5,7 +5,7 @@ uuidMemoization = {}
 
 UI.registerHelper(
 	'uuidToNumber'
-	(uuid)-> uuidMemoization[uuid] or ( uuidMemoization[uuid] = (charMap[char] for char in uuid.toLowerCase()).join('') )
+	(uuid)-> uuid and ( uuidMemoization[uuid] or ( uuidMemoization[uuid] = (charMap[char] for char in uuid.toLowerCase()).join('') ) )
 )
 
 
