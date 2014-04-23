@@ -1,9 +1,11 @@
 charMap = {}
 charMap[char] = index % 10 for char, index in '0123456789abcdefghijklmnopqrstuvwxyz'.split('')
 
+uuidMemoization = {}
+
 UI.registerHelper(
 	'uuidToNumber'
-	(uuid)-> (charMap[char] for char in uuid.toLowerCase()).join('')
+	(uuid)-> uuidMemoization[uuid] or ( uuidMemoization[uuid] = (charMap[char] for char in uuid.toLowerCase()).join('') )
 )
 
 
