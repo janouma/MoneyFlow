@@ -1,3 +1,12 @@
+charMap = {}
+charMap[char] = index % 10 for char, index in '0123456789abcdefghijklmnopqrstuvwxyz'.split('')
+
+UI.registerHelper(
+	'uuidToNumber'
+	(uuid)-> (charMap[char] for char in uuid.toLowerCase()).join('')
+)
+
+
 UI.registerHelper(
 	'settings'
 	-> Settings.findOne userId: Meteor.userId()

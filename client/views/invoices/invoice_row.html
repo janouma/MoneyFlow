@@ -6,7 +6,7 @@
 			</div>
 		</td>
 		<td class="fatty medium-text uppercase valign-middle">
-			{{shorten 'invoice'}}{{_id}}
+			{{shorten 'invoice'}}-{{uuidToNumber _id}}
 		</td>
 		<td class="valign-middle text-justify">
 			{{#if clientName}}{{clientName}}{{/if}}

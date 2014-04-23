@@ -3,7 +3,7 @@
 		<div class="col width-fit mobile-width-fit">
 			<h2 class="color-lead">
 				{{#if invoice}}
-				<i class="fa fa-pencil"></i> <span class="uppercase">{{shorten 'invoice'}}{{invoice._id}}</span>
+				<i class="fa fa-pencil"></i> <span class="uppercase">{{shorten 'invoice'}}-{{uuidToNumber invoice._id}}</span>
 				{{/if}}
 				{{#unless invoice}}
 				<i class="fa fa-plus"></i> <span class="capitalize">{{i18n 'newRecord'}}</span>

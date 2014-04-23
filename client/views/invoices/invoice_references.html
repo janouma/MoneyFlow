@@ -4,7 +4,7 @@
 			<h3>
 				<span class="color-sky"><i class="fa fa-tag reveal-visible"></i><i class="fa fa-chevron-up reveal-hidden"></i> {{i18n 'references'}}</span>
 				<ul class="nav pipes pull-right reveal-visible animated">
-					{{#if _id}}<li class="uppercase">{{shorten 'invoice'}}{{_id}}</li>{{/if}}
+					{{#if _id}}<li class="uppercase">{{shorten 'invoice'}}-{{uuidToNumber _id}}</li>{{/if}}
 					<li>02/11/2013</li>
 					<li>02/12/2013</li>
 				</ul>
@@ -22,7 +22,7 @@
 						</div>
 					</div>
 					<div class="col width-1of2">
-						<div class="cell form-cell mtn mrn uppercase fatty text-right brbs border-flour medium-text text-ellipsis">{{shorten 'invoice'}}{{_id}}</div>
+						<div class="cell form-cell mtn mrn uppercase fatty text-right brbs border-flour medium-text text-ellipsis">{{shorten 'invoice'}}-{{uuidToNumber _id}}</div>
 					</div>
 				</div>
 				<div class="col">
