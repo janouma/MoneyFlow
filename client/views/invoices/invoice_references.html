@@ -15,6 +15,7 @@
 				<div class="cell capitalize fatty mvs big-text">{{settings.company}}</div>
 			</div>
 			<div class="col width-2of5 tablet-width-1of2 pull-right">
+				{{#if _id}}
 				<div class="col">
 					<div class="col width-1of2">
 						<div class="cell form-label mln mtn">
@@ -25,6 +26,7 @@
 						<div class="cell form-cell mtn mrn uppercase fatty text-right brbs border-flour medium-text text-ellipsis">{{shorten 'invoice'}}-{{uuidToNumber _id}}</div>
 					</div>
 				</div>
+				{{/if}}
 				<div class="col">
 					<div class="col width-1of2">
 						<div class="cell form-label mln mtn">
