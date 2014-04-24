@@ -16,33 +16,33 @@ I18nEasy.mapAll {
 		taxerate: "taxe rate"
 		taxeid: "taxe id"
 		close: "close"
-		verifyEmailSubject: 'verify your email #{email} on MoneyFlow'
+		verifyEmailSubject: 'verify your email {{email}} on MoneyFlow'
 		verifyEmailText: '''
 Hello,
 
 To verify your account, simply click the link below.
 
-#{url}
+{{url}}
 
 Thanks.
 '''
-		enrollAccountSubject: 'create your account #{email} on MoneyFlow'
+		enrollAccountSubject: 'create your account {{email}} on MoneyFlow'
 		enrollAccountText: '''
 Hello,
 
 To create your account, simply click the link below.
 
-#{url}
+{{url}}
 
 Thanks.
 '''
-		resetPasswordSubject: 'reset your password for #{email} on MoneyFlow'
+		resetPasswordSubject: 'reset your password for {{email}} on MoneyFlow'
 		resetPasswordText: '''
 Hello,
 
 To reset your password, simply click the link below.
 
-#{url}
+{{url}}
 
 Thanks.
 '''
@@ -120,33 +120,33 @@ Thanks.
 		taxerate: "T.V.A."
 		taxeid: "code T.V.A."
 		close: "fermer"
-		verifyEmailSubject: 'vérifiez votre courriel #{email} sur MoneyFlow'
+		verifyEmailSubject: 'vérifiez votre courriel {{email}} sur MoneyFlow'
 		verifyEmailText: '''
 Bonjour,
 
 Pour confirmer votre compte, cliquez simplement sur le lien ci-dessous.
 
-#{url}
+{{url}}
 
 Merci.
 '''
-		enrollAccountSubject: 'créez votre compte #{email} sur MoneyFlow'
+		enrollAccountSubject: 'créez votre compte {{email}} sur MoneyFlow'
 		enrollAccountText: '''
 Bonjour,
 
 Pour créer votre compte, cliquez simplement sur le lien ci-dessous.
 
-#{url}
+{{url}}
 
 Merci.
 '''
-		resetPasswordSubject: 'réinitialisez votre mot de passe pour #{email} sur MoneyFlow'
+		resetPasswordSubject: 'réinitialisez votre mot de passe pour {{email}} sur MoneyFlow'
 		resetPasswordText: '''
 Bonjour,
 
 Pour réinitialiser votre mot de passe, cliquez simplement sur le lien ci-dessous.
 
-#{url}
+{{url}}
 
 Merci.
 '''

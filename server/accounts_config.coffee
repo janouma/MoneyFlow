@@ -14,13 +14,13 @@ Accounts.config {
 Accounts.emailTemplates.siteName = 'MoneyFlow'
 
 Accounts.emailTemplates.verifyEmail =
-	subject: (user)-> I18nEasy.i18n('verifyEmailSubject').replace /#\{email\}/gi, user.emails[0].address
-	text: (user, url)-> I18nEasy.i18n('verifyEmailText').replace /#\{url\}/gi, url
+	subject: (user)-> I18nEasy.i18n('verifyEmailSubject', email: user.emails[0].address)
+	text: (user, url)-> I18nEasy.i18n('verifyEmailText', url: url)
 
 Accounts.emailTemplates.enrollAccount =
-	subject: (user)-> I18nEasy.i18n('enrollAccountSubject').replace /#\{email\}/gi, user.emails[0].address
-	text: (user, url)-> I18nEasy.i18n('enrollAccountText').replace /#\{url\}/gi, url
+	subject: (user)-> I18nEasy.i18n('enrollAccountSubject', email: user.emails[0].address)
+	text: (user, url)-> I18nEasy.i18n('enrollAccountText', url: url)
 
 Accounts.emailTemplates.resetPassword =
-	subject: (user)-> I18nEasy.i18n('resetPasswordSubject').replace /#\{email\}/gi, user.emails[0].address
-	text: (user, url)-> I18nEasy.i18n('resetPasswordText').replace /#\{url\}/gi, url
+	subject: (user)-> I18nEasy.i18n('resetPasswordSubject', email: user.emails[0].address)
+	text: (user, url)-> I18nEasy.i18n('resetPasswordText', url: url)
