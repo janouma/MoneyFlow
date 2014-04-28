@@ -5,8 +5,7 @@
 				<span class="color-sky"><i class="fa fa-tag reveal-visible"></i><i class="fa fa-chevron-up reveal-hidden"></i> {{i18n 'references'}}</span>
 				<ul class="nav pipes pull-right reveal-visible animated">
 					{{#if _id}}<li class="uppercase">{{shorten 'invoice'}}-{{uuidToNumber _id}}</li>{{/if}}
-					<li>02/11/2013</li>
-					<li>02/12/2013</li>
+					<li>{{i18n 'term'}} {{termDate}}</li>
 				</ul>
 			</h3>
 		</legend>
@@ -35,7 +34,7 @@
 					</div>
 					<div class="col width-1of2">
 						<div class="cell form-cell mtn mrn brbs">
-							<input type="text" id="invoiceDate" placeholder="{{i18n 'datePattern'}}" class="text medium-text uppercase text-right stretch pln" pattern="\d{2}/\d{2}/\d{4}">
+							<input type="text" id="invoiceDate" placeholder="{{i18n 'datePattern'}}" class="text medium-text uppercase text-right stretch pln" value="{{formatedInvoiceDate}}" pattern="\d{2}/\d{2}/\d{4}">
 						</div>
 					</div>
 				</div>
@@ -46,7 +45,7 @@
 						</div>
 					</div>
 					<div class="col width-1of2">
-						<div class="cell form-cell mtn mrn medium-text text-right brbs border-flour">02/12/2013</div>
+						<div class="cell form-cell mtn mrn medium-text text-right brbs border-flour">{{termDate}}</div>
 					</div>
 				</div>
 				<div class="col">

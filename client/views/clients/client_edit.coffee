@@ -18,7 +18,6 @@ Template[templateName].events {
 				field: $input.attr 'id'
 				value: $input.val().trim()
 
-			client.value = Validation.parseFloat client.value
 			client._id = Router.current().params._id if Router.current().params._id
 
 			$label = $(template.find "label[for=#{$input.attr 'id'}]")

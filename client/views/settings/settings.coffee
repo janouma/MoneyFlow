@@ -16,7 +16,7 @@ Template[templateName].events {
 				field: $input.attr 'id'
 				value: $input.val().trim()
 
-			settings.value = Validation.parseFloat settings.value
+			settings.value = Validation.parse settings.value
 
 			Meteor.call(
 				'updateSettings'

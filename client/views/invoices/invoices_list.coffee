@@ -4,6 +4,6 @@ Template[templateName].helpers {
 	invoices: ->
 		AccountingDocuments.find(
 			{documentType: 'i'}
-			{sort: invoiceDate: 1}
+			{sort: invoiceDate: -1}
 		)
 }

@@ -10,6 +10,7 @@ validate = (accountingDocument)->
 	expectedFields =
 		documentType: Match.Where (docType)-> docType in ['i','o']
 		currency: Match.Where (cur)-> cur in ['€','$']
+		invoiceDate: Date
 		dailyprice: Match.Optional Number
 		taxerate: Match.Optional Boolean
 

@@ -1,5 +1,7 @@
 // Extends Fontawesome (based on Fontawesome 4.0.x syntax)
 
++font-face(Moneyflow, '/fonts/moneyflow/moneyflow-regular')
+
 .fa
 	&.fa-10x
 		font-size: 10em
@@ -14,3 +16,7 @@
 		-webkit-font-smoothing: antialiased
 		-moz-osx-font-smoothing: grayscale
 		-webkit-user-select: none
+
+	&.fa-moneyflow::before
+		content: "M"
+		font-family: "Moneyflow"

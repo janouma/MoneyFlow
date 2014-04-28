@@ -3,6 +3,7 @@ templateName = 'invoiceEdit'
 invoiceDefaults =
 	taxerate: yes
 	documentType: 'i'
+	invoiceDate: new Date()
 
 
 addDefaultsTo = (invoice)->
@@ -38,7 +39,7 @@ Template[templateName].events {
 				if $input.prop('checked')
 					invoice.value = $input.attr("value") or yes
 			else
-				invoice.value = Validation.parseFloat $input.val().trim()
+				invoice.value = Validation.parse $input.val().trim()
 
 			if Router.current().params._id
 				invoice._id = Router.current().params._id

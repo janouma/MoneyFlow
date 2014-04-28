@@ -390,6 +390,13 @@ a.border-lightsilver:hover,
 .clickable.border-lightsilver:hover {
   border-color: #d4d4df !important; }
 
+@font-face {
+  font-family: Moneyflow;
+  font-weight: normal;
+  font-style: normal;
+  src: url("/fonts/moneyflow/moneyflow-regular.eot");
+  src: url("/fonts/moneyflow/moneyflow-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/moneyflow/moneyflow-regular.woff") format("woff"), url("/fonts/moneyflow/moneyflow-regular.ttf") format("truetype"), url("/fonts/moneyflow/moneyflow-regular.svg#Moneyflow") format("svg"); }
+
 .fa.fa-10x {
   font-size: 10em; }
 .fa.fa-percent::before {
@@ -402,6 +409,9 @@ a.border-lightsilver:hover,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-user-select: none; }
+.fa.fa-moneyflow::before {
+  content: "M";
+  font-family: "Moneyflow"; }
 
 /* border helpers
  * br = border
@@ -1396,6 +1406,8 @@ label.textarea-valign,
 .folder-tab {
   border-radius: 4px 4px 0 0;
   padding-left: 5px; }
+  .folder-tab .pipes li {
+    border-color: #c7c7c7; }
 
 .folder-tab:not(.last-tab) {
   background-color: #f7f7f9; }
