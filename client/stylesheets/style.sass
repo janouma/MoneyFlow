@@ -310,7 +310,7 @@ label.textarea-valign,
 
 
 	&.down-label
-		border-radius: 0 0 5px 5px
+		border-radius: 0 0 2px 2px
 		+background-image(linear-gradient(white, rgba($lightsilver,0)))
 
 		label[for],
@@ -437,15 +437,17 @@ label.textarea-valign,
 
 	&:first-of-type
 		.folder-tab
-			$border-style: solid rgba(#000, 0.075)
-			border-left: $border-style
-			border-top: $border-style
-			border-right: $border-style
-			border-width: 1px
+			border-color: rgba(#000, 0.075)
 
 .folder-tab
 	border-radius: 2px 2px 0 0
 	padding-left: 5px
+	box-sizing: border-box
+	$border-style: solid rgba(#000, 0.15)
+	border-left: $border-style
+	border-top: $border-style
+	border-right: $border-style
+	border-width: 1px
 
 	.pipes
 		li
@@ -482,7 +484,7 @@ label.textarea-valign,
 
 @media (max-width: 767px)
 	.form-label
-		border-radius: 0 0 5px 5px
+		border-radius: 0 0 2px 2px
 		+background-image(linear-gradient(white, rgba($lightsilver,0)))
 
 	.form-cell,
@@ -558,7 +560,7 @@ label.textarea-valign,
 		& .active
 			background-color: $flour
 			box-shadow: inset 0 0 20px darken($lightsilver, 2.5%)
-			border-radius: 5px
+			border-radius: 2px
 
 	.side-nav
 		padding: 0 !important

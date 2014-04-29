@@ -4,6 +4,7 @@ invoiceDefaults =
 	taxerate: yes
 	documentType: 'i'
 	invoiceDate: new Date()
+	currency: '€'
 
 
 addDefaultsTo = (invoice)->

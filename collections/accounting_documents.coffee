@@ -7,9 +7,12 @@
 }
 
 validate = (accountingDocument)->
+	docTypeValidator = Match.Where (docType)-> docType in ['i','o']
+	currencyValidator = Match.Where (cur)-> cur in ['€','$']
+
 	expectedFields =
-		documentType: Match.Where (docType)-> docType in ['i','o']
-		currency: Match.Where (cur)-> cur in ['€','$']
+		documentType: docTypeValidator
+		currency: currencyValidator
 		invoiceDate: Date
 		dailyprice: Match.Optional Number
 		taxerate: Match.Optional Boolean
@@ -22,8 +25,9 @@ validate = (accountingDocument)->
 
 			defaults: Match.Optional {
 				taxerate: Match.Optional Boolean
-				documentType: Match.Optional String
+				documentType: Match.Optional docTypeValidator
 				invoiceDate: Match.Optional Date
+				currency: Match.Optional currencyValidator
 			}
 
 			field: Match.Where (field)->
