@@ -13,6 +13,7 @@ validate = (accountingDocument)->
 		invoiceDate: Date
 		dailyprice: Match.Optional Number
 		taxerate: Match.Optional Boolean
+		term: Match.Optional Number
 
 	check(
 		accountingDocument
@@ -22,6 +23,7 @@ validate = (accountingDocument)->
 			defaults: Match.Optional {
 				taxerate: Match.Optional Boolean
 				documentType: Match.Optional String
+				invoiceDate: Match.Optional Date
 			}
 
 			field: Match.Where (field)->

@@ -160,6 +160,11 @@ input[required],
 textarea[required]
 	+background-image(url($asterisk-light-img), url($asterisk-dark-img))
 
+input[type=number]
+	&[required],
+	&:invalid
+		background-position: right 18px center, right 18px center
+
 .checkbox-style
 	display: inline-block
 	+size(18px)
@@ -439,7 +444,7 @@ label.textarea-valign,
 			border-width: 1px
 
 .folder-tab
-	border-radius: 4px 4px 0 0
+	border-radius: 2px 2px 0 0
 	padding-left: 5px
 
 	.pipes

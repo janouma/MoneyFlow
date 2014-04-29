@@ -39,7 +39,8 @@ Template[templateName].events {
 				if $input.prop('checked')
 					invoice.value = $input.attr("value") or yes
 			else
-				invoice.value = Validation.parse $input.val().trim()
+				value = $input.val().trim()
+				invoice.value = if value.length then Validation.parse(value)
 
 			if Router.current().params._id
 				invoice._id = Router.current().params._id

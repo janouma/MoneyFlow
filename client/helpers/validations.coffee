@@ -1,5 +1,5 @@
 emailPattern = /^[.-_\w]+@[.-_\w]+$/i
-numberPattern = /^\d+(,|\.)?\d+$/
+numberPattern = /^\d+(,|\.)?\d*$/
 datePattern = /^\d{2}\/\d{2}\/\d{4}$/
 
 @Validation =
@@ -19,5 +19,5 @@ datePattern = /^\d{2}\/\d{2}\/\d{4}$/
 
 		switch
 			when numberPattern.test value then parseFloat(value.replace /,/g, '.')
-			when datePattern.test value then moment(value, 'DD-MM-YYYY').toDate()
+			when datePattern.test value then moment(value, App.dateFormat).toDate()
 			else value
