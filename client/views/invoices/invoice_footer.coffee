@@ -1,0 +1,1 @@
+Template.invoiceFooter.currencyIcon = -> if @currency is '$' then 'usd' else 'euro'
