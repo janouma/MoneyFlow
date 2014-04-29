@@ -14,6 +14,7 @@ validate = (accountingDocument)->
 		documentType: docTypeValidator
 		currency: currencyValidator
 		invoiceDate: Date
+		client: String
 		dailyprice: Match.Optional Number
 		taxerate: Match.Optional Boolean
 		term: Match.Optional Number

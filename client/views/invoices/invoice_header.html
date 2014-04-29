@@ -5,7 +5,7 @@
 				<span class="color-sky"><i class="fa fa-info-circle reveal-visible"></i><i class="fa fa-chevron-up reveal-hidden"></i> {{i18n 'header'}}</span>
 				<ul class="nav pipes pull-right reveal-visible animated">
 					<li>{{settings.company}}</li>
-					<li>The Client</li>
+					<li>{{invoiceClient.name}}</li>
 				</ul>
 			</h3>
 		</legend>
@@ -34,15 +34,15 @@
 					<div class="form-cell capitalize brbs mbs">
 						<div class="select-style stretch">
 							<select id="client" class="capitalize spaced-letters medium-text fatty">
-								<option>{{i18n 'choose'}}</option>
+								<option value="">{{i18n 'choose'}}</option>
 								{{#each clients}}
-								<option value="{{_id}}">{{name}}</option>
+								<option selected="{{selectedClient _id ../client}}" value="{{_id}}">{{name}}</option>
 								{{/each}}
 							</select>
 						</div>
 					</div>
-					{{#if settings.address}}<p class="capitalize text-multiline mtm spaced-letters lhs">the client address</p>{{/if}}
-					{{#if settings.email}}<p class="spaced-letters"><i class="fa fa-envelope-o color-lightlead"></i> the.client@email</p>{{/if}}
+					{{#if invoiceClient.address}}<p class="capitalize text-multiline mtm spaced-letters lhs">{{invoiceClient.address}}</p>{{/if}}
+					{{#if invoiceClient.email}}<p class="spaced-letters"><i class="fa fa-envelope-o color-lightlead"></i> {{invoiceClient.email}}</p>{{/if}}
 				</div>
 			</div>
 		</div>
