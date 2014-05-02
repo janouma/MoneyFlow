@@ -1,11 +1,11 @@
 <template name="invoiceHeader">
-	<fieldset class="click-reveal-container folder animated">
+	<fieldset class="click-reveal-container folder animated {{#unless invoiceClient}}reveal-toggle unfolded{{/unless}}">
 		<legend class="click-reveal folder-tab">
 			<h3>
 				<span class="color-sky"><i class="fa fa-info-circle reveal-visible"></i><i class="fa fa-chevron-up reveal-hidden"></i> {{i18n 'header'}}</span>
 				<ul class="nav pipes pull-right reveal-visible animated">
 					<li>{{settings.company}}</li>
-					<li>{{invoiceClient.name}}</li>
+					{{#if invoiceClient}}<li>{{invoiceClient.name}}</li>{{/if}}
 				</ul>
 			</h3>
 		</legend>
