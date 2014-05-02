@@ -46,7 +46,7 @@ validate = (accountingDocument)->
 
 Meteor.methods {
 	updateAccountingDocument: (accountingDocument)->
-		throw new Meteor.Error(403, 'Authetication required') unless Meteor.user()
+		throw new Meteor.Error(403, 'Authentication required') unless Meteor.user()
 		validate accountingDocument
 
 		_id = accountingDocument._id

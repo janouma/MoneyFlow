@@ -8,7 +8,7 @@
 
 Meteor.methods {
 	updateClient: (client)->
-		throw new Meteor.Error(403, 'Authetication required') unless Meteor.user()
+		throw new Meteor.Error(403, 'Authentication required') unless Meteor.user()
 
 		check(
 			client
@@ -42,6 +42,13 @@ Meteor.methods {
 				{_id: client._id}
 				modifier
 			)
+
+			if client.field is 'name'
+				AccountingDocuments.update(
+					{client: client._id}
+					{$set: clientName: client.value}
+					{multi: yes}
+				)
 		else
 			if client.value?.toString().length
 				document = userId: Meteor.userId()

@@ -7,7 +7,7 @@
 
 Meteor.methods {
 	updateSettings: (settings)->
-		throw new Meteor.Error(403, 'Authetication required') unless Meteor.user()
+		throw new Meteor.Error(403, 'Authentication required') unless Meteor.user()
 
 		check(
 			settings
