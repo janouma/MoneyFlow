@@ -18,6 +18,12 @@ addDefaultsTo = (invoice)->
 	invoice.defaults = defaults if hasDefaults
 
 
+fetchers =
+	client: ($select)-> clientName: $select.find('option:selected').text()
+
+fetchDataFrom = ($input)-> (fetchers[$input.attr 'id'])?($input)
+
+
 Template[templateName].helpers {
 	invoicesAreAvailable: -> AccountingDocuments.findOne(documentType: 'i')
 	invoice: ->
@@ -41,12 +47,15 @@ Template[templateName].events {
 					invoice.value = $input.attr("value") or yes
 			else
 				value = $input.val().trim()
-				invoice.value = if value.length then Validation.parse(value)
+				invoice.value = Validation.parse(value) if value.length
 
 			if Router.current().params._id
 				invoice._id = Router.current().params._id
 			else
 				addDefaultsTo invoice
+
+			linkedData = fetchDataFrom $input
+			invoice.linkedData = linkedData if linkedData
 
 			$label = $(template.find "label[for=#{$input.attr 'id'}]")
 			$formLabel = $label.parent '.form-label'
