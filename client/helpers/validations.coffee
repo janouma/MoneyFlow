@@ -1,13 +1,13 @@
-emailPattern = /^[.-_\w]+@[.-_\w]+$/i
+emailPattern = /^[.-_\w]+@[.-_\w]+\.\w+$/i
 numberPattern = /^\d+(,|\.)?\d*$/
 datePattern = /^\d{2}\/\d{2}\/\d{4}$/
 
 @Validation =
-	valid: ($input)->
+	valid: ($input, options={})->
 		return false unless $input
 		emailPattern.lastIndex = 0
 		value = $input.val().trim()
-		validated = value.length or $input.attr('data-initial-value')?.length
+		validated = value.length or options.noInitialValue or $input.attr('data-initial-value')?.length
 		validated and= value isnt $input.attr('data-initial-value')
 		validated and= not ($input.attr('required')) or value.length
 		validated and= not (value.length) or not ($input.attr('pattern')) or (new RegExp $input.attr('pattern')).test(value)

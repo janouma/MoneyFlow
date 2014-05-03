@@ -1,0 +1,1 @@
+Template.invoiceItemRow.selectedUnit = (unit)-> unit is @unit

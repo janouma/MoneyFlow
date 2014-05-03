@@ -29,6 +29,8 @@ Template[templateName].helpers {
 	invoice: ->
 		if Router.current().params._id
 			AccountingDocuments.findOne(_id: Router.current().params._id)
+
+	items: -> Items.find documentId: Router.current().params._id
 }
 
 Template[templateName].events {
@@ -47,7 +49,8 @@ Template[templateName].events {
 					invoice.value = $input.attr("value") or yes
 			else
 				value = $input.val().trim()
-				invoice.value = Validation.parse(value) if value.length
+				if value.length
+					invoice.value = if $input.attr('pattern') then Validation.parse(value) else value
 
 			if Router.current().params._id
 				invoice._id = Router.current().params._id

@@ -64,7 +64,10 @@ Router.map ->
 	@route(
 		'invoices'
 		path: '/:language?/invoices/:_id?'
-		waitOn: -> Meteor.subscribe 'invoices', Meteor.userId()
+		waitOn: -> [
+			Meteor.subscribe('invoices', Meteor.userId())
+			Meteor.subscribe('items', Meteor.userId())
+		]
 	)
 
 	@route(

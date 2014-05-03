@@ -36,7 +36,7 @@
 				</div>
 				<div class="col width-1of8">
 					<div class="cell form-cell brbs mtn prs">
-						<input type="text" id="item-price" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
+						<input type="text" id="item-price" placeholder="000" class="text stretch spaced-letters pls" pattern="^\d+$">
 					</div>
 				</div>
 				<div class="col width-1of8">
@@ -46,7 +46,7 @@
 				</div>
 				<div class="col width-1of8">
 					<div class="cell form-cell brbs mtn prs">
-						<input type="text" id="amount" placeholder="000" class="text stretch spaced-letters pls" required pattern="\d+">
+						<input type="text" id="amount" placeholder="000" class="text stretch spaced-letters pls" required pattern="^\d+$">
 					</div>
 				</div>
 				<div class="col width-1of8">
@@ -57,7 +57,7 @@
 				<div class="col width-1of8">
 					<div class="cell form-cell brbs mtn prs">
 						<div class="select-style stretch pls">
-							<select name="unit" class="capitalize tablet-spaced-letters desktop-spaced-letters">
+							<select id="unit" class="capitalize tablet-spaced-letters desktop-spaced-letters">
 								<option value="t">{{i18n 'time'}}</option>
 								<option value="w">{{i18n 'without'}}</option>
 							</select>

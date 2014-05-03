@@ -12,11 +12,11 @@ Template[templateName].events {
 		$input = $(e.target)
 
 		if Validation.valid $input
-			settings =
-				field: $input.attr 'id'
-				value: $input.val().trim()
+			settings = field: $input.attr 'id'
+			value = $input.val().trim()
 
-			settings.value = Validation.parse settings.value
+			if value.length
+				settings.value = if $input.attr('pattern') then Validation.parse(value) else value
 
 			Meteor.call(
 				'updateSettings'

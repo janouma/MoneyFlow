@@ -21,7 +21,7 @@
 		{{>invoiceReferences invoice}}
 		{{>invoiceHeader invoice}}
 		{{>invoiceNewItem invoice}}
-		{{>invoiceItems invoice}}
+		{{#if items.count}}{{>invoiceItems items}}{{/if}}
 		{{>invoiceFooter invoice}}
 	</form>
 	{{#if invoicesAreAvailable}}
