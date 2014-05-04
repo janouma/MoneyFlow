@@ -3,6 +3,7 @@ Template.invoiceItems.events {
 		Meteor.clearTimeout template._toast
 
 		$deleteIcon = $(e.target).removeClass 'hidden'
+		template._itemId = $(e.target).attr 'id'
 		$dialog = $deleteIcon.parents('table').siblings('.inline-confirm-buttons')
 
 		offset = $deleteIcon.offset()
@@ -32,5 +33,5 @@ Template.invoiceItems.events {
 		template._cancel = yes
 		Meteor.clearTimeout template._toast
 		$(template.find '.inline-confirm-buttons').addClass 'hidden'
-		$(template.find '.delete-item-row').addClass 'hidden'
+		$(template.find "##{template._itemId}").addClass 'hidden'
 }
