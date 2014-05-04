@@ -7,71 +7,77 @@
 		</legend>
 		<div class="col reveal-hidden animated" data-delay-shrink>
 			<div class="col">
-				<div class="col width-2of10">
-					<div class="cell form-label mln mtn">
-						<label for="item">{{i18n 'description'}}</label>
+				<div class="col width-1of2">
+					<div class="col width-1of2">
+						<div class="cell form-label mln mtn">
+							<label for="item">{{i18n 'description'}}</label>
+						</div>
 					</div>
-				</div>
-				<div class="col width-3of10">
-					<div class="cell form-cell brbs mtn prs">
-						<input type="text" id="item" placeholder="{{i18n 'description'}}" class="text stretch spaced-letters pls capitalize" required>
-					</div>
-				</div>
-				<div class="col width-2of10">
-					<div class="cell form-label mln mtn">
-						<label for="group">{{i18n 'group'}}</label>
-					</div>
-				</div>
-				<div class="col width-3of10">
-					<div class="cell form-cell brbs mtn prs">
-						<input type="text" id="group" placeholder="{{i18n 'group'}}" class="text stretch spaced-letters pls capitalize">
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="col width-1of8">
-					<div class="cell form-label mln mtn">
-						<label for="item-price">{{i18n 'price'}}</label>
-					</div>
-				</div>
-				<div class="col width-1of8">
-					<div class="cell form-cell brbs mtn prs">
-						<input type="text" id="item-price" placeholder="000" class="text stretch spaced-letters pls" pattern="^\d+$">
-					</div>
-				</div>
-				<div class="col width-1of8">
-					<div class="cell form-label mln mtn">
-						<label for="amount">{{i18n 'amount'}}</label>
-					</div>
-				</div>
-				<div class="col width-1of8">
-					<div class="cell form-cell brbs mtn prs">
-						<input type="text" id="amount" placeholder="000" class="text stretch spaced-letters pls" required pattern="^\d+$">
-					</div>
-				</div>
-				<div class="col width-2of10">
-					<div class="cell form-label mln mtn">
-						<label for="unit">{{i18n 'unit'}}</label>
-					</div>
-				</div>
-				<div class="col width-3of10">
-					<div class="cell form-cell brbs mtn mrn prn">
-						<div class="select-style stretch pls">
-							<select id="unit" class="capitalize tablet-spaced-letters desktop-spaced-letters">
-								<option value="t">{{i18n 'time'}}</option>
-								<option value="w">{{i18n 'without'}}</option>
-							</select>
+					<div class="col width-1of2">
+						<div class="cell form-cell brbs mtn prs">
+							<input type="text" id="item" placeholder="{{i18n 'description'}}" class="text stretch spaced-letters pls capitalize" required>
 						</div>
 					</div>
 				</div>
-				<!--
-				<div class="col width-1of4">
-					<div class="cell form-cell text-right fatty medium-text brbs border-flour mtn mrn prn">
-						<span class="color-lightsilver capitalize">{{i18n 'sum'}}</span>
-						<span class="color-lightlead">000 <i class="fa fa-{{currencyIcon}}"></i></span>
+
+				<div class="col width-1of2">
+					<div class="col width-1of2">
+						<div class="cell form-label mln mtn">
+							<label for="group">{{i18n 'group'}}</label>
+						</div>
+					</div>
+					<div class="col width-1of2">
+						<div class="cell form-cell brbs mtn prs">
+							<input type="text" id="group" placeholder="{{i18n 'group'}}" class="text stretch spaced-letters pls capitalize">
+						</div>
 					</div>
 				</div>
-				-->
+
+			</div>
+			<div class="col">
+
+				<div class="col width-1of2">
+					<div class="col width-1of2">
+						<div class="cell form-label mln mtn">
+							<label for="item-price">{{i18n 'price'}}</label>
+						</div>
+					</div>
+					<div class="col width-1of2">
+						<div class="cell form-cell brbs mtn prs">
+							<input type="text" id="item-price" placeholder="000" class="text stretch spaced-letters pls" pattern="^\d+$">
+						</div>
+					</div>
+				</div>
+
+				<div class="col width-1of2">
+					<div class="col width-1of4">
+						<div class="cell form-label mln mtn">
+							<label for="amount">{{i18n 'amount'}}</label>
+						</div>
+					</div>
+					<div class="col width-1of4">
+						<div class="cell form-cell brbs mtn prs">
+							<input type="text" id="amount" placeholder="000" class="text stretch spaced-letters pls" required pattern="^\d+$">
+						</div>
+					</div>
+
+					<div class="col width-1of4">
+						<div class="cell form-label mln mtn">
+							<label for="unit">{{i18n 'unit'}}</label>
+						</div>
+					</div>
+					<div class="col width-1of4">
+						<div class="cell form-cell brbs mtn mrn prn">
+							<div class="select-style stretch pls">
+								<select id="unit" class="capitalize tablet-spaced-letters desktop-spaced-letters">
+									<option value="t">{{i18n 'time'}}</option>
+									<option value="w">{{i18n 'without'}}</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</fieldset>
