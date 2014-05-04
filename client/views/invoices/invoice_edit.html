@@ -20,8 +20,8 @@
 		{{>invoiceSettings invoice}}
 		{{>invoiceReferences invoice}}
 		{{>invoiceHeader invoice}}
-		{{>invoiceNewItem invoice}}
-		{{#if items.count}}{{>invoiceItems items}}{{/if}}
+		{{#if invoice}}{{>invoiceNewItem invoice}}{{/if}}
+		{{#if itemsData.items.count}}{{>invoiceItems itemsData}}{{/if}}
 		{{>invoiceFooter invoice}}
 	</form>
 	{{#if invoicesAreAvailable}}

@@ -1,13 +1,13 @@
 <template name="invoiceItemRow">
 	<tr>
 		<td class="valign-middle pas border-lightsilver">
-			<input type="text" name="item" placeholder="{{i18n 'description'}}" value="{{item}}" data-initial-value="{{item}}" class="text capitalize stretch tablet-spaced-letters desktop-spaced-letters" required>
+			<input type="text" name="item" placeholder="{{i18n 'description'}}" value="{{item.item}}" data-initial-value="{{item.item}}" class="text capitalize stretch tablet-spaced-letters desktop-spaced-letters" required>
 		</td>
 		<td class="valign-middle pas border-lightsilver">
-			<input type="text" name="item-price" placeholder="000" value="{{itemPrice}}" data-initial-value="{{itemPrice}}" class="text stretch tablet-spaced-letters desktop-spaced-letters" required pattern="\d+">
+			<input type="text" name="item-price" placeholder="{{documentPrice}}" value="{{item.itemPrice}}" data-initial-value="{{item.itemPrice}}" class="text stretch tablet-spaced-letters desktop-spaced-letters" pattern="^\d+$">
 		</td>
 		<td class="valign-middle pas border-lightsilver">
-			<input type="text" name="amount" placeholder="000" value="{{amount}}" data-initial-value="{{amount}}" class="text stretch tablet-spaced-letters desktop-spaced-letters" required pattern="\d+">
+			<input type="text" name="amount" placeholder="000" value="{{item.amount}}" data-initial-value="{{item.amount}}" class="text stretch tablet-spaced-letters desktop-spaced-letters" required pattern="^\d+$">
 		</td>
 		<td class="valign-middle pas border-lightsilver">
 			<div class="select-style stretch">

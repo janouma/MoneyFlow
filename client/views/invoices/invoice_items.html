@@ -17,8 +17,8 @@
 				</tr>
 				</thead>
 				<tbody>
-					{{#each this}}
-					{{>invoiceItemRow}}
+					{{#each items}}
+					{{>invoiceItemRow accountingDocument=../invoice item=this}}
 					{{/each}}
 					<tr class="medium-text color-lightlead fatty">
 						<td class="valign-middle capitalize pas brts border-silver" colspan="4">{{i18n 'discount'}}</td>

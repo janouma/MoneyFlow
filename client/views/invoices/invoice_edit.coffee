@@ -26,11 +26,13 @@ fetchDataFrom = ($input)-> (fetchers[$input.attr 'id'])?($input)
 
 Template[templateName].helpers {
 	invoicesAreAvailable: -> AccountingDocuments.findOne(documentType: 'i')
-	invoice: ->
-		if Router.current().params._id
-			AccountingDocuments.findOne(_id: Router.current().params._id)
+	invoice: -> AccountingDocuments.findOne(_id: invoiceId) if (invoiceId = Router.current().params._id)
 
-	items: -> Items.find documentId: Router.current().params._id
+	itemsData: ->
+		invoiceId = Router.current().params._id
+
+		invoice: if invoiceId then AccountingDocuments.findOne(_id: invoiceId)
+		items: if invoiceId then Items.find(documentId: invoiceId)
 }
 
 Template[templateName].events {
