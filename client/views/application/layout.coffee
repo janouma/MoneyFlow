@@ -22,6 +22,9 @@ Template[templateName].events {
 	#==========================================
 	'transitionend .click-reveal-container:not(.reveal-toggle) .delay-shrink': (e)->
 		$(e.target).removeClass 'delay-shrink'
+
+	#==================================
+	'keypress input, keypress textarea': (e)-> $(e.target).blur() if e.key is 13 or e.keyCode is 13
 }
 
 

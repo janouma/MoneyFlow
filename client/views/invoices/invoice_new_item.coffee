@@ -12,6 +12,7 @@ Template[templateName].helpers {
 }
 
 Template[templateName].events {
+
 	'blur input, change select': (e, template)->
 		do e.stopPropagation
 
