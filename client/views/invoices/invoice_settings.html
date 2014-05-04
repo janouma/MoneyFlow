@@ -11,34 +11,58 @@
 		</legend>
 		<div class="col stretch reveal-hidden animated" data-delay-shrink>
 			<div class="col">
-				<div class="col width-2of10">
-					<div class="cell form-label mln mtn">
-						<label for="dailyprice">{{i18n 'dailyprice'}}</label>
+
+				<div class="col width-6of16">
+					<div class="col width-1of3">
+						<div class="cell form-label mln mtn">
+							<label for="dailyprice">{{i18n 'dailyprice'}}</label>
+						</div>
 					</div>
-				</div>
-				<div class="col width-1of8 mobile-width-1of6">
-					<div class="cell form-cell brbs mtn">
-						<input type="text" id="dailyprice" placeholder="{{settings.dailyprice}}" class="text stretch spaced-letters pls" value="{{dailyprice}}" data-initial-value="{{dailyprice}}" pattern="^\d+$">
-					</div>
-				</div>
-				<div class="col width-fit mobile-width-fill">
-					<div class="col width-fit mobile-width-fit">
-						<div class="cell form-cell brbs mtn">
-							<div class="select-style one-char">
-								<select id="currency">
-									<option selected="{{selectedCurreny '€'}}" value="€">€</option>
-									<option selected="{{selectedCurreny '$'}}" value="$">$</option>
-								</select>
+
+					<div class="col width-2of3">
+						<div class="col width-2of5">
+							<div class="cell form-cell brbs mtn">
+								<input type="text" id="dailyprice" placeholder="{{settings.dailyprice}}" class="text stretch spaced-letters pls" value="{{dailyprice}}" data-initial-value="{{dailyprice}}" pattern="^\d+$">
+							</div>
+						</div>
+						<div class="col width-fit mobile-width-fill">
+							<div class="col width-fit mobile-width-fit">
+								<div class="cell form-cell brbs mtn">
+									<div class="select-style one-char">
+										<select id="currency">
+											<option selected="{{selectedCurreny '€'}}" value="€">€</option>
+											<option selected="{{selectedCurreny '$'}}" value="$">$</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="col width-fit mobile-width-fit">
+								<div class="cell form-cell mhn mtn">
+									<span class="medium-text">/ {{i18n 'day'}}</span>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col width-fit mobile-width-fit">
-						<div class="cell form-cell mhn mtn">
-							<span class="medium-text">/ {{i18n 'day'}}</span>
+				</div>
+
+				<div class="col width-4of16">
+					<div class="col width-3of5">
+						<div class="cell form-label mln mtn">
+							<label for="taxerate">{{i18n 'taxerate'}}</label>
+						</div>
+					</div>
+					<div class="col width-2of5">
+						<div class="cell form-cell mtn">
+							<div class="switch-checkbox {{taxerateCheckedClass}} mls">
+								<div class="switch-on">{{i18n 'yes'}}</div>
+								<div class="switch-off">{{i18n 'no'}}</div>
+								<input type="checkbox" id="taxerate" checked={{taxerateChecked}}>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col width-2of5 pull-right">
+
+				<div class="col width-6of16">
 					<div class="col width-1of2">
 						<div class="cell form-label mln mtn">
 							<label for="documentType">{{i18n 'documentType'}}</label>
@@ -55,8 +79,9 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
-			<div class="col">
+			<!--<div class="col">
 				<div class="col width-2of10">
 					<div class="cell form-label mln mtn">
 						<label for="taxerate">{{i18n 'taxerate'}}</label>
@@ -71,7 +96,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 		</div>
 	</fieldset>
 </template>
