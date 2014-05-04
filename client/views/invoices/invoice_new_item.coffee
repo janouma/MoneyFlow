@@ -32,8 +32,10 @@ Template[templateName].events {
 
 			validated and= Validation.valid $input, noInitialValue: yes
 
+		validated and= item.unit is 't' or item.itemPrice
+
 		if validated
 			Items.insert item
-			$input.val('') for $input in inputs
-
+			$input.val('') for $input in inputs when $input.prop('tagName').toLowerCase() isnt 'select'
+			$('#unit').find('option:selected').removeAttr('selected')
 }
