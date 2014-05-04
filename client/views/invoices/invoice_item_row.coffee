@@ -8,4 +8,5 @@ Template.invoiceItemRow.helpers {
 		price * @item.amount
 
 	currencyIcon: -> if @accountingDocument.currency is '$' then 'usd' else 'euro'
+	unitColor: -> 'color-lightsilver' if @item.unit is 'w'
 }

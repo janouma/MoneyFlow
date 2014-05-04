@@ -11,8 +11,9 @@
 		</td>
 		<td class="valign-middle pas border-lightsilver">
 			<div class="select-style stretch">
-				<select name="unit" class="capitalize tablet-spaced-letters desktop-spaced-letters">
-					<option selected="{{selectedUnit 't'}}" value="t">{{i18n 'time'}}</option>
+				<select name="unit" class="capitalize tablet-spaced-letters desktop-spaced-letters {{unitColor}}">
+					<option selected="{{selectedUnit 'd'}}" value="d">{{i18n 'days'}}</option>
+					<option selected="{{selectedUnit 'h'}}" value="h">{{i18n 'hours'}}</option>
 					<option selected="{{selectedUnit 'w'}}" value="w">{{i18n 'without'}}</option>
 				</select>
 			</div>

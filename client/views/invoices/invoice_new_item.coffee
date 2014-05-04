@@ -33,7 +33,7 @@ Template[templateName].events {
 
 			validated and= Validation.valid $input, noInitialValue: yes
 
-		validated and= item.unit is 't' or item.itemPrice
+		validated and= item.unit in ['d','h'] or item.itemPrice
 
 		if validated
 			Items.insert item
