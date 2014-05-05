@@ -683,6 +683,13 @@ a.border-lightsilver:hover,
 .lhx {
   line-height: 2.5 !important; }
 
+.tiny-button {
+  height: 22px;
+  margin: 4px 4px 4px 0;
+  padding: 2px 4px;
+  font-size: 14px;
+  line-height: 0.88em; }
+
 .tiny-input {
   height: 11px !important;
   margin-top: 8px;

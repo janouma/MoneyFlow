@@ -97,6 +97,9 @@ Thanks.
 		dailyprice: "daily price"
 		yes: "yes"
 		no: "no"
+		add: "add"
+		reset: "reset"
+		noItem: "no item"
 
 
 	#================================================================================================
@@ -202,6 +205,9 @@ Merci.
 		dailyprice: "tarif journalier"
 		yes: "oui"
 		no: "non"
+		add: "ajouter"
+		reset: "réinitialiser"
+		noItem: "aucun article"
 }
 
 
