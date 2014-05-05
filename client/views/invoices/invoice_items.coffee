@@ -1,9 +1,18 @@
+dialogDispose = (e, template)->
+	do e.preventDefault
+	template._cancel = yes
+	Meteor.clearTimeout template._toast
+	$(template.find '.inline-confirm-buttons').addClass 'hidden'
+	$(template.find "##{template._deleteIconId}").addClass 'hidden'
+
+
 Template.invoiceItems.events {
 	'click .delete-item-row': (e, template)->
 		Meteor.clearTimeout template._toast
 
 		$deleteIcon = $(e.target).removeClass 'hidden'
-		template._itemId = $(e.target).attr 'id'
+		template._deleteIconId = $deleteIcon.attr 'id'
+		template._itemId = $deleteIcon.attr 'data-item-id'
 		$dialog = $deleteIcon.parents('table').siblings('.inline-confirm-buttons')
 
 		offset = $deleteIcon.offset()
@@ -28,10 +37,11 @@ Template.invoiceItems.events {
 		$dialog.css left: 0 if $dialog.hasClass 'hidden'
 
 	#==========================================
-	'click .inline-confirm-buttons .cancel': (e, template)->
-		do e.preventDefault
-		template._cancel = yes
-		Meteor.clearTimeout template._toast
-		$(template.find '.inline-confirm-buttons').addClass 'hidden'
-		$(template.find "##{template._itemId}").addClass 'hidden'
+	'click .inline-confirm-buttons .cancel': dialogDispose
+
+	#==========================================
+	'click .inline-confirm-buttons .confirm': (e, template)->
+		dialogDispose e, template
+		Items.remove _id: template._itemId
+
 }
