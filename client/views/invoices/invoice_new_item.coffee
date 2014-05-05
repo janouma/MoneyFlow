@@ -66,4 +66,10 @@ Template[templateName].events {
 			clear template, inputs
 			$(e.target).addClass 'hidden'
 
+	#==================================
+	'click #reset': (e, template)->
+		do e.stopPropagation
+		clear template
+		$(template.find '#add').addClass 'hidden'
+
 }
