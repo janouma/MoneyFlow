@@ -11,10 +11,7 @@ fieldsMapping =
 validate = (template)->
 	validated = yes
 
-	item =
-		userId: Meteor.userId()
-		documentId: template.data._id
-
+	item = userId: Meteor.userId()
 	inputs = []
 
 	for field, inputId of fieldsMapping
@@ -62,7 +59,15 @@ Template[templateName].events {
 		inputs = results.inputs
 
 		if results.validated
+			if (currentDocumentId = template.data?._id)
+				item.documentId = currentDocumentId
+			else
+				newInvoice = userId: Meteor.userId()
+				newInvoice[field] = value for field, value of App.invoiceDefaults()
+				item.documentId = AccountingDocuments.insert newInvoice
+
 			Items.insert item
+			Router.go('invoices', _id: item.documentId) unless currentDocumentId
 			clear template, inputs
 			$(e.target).addClass 'hidden'
 

@@ -1,17 +1,10 @@
 templateName = 'invoiceEdit'
 
-invoiceDefaults =
-	taxerate: yes
-	documentType: 'i'
-	invoiceDate: new Date()
-	currency: '€'
-
-
 addDefaultsTo = (invoice)->
 	defaults = {}
 	hasDefaults = 0
 
-	for property, value of invoiceDefaults when property isnt invoice.field
+	for property, value of App.invoiceDefaults() when property isnt invoice.field
 		hasDefaults++
 		defaults[property] = value
 
