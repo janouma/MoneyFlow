@@ -49,6 +49,7 @@ Template.invoiceItems.events {
 	#==========================================
 	'click .inline-confirm-buttons .confirm': (e, template)->
 		dialogDispose e, template
-		Items.remove _id: template._itemId
+		Items.remove _id: template._itemId if template._itemId
+		template._itemId = template._deleteIconId = undefined
 
 }
