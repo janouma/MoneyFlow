@@ -1,3 +1,5 @@
+templateName = 'invoiceItems'
+
 dialogDispose = (e, template)->
 	do e.preventDefault
 	template._cancel = yes
@@ -7,7 +9,11 @@ dialogDispose = (e, template)->
 	$(template.find "#item-row-#{template._itemId}").removeClass 'striked-row'
 
 
-Template.invoiceItems.events {
+Template[templateName].helpers {
+	itemsAvailable: -> @invoice and Items.findOne(documentId: @invoice._id)
+}
+
+Template[templateName].events {
 	'click .delete-item-row': (e, template)->
 		Meteor.clearTimeout template._toast
 

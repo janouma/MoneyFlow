@@ -17,22 +17,21 @@
 				</tr>
 				</thead>
 				<tbody>
-					{{#if items.count}}
-					{{#each items}}
-					{{>invoiceItemRow accountingDocument=../invoice item=this}}
-					{{/each}}
+					{{#if itemsAvailable}}
+						{{#each items}}
+							{{>invoiceItemRow accountingDocument=../invoice item=this}}
+						{{/each}}
 					<tr class="medium-text color-lightlead fatty">
 						<td class="valign-middle capitalize pas brts border-silver" colspan="4">{{i18n 'discount'}}</td>
 						<td class="valign-middle pas brts border-silver prl">
 							<input type="text" id="discount" placeholder="-000" class="text stretch tablet-spaced-letters desktop-spaced-letters text-right" pattern="^\d+$">
 						</td>
 					</tr>
-					{{/if}}
-					{{#unless items.count}}
+					{{else}}
 					<tr class="medium-text color-lightlead fatty">
 						<td class="valign-middle capitalize pas brts border-silver text-center" colspan="5">{{i18n 'noItem'}}</td>
 					</tr>
-					{{/unless}}
+					{{/if}}
 				</tbody>
 			</table>
 			<div class="inline-confirm-buttons animated right-triangle hidden">
