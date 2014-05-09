@@ -84,7 +84,12 @@ Template[templateName].events {
 		$(template.find '.confirm-buttons').addClass 'hidden'
 		$("tr").removeClass 'striked-row'
 
-		$("input[name=#{template.data.item}]:checked").each( -> template.data.collection.remove _id: $(@).attr('id') )
+		$("input[name=#{template.data.item}]:checked").each ->
+			documentId = $(@).attr('id')
+			template.data.collection.remove _id: documentId
+			cascadeDelete documentId if (cascadeDelete = template.data.cascadeDelete)
+
+
 		.attr('checked', no)
 		.parent('.checkbox-style').removeClass('checked')
 

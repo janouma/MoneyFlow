@@ -13,4 +13,5 @@ Template.invoices.helpers {
 		template: Template.invoicesList
 		item: 'invoice'
 		collection: AccountingDocuments
+		cascadeDelete: (invoiceId)-> Meteor.call 'removeChildItems', invoiceId
 }

@@ -46,4 +46,8 @@ Meteor.methods {
 			{_id: _id}
 			modifier
 		)
+
+	removeChildItems: (parentId)->
+		throw new Meteor.Error(403, 'Authentication required') unless Meteor.user()
+		Items.remove documentId: parentId
 }
