@@ -19,17 +19,17 @@ taxeFreeSum = ->
 	sum
 
 
-taxes = -> if @invoice.taxerate then taxeRate() * taxeFreeSum.call @ else 0
+taxes = -> if @invoice.taxerate then taxeRate() * taxeFreeSum.call(@) else 0
 
 
 Template.invoiceFooter.helpers {
 	currencyIcon: -> if @invoice.currency is '$' then 'usd' else 'euro'
 
-	taxeFreeSum: taxeFreeSum
+	taxeFreeSum: -> Formatter.toFixed (taxeFreeSum.call @), 2
 
-	taxes: taxes
+	taxes: -> Formatter.toFixed (taxes.call @), 2
 
 	sumWithTaxes: ->
 		freeOfTaxes = taxeFreeSum.call @
-		freeOfTaxes + taxes.call @
+		Formatter.toFixed (freeOfTaxes + taxes.call @), 2
 }

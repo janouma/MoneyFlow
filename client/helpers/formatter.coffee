@@ -1,0 +1,1 @@
+@Formatter = toFixed: (value, decimals)-> value.toFixed(decimals).replace(/[\.,]0+/, '')
