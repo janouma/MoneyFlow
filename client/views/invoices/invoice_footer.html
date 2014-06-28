@@ -14,7 +14,7 @@
 					</div>
 					<div class="col width-1of2">
 						<div class="cell form-cell brbs mtn prs">
-							<input type="number" id="term" placeholder="{{i18n 'onReceive'}}" class="text capitalize stretch spaced-letters pls" value="{{term}}" data-initial-value="{{term}}" min="0" max="90" step="15" pattern="^\d+$">
+							<input type="number" id="term" placeholder="{{i18n 'onReceive'}}" class="text capitalize stretch spaced-letters pls" value="{{invoice.term}}" data-initial-value="{{invoice.term}}" min="0" max="90" step="15" pattern="^\d+$">
 						</div>
 					</div>
 				</div>
@@ -27,7 +27,7 @@
 					<div class="col width-1of2">
 						<div class="cell form-cell brbs prs mtn">
 							<div class="select-style stretch pls">
-								<select name="paymentMode" class="capitalize spaced-letters">
+								<select id="paymentMode" class="capitalize spaced-letters">
 									<option value="t">{{i18n 'transfer'}}</option>
 									<option value="c">{{i18n 'check'}}</option>
 								</select>
@@ -72,7 +72,7 @@
 						</div>
 					</div>
 					<div class="col width-1of2">
-						<div class="cell form-cell mtn mrn uppercase text-right brbs border-flour adjust-line-height">000 <i class="fa fa-{{currencyIcon}}"></i></div>
+						<div class="cell form-cell mtn mrn uppercase text-right brbs border-flour adjust-line-height">{{taxeFreeSum}} <i class="fa fa-{{currencyIcon}}"></i></div>
 					</div>
 				</div>
 				<div class="col">
@@ -82,7 +82,7 @@
 						</div>
 					</div>
 					<div class="col width-1of2">
-						<div class="cell form-cell mtn mrn text-right brbs border-flour adjust-line-height">000 <i class="fa fa-{{currencyIcon}}"></i></div>
+						<div class="cell form-cell mtn mrn text-right brbs border-flour adjust-line-height">{{taxes}} <i class="fa fa-{{currencyIcon}}"></i></div>
 					</div>
 				</div>
 				<div class="col">
@@ -92,7 +92,7 @@
 						</div>
 					</div>
 					<div class="col width-1of2">
-						<div class="cell form-cell mtn mrn medium-text fatty text-right brbs border-flour color-lead">000 <i class="fa fa-{{currencyIcon}}"></i></div>
+						<div class="cell form-cell mtn mrn medium-text fatty text-right brbs border-flour color-lead">{{sumWithTaxes}} <i class="fa fa-{{currencyIcon}}"></i></div>
 					</div>
 				</div>
 				<div class="col">

@@ -24,7 +24,7 @@ Template[templateName].events {
 		$(e.target).removeClass 'delay-shrink'
 
 	#==================================
-	'keypress input, keypress textarea': (e)-> $(e.target).blur() if e.key is 13 or e.keyCode is 13
+	'keypress input, keypress textarea': (e)-> $(e.target).blur() if not e.altKey and (e.key is 13 or e.keyCode is 13)
 }
 
 

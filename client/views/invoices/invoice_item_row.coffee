@@ -5,9 +5,12 @@ documentPrice = -> @accountingDocument.dailyprice or Settings.findOne(userId: Me
 Template[templateName].helpers {
 	selectedUnit: (unit)-> unit is @item.unit
 	documentPrice: documentPrice
+
 	sum: ->
 		price = @item.itemPrice or documentPrice.call @
-		price * @item.amount
+		sum = price * @item.amount
+		Math.ceil(Converter.toDays sum, @item.unit)
+
 
 	currencyIcon: -> if @accountingDocument.currency is '$' then 'usd' else 'euro'
 	unitColor: -> 'color-lightsilver' if @item.unit is 'w'
