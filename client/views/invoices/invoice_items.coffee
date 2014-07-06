@@ -26,6 +26,8 @@ Template[templateName].helpers {
 				groups.push(group = indexedGroups[groupName] = {group: groupName, items: []}) if not group = indexedGroups[groupName]
 				group.items.push item
 
+			@items.rewind()
+
 		groups
 }
 
