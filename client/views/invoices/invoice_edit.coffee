@@ -11,8 +11,7 @@ addDefaultsTo = (invoice)->
 	invoice.defaults = defaults if hasDefaults
 
 
-fetchers =
-	client: ($select)-> clientName: $select.find('option:selected').text()
+fetchers = client: ($select)-> clientName: $select.find('option:selected').text()
 
 fetchDataFrom = ($input)-> (fetchers[$input.attr 'id'])?($input)
 

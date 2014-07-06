@@ -9,8 +9,24 @@ dialogDispose = (e, template)->
 	$(template.find "#item-row-#{template._itemId}").removeClass 'striked-row'
 
 
+itemsAvailable = -> @invoice and Items.findOne(documentId: @invoice._id)
+
+
 Template[templateName].helpers {
-	itemsAvailable: -> @invoice and Items.findOne(documentId: @invoice._id)
+	itemsAvailable: itemsAvailable
+
+	itemsByGroup: ->
+		groups = undefined
+		indexedGroups = {}
+
+		if itemsAvailable.call @
+			@items.forEach (item)->
+				groupName = item.group
+				groups ?= []
+				groups.push(group = indexedGroups[groupName] = {group: groupName, items: []}) if not group = indexedGroups[groupName]
+				group.items.push item
+
+		groups
 }
 
 Template[templateName].events {
