@@ -66,6 +66,8 @@ Template[templateName].events {
 				newInvoice[field] = value for field, value of App.invoiceDefaults()
 				item.documentId = AccountingDocuments.insert newInvoice
 
+			item.group = item.group?.toLocaleLowerCase()
+
 			Items.insert item
 			Router.go('invoices', _id: item.documentId) unless currentDocumentId
 			clear template, inputs
