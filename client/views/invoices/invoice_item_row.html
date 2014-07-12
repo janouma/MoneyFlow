@@ -1,8 +1,10 @@
 <template name="invoiceItemRow">
 	<tr id="item-row-{{item._id}}">
 		<td class="valign-middle pas border-lightsilver">
+			{{#if groupAvailable}}
 			<i class="move-item-row fa fa-reorder color-sky animated hidden"></i>
-			<input type="text" name="item" placeholder="{{i18n 'description'}}" value="{{item.item}}" data-initial-value="{{item.item}}" class="text capitalize stretch tablet-spaced-letters desktop-spaced-letters pll" required>
+			{{/if}}
+			<input type="text" name="item" placeholder="{{i18n 'description'}}" value="{{item.item}}" data-initial-value="{{item.item}}" class="text capitalize stretch tablet-spaced-letters desktop-spaced-letters {{paddingClass}}" required>
 		</td>
 		<td class="valign-middle pas border-lightsilver">
 			<input type="text" name="itemPrice" placeholder="{{documentPrice}}" value="{{item.itemPrice}}" data-initial-value="{{item.itemPrice}}" class="text stretch tablet-spaced-letters desktop-spaced-letters text-right" pattern="^\d+$">

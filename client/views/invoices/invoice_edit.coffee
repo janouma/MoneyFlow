@@ -23,8 +23,9 @@ Template[templateName].helpers {
 	itemsData: ->
 		invoiceId = Router.current().params._id
 
-		invoice: if invoiceId then AccountingDocuments.findOne(_id: invoiceId)
-		items: if invoiceId then Items.find({documentId: invoiceId}, {sort: {group: 1, item: 1}})
+		invoice: invoiceId and AccountingDocuments.findOne(_id: invoiceId)
+		items: invoiceId and Items.find({documentId: invoiceId}, {sort: {group: 1, item: 1}})
+		hasGroup: invoiceId and Items.findOne {documentId: invoiceId, group: $exists: yes}
 }
 
 Template[templateName].events {

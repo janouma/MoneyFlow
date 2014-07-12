@@ -14,6 +14,7 @@ Template[templateName].helpers {
 
 	currencyIcon: -> if @accountingDocument.currency is '$' then 'usd' else 'euro'
 	unitColor: -> 'color-lightsilver' if @item.unit is 'w'
+	paddingClass: -> if @groupAvailable then 'pll'
 }
 
 Template[templateName].events {

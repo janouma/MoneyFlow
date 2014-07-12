@@ -19,7 +19,7 @@
 				<tbody>
 					{{#if itemsAvailable}}
 						{{#each itemsByGroup}}
-							{{#if this.group}}
+							{{#if group}}
 					<tr class="medium-text color-lightlead fatty theme-flour">
 						<td class="valign-middle capitalize pas brvs border-silver engraved" colspan="5">
 							<i class="fa fa-folder-open"></i>
@@ -27,8 +27,8 @@
 						</td>
 					</tr>
 							{{/if}}
-							{{#each this.items}}
-								{{>invoiceItemRow accountingDocument=../../invoice item=this}}
+							{{#each items}}
+								{{>invoiceItemRow accountingDocument=../../invoice item=this groupAvailable=../../hasGroup}}
 							{{/each}}
 						{{/each}}
 					<tr class="medium-text color-lightlead fatty">
