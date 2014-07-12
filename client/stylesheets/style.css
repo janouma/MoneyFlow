@@ -810,7 +810,8 @@ input[type=file] {
 .no-display {
   display: none !important; }
 
-.visible, tr:hover .delete-item-row {
+.visible, tr:hover .delete-item-row,
+tr:hover .move-item-row {
   opacity: 1;
   visibility: visible; }
 
@@ -1081,6 +1082,11 @@ td .select-style select, th .select-style select {
 .one-char {
   width: 20px;
   background-image: none; }
+
+table input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 input[type=text],
 input[type=file],
@@ -1421,6 +1427,8 @@ label.textarea-valign,
 .folder-tab {
   border-radius: 2px 2px 0 0;
   padding-left: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-left: solid rgba(0, 0, 0, 0.15);
   border-top: solid rgba(0, 0, 0, 0.15);
@@ -1445,6 +1453,19 @@ label.textarea-valign,
   height: 10px;
   width: 150%;
   margin-left: -25%; }
+
+.move-item-row {
+  position: absolute;
+  line-height: 18px !important;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: -ms-grab;
+  cursor: grab; }
+  .move-item-row:active {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: -ms-grabbing;
+    cursor: grabbing; }
 
 @media (min-width: 769px) {
   .folder:not(.last-folder):not(.unfolded):hover {
