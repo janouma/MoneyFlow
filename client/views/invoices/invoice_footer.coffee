@@ -1,4 +1,4 @@
-documentPrice = -> @invoice.dailyprice or Settings.findOne(userId: Meteor.userId())?.dailyprice
+documentPrice = -> @invoice?.dailyprice or Settings.findOne(userId: Meteor.userId())?.dailyprice
 
 
 taxeRate = ->
@@ -9,9 +9,9 @@ taxeRate = ->
 taxeFreeSum = ->
 	sum = 0
 
-	@items.rewind()
+	@items?.rewind()
 
-	@items.forEach (item)=>
+	@items?.forEach (item)=>
 		price = item.itemPrice or documentPrice.call @
 		itemSum = price * item.amount
 		sum += Math.ceil(Converter.toDays itemSum, item.unit)
@@ -19,11 +19,11 @@ taxeFreeSum = ->
 	sum
 
 
-taxes = -> if @invoice.taxerate then taxeRate() * taxeFreeSum.call(@) else 0
+taxes = -> if @invoice?.taxerate then taxeRate() * taxeFreeSum.call(@) else 0
 
 
 Template.invoiceFooter.helpers {
-	currencyIcon: -> if @invoice.currency is '$' then 'usd' else 'euro'
+	currencyIcon: -> if @invoice?.currency is '$' then 'usd' else 'euro'
 
 	taxeFreeSum: -> Formatter.toFixed (taxeFreeSum.call @), 2
 
