@@ -100,6 +100,7 @@ Thanks.
 		add: "add"
 		reset: "reset"
 		noItem: "no item"
+		moveToAnotherGroup: "move to another group"
 
 
 	#================================================================================================
@@ -208,6 +209,7 @@ Merci.
 		add: "ajouter"
 		reset: "réinitialiser"
 		noItem: "aucun article"
+		moveToAnotherGroup: "déplacer dans un autre groupe"
 }
 
 
