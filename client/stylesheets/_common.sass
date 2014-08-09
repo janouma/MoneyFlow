@@ -237,6 +237,16 @@ input[type=file]
 	border-bottom-width: 0
 	@extend .z1
 
+.left-triangle::before
+	content: ""
+	position: absolute
+	top: 0
+	left: -9px
+	display: block
+	+triangle(18px, white, left)
+	border-left-width: 0
+	@extend .z1
+
 .right-triangle::after
 	content: ""
 	position: absolute

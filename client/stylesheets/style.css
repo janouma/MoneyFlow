@@ -888,7 +888,7 @@ tr:hover .move-item-row {
 .form-label .label-like {
   text-shadow: 0 1px 1px white; }
 
-.z1, .up-triangle::before, .down-triangle::after, .right-triangle::after {
+.z1, .up-triangle::before, .down-triangle::after, .left-triangle::before, .right-triangle::after {
   z-index: 1; }
 
 .z2 {
@@ -931,6 +931,20 @@ tr:hover .move-item-row {
   border-width: 9px;
   border-top-color: white;
   border-bottom-width: 0; }
+
+.left-triangle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -9px;
+  display: block;
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 9px;
+  border-right-color: white;
+  border-left-width: 0; }
 
 .right-triangle::after {
   content: "";
@@ -1406,7 +1420,8 @@ label.textarea-valign,
       background-image: linear-gradient(to left, #ffcfcf, rgba(255, 217, 217, 0) 40px); }
 
 .confirm-buttons,
-.inline-confirm-buttons {
+.inline-confirm-buttons,
+.floating-text-input {
   position: absolute; }
 
 .confirm-buttons:after {
@@ -1415,6 +1430,10 @@ label.textarea-valign,
 .inline-confirm-buttons:after {
   top: 5px;
   border-left-color: #dadada; }
+
+.floating-text-input:before {
+  top: 5px;
+  border-right-color: #6b96eb; }
 
 .folder {
   margin-top: -35px; }
@@ -1466,6 +1485,24 @@ label.textarea-valign,
     cursor: -moz-grabbing;
     cursor: -ms-grabbing;
     cursor: grabbing; }
+
+.drag-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px dashed #6b96eb;
+  /*thead
+   * &, tr
+   * 	overflow-y: hidden
+   * 	height: 0 */
+  /*th
+   * overflow-y: hidden
+   * height: 0 */
+  /*background-color: transparent */
+  /*td
+   * background-color: white */
+  /*tbody
+   * background-color: white */ }
 
 @media (min-width: 769px) {
   .folder:not(.last-folder):not(.unfolded):hover {

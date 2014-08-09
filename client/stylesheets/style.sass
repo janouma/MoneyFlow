@@ -419,17 +419,20 @@ label.textarea-valign,
 			+background-image(linear-gradient(right, darken($lighterred, 2%), rgba($lighterred, 0) 40px))
 
 .confirm-buttons,
-.inline-confirm-buttons
+.inline-confirm-buttons,
+.floating-text-input
 	position: absolute
 
-.confirm-buttons
-	&:after
-		border-top-color: $lightsky
+.confirm-buttons:after
+	border-top-color: $lightsky
 
-.inline-confirm-buttons
-	&:after
-		top: 5px
-		border-left-color: $silver
+.inline-confirm-buttons:after
+	top: 5px
+	border-left-color: $silver
+
+.floating-text-input:before
+	top: 5px
+	border-right-color: $lightsky
 
 .folder
 	margin-top: -35px
@@ -489,6 +492,30 @@ label.textarea-valign,
 		cursor: -moz-grabbing
 		cursor: -ms-grabbing
 		cursor: grabbing
+
+.drag-container
+	position: absolute
+	top: 0
+	left: 0
+	border: 1px dashed $lightsky
+
+	/*thead
+		&, tr
+			overflow-y: hidden
+			height: 0*/
+
+	/*th
+		overflow-y: hidden
+		height: 0*/
+
+	/*background-color: transparent*/
+
+	/*td
+		background-color: white*/
+
+	/*tbody
+		background-color: white*/
+
 
 @media (min-width: 769px)
 	.folder:not(.last-folder):not(.unfolded):hover
