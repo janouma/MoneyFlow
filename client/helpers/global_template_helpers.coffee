@@ -59,3 +59,12 @@ UI.registerHelper(
 	'activeRowClass'
 	(item)-> 'active-row' if item._id is Router.current().params._id
 )
+
+
+loadTweenlite = -> Meteor.Loader.loadJs('//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenLite.min.js').done loadScrolltoPlugin
+
+loadScrolltoPlugin = -> Meteor.Loader.loadJs('//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.0/plugins/ScrollToPlugin.min.js').done modifyScrollTop
+
+modifyScrollTop = -> Transition.scrollTop = -> TweenLite.to window, 0.65, scrollTo: y:0, ease:Power2.easeOut
+
+UI.body.rendered = loadTweenlite

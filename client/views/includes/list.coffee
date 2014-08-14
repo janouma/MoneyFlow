@@ -15,19 +15,6 @@ showHideDeleteLink = (template, fade = no)->
 		$deleteLink.addClass(hiddenClass)
 
 
-
-scrollTop = -> $(window).scrollTop 0
-
-loadTweenlite = -> Meteor.Loader.loadJs('//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenLite.min.js').done loadScrolltoPlugin
-
-loadScrolltoPlugin = -> Meteor.Loader.loadJs('//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.0/plugins/ScrollToPlugin.min.js').done modifyScrollTop
-
-modifyScrollTop = -> scrollTop = -> TweenLite.to window, 0.75, scrollTo: y:0, ease:Power2.easeOut
-
-
-Template[templateName].created = loadTweenlite
-
-
 Template[templateName].events {
 
 	'click input[type=checkbox]': (e, template)->
@@ -113,7 +100,7 @@ Template[templateName].events {
 	'click tr.clickable': (e, template)->
 		if $(e.target).prop('tagName').toLowerCase() is 'td'
 			Router.go "#{template.data.item}s", @
-			do scrollTop
+			do Transition.scrollTop
 
 
 	#============================================
