@@ -4,6 +4,7 @@
     "iron-router-progress": {},
     "font-awesome": {},
     "moment": {},
-    "external-file-loader": {}
+    "external-file-loader": {},
+    "fast-render": {}
   }
 }

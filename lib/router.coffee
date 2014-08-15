@@ -5,11 +5,16 @@ Router.configure(
 	#CAUTION, this option is not for unmatched route but for null "data" on a matched route
 	notFoundTemplate: 'notFound'
 
-	waitOn: -> [
-		I18nEasy.subscribe()...,
-		Meteor.subscribe 'settings', Meteor.userId()
-		Meteor.subscribe 'clients', Meteor.userId()
-	]
+	waitOn: ->
+		subscriptions = [
+			Meteor.subscribe 'settings', Meteor.userId()
+			Meteor.subscribe 'clients', Meteor.userId()
+		]
+
+		subscriptions.push I18nEasy.subscribe()... unless Meteor.isServer
+		subscriptions
+
+	fastRender: true
 )
 
 navigatorLanguage = ->
@@ -27,31 +32,31 @@ setLanguage = ->
 		amplify.store 'language', language
 
 
-unless Meteor.isServer
-	Router.onBeforeAction(
-		setLanguage
-		except: 'notFound'
-	)
+Router.onBeforeAction(
+	setLanguage
+	except: 'notFound'
+)
 
-	Router.onBeforeAction(
-		-> Router.go '/' unless Meteor.user()
-		except: ['notFound', 'home', 'i18n_easy_admin']
-	)
+Router.onBeforeAction(
+	-> Router.go '/' unless Meteor.user()
+	except: ['notFound', 'home', 'i18n_easy_admin']
+)
 
-	Router.onBeforeAction('loading')
+Router.onBeforeAction('loading')
 
-	Router.onBeforeAction(
-		->
-			settings = Settings.findOne(userId: Meteor.userId())
-			Router.go '/' unless settings?.company and settings?.companyid and settings?.dailyprice
+Router.onBeforeAction(
+	->
+		settings = Settings.findOne(userId: Meteor.userId())
+		Router.go '/' unless settings?.company and settings?.companyid and settings?.dailyprice
 
-		except: ['notFound', 'home', 'settings']
-	)
+	except: ['notFound', 'home', 'settings']
+)
 
-	Router.onBeforeAction(
-		-> Router.go '/' unless Clients.findOne name: $exists: yes
-		except: ['notFound', 'home', 'settings', 'clients']
-	)
+Router.onBeforeAction(
+	-> Router.go '/' unless Clients.findOne name: $exists: yes
+	except: ['notFound', 'home', 'settings', 'clients']
+)
+
 
 
 

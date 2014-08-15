@@ -6,7 +6,8 @@
       "iron-router-progress": {},
       "font-awesome": {},
       "moment": {},
-      "external-file-loader": {}
+      "external-file-loader": {},
+      "fast-render": {}
     },
     "packages": {
       "iron-router": {
@@ -26,13 +27,18 @@
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
-        "tag": "v2.6.0",
-        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+        "tag": "v2.8.1",
+        "commit": "722ea63783d594341023836b7d418ab2567dab8c"
       },
       "external-file-loader": {
         "git": "https://github.com/davidd8/meteor-external-file-loader.git",
         "tag": "v0.1.4",
         "commit": "352694a7cf906b8241161c2fd1435161c1d5409f"
+      },
+      "fast-render": {
+        "git": "https://github.com/arunoda/meteor-fast-render.git",
+        "tag": "v1.0.0",
+        "commit": "acbc04982025fe78cebb8865b5a04689741d4b0b"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

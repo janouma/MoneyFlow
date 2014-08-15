@@ -8,5 +8,5 @@ Template.invoiceReferences.helpers {
 			term = 0
 			invoiceDate = new Date()
 
-		moment(invoiceDate).add('days', term).format App.dateFormat
+		moment(invoiceDate).add(term, 'days').format App.dateFormat
 }
