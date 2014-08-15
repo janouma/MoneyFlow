@@ -1482,23 +1482,30 @@ label.textarea-valign,
     cursor: -ms-grabbing;
     cursor: grabbing; }
 
-.drag-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px dashed #6b96eb;
-  /*thead
-   * &, tr
-   * 	overflow-y: hidden
-   * 	height: 0 */
-  /*th
-   * overflow-y: hidden
-   * height: 0 */
-  /*background-color: transparent */
-  /*td
-   * background-color: white */
-  /*tbody
-   * background-color: white */ }
+/*.drag-container
+ * position: absolute
+ * top: 0
+ * left: 0
+ * border: 1px dashed $lightsky*/
+ *
+ * /*thead
+ * 	&, tr
+ * 		overflow-y: hidden
+ * 		height: 0*/
+ *
+ * /*th
+ * 	overflow-y: hidden
+ * 	height: 0*/
+ *
+ * /*background-color: transparent*/
+ *
+ * /*td
+ * 	background-color: white*/
+ *
+ * /*tbody
+ * 	background-color: white */
+tr.clickable:active {
+  background-color: #f7f7f9; }
 
 @media (min-width: 769px) {
   .folder:not(.last-folder):not(.unfolded):hover {

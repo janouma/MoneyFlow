@@ -1,3 +1,5 @@
+subsManager = new SubsManager()
+
 Router.configure(
 	layoutTemplate: 'layout'
 	loadingTemplate: 'loading'
@@ -7,8 +9,8 @@ Router.configure(
 
 	waitOn: ->
 		subscriptions = [
-			Meteor.subscribe 'settings', Meteor.userId()
-			Meteor.subscribe 'clients', Meteor.userId()
+			subsManager.subscribe 'settings', Meteor.userId()
+			subsManager.subscribe 'clients', Meteor.userId()
 		]
 
 		subscriptions.push I18nEasy.subscribe()... unless Meteor.isServer
@@ -70,8 +72,8 @@ Router.map ->
 		'invoices'
 		path: '/:language?/invoices/:_id?'
 		waitOn: -> [
-			Meteor.subscribe('invoices', Meteor.userId())
-			Meteor.subscribe('items', Meteor.userId())
+			subsManager.subscribe('invoices', Meteor.userId())
+			subsManager.subscribe('items', Meteor.userId())
 		]
 	)
 

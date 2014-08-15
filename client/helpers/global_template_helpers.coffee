@@ -65,6 +65,6 @@ loadTweenlite = -> Meteor.Loader.loadJs('//cdnjs.cloudflare.com/ajax/libs/gsap/1
 
 loadScrolltoPlugin = -> Meteor.Loader.loadJs('//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.0/plugins/ScrollToPlugin.min.js').done modifyScrollTop
 
-modifyScrollTop = -> Transition.scrollTop = -> TweenLite.to window, 0.65, scrollTo: y:0, ease:Power2.easeOut
+modifyScrollTop = -> Transition.scrollTop = -> TweenLite.to window, 0.65, scrollTo: y:0, ease:Power1.easeOut
 
 UI.body.rendered = loadTweenlite

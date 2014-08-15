@@ -5,6 +5,7 @@
     "font-awesome": {},
     "moment": {},
     "external-file-loader": {},
-    "fast-render": {}
+    "fast-render": {},
+    "subs-manager": {}
   }
 }

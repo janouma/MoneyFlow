@@ -7,7 +7,8 @@
       "font-awesome": {},
       "moment": {},
       "external-file-loader": {},
-      "fast-render": {}
+      "fast-render": {},
+      "subs-manager": {}
     },
     "packages": {
       "iron-router": {
@@ -39,6 +40,11 @@
         "git": "https://github.com/arunoda/meteor-fast-render.git",
         "tag": "v1.0.0",
         "commit": "acbc04982025fe78cebb8865b5a04689741d4b0b"
+      },
+      "subs-manager": {
+        "git": "https://github.com/meteorhacks/subs-manager.git",
+        "tag": "v1.0.2",
+        "commit": "029236aa004062cc10d8c04e79907d6fe223ecf7"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",
