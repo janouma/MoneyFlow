@@ -2,7 +2,7 @@ subsManager = new SubsManager()
 
 Router.configure(
 	layoutTemplate: 'layout'
-	loadingTemplate: 'loading'
+	#loadingTemplate: 'loading'
 
 	#CAUTION, this option is not for unmatched route but for null "data" on a matched route
 	notFoundTemplate: 'notFound'
@@ -27,6 +27,8 @@ appLanguage = ->
 	amplify.store('language') or navigatorLanguage()
 
 setLanguage = ->
+	return unless Meteor.isClient
+
 	language = @params[0] or @params.language or appLanguage()
 
 	if language and I18nEasy.getLanguage() isnt language
