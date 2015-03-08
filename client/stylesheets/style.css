@@ -1287,63 +1287,11 @@ label.textarea-valign,
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: inherit; }
-    .form-cell label[for]::after,
-    .form-cell .label-like::after,
-    .form-label label[for]::after,
-    .form-label .label-like::after {
-      content: "";
-      position: absolute;
-      right: -8px;
-      bottom: 0;
-      width: 0px;
-      height: 0px;
-      border-color: transparent transparent transparent #e3e3ea;
-      border-style: solid;
-      border-width: 15px 0 15px 8px; }
-    .form-cell label[for].textarea-valign::after,
-    .form-cell .label-like.textarea-valign::after,
-    .form-label label[for].textarea-valign::after,
-    .form-label .label-like.textarea-valign::after {
-      border-width: 26px 0 26px 8px; }
-    .form-cell label[for]:active::after,
-    .form-cell .label-like:active::after,
-    .form-label label[for]:active::after,
-    .form-label .label-like:active::after {
-      border-left-color: #c5c5d4; }
   .form-cell.down-label,
   .form-label.down-label {
     border-radius: 0 0 2px 2px;
     background-image: -webkit-linear-gradient( white, rgba(227, 227, 234, 0));
     background-image: linear-gradient( white, rgba(227, 227, 234, 0)); }
-    .form-cell.down-label label[for]::after,
-    .form-cell.down-label .label-like::after,
-    .form-label.down-label label[for]::after,
-    .form-label.down-label .label-like::after {
-      left: 0;
-      bottom: -8px;
-      margin: 0 auto;
-      height: 0;
-      width: 0;
-      border-color: transparent;
-      border-style: solid;
-      border-width: 8px;
-      border-top-color: #e3e3ea;
-      border-bottom-width: 0; }
-    .form-cell.down-label label[for]:active::after,
-    .form-cell.down-label .label-like:active::after,
-    .form-label.down-label label[for]:active::after,
-    .form-label.down-label .label-like:active::after {
-      border-color: #c5c5d4 transparent transparent transparent; }
-  .form-cell.theme-error label[for]::after,
-  .form-cell.theme-error label[for]:active::after,
-  .form-label.theme-error label[for]::after,
-  .form-label.theme-error label[for]:active::after {
-    border-color: transparent transparent transparent #ffcccc; }
-  .form-cell.theme-error.down-label label[for]::after,
-  .form-cell.theme-error.down-label label[for]:active::after,
-  .form-label.theme-error.down-label label[for]::after,
-  .form-label.theme-error.down-label label[for]:active::after {
-    border-color: #ffcccc transparent transparent transparent; }
   .form-cell div, .form-cell span,
   .form-label div,
   .form-label span {
@@ -1522,42 +1470,11 @@ tr.clickable:active {
     background-image: -webkit-linear-gradient( white, rgba(227, 227, 234, 0));
     background-image: linear-gradient( white, rgba(227, 227, 234, 0)); }
 
-  .form-cell label[for]::after,
-  .form-cell .label-like::after,
-  .form-label label[for]::after,
-  .form-label .label-like::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    margin: 0 auto;
-    height: 0;
-    width: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 8px;
-    border-top-color: #e3e3ea;
-    border-bottom-width: 0; }
   .form-cell label[for].textarea-valign,
   .form-cell .label-like.textarea-valign,
   .form-label label[for].textarea-valign,
   .form-label .label-like.textarea-valign {
     height: 19px; }
-    .form-cell label[for].textarea-valign::after,
-    .form-cell .label-like.textarea-valign::after,
-    .form-label label[for].textarea-valign::after,
-    .form-label .label-like.textarea-valign::after {
-      border-width: 8px 8px 0 8px; }
-  .form-cell label[for]:active::after,
-  .form-cell .label-like:active::after,
-  .form-label label[for]:active::after,
-  .form-label .label-like:active::after {
-    border-color: #c5c5d4 transparent transparent transparent; }
-  .form-cell.theme-error label[for]::after,
-  .form-cell.theme-error label[for]:active::after,
-  .form-label.theme-error label[for]::after,
-  .form-label.theme-error label[for]:active::after {
-    border-color: #ffcccc transparent transparent transparent; }
 
   .select-style.mobile-stretch select {
     width: 119.31%; }

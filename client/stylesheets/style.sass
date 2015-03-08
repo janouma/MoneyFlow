@@ -296,48 +296,9 @@ label.textarea-valign,
 		line-height: $medium-line-height
 		+box-sizing(inherit)
 
-		&::after
-			content: ""
-			position: absolute
-			right: -8px
-			bottom: 0
-			+size(0)
-			border-color: transparent transparent transparent $lightsilver
-			border-style: solid
-			border-width: 15px 0 15px 8px
-
-		&.textarea-valign::after
-			border-width: 26px 0 26px 8px
-
-		&:active::after
-			border-left-color: darken($lightsilver, 10%)
-
-
 	&.down-label
 		border-radius: 0 0 2px 2px
 		+background-image(linear-gradient(white, rgba($lightsilver,0)))
-
-		label[for],
-		.label-like
-			&::after
-				left: 0
-				bottom: -8px
-				margin: 0 auto
-				+triangle(16px, $lightsilver, down)
-				border-bottom-width: 0
-
-			&:active::after
-				border-color: darken($lightsilver, 10%) transparent transparent transparent
-
-	&.theme-error
-		label[for]::after,
-		label[for]:active::after
-			border-color: transparent transparent transparent $error-theme-color
-
-		&.down-label
-			label[for]::after,
-			label[for]:active::after
-				border-color: $error-theme-color transparent transparent transparent
 
 	div,span
 		vertical-align: middle
@@ -534,28 +495,8 @@ tr.clickable:active
 	.form-label
 		label[for],
 		.label-like
-			&::after
-				content: ""
-				position: absolute
-				left: 0
-				bottom: -8px
-				margin: 0 auto
-				+triangle(16px, $lightsilver, down)
-				border-bottom-width: 0
-
 			&.textarea-valign
 				height: 19px
-				&::after
-					border-width: 8px 8px 0 8px
-
-			&:active::after
-				border-color: darken($lightsilver, 10%) transparent transparent transparent
-
-		&.theme-error
-			label[for]::after,
-			label[for]:active::after
-				border-color: $error-theme-color transparent transparent transparent
-
 
 	.select-style.mobile-stretch
 		select
