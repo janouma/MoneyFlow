@@ -53,20 +53,24 @@ Meteor.methods {
 		value = accountingDocument.value
 		field = accountingDocument.field
 
-		injectLinkedData = (propertySet)->
-			linkedData = accountingDocument.linkedData
-			if linkedData
-				propertySet[linkedProperty] = linkedValue for linkedProperty, linkedValue of linkedData
+		injectLinkedData = (data, propertySet)->
+			if data
+				propertySet[linkedProperty] = linkedValue for linkedProperty, linkedValue of data
 
 			propertySet
+
 
 		if _id
 			updateOperator = if value?.toString().length then "$set" else "$unset"
 			modifier = {}
 			modifier[updateOperator] = {}
 			modifier[updateOperator][field] = value
-			modifier.$set ?= {}
-			injectLinkedData modifier.$set
+
+			linkedData = accountingDocument.linkedData
+
+			if linkedData
+				modifier.$set ?= {}
+				injectLinkedData linkedData, modifier.$set
 
 			AccountingDocuments.update(
 				{_id: _id}
